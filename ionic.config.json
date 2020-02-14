@@ -1,0 +1,7 @@
+{
+  "name": "RMS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
