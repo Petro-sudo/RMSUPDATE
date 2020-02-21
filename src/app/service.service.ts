@@ -9,7 +9,7 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
   login_url = 'http://168.172.185.101:7000/loglord';
-  reg_url = 'http://168.172.185.106:7000/addlord';
+  reg_url = 'http://168.172.185.106:5000/lord';
   regstu_url = 'http://168.172.185.106:5000/reg';
 
   public postLogin(loglord:any)
