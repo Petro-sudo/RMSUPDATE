@@ -6,20 +6,13 @@ ion-menu-button {
 
 ion-card{
 
-background-image: url("tut1.jpg");
-  background-position: center;
 
-  width: 2000px;
-  height: 350px;
+  background-position: center;
+  padding-bottom: 0;
+
  // animation: animate 16s ease-in-out infinite;
  
 }
-.we
-{
-  background-color: yellow;
-  opacity: 0.5;
-}
-
 
   
 
@@ -157,3 +150,8 @@ margin-top: 100px;
    margin-top: 0;
    margin-bottom: 0;
  }
+ .ion-activatable{
+  position: relative;
+  overflow: hidden;
+  
+}

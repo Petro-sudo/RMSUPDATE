@@ -33,19 +33,19 @@ export class AppComponent implements OnInit {
       icon: 'clipboard'
     },
     {
-      title: 'AboutUs',
-      url: '/folder/About',
+      title: 'How to Apply',
+      url: 'how-to-apply',
       icon: 'people'
     }
     ,
     {
       title: 'Contact',
-      url: '/folder/Contact',
+      url: 'contact',
       icon: 'people'
     }
 
   ];
-  public labels = ['', '', '', '', '', ''];
+
 
   constructor(
     private platform: Platform,

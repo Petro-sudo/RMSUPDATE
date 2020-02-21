@@ -16,8 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./sturegister/sturegister.module').then( m => m.SturegisterPageModule)
 
   },
-
-
   {
     path: 'landlord-reg',
     loadChildren: () => import('./landlord-reg/landlord-reg.module').then( m => m.LandlordRegPageModule)
@@ -26,7 +24,38 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'stud-orlord',
+    loadChildren: () => import('./stud-orlord/stud-orlord.module').then( m => m.StudORlordPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'how-to-apply',
+    loadChildren: () => import('./how-to-apply/how-to-apply.module').then( m => m.HowToApplyPageModule)
+  },
+  {
+    path: 'student-dash',
+    loadChildren: () => import('./student-dash/student-dash.module').then( m => m.StudentDashPageModule)
+  },
+  {
+    path: 'stud-profile',
+    loadChildren: () => import('./stud-profile/stud-profile.module').then( m => m.StudProfilePageModule)
+  },
+  {
+    path: 'soshanguve',
+    loadChildren: () => import('./soshanguve/soshanguve.module').then( m => m.SoshanguvePageModule)
   }
+  ,
+  {
+    path: 'forget',
+    loadChildren: () => import('./forget/forget.module').then( m => m.ForgetPageModule)
+  }
+
+
 
 
 
