@@ -1,0 +1,72 @@
+ion-content{
+
+    --ion-background-color:#f4ae00;
+}
+.login-header{
+    position: relative;
+    
+}
+.logo-img{
+    display: block;
+    width: 120px;
+    text-align: left;
+}
+[heading-column-lr]{
+    display: flex;
+    text-align:center;
+    padding : 15px;
+}
+[medium-heading]{
+
+  font-family: "Heebo-Bold" !important;  
+  font-size: 30px !important;
+  color: var(--theme-black);
+  font-style: bold;
+}
+[small-heading]{
+    font-family: "Heebo-Regular" !important;
+    margin-left: auto;padding-right: 15px; font-size: 15px; ;
+    font-style: oblique;
+}
+[transparent]
+{
+    --background: transparent;
+}
+ion-input
+{
+    --color:#000;
+    font-size: 15px;
+     position: floating;
+     text-align: center;
+     border: solid rgb(13, 13, 15) 0.5px;
+    
+}
+[icon-small]{
+    width:35px;
+}
+ion-item{
+    --highlight-color-focused:transparent;
+    padding:10px;
+}
+[linespace]
+{
+    height: 20px;
+}
+ion-label{
+    color:#000;
+    opacity: .8;
+    font-size: 15px;
+    display: block;
+}
+.forget-password
+{
+    color:#000;
+    font-size: 15px;
+    display: block;
+    text-align: right;
+    padding: 10px;
+}
+ion-button
+{
+    text-align: center;
+}

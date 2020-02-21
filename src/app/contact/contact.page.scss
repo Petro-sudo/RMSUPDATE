@@ -1,0 +1,40 @@
+ion-input{
+
+    border-color: black;
+    width: 280px ;
+    background: #204083;
+    font: inherit;
+    color: white;
+    box-shadow: goldenrod;
+    border: 0;
+    outline: 0;
+    padding: 14px 18px;
+    margin: 13px 8px;
+    align-self: center;
+    margin-left: 60px;
+}
+
+ion-textarea{
+
+    width: 280px;
+    height: 180px;
+    background: #204083;
+    margin-left: 60px;
+    color: white;
+}
+
+ion-card{
+
+    border-color: black;
+    border-width: 80px;
+    border-color:#204083 ;
+    height: 150px;
+    text-decoration-color: white;
+    background-origin: padding-box;
+    
+
+}
+ion-button{
+    width: 100px;
+}
+

@@ -1,0 +1,41 @@
+
+
+<ion-content login-header ion-padding>
+  <div class = "login-header ion-padding">
+    <img class = "logo-img" src="assets/icon/tut.png" alt="">
+  </div>
+  <div class = "ion-text-center">
+      <div heading-column-lr>
+       <h1 medium-heading>TUTEH PROPERTIES</h1>
+      </div>
+
+      <br>
+    
+      <ion-item transparent>
+      <ion-label position="floating"></ion-label>
+         <ion-input ngModel name = "loginData.email" #email = "ngModel" placeholder = "E-MAIL" type= "text" required></ion-input>
+         <div *ngIf = "!email.valid && email.touched">
+           <div *ngIf = "email.errors.required">email required</div>
+
+           <div *ngIf = "email != loginData.password">
+            <div *ngIf = "email.errors">email doesn't exist</div>
+          </div>
+
+         </div>
+        </ion-item>
+        <p>check your e-mail for reseting your password</p>
+     <br><br>
+     
+    <ion-button class = "ion-text-center" color="primary" 
+     (click)="forgot">submit</ion-button>
+    <br>
+<br><br>
+     
+
+      
+  </div> 
+</ion-content>
+
+
+
+

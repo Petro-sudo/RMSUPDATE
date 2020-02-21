@@ -1,0 +1,109 @@
+
+
+
+ <ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start" >
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title align="center">Landlord Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!--
+<ion-header>
+  <ion-toolbar color = "dark">
+    <ion-title >Residential Management</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+-->
+<ion-content>
+  <ion-list>
+    <ion-grid>
+      
+    </ion-grid>
+    <!--
+    <ion-card>
+      
+      <ion-card-header>
+        <ion-card-title color= "tint">Landlord Registration</ion-card-title>
+      </ion-card-header>
+
+
+    </ion-card>
+    -->
+    <ion-item>
+      <!---->
+      <ion-label position="floating">Name</ion-label>
+      <ion-input [(ngModel)] = "lordData.fname" name="fname" type= "text" required ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Surname</ion-label>
+      <ion-input [(ngModel)] ="lordData.lname" name="lname"  type= "text" required ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Identity number </ion-label>
+      <ion-input [(ngModel)]= "lordData.id_no" name="id_no" type= "text" required ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email address</ion-label>
+      <ion-input [(ngModel)] = "lordData.email" name="email"  type= "Email" required ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contact number</ion-label>
+      <ion-input [(ngModel)]= "lordData.cell" name="cell"  type= "number" required ></ion-input>
+    </ion-item>
+    
+  
+    <ion-item>
+      <ion-label>Select title</ion-label>
+      <ion-select placeholder="Select One" [(ngModel)]= "lordData.title" name="title"  required >
+        <ion-select-option value="a">Mr</ion-select-option>
+        <ion-select-option value="b">Mrs</ion-select-option>
+        <ion-select-option value="c">Miss</ion-select-option>
+        <ion-select-option value="d">Dr</ion-select-option>
+        <ion-select-option value="e">Ms</ion-select-option>
+        
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Select Campus location</ion-label>
+      <ion-select placeholder="Select One" [(ngModel)]= "lordData.campus_loc" name="campus_loc"  required >
+        <ion-select-option value="A">ARCADIA CAMPUS</ion-select-option>
+        <ion-select-option value="AR">ARTS CAMPUS</ion-select-option>
+        <ion-select-option value="E">EMALAHLENI CAMPUS</ion-select-option>
+        <ion-select-option value="G">GA-RANKUWA CAMPUS</ion-select-option>
+        <ion-select-option value="M">MBOMBELA CAMPUS</ion-select-option>
+        <ion-select-option value="P">PRETORIA MAIN CAMPUS</ion-select-option>
+        <ion-select-option value="PLK">POLOKWANE CAMPUS</ion-select-option>
+        <ion-select-option value="S">SOSHAGUVE CAMPUS</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position= "floating" stacked>Enter password  :</ion-label>
+      <ion-input  type="password" name="pwd"  [(ngModel)] ='lordData.pwd'></ion-input>
+    </ion-item>
+
+   <!--    <ion-item>
+      <ion-label position= "floating" stacked>Re-enter password: </ion-label>
+      <ion-input name="password-repeat" type="password"  equals-to="Form.password"  placeholder=""></ion-input>  
+    </ion-item>
+    -->
+
+    <ion-button expand="block" color="dark" (click)=" addreg()">
+      <ion-icon name="add"></ion-icon>
+      Submit Registration
+
+    </ion-button>
+    
+  </ion-list>
+</ion-content>

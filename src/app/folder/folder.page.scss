@@ -2,6 +2,76 @@ ion-menu-button {
   color: var(--ion-color-primary);
 }
 
+
+
+ion-card{
+
+background-image: url("tut1.jpg");
+  background-position: center;
+
+  width: 2000px;
+  height: 350px;
+ // animation: animate 16s ease-in-out infinite;
+ 
+}
+.we
+{
+  background-color: yellow;
+  opacity: 0.5;
+}
+
+
+  
+
+ 
+ 
+
+ 
+
+
+@keyframes animate{
+  0%{
+
+
+background-image: url("tut1.jpg");
+background-position: cover;
+background-repeat:no-repeat ;
+width: 1500px;
+height: 350px;
+  }
+  30%{
+
+    background-image: url("tut2.jpg"); 
+    background-position: cover;
+    background-repeat:no-repeat ;
+    width: 2000px;
+    height: 350px;
+    
+    }
+    85%{
+      background-image: url("tut3.png");
+      background-position: cover;
+      background-repeat:no-repeat ;
+      width: 2000px;
+      height: 350px;
+
+    }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #container {
   text-align: center;
   position: absolute;
@@ -53,3 +123,37 @@ a:-webkit-any-link {
 .folder a:link, .folder a:visited {
   text-decoration: none;
 }
+
+  ionic-slide{
+  flex-direction: column;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+ min-height: 100%;
+margin-top: 100px;
+}
+
+ ion-content
+ {
+   --overflow:hidden;
+   text-align: center;
+ }
+
+ ion-slide p
+ {
+  margin: 0;
+  font-size: 13px;
+  line-height: 15px;
+  margin-top: 0;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+ }
+
+ .center
+ {
+   margin-top: 0;
+   margin-bottom: 0;
+ }

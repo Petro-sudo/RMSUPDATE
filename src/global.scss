@@ -32,7 +32,7 @@
    */
   
   body {
-    --ion-color-primary: #428cff;
+    --ion-color-primary: #ec9c1ced;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255,255,255;
@@ -173,6 +173,6 @@
   }
   
   ion-title.title-large {
-    --color: white;
+    --color: rgb(44, 42, 42);
   }
 }

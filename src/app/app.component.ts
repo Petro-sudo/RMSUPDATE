@@ -18,25 +18,30 @@ export class AppComponent implements OnInit {
       icon: 'arrow-forward'
     },
     {
-      title: 'Login',
-      url: '/folder/Login',
+      title: 'Login ',
+      url: 'login',
       icon: 'log-in'
     },
     {
-      title: 'Register',
-      url: '/folder/Register',
+      title: 'Student Registration',
+      url: 'sturegister',
+      icon: 'clipboard'
+    },
+    {
+      title: 'Landlord Registration',
+      url: 'landlord-reg',
       icon: 'clipboard'
     },
     {
       title: 'AboutUs',
-      url: '/folder/Archived',
+      url: '/folder/About',
       icon: 'people'
     }
     ,
     {
       title: 'Contact',
       url: '/folder/Contact',
-      icon: 'ion-contact'
+      icon: 'people'
     }
 
   ];
