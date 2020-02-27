@@ -51,12 +51,6 @@ export class SturegisterPage implements OnInit {
     console.log(this.addstu);
     });
   }
-
-
-
-
-
-
   add() {
     this._serviceService.poststu(this.stuData).subscribe(
 data =>
