@@ -53,7 +53,8 @@ const routes: Routes = [
   {
     path: 'forget',
     loadChildren: () => import('./forget/forget.module').then( m => m.ForgetPageModule)
-  },  {
+  },
+  {
     path: 'studapply',
     loadChildren: () => import('./studapply/studapply.module').then( m => m.StudapplyPageModule)
   },
@@ -61,9 +62,6 @@ const routes: Routes = [
     path: 'process',
     loadChildren: () => import('./process/process.module').then( m => m.ProcessPageModule)
   }
-
-
-
 
 
 
