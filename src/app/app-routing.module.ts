@@ -61,8 +61,12 @@ const routes: Routes = [
   {
     path: 'process',
     loadChildren: () => import('./process/process.module').then( m => m.ProcessPageModule)
-  }
+  },
 
+  {
+    path: 'stud-app',
+    loadChildren: () => import('./stud-app/stud-app.module').then( m => m.StudAppPageModule)
+  }
 
 
 

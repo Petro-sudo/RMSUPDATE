@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start" >
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title align="center">STUDENT APPLICATION</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label>Upload proof of registration</ion-label>
+    <input mbsc-input type="file" placeholder="Select file..." />
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Upload ID copy</ion-label>
+    <input mbsc-input type="file" placeholder="Select file..." />
+  </ion-item>
+
+  
+  <ion-item>
+    <ion-label>Disabilities</ion-label>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="No">No</ion-select-option>
+      <ion-select-option value="Yes">Yes</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Do you agree to the terms and conditions</ion-label>
+    <ion-checkbox item-right secondary checked="false"></ion-checkbox>
+  </ion-item>
+
+  <ion-button class = "ion-text-center" expand="block" color="dark" shape="round">SUBMIT APPLICATION</ion-button>
+
+</ion-content>
