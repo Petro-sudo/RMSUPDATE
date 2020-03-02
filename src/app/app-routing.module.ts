@@ -53,7 +53,39 @@ const routes: Routes = [
   {
     path: 'forget',
     loadChildren: () => import('./forget/forget.module').then( m => m.ForgetPageModule)
+  }  ,
+  {
+    path: 'Arcadia',
+    loadChildren: () => import('./folder/arcadia/arcadia.module').then( m => m.ArcadiaPageModule)
+  } ,
+  {
+    path: 'Arts',
+    loadChildren: () => import('./folder/arts/arts.module').then( m => m.ArtsPageModule)
+  } ,
+  {
+    path: 'E-malahleni',
+    loadChildren: () => import('./folder/emalahleni/emalahleni.module').then( m => m.EmalahleniPageModule)
+  },
+  {
+    path: 'garankua',
+    loadChildren: () => import('./folder/garankua/garankua.module').then( m => m.GarankuaPageModule)
+  },
+  {
+    path: 'Mbombela',
+    loadChildren: () => import('./folder/mbombela/mbombela.module').then( m => m.MbombelaPageModule)
+  },
+  {
+    path: 'Polokwane',
+    loadChildren: () => import('./folder/polokwane/polokwane.module').then( m => m.PolokwanePageModule)
+  },
+  {
+    path: 'Pretoria',
+    loadChildren: () => import('./folder/pretoria/pretoria.module').then( m => m.PretoriaPageModule)
   }
+
+
+
+
 
 
 
