@@ -24,7 +24,7 @@ import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
   styleUrls: ['./sturegister.page.scss'],
 })
 export class SturegisterPage implements OnInit {
-  @Input() stuData= {firstName:" ", lastName:" ",email:" ", password:" " }
+  @Input() stuData= {firstName:" ", lastName:" ",email:" ", password:" ",campus_loc:" ",studno:" " ,id_no:" ",cell_no:" "}
  // name = new FormControl('');
   constructor(public alertCtrl: AlertController, private _serviceService : ServiceService ) { }
   addstu: any = [];
@@ -34,6 +34,10 @@ export class SturegisterPage implements OnInit {
   lastName: FormControl;
   email: FormControl;
   password: FormControl;
+  campus_loc= new FormControl;
+  studno= new FormControl;
+  id_no=new FormControl;
+  cell_no= new FormControl;
   passwordr: FormControl;
   language: FormControl;
 
@@ -60,6 +64,10 @@ console.log(this.stuData.firstName);
 console.log(this.stuData.lastName);
 console.log(this.stuData.email);
 console.log(this.stuData.password);
+console.log(this.stuData.campus_loc);
+console.log(this.stuData.studno);
+console.log(this.stuData.id_no);
+console.log(this.stuData.cell_no);
 
     
   }
@@ -108,11 +116,18 @@ console.log(this.stuData.password);
       name: new FormGroup({
         firstName: this.firstName,
         lastName: this.lastName,
+       
+
       }),
       email: this.email,
       password: this.password,
+      campus_loc:this.campus_loc,
+      studno: this.studno,
+      id_no: this.id_no,
+      cell_no: this.cell_no,
       passwordr: this.passwordr,
-      language: this.language
+      language: this.language,
+   
     });
   }
 

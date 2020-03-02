@@ -112,7 +112,7 @@
   <ion-header>
     <ion-toolbar    color="dark"  >
    
-      <ion-buttons slot="start">
+      <ion-buttons style="background-color: red;" slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title  align="center" > 
@@ -191,6 +191,50 @@
       </div>
     </ion-item>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   </fieldset>
 
 
@@ -244,21 +288,21 @@
 
   <div class="form-group"
        [ngClass]="{
-        'has-danger': email.invalid && (email.dirty || email.touched),
-        'has-success': email.valid && (email.dirty || email.touched)
+        'has-danger': studno.invalid && (studno.dirty || studno.touched),
+        'has-success': studno.valid && (studno.dirty || studno.touched)
    }">
    <ion-item>
     <ion-label position="fixed">Student NO:</ion-label>
-    <ion-input type="email"
-    required  [(ngModel)] = "stuData.email"
+    <ion-input type="number"
+    required  [(ngModel)] = "stuData.studno"
            class="form-control"
-           formControlName="email"
+           formControlName="studno"
            required>
            </ion-input>
     <div class="form-control-feedback"
-         *ngIf="email.errors && (email.dirty || email.touched)">
-      <p style="color:red" *ngIf="email.errors.required">Student Number is required</p>
-      <p style="color:red" *ngIf="password.errors.pattern">The email address must contain at least the @ character</p>
+         *ngIf="studno.errors && (studno.dirty || studno.touched)">
+      <p style="color:red" *ngIf="studno.errors.required">Student Number is required</p>
+     
     </div>
   </ion-item>
 
@@ -292,20 +336,20 @@
 
   <div class="form-group"
        [ngClass]="{
-        'has-danger': email.invalid && (email.dirty || email.touched),
-        'has-success': email.valid && (email.dirty || email.touched)
+        'has-danger': id_no.invalid && (id_no.dirty || id_no.touched),
+        'has-success': id_no.valid && (id_no.dirty || id_no.touched)
    }">
    <ion-item>
     <ion-label position="fixed">ID Number:</ion-label>
     <ion-input type="number"
-    required  [(ngModel)] = "stuData.email"
+    required  [(ngModel)] = "stuData.id_no"
            class="form-control"
-           formControlName="email"
+           formControlName="id_no"
            required>
            </ion-input>
     <div class="form-control-feedback"
          *ngIf="email.errors && (email.dirty || email.touched)">
-      <p style="color:red" *ngIf="email.errors.required">ID is required</p>
+      <p style="color:red" *ngIf="id_no.errors.required">ID is required</p>
      
     </div>
   </ion-item>
@@ -332,6 +376,60 @@
 
 
 
+
+
+
+  <div class="form-group"
+       [ngClass]="{
+        'has-danger': cell_no.invalid && (cell_no.dirty || cell_no.touched),
+        'has-success': cell_no.valid && (cell_no.dirty || cell_no.touched)
+   }">
+   <ion-item>
+    <ion-label position="fixed">cell Number:</ion-label>
+    <ion-input type="number"
+    required  [(ngModel)] = "stuData.cell_no"
+           class="form-control"
+           formControlName="cell_no"
+           required>
+           </ion-input>
+    <div class="form-control-feedback"
+         *ngIf="cell_no.errors && (cell_no.dirty || cell_no.touched)">
+      <p style="color:red" *ngIf="cell_no.errors.required">ID is required</p>
+     
+    </div>
+  </ion-item>
+
+    <!--
+      <pre>Valid? {{ myform.controls.email.valid }}</pre>
+      <pre>Dirty? {{ myform.controls.email.dirty }}</pre>
+    -->
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="form-group"
   [ngClass]="{
    'has-danger': password.invalid && (password.dirty || password.touched),
@@ -341,7 +439,9 @@
 
   <ion-item>
     <ion-label>Select Campus location</ion-label>
-    <ion-select placeholder="Select One"   name="campus_loc"  required >
+    <ion-select placeholder="Select campus"   class="form-control"
+    formControlName="campus_loc" type="text"  
+    [(ngModel)] = "stuData.campus_loc"  required >
       <ion-select-option value="ARCADIA CAMPUS">ARCADIA CAMPUS</ion-select-option>
       <ion-select-option value="ARTS CAMPUS">ARTS CAMPUS</ion-select-option>
       <ion-select-option value="EMALAHLENI CAMPUS">EMALAHLENI CAMPUS</ion-select-option>
@@ -383,6 +483,7 @@
     type="password"
            class="form-control"
            formControlName="password"
+        
            required>
            </ion-input>
     <div class="form-control-feedback"
@@ -450,7 +551,7 @@
   
 
 
-  <ion-button (click)=" add()" (click)="doSomething()"shape="round" color="dark" position="floating">Register </ion-button>
+  <ion-button       (click)=" add()" (click)="doSomething()"shape="round" color="dark" position="floating">Register </ion-button>
   <ion-button shape="round" color="dark"  position="floating">Sign In</ion-button>
   <!--
     <
