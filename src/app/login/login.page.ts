@@ -22,15 +22,7 @@ login: any=[];
  ngOnInit() {
    //this.getData();
  }
- validateInputs(){
-   let email = this.postData.email.trim();
-   let password = this.postData.password.trim();
-   return (this.postData.email && 
-     this.postData.password && 
-     email.length>0 
-     && password.length>0)
- 
- }
+
 
  loginAction(){
   console.log(this.postData);
