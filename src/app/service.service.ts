@@ -15,6 +15,13 @@ export class ServiceService {
   image_url = 'http://168.172.185.106:5000/getimage';
   
 
+  status_url = 'https://jsonplaceholder.typicode.com/posts/1';
+
+
+public status()
+{
+  return this.http.get<any>(this.status_url)
+}
   public postLogin(loglord:any)
   {
     return this.http.post<any>(this.login_url, loglord, {})

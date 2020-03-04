@@ -1,0 +1,55 @@
+<ion-header style="background-color: black;">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button style="background-color: red;"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="dark" style="color: white;" align="center">{{ folder }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card">
+  <ion-card text-center padding color="warning">
+    <p>Student Number:</p>
+    <p>Surname Name:</p>
+  </ion-card>
+</div>
+<br><br>
+<div >
+  <h1 align = "center">RESIDENCE ADMISSION STATUS</h1>
+ </div>
+<br>
+
+<form>
+  <ion-item lines="none">
+    <ion-label >STATUS: {{result.body}} </ion-label><br/>
+    
+  </ion-item>
+
+    <ion-item lines="none">
+    <ion-label >YEAR: {{result.body}}</ion-label><br/>
+    
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>RESIDENT PERIOD: {{result.id}}</ion-label><br/>
+      
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>ROOM: {{result.userId}}</ion-label><br/>
+       
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label >ROOM TYPE: {{result.title}} </ion-label><br/>
+         
+          </ion-item>
+         
+          <ion-button  color="primary" 
+          (click)="getData()">VIEW STATUS</ion-button>
+
+          <a  routerLink="/student-dash">
+            <ion-button shape=" " color="danger"  position="floating" class = "ion-text-center">Cancel</ion-button>
+          </a>
+</form>
+</ion-content>
