@@ -11,26 +11,35 @@ export class ServiceService {
   login_url = 'http://168.172.185.101:7000/loglord';
   reg_url = 'http://168.172.185.106:5000/lord';
   regstu_url = 'http://168.172.185.106:5000/reg';
+  apart_url = 'http://168.172.185.106:5000/getproperty';
+  image_url = 'http://168.172.185.106:5000/getimage';
+  
 
   public postLogin(loglord:any)
   {
     return this.http.post<any>(this.login_url, loglord, {})
   }
- 
-  
   public postLandlord(addlord:any)
   {
-    return this.http.post<any>(this. reg_url, addlord, {});
+    return this.http.post<any>(this.reg_url, addlord, {});
   }
 
 
 
   public poststu(reg:any)
   {
-    return this.http.post<any>(this. regstu_url, reg, {});
+    return this.http.post<any>(this.regstu_url, reg, {});
   }
 
+  public getApartment()
+  {
+    return this.http.get<any>(this.apart_url);
+  }
 
+  public getimages()
+  {
+    return this.http.get<any>(this.image_url);
+  }
 
 
 
