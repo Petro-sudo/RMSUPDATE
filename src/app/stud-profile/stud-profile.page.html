@@ -14,9 +14,14 @@
   <a id="back" routerLink="/student-dash">
     <ion-icon id="back" name="arrow-undo"></ion-icon>
   </a>
+  <br><br>
+  <br><br>
+  <br><br>
+  
+  <!--<ion-button (click)="getData()">Show</ion-button>-->
   
 
-  <ion-grid>
+  <!--<ion-grid>
     <ion-row>
        <ion-col col=6> 
         <ion-card color="light">
@@ -24,38 +29,44 @@
         </ion-card>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid>-->
   <form>
     <ion-item lines="none">
       <ion-label position="fixed">Name </ion-label><br/>
-      <ion-input type="text" class="form-control"></ion-input>
+
+      <ion-label  class="ion-padding" id="names">{{result.body}}</ion-label>  
     </ion-item>
 
       <ion-item lines="none">
       <ion-label position="fixed">Surname </ion-label><br/>
-      <ion-input type="text" class="form-control"></ion-input>
-      </ion-item>
+      <ion-label  class="ion-padding" id="names">{{result.id}}</ion-label>    </ion-item>
 
       <ion-item lines="none">
+        <ion-label position="fixed">Email </ion-label><br/>
+        <ion-label  class="ion-padding" id="names">{{result.title}}</ion-label>    </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="fixed">Cell </ion-label><br/>
+          <ion-label  class="ion-padding" id="names"></ion-label>    </ion-item>
+
+      
+      <ion-item lines="none">
         <ion-label position="fixed">ID </ion-label><br/>
-        <ion-input type="text" class="form-control"></ion-input>
-        </ion-item>
+        <ion-label  class="ion-padding" id="names"></ion-label>    </ion-item>
 
         <ion-item lines="none">
           <ion-label position="fixed">Residence </ion-label><br/>
-          <ion-input type="text" id ="Res" class="form-control"></ion-input>
-          </ion-item>
+          <ion-label   class="ion-padding" id="res">{{result.body}}</ion-label>        
+        </ion-item>
 
 
   </form>
+  <br><br>
+
+  <a routerLink="/edit-prof"><ion-button id="edit">Edit</ion-button></a>
+  <!--get data from db with getData function-->
   
 
-
-   
-    
-    
-    
-    
   
 
 </ion-content>

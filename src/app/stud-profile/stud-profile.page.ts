@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import{HttpClient} from '@angular/common/http';
+/*import {NavController} from '@ionic/angular';*/
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-stud-profile',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudProfilePage implements OnInit {
 
-  constructor() { }
+  result: any=[];
+  data: Observable<any>;
+  constructor(/*public navCtrl: NavController,*/ public http: HttpClient) { }
 
   ngOnInit() {
+
+    this.getData();
+
+  }
+  getData(){
+    var url='https://jsonplaceholder.typicode.com/posts/1';
+    this.data= this.http.get(url);
+    this.data.subscribe(data =>{
+        this.result=data;
+    });
+    
   }
 
 }

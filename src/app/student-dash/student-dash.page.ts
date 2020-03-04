@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-student-dash',
   templateUrl: './student-dash.page.html',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentDashPage implements OnInit {
 
+
+  
   constructor() { }
 
   ngOnInit() {
   }
+
+  
 
 }
