@@ -1,3 +1,4 @@
+
 import { Component, OnInit} from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
@@ -6,11 +7,11 @@ import {ServiceService} from './../service.service';
 
 
 @Component({
-  selector: 'app-studstatus',
-  templateUrl: './studstatus.page.html',
-  styleUrls: ['./studstatus.page.scss'],
+  selector: 'app-resproof',
+  templateUrl: './resproof.page.html',
+  styleUrls: ['./resproof.page.scss'],
 })
-export class StudstatusPage implements OnInit{
+export class ResproofPage implements OnInit{
   result: any = [];
  data: Observable<any>;
 
@@ -24,7 +25,7 @@ export class StudstatusPage implements OnInit{
   getData(){
 
 
-   this. _serviceService.status().subscribe(data=>{
+   this. _serviceService.proof().subscribe(data=>{
     this.result = data;
     });
     

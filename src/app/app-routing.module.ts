@@ -69,6 +69,10 @@ const routes: Routes = [
   },  {
     path: 'studstatus',
     loadChildren: () => import('./studstatus/studstatus.module').then( m => m.StudstatusPageModule)
+  },
+  {
+    path: 'resproof',
+    loadChildren: () => import('./resproof/resproof.module').then( m => m.ResproofPageModule)
   }
 
 
