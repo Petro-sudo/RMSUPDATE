@@ -11,7 +11,7 @@ export class ServiceService {
   login_url = 'http://168.172.185.101:7000/loglord';
   reg_url = 'http://168.172.185.106:5000/lord';
   regstu_url = 'http://168.172.185.106:5000/reg';
-  apart_url = 'http://168.172.185.106:5000/getproperty';
+  apart_url = 'http://168.172.185.106:7000/getproperty';
   image_url = 'http://168.172.185.106:5000/getimage';
   
 
