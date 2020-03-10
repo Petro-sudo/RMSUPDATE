@@ -1,0 +1,113 @@
+<ion-header style="background-color: black;">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button style="background-color: red;"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="dark" style="color: white;" align="center">{{ folder }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card">
+  <ion-card text-center padding color="warning">
+    <p>Student Number:{{result.id}}</p>
+    <p>Surname Name:{{result.id}}</p>
+  </ion-card>
+</div>
+<br><br>
+<div >
+  <h1 align = "center">RESIDENCE ADMISSION STATUS</h1>
+ </div>
+<br>
+
+<form>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+           <ion-item lines="none">
+              <ion-label >STATUS:</ion-label><br/>
+          </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none">
+           <ion-label >{{result.id}} </ion-label><br/>
+       </ion-item>
+   </ion-col>
+  </ion-row>
+
+  <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+           <ion-label >YEAR:</ion-label><br/>
+         </ion-item>
+      </ion-col>
+
+      <ion-col>
+       <ion-item lines="none">
+         <ion-label > {{result.id}}</ion-label><br/>
+      </ion-item>
+     </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <ion-item lines="none">
+      <ion-label>RESIDENT PERIOD</ion-label><br/>
+    </ion-item>
+  </ion-col>
+
+  <ion-col>
+    <ion-item lines="none">
+      <ion-label>{{result.id}}</ion-label><br/>
+    </ion-item>
+  </ion-col>
+</ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label>RESIDENT ADDRESS</ion-label><br/>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label>{{result.id}}</ion-label><br/>
+          </ion-item>
+        </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col>
+       <ion-item lines="none">
+        <ion-label>ROOM No: </ion-label><br/>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none">
+         <ion-label>{{result.userId}}</ion-label><br/>
+         </ion-item>
+       </ion-col>
+    </ion-row>
+
+       <ion-row>
+         <ion-col>
+           <ion-item lines="none">
+             <ion-label >ROOM TYPE:  </ion-label><br/>
+           </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label>{{result.id}} </ion-label><br/>
+          </ion-item>
+       </ion-col>
+      </ion-row>
+
+</ion-grid>
+         
+          <a  routerLink="/student-dash">
+            <ion-button shape=" " color="danger"  position="floating" class = "ion-text-center">Cancel</ion-button>
+          </a>
+</form>
+</ion-content>

@@ -1,6 +1,6 @@
 ion-content{
 
-    --ion-background-color:#f4ae00;
+    --ion-background-color:#ddb636f3;
 }
 .login-header{
     position: relative;
@@ -38,7 +38,7 @@ ion-input
     font-size: 15px;
      position: floating;
      text-align: center;
-     border: solid rgb(13, 13, 15) 0.5px;
+     
     
 }
 [icon-small]{
@@ -73,4 +73,12 @@ ion-button
 .log
 {
     text-align: right;
+}
+h1
+{
+   text-align:center; 
+}
+.ion-radio
+{
+    text-align: center;
 }
