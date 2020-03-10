@@ -22,7 +22,7 @@ export class StudstatusPage implements OnInit{
   }
 
   getData(){
-   //var status = 'https:jsonplaceholder.typicode.com/posts/1';
+
 
    this. _serviceService.status().subscribe(data=>{
     this.result = data;

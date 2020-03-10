@@ -1,7 +1,8 @@
 {
   "name": "RMS",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

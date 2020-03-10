@@ -66,10 +66,14 @@ const routes: Routes = [
   {
     path: 'stud-app',
     loadChildren: () => import('./stud-app/stud-app.module').then( m => m.StudAppPageModule)
-  },  {
-    path: 'studstatus',
-    loadChildren: () => import('./studstatus/studstatus.module').then( m => m.StudstatusPageModule)
+  },
+  {
+
+    path: 'edit-prof',
+    loadChildren: () => import('./edit-prof/edit-prof.module').then( m => m.EditProfPageModule)
   }
+
+ 
 
 
 
