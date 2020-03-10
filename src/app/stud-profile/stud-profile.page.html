@@ -34,16 +34,20 @@
     <ion-item lines="none">
       <ion-label position="fixed">Name </ion-label><br/>
 
-      <ion-label  class="ion-padding" id="names">{{result.body}}</ion-label>  
+      <ion-label  class="ion-padding" id="names">{{result.firstName}}</ion-label>  
     </ion-item>
 
       <ion-item lines="none">
       <ion-label position="fixed">Surname </ion-label><br/>
-      <ion-label  class="ion-padding" id="names">{{result.id}}</ion-label>    </ion-item>
+      <ion-label  class="ion-padding" id="names"></ion-label>    </ion-item>
 
       <ion-item lines="none">
-        <ion-label position="fixed">Email </ion-label><br/>
-        <ion-label  class="ion-padding" id="names">{{result.title}}</ion-label>    </ion-item>
+        <ion-label position="fixed">ID </ion-label><br/>
+        <ion-label  class="ion-padding" id="names"></ion-label>    </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="fixed">Campus </ion-label><br/>
+        <ion-label  class="ion-padding" id="names"></ion-label>    </ion-item>
 
         <ion-item lines="none">
           <ion-label position="fixed">Cell </ion-label><br/>
@@ -51,12 +55,23 @@
 
       
       <ion-item lines="none">
-        <ion-label position="fixed">ID </ion-label><br/>
+        <ion-label position="fixed">Email </ion-label><br/>
         <ion-label  class="ion-padding" id="names"></ion-label>    </ion-item>
 
         <ion-item lines="none">
           <ion-label position="fixed">Residence </ion-label><br/>
-          <ion-label   class="ion-padding" id="res">{{result.body}}</ion-label>        
+          <ion-label   class="ion-padding" id="res"></ion-label>        
+        </ion-item>
+        <br><br><br>
+
+        <ion-item lines="none">
+          <ion-label class="ion-text-wrap" position="fixed" id="doc"><strong> Upload Proof Of Registration </strong></ion-label><br/>
+          <ion-icon name="cloud-upload" id="upload"></ion-icon>   
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label class="ion-text-wrap" position="fixed" id="doc"><strong>Upload Copy Of ID</strong></ion-label><br/>
+          <ion-icon name="cloud-upload" id="upload"></ion-icon>    
         </ion-item>
 
 

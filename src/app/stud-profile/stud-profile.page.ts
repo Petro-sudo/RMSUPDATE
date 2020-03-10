@@ -20,11 +20,14 @@ export class StudProfilePage implements OnInit {
 
   }
   getData(){
-    var url='https://jsonplaceholder.typicode.com/posts/1';
+    var url='http://168.172.185.106:5000/getstud/40';
     this.data= this.http.get(url);
-    this.data.subscribe(data =>{
-        this.result=data;
-    });
+    //this.data.subscribe(data =>{
+        //this.result=data;
+        console.log("clicked");
+
+      
+    //});
     
   }
 

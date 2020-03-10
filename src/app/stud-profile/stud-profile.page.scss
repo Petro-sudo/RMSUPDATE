@@ -15,6 +15,11 @@ ion-card{
     margin-top: 20px;
     margin-left: 40%;
 }
+#upload{
+    
+    zoom:2;
+    margin-left: 50%;
+}
 
 ion-label{
     margin-top: 10px;
@@ -44,6 +49,7 @@ ion-input{
 ion-item{
     margin-top: 15px;
     margin-left:5px;
+    width: auto;
 }
 //links
 #back{
@@ -54,4 +60,13 @@ ion-item{
 //edit button
 #edit{
     float:right;
+}
+//ion-item
+#doc{
+    margin-left:20% ;
+}
+
+strong{
+    font-weight:medium;
+    
 }

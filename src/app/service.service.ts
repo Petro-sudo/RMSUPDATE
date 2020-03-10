@@ -11,6 +11,8 @@ export class ServiceService {
   login_url = 'http://168.172.185.101:7000/loglord';
   reg_url = 'http://168.172.185.106:5000/lord';
   regstu_url = 'http://168.172.185.106:5000/reg';
+  getstu_url='http://168.172.185.106:5000/getstudent';
+  getstud1_url='http://168.172.185.106:5000/getstud/40';
 
   public postLogin(loglord:any)
   {
