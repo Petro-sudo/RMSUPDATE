@@ -127,7 +127,7 @@
 <ion-content>
   <div class="container">
   <form novalidate
-      [formGroup]="myform">
+      [formGroup]="myform" >
 
   
 
@@ -142,9 +142,9 @@
         'has-success': firstName.valid && (firstName.dirty || firstName.touched)
       }">
 
-
-      <ion-item>
       <ion-label position="fixed">First Name:</ion-label>
+      <ion-item>
+    
       
       <ion-input type="text"
       
@@ -177,8 +177,9 @@
         'has-danger': lastName.invalid && (lastName.dirty || lastName.touched),
         'has-success': lastName.valid && (lastName.dirty || lastName.touched)
       }">
-      <ion-item>
       <ion-label position="fixed">Last Name:</ion-label>
+      <ion-item>
+      
       <ion-input type="text"
       required  [(ngModel)] = "stuData.lastName"
              class="form-control"
@@ -249,8 +250,9 @@
         'has-danger': email.invalid && (email.dirty || email.touched),
         'has-success': email.valid && (email.dirty || email.touched)
    }">
+   <ion-label position="fixed">Email:</ion-label>
    <ion-item>
-    <ion-label position="fixed">Email:</ion-label>
+    
     <ion-input type="email"
     required  [(ngModel)] = "stuData.email"
            class="form-control"
@@ -260,7 +262,7 @@
     <div class="form-control-feedback"
          *ngIf="email.errors && (email.dirty || email.touched)">
       <p style="color:red" *ngIf="email.errors.required">Email is required</p>
-      <p style="color:red" *ngIf="password.errors.pattern">The email address must contain at least the @ character</p>
+      <p style="color:red" *ngIf="password.errors.pattern">email must contain at least the @ character</p>
     </div>
   </ion-item>
 
@@ -291,8 +293,9 @@
         'has-danger': studno.invalid && (studno.dirty || studno.touched),
         'has-success': studno.valid && (studno.dirty || studno.touched)
    }">
+   <ion-label position="fixed">Student NO:</ion-label>
    <ion-item>
-    <ion-label position="fixed">Student NO:</ion-label>
+    
     <ion-input type="number"
     required  [(ngModel)] = "stuData.studno"
            class="form-control"
@@ -307,8 +310,8 @@
   </ion-item>
 
     <!--
-      <pre>Valid? {{ myform.controls.email.valid }}</pre>
-      <pre>Dirty? {{ myform.controls.email.dirty }}</pre>
+      <pre>Valid? {{ myform.controls.studno.valid }}</pre>
+      <pre>Dirty? {{ myform.controls.studno.dirty }}</pre>
     -->
 
   </div>
@@ -339,8 +342,9 @@
         'has-danger': id_no.invalid && (id_no.dirty || id_no.touched),
         'has-success': id_no.valid && (id_no.dirty || id_no.touched)
    }">
+   <ion-label position="fixed">ID Number:</ion-label>
    <ion-item>
-    <ion-label position="fixed">ID Number:</ion-label>
+    
     <ion-input type="number"
     required  [(ngModel)] = "stuData.id_no"
            class="form-control"
@@ -348,7 +352,7 @@
            required>
            </ion-input>
     <div class="form-control-feedback"
-         *ngIf="email.errors && (email.dirty || email.touched)">
+         *ngIf="id_no.errors && (id_no.dirty || id_no.touched)">
       <p style="color:red" *ngIf="id_no.errors.required">ID is required</p>
      
     </div>
@@ -384,8 +388,9 @@
         'has-danger': cell_no.invalid && (cell_no.dirty || cell_no.touched),
         'has-success': cell_no.valid && (cell_no.dirty || cell_no.touched)
    }">
-   <ion-item>
-    <ion-label position="fixed">cell Number:</ion-label>
+   <ion-label position="fixed">cell Number:</ion-label>
+   <!-- ion item-->
+    
     <ion-input type="number"
     required  [(ngModel)] = "stuData.cell_no"
            class="form-control"
@@ -394,10 +399,10 @@
            </ion-input>
     <div class="form-control-feedback"
          *ngIf="cell_no.errors && (cell_no.dirty || cell_no.touched)">
-      <p style="color:red" *ngIf="cell_no.errors.required">ID is required</p>
-     
+      <p style="color:red" *ngIf="cell_no.errors.required">cell number is required</p>
+    <!-- <p style="color:red" *ngIf="cell_no.errors.pattern">please provide south african cell number</p> -->
     </div>
-  </ion-item>
+ 
 
     <!--
       <pre>Valid? {{ myform.controls.email.valid }}</pre>
@@ -436,9 +441,9 @@
    'has-success': password.valid && (password.dirty || password.touched)
 }">
 
-
+<ion-label>Select Campus location</ion-label>
   <ion-item>
-    <ion-label>Select Campus location</ion-label>
+   
     <ion-select placeholder="Select campus"   class="form-control"
     formControlName="campus_loc" type="text"  
     [(ngModel)] = "stuData.campus_loc"  required >
@@ -476,9 +481,10 @@
         'has-danger': password.invalid && (password.dirty || password.touched),
         'has-success': password.valid && (password.dirty || password.touched)
    }">
+   <ion-label position="fixed">Password: </ion-label>
    <ion-item>
-    <ion-label position="fixed">Password: </ion-label>
-    <ion-input  
+   
+    <ion-input   
     required  [(ngModel)] = "stuData.password"
     type="password"
            class="form-control"
@@ -551,8 +557,8 @@
   
 
 
-  <ion-button       (click)=" add()" (click)="doSomething()"shape="round" color="dark" position="floating">Register </ion-button>
-  <ion-button shape="round" color="dark"  position="floating">Sign In</ion-button>
+  <ion-button   (click)=" add()" shape="round" color="dark" position="floating">Register </ion-button>
+  <a routerLink="/login"> <ion-button  shape="round" color="dark"  position="floating">Sign In</ion-button> </a>
   <!--
     <
       pre>{{ password.errors | json }}</pre>
