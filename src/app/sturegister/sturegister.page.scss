@@ -1,12 +1,13 @@
 fieldset {
     border: 0;
-    margin-left: -15px;  
+    margin-left: -10px;  
 }
 ion-input
 {
     
     border-radius: 10px;
- 
+    border: solid white 1px;
+
 }
 ion-select-option 
 {
@@ -14,7 +15,11 @@ ion-select-option
     border-radius: 10px;  
 }
 
-
+on-select
+{
+    border: solid black 1px;
+    border-radius: 10px;   
+}
 
 ion-content{
 
