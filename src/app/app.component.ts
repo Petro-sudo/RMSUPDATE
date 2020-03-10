@@ -22,6 +22,13 @@ export class AppComponent implements OnInit {
       url: 'login',
       icon: 'log-in'
     },
+
+    {
+      title: 'Logout ',
+      url: '/folder/folder',
+      icon: 'log-in'
+    },
+
     {
       title: 'Student Registration',
       url: 'sturegister',

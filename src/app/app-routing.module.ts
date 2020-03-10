@@ -71,6 +71,11 @@ const routes: Routes = [
 
     path: 'edit-prof',
     loadChildren: () => import('./edit-prof/edit-prof.module').then( m => m.EditProfPageModule)
+  },
+  {
+
+    path: 'resproof',
+    loadChildren: () => import('./resproof/resproof.module').then( m => m.ResproofPageModule)
   }
 
  
