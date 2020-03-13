@@ -19,7 +19,7 @@ export class ServiceService {
   getstu_url='http://168.172.185.106:5000/getstudent';
   getstud1_url='http://168.172.185.106:5000/getstud/40';
 
-  apart_url = 'http://168.172.185.106:5000/getproperty';
+  
 
   image_url = 'http://168.172.185.106:5000/getimage';
   
