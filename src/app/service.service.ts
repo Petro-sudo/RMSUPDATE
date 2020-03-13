@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServiceService {
+  display: any;
 
   constructor(private http: HttpClient) { }
   login_url = 'http://168.172.185.101:7000/loglord';
