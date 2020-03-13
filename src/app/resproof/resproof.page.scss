@@ -1,7 +1,4 @@
-ion-content{
 
-    --ion-background-color:#ddb636f3;
-}
 .card
 {
    // margin-left:0px ;
@@ -10,4 +7,15 @@ ion-content{
 .ion-text-center
 {
     text-align: right;
+}
+ion-label
+{
+color: black;
+font-weight: 200px;
+}
+ion-item
+{
+    opacity: 0.5;
+   transition: ease-in all; 
+   background-color: goldenrod;
 }

@@ -76,7 +76,15 @@ const routes: Routes = [
 
     path: 'resproof',
     loadChildren: () => import('./resproof/resproof.module').then( m => m.ResproofPageModule)
+  },  {
+    path: 'landloard-app',
+    loadChildren: () => import('./landloard-app/landloard-app.module').then( m => m.LandloardAppPageModule)
+  },
+  {
+    path: 'landlord-dash',
+    loadChildren: () => import('./landlord-dash/landlord-dash.module').then( m => m.LandlordDashPageModule)
   }
+
 
  
 

@@ -3,131 +3,98 @@
     <ion-buttons slot="start">
       <ion-menu-button style="background-color: red;"></ion-menu-button>
     </ion-buttons>
-    <ion-title color="dark" style="color: white;" align="center">{{ folder }} </ion-title>
+    <ion-title color="dark" style="color: white; font-size: xx-large;" align="center"> Residence Report</ion-title>
     <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/student-dash">previous</ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+  <ion-card style="background-image: url('assets/pics/student.jpg'); padding-top: -200px;">
   <div class="card">
+    <br>
+<br>
+<br>
+<br>
   <ion-card text-center padding color="warning">
-    <p>Student Number:{{result.id}}</p>
-    <p>Surname Name:{{result.id}}</p>
+    
+    <form  align="center" >
+      <ion-item style="background-color: transparent;">
+       <ion-label >
+         Fullname:{{result.id}}
+       </ion-label>
+      </ion-item>
+     <br>
+      
+     
+     
+     <ion-item><ion-label >
+       Identity Number:{{result.id}}
+     </ion-label></ion-item>
+     
+     <br>
+     <ion-item><ion-label >
+       :{{result.id}}
+     </ion-label></ion-item>
+      <br>
+     
+     
+     <ion-item><ion-label >
+       Residence Name:{{result.id}}
+     </ion-label></ion-item>
+     <br>
+     <ion-item><ion-label >
+       Room Number:{{result.id}}
+     </ion-label></ion-item>
+     
+      
+     
+     <br>
+     <ion-item><ion-label >
+       Accupation Date:{{result.id}}
+     </ion-label>
+     </ion-item>
+     
+     
+     <br>
+     <ion-item><ion-label >
+       Residential Address:{{result.id}}
+     </ion-label></ion-item>
+     
+     
+     
+     </form>
   </ion-card>
 </div>
 <br><br>
 
-<form>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-           <ion-item lines="none">
-              <ion-label >Full Name</ion-label><br/>
-          </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item lines="none">
-           <ion-label >{{result.id}} {{result.id}}</ion-label><br/>
-       </ion-item>
-   </ion-col>
-  </ion-row>
 
-  <ion-row>
-        <ion-col>
-          <ion-item lines="none">
-           <ion-label >Identity Number:</ion-label><br/>
-         </ion-item>
-      </ion-col>
-
-      <ion-col>
-       <ion-item lines="none">
-         <ion-label > {{result.id}}</ion-label><br/>
-      </ion-item>
-     </ion-col>
-</ion-row>
-
-<ion-row>
-  
-
-  
-    <ion-item lines="none">
-      <p>Is a registered student of Tshwane University
-         of Technology for block R1 and resides at:<p><br/>
-    </ion-item>
-  
-</ion-row>
-
-      <ion-row>
-        <ion-col>
-          <ion-item lines="none">
-            <ion-label>Name of Residence:</ion-label><br/>
-          </ion-item>
-        </ion-col>
-
-        <ion-col>
-          <ion-item lines="none">
-            <ion-label>{{result.id}}</ion-label><br/>
-          </ion-item>
-        </ion-col>
-    </ion-row>
-
-
-    <ion-row>
-      <ion-col>
-       <ion-item lines="none">
-        <ion-label>ROOM No: </ion-label><br/>
-        </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item lines="none">
-         <ion-label>{{result.userId}}</ion-label><br/>
-         </ion-item>
-       </ion-col>
-    </ion-row>
-
-       <ion-row>
-         <ion-col>
-           <ion-item lines="none">
-             <ion-label >Occupation Date:</ion-label><br/>
-           </ion-item>
-        </ion-col>
-        <ion-col>
-          <ion-item lines="none">
-            <ion-label>{{result.id}} </ion-label><br/>
-          </ion-item>
-       </ion-col>
-      </ion-row>
-
-      
-      <ion-row>
-        <ion-col>
-          <ion-item lines="none">
-            <ion-label >Full Address:</ion-label><br/>
-          </ion-item>
-       </ion-col>
-       <ion-col>
-         <ion-item lines="none">
-           <ion-label>{{result.id}} </ion-label><br/>
-         </ion-item>
-      </ion-col>
-     </ion-row>
-
-     
-     <ion-row>
-      <ion-col>
-        <ion-item lines="none">
-          <ion-label >Download Proof Of Resident</ion-label><br/>
-        </ion-item>
-     </ion-col>
-     <ion-col>
-       <ion-item lines="none">
-         <ion-label>{{result.id}} </ion-label><br/>
-       </ion-item>
-    </ion-col>
-   </ion-row>
-</ion-grid>
-         
-         
-</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<ion-footer  class="ion-footer">
+  <ion-toolbar color="dark" >
+    <ion-title align="center" >2020 Off campus accomodation</ion-title>
+  </ion-toolbar>
+</ion-footer>
+   
+</ion-card>
 </ion-content>
 
