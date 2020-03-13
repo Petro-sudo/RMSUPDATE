@@ -5,9 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import {HttpClient} from '@angular/common/http';
+import { AuthGuard } from './auth.guard';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ShareService } from '../share/share';
+import{ HttpModule }from '@angular/http';
+ 
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,12 +19,15 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     HttpClientModule,
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [
+  providers: [AuthGuard,
     StatusBar,
     SplashScreen,
+    HttpModule,
+    ShareService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
