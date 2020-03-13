@@ -7,18 +7,14 @@
       <ion-menu-button style="background-color: red;"></ion-menu-button>
     </ion-buttons>
   
-    <ion-title color="dark" style="color: white; font-size: xx-large; "  align="center" >Welcome  student </ion-title>
+    <ion-title color="dark" style="color: white; font-size: xx-large; " align="center" >WELCOME LANDLORD</ion-title>
   </ion-toolbar>
 </ion-header>
-
-
-
  
-
+ 
  
  <ion-content >
-
-  <ion-card style="background-image: url('assets/pics/student.jpg'); padding-top: -200px;"  >
+  <ion-card  style="background-image: url('landlord.jpg');">
 
    <section text-center>
     <br>
@@ -34,7 +30,7 @@
     
 
    </section>
-   <ion-grid>
+   <ion-grid >
      
 <!--
       <ion-row>
@@ -64,24 +60,20 @@
 -->
 <ion-row>
        <ion-col col=6>
-        <a routerLink="/resproof"><ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
-           <ion-icon name="home"></ion-icon>
-           <h2>Residence Report</h2>
+        <ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
+          <h2>Add Residence</h2>
+          <ion-icon name="add-circle-outline"></ion-icon>
          </ion-card>
-        </a>
        </ion-col>
      
  
 
    
        <ion-col col=6>
-        <a routerLink="/studapply">
           <ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
-           <ion-icon name="book"></ion-icon>
-           <h2>Apply</h2>
+            <h2>View Personal Administrated Residence</h2>
+            <ion-icon name="home-outline"></ion-icon>
          </ion-card>
-        </a>
-
        </ion-col>
      </ion-row>
 
@@ -89,10 +81,10 @@
 
  <ion-row>
      <ion-col col=6> 
-      <a routerLink="/stud-profile"><ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
-        <ion-icon name="person"></ion-icon>
-        <h2>Profile</h2>
-      </ion-card></a>
+      <ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
+        <h2>View Properties</h2>
+        <ion-icon name="business-outline"></ion-icon>
+      </ion-card>
     </ion-col>
  
 
@@ -100,12 +92,11 @@
 
 
 
-
        <ion-col col=6>
-        <a routerLink="/resproof"><ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
-           <ion-icon name="eye"></ion-icon>
-           <h2>Residence Status</h2>
-         </ion-card></a>
+        <ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
+          <h2>View Profile</h2>
+          <ion-icon name="person-circle-outline"></ion-icon>
+         </ion-card>
        </ion-col>
      </ion-row>
 
@@ -134,10 +125,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-
 
  <ion-footer  class="ion-footer">
    <ion-toolbar color="dark" >
@@ -149,6 +136,6 @@
   
 
 
- 
-   </ion-card>
+</ion-card>
+   
  </ion-content>
