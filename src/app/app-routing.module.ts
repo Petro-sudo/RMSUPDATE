@@ -83,6 +83,10 @@ const routes: Routes = [
   {
     path: 'landlord-dash',
     loadChildren: () => import('./landlord-dash/landlord-dash.module').then( m => m.LandlordDashPageModule)
+  },
+  {
+    path: 'lordprofile',
+    loadChildren: () => import('./lordprofile/lordprofile.module').then( m => m.LordprofilePageModule)
   }
 
 

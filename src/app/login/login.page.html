@@ -22,14 +22,14 @@
 <div class="ion-radio">
 
   <ion-radio-group >
-      <ion-row radio-group >
+      <ion-row radio-group name = "userType" >
         
       <ion-col>
       <ion-item lines="none">
         <ion-label>
           Admin
         </ion-label>
-       <ion-radio (click)="getUserType(3)" value = "3"></ion-radio>
+       <ion-radio (click)="getUserType(3)" value = "3" ></ion-radio>
       </ion-item>
       </ion-col>
 
@@ -38,7 +38,7 @@
         <ion-label >
           Student
         </ion-label>
-        <ion-radio  (click)="getUserType(1)" value = "1" checked></ion-radio>
+        <ion-radio  (click)="getUserType(1)" value = "1" ></ion-radio>
       </ion-item>
     </ion-col>
 
@@ -47,7 +47,7 @@
         <ion-label >
           Landlord
         </ion-label>
-       <ion-radio (click)="getUserType(2)" value = "2"></ion-radio>
+       <ion-radio (click)="getUserType(2)" value = "2" ></ion-radio>
       </ion-item>
     </ion-col>
 

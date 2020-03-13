@@ -9,7 +9,7 @@ export class ServiceService {
   display: any;
 
   constructor(private http: HttpClient) { }
-  login_url = 'http://168.172.185.101:7000/loglord';
+  login_url = 'http://168.172.185.101:7000/login';
   reg_url = 'http://168.172.185.106:5000/lord';
   regstu_url = 'http://168.172.185.106:5000/reg';
   apart_url = 'http://168.172.185.106:7000/getproperty';
@@ -26,6 +26,11 @@ public status()
 }
 
 public proof()
+{
+  return this.http.get<any>(this.proof_url)
+}
+
+public lordprofile()
 {
   return this.http.get<any>(this.proof_url)
 }
