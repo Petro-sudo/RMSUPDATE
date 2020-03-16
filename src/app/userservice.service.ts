@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UserserviceService {
-  login_url = 'http://168.172.185.101:7000/loglord';
+  login_url = 'http://168.172.185.106:7000/login';
+  
 
   $isLoggedIn = new EventEmitter();
   user: LoginPage;
