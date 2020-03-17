@@ -44,8 +44,8 @@ export class LoginPage implements OnInit {
 addprofile: any=[];
 myform: FormGroup;
 //email: FormControl;
-password: FormControl;
-
+//password: FormControl;
+password: any;
  ngOnInit() {
   
   //this.getstu();
@@ -68,8 +68,10 @@ this.userserviceService.userLogin(this.loginUserData).subscribe(
         this.router.navigate(['/student-dash']);
         localStorage.setItem('token', res.token)
       }else{
-        this.router.navigate(['/home']);
+        this.router.navigate(['/login']);
       }
+
+      
       if(this.userID == 2){
         console.log(res)
         localStorage.setItem('token',res.token)
@@ -100,6 +102,9 @@ this.userserviceService.userLogin(this.loginUserData).subscribe(
 
  }
 
+
+
+
 //  getstu(){
 //   this._serviceService.postLogin(this.addprofile).subscribe((data: any)=>
 //   {this.addprofile=data;
@@ -114,9 +119,10 @@ this.userserviceService.userLogin(this.loginUserData).subscribe(
 //   console.log(this.postData);
 //    }
    
+    getUserID(e) {
 
-  
-   
+      console.log(e);
+}
 
 
 };

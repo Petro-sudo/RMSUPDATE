@@ -7,8 +7,13 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UserserviceService {
+
+  login_url1 = 'http://168.172.185.106:5000/login';
+    userType = 'http://168.172.185.106:5000/userType';
+
   login_url = 'http://168.172.185.106:7000/login';
   
+
 
   $isLoggedIn = new EventEmitter();
   user: LoginPage;
@@ -16,7 +21,7 @@ export class UserserviceService {
 
   userLogin(user){
     this.$isLoggedIn.emit(user);
-    return this.http.post<any>(this.login_url + '_login', user);
+    return this.http.post<any>(this.login_url1 , user);
   }
   loggedIn(){
     return !!localStorage.getItem('token')
@@ -35,9 +40,8 @@ getToken(){
   return localStorage.getItem('token')
 }
 
-
-
-
-
+public getUserType() {
+  return this.http.get<any>(this.userType);
+}
 
 }
