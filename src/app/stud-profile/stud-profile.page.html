@@ -6,12 +6,16 @@
     </ion-buttons>
     <ion-title  align="center" > 
       Student Profile
+
     </ion-title>
     <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/student-dash">previous</ion-icon>
+  </ion-toolbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
 
   <br><br>
   <br><br>
@@ -64,14 +68,24 @@
         <br><br><br>
 
         <ion-item lines="none">
-          <ion-label class="ion-text-wrap" position="fixed" id="doc"><strong> Upload Proof Of Registration </strong></ion-label><br/>
-          <ion-icon name="cloud-upload" id="upload"></ion-icon>   
+         <!-- <ion-label class="ion-text-wrap" position="fixed" id="doc"><strong> Upload Proof Of Registration </strong></ion-label><br/>-->
+          <ion-label id="upload">
+            <strong>Upload Proof Of Registration</strong><br>
+            <input mbsc-input type="file" placeholder="Select file..." />
+           
+        </ion-label>   
         </ion-item>
 
         <ion-item lines="none">
-          <ion-label class="ion-text-wrap" position="fixed" id="doc"><strong>Upload Copy Of ID</strong></ion-label><br/>
-          <ion-icon name="cloud-upload" id="upload"></ion-icon>    
+          <!--<ion-label class="ion-text-wrap" position="fixed" id="doc"><strong>Upload Copy Of ID</strong></ion-label><br/>-->
+          <!--<ion-icon name="cloud-upload" id="upload"></ion-icon>  -->
+          <ion-label id="upload">
+            <strong>Upload Copy Of ID</strong><br>
+            <input mbsc-input type="file" placeholder="Select file..." />
+        </ion-label>  
         </ion-item>
+
+        <ion-button id="fileUpload" color="primary">Submit</ion-button>
 
 
   </form>
