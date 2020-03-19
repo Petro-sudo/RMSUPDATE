@@ -7,3 +7,101 @@
     <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/landlord-dash">previous</ion-icon>
   </ion-toolbar>
 </ion-header>
+
+
+<ion-content>
+  <div style="background-image: url('assets/pics/landlord.jpg');">
+  <ion-card text-center padding >
+  <h3 style="font-size: 50px; color: whitesmoke; text-align: center;" >Edit Details</h3>
+  <br>
+ 
+
+    <form action="" method="post" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <ion-label for="email">Email</ion-label>
+        <ion-input value={{edit.id}} type="email" class="form-control" name="lord_email"></ion-input>
+      </div>
+
+      <div class="form-group">
+        <ion-label for="email">Title</ion-label>
+        <ion-input value={{edit.id}} type="email" class="form-control" name="lord_email"></ion-input>
+      </div>
+
+      <div class="form-group">
+        <ion-label for="firstname">Fullnames</ion-label>
+        <ion-input value={{edit.id}} type="text" class="form-control" name="lord_firstname"></ion-input>
+      </div>
+
+      <div class="form-group">
+        <ion-label for="lastname">Surname</ion-label>
+        <ion-input value={{edit.id}} type="text" class="form-control" name="lord_lastname"></ion-input>
+      </div>
+
+      <div class="form-group">
+        <ion-label for="contact">CellNumbers</ion-label>
+        <ion-input value={{edit.id}} type="text" class="form-control" name="lord_cellno"></ion-input>
+      </div>
+      <div class="form-group">
+        <ion-label for="contact">Number of Properties</ion-label>
+        <ion-input value={{edit.id}} type="text" class="form-control" name="lord_cellno"></ion-input>
+      </div>
+
+      <div class="form-group">
+        <ion-label for="password">Password</ion-label>
+        <ion-input value={{edit.id}} id="myInput" type="password" class="form-control" name="lord_password"></ion-input>
+      </div>
+
+      <!-- show password in ionic do the function -->
+      <div class="form-group">
+        <ion-input type="checkbox" onclick= " ">Show Password</ion-input>
+            </div>
+
+      <div class="form-group">
+        <img width="100" src="../../assets/pics/user1.jpg">
+      </div>
+
+      <div class="form-group">
+        <ion-label for="bus-image">User Image</ion-label>
+        <ion-input type="file" name="images" ></ion-input>
+      </div>
+
+      <div class="form-group">
+        <ion-button class = "ion-text-center" color="primary" 
+          (click)="update()">Update</ion-button>
+        </div>
+    </form>
+
+
+
+</ion-card>
+</div>
+<ion-footer  class="ion-footer">
+  <ion-toolbar color="dark" >
+    <ion-title align="center" >2020 Off campus accomodation</ion-title>
+  </ion-toolbar>
+</ion-footer>
+</ion-content>
+
+
+<!-- <script>
+
+
+
+
+function openCity(evt, tabName) {
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+document.getElementById(tabName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+</script> -->
+
+
