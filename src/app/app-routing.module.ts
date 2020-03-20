@@ -84,7 +84,8 @@ const routes: Routes = [
   {
     path: 'landlord-dash',
     loadChildren: () => import('./landlord-dash/landlord-dash.module').then( m => m.LandlordDashPageModule)
-  },  {
+  },
+  {
     path: 'editlordprof',
     loadChildren: () => import('./editlordprof/editlordprof.module').then( m => m.EditlordprofPageModule)
   },
@@ -95,6 +96,10 @@ const routes: Routes = [
   {
     path: 'manageprop',
     loadChildren: () => import('./manageprop/manageprop.module').then( m => m.ManagepropPageModule)
+  },
+  {
+    path: 'viewproperties',
+    loadChildren: () => import('./manageprop/viewproperties/viewproperties.module').then( m => m.ViewpropertiesPageModule)
   }
 
 

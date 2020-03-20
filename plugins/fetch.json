@@ -1,0 +1,10 @@
+{
+  "com.telerik.plugins.nativepagetransitions": {
+    "source": {
+      "type": "registry",
+      "id": "com.telerik.plugins.nativepagetransitions@^0.6.5"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

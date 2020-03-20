@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController, NavParams} from '@ionic/angular';
 
 @Component({
   selector: 'app-manageprop',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagepropPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
+  
   ngOnInit() {
   }
+  addprop(){
+
+  
+  }
+  viewprop(){
+    
+  }
+
+  updateprop(){
+    
+  }
+
+  editprop(){
+    
+  }
+
+  deleteprop(){
+    
+  }
+
 
 }
