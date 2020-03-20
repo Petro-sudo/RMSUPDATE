@@ -1,10 +1,9 @@
 ion-card{
     margin-top: 50px;
     margin-left:200px;
-    height:250px;
-    width: 40%;
-    
-}
+    height:100px;
+    width: 30%;
+    background-color: #FE9F7A;}
 //icons
 #back{
     float: right;
@@ -25,12 +24,7 @@ ion-label{
     margin-top: 10px;
     
 }
-ion-input{
-    border: 1px solid grey;
-    border-radius: 5px;
-    width: 20px;
-    
-}
+
 #names{
     border: 1px solid grey;
     border-radius: 5px;
@@ -50,6 +44,8 @@ ion-item{
     margin-top: 15px;
     margin-left:5px;
     width: auto;
+    opacity: 0.8;
+   
 }
 //links
 #back{
@@ -69,4 +65,26 @@ ion-item{
 strong{
     font-weight:medium;
     
+}
+
+ion-card:hover
+{
+
+    background-color:#FE9F7A;
+    width:180px;
+    height:180px;
+    opacity: 1;
+}
+
+
+
+ion-card{
+    color:black;
+    opacity: 0.8;
+    transition: width 0.5s, height 0.5s;
+}
+
+a{
+    text-decoration: none;
+    color:black;
 }
