@@ -5,35 +5,38 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title  align="center" > 
+     <h1>
       Student Profile
+     </h1> 
 
     </ion-title>
-    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/student-dash">previous</ion-icon>
-  </ion-toolbar>
+   
+  
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+<!-- <ion-grid>
+  <ion-row>
+    <ion-col> -->
+<ion-content style="background-image: url('assets/pics/student.jpg'); padding-top: -200px;" >
+ 
 
 
-
-  <br><br>
-  <br><br>
-  <br><br>
+ 
   
-  <!--<ion-button (click)="getData()">Show</ion-button>-->
+ 
   
 
-  <!--<ion-grid>
+    <ion-grid style="background-image: url('assets/pics/student.jpg'); padding-top: -200px;">
+     
+      
     <ion-row>
        <ion-col col=6> 
-        <ion-card color="light">
-          <ion-icon id="add" name="add-circle"></ion-icon>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>-->
-  <form>
+<form style=" border-right: 10px solid black;">
+
+  <ion-icon style="margin-left: 30px; zoom: 7;"  name="person"></ion-icon>
+<h1 style="margin-left: 50px; font-weight: bold;">PERSONAL INFORMATION</h1>
     <ion-item lines="none">
       <ion-label position="fixed">Name </ion-label><br/>
 
@@ -67,34 +70,46 @@
         </ion-item>
         <br><br><br>
 
-        <ion-item lines="none">
-         <!-- <ion-label class="ion-text-wrap" position="fixed" id="doc"><strong> Upload Proof Of Registration </strong></ion-label><br/>-->
-          <ion-label id="upload">
-            <strong>Upload Proof Of Registration</strong><br>
-            <input mbsc-input type="file" placeholder="Select file..." />
-           
-        </ion-label>   
-        </ion-item>
+       <br>
+       <br>
+       <br>
 
-        <ion-item lines="none">
-          <!--<ion-label class="ion-text-wrap" position="fixed" id="doc"><strong>Upload Copy Of ID</strong></ion-label><br/>-->
-          <!--<ion-icon name="cloud-upload" id="upload"></ion-icon>  -->
-          <ion-label id="upload">
-            <strong>Upload Copy Of ID</strong><br>
-            <input mbsc-input type="file" placeholder="Select file..." />
-        </ion-label>  
-        </ion-item>
-
-        <ion-button id="fileUpload" color="primary">Submit</ion-button>
+   
+      </form>
+</ion-col>
 
 
-  </form>
-  <br><br>
 
-  <a routerLink="/edit-prof"><ion-button id="edit">Edit</ion-button></a>
-  <!--get data from db with getData function-->
-  
+<ion-col  col=6> 
+ <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <a routerLink="/resproof"><ion-card align="center"
+     style="border-radius: 20px; height: 150px;">
+    <ion-icon style="zoom: 3;" name="home"></ion-icon>
+    <h2>Residence Report</h2>
+  </ion-card>
+ </a>
 
-  
 
+ <a routerLink="/studapply">
+  <ion-card align="center" style="border-radius: 20px;  height: 150px;">
+   <ion-icon style="zoom: 3;" name="book"></ion-icon>
+   <h2>Apply</h2>
+ </ion-card>
+</a>
+
+<a routerLink="/resproof">
+  <ion-card align="center" style="border-radius: 20px;  height: 150px; ">
+  <ion-icon style="zoom: 3;" name="eye"></ion-icon>
+  <h2>Residence Status</h2>
+</ion-card></a>
+
+
+</ion-col>
+</ion-row>
+</ion-grid> 
 </ion-content>
