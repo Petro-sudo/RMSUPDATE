@@ -65,7 +65,7 @@ this.userserviceService.userLogin(this.loginUserData).subscribe(
       this._loaderservice.display(false);
 
       if(this.userID == 1){
-        this.router.navigate(['/student-dash']);
+        this.router.navigate(['/stud-profile']);
         localStorage.setItem('token', res.token)
       }else{
         this.router.navigate(['/login']);

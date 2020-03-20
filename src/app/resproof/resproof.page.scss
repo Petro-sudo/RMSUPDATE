@@ -8,14 +8,17 @@
 {
     text-align: right;
 }
-ion-label
+.ion-label
 {
 color: black;
-font-weight: 200px;
+font-style:oblique;
+font-size: 25px;
 }
-ion-item
+.ion-item
 {
     opacity: 0.5;
    transition: ease-in all; 
-   background-color: goldenrod;
+   background-color:grey;
+   color:black;
+   
 }

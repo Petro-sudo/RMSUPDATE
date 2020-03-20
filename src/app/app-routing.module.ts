@@ -34,14 +34,6 @@ const routes: Routes = [
     loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
   },
   {
-    path: 'how-to-apply',
-    loadChildren: () => import('./how-to-apply/how-to-apply.module').then( m => m.HowToApplyPageModule)
-  },
-  {
-    path: 'student-dash',
-    loadChildren: () => import('./student-dash/student-dash.module').then( m => m.StudentDashPageModule)
-  },
-  {
     path: 'stud-profile',
     loadChildren: () => import('./stud-profile/stud-profile.module').then( m => m.StudProfilePageModule)
   },
@@ -100,8 +92,12 @@ const routes: Routes = [
   {
     path: 'viewproperties',
     loadChildren: () => import('./manageprop/viewproperties/viewproperties.module').then( m => m.ViewpropertiesPageModule)
+  },
+  
+  {
+    path: 'studstatus',
+    loadChildren: () => import('./studstatus/studstatus.module').then( m => m.StudstatusPageModule)
   }
-
 
  
 
