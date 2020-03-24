@@ -10,6 +10,25 @@
 
 
 <ion-content>
+  <div style="background-image: url('assets/pics/landlord.jpg');">
+    <br>
+    <br>
+  
+
+    
+      <ul id="nav-mobile" class="hide-on-med-and-down">
+      <li><a routerLink="/landloard-app"> <ion-button class = "ion-text-center" color="primary" 
+        (click)="addprop()">ADD PROPERTIES</ion-button></a></li>
+      
+      <li><a routerLink="/viewproperties"> <ion-button class = "ion-text-center" color="secondary" 
+        (click)="viewprop()">VIEW PROPERTIES</ion-button></a></li>
+     
+      <li><a routerLink="/updateproperties"> <ion-button class = "ion-text-center" color="warning" 
+        (click)="updateprop()">UPDATE PROPERTIES</ion-button></a></li>
+        
+       
+    </ul>
+   
 
   <form style="background-color: grey;">
 <ion-item>
@@ -197,4 +216,5 @@
     <ion-title align="center" >2020 Off campus accomodation</ion-title>
   </ion-toolbar>
 </ion-footer>
+</div>
 </ion-content>
