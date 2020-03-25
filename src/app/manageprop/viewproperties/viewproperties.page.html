@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start" >
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title align="center">VIEW PROPERTIES</ion-title>
+    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/manageprop">previous</ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="background-image: url('assets/pics/landlord.jpg');">
+    <br>
+
+   
+    <br>
+  
+
+    
+      <ul id="nav-mobile" class="hide-on-med-and-down">
+      <li><a routerLink="/landloard-app"> <ion-button class = "ion-text-center" color="primary" 
+        (click)="addprop()">ADD PROPERTIES</ion-button></a></li>
+      
+      <li><a routerLink="/viewproperties"> <ion-button class = "ion-text-center" color="secondary" 
+        (click)="viewprop()">VIEW PROPERTIES</ion-button></a></li>
+     
+      <li><a routerLink="/updateproperties"> <ion-button class = "ion-text-center" color="warning"
+        (click)="updateprop()">UPDATE PROPERTIES</ion-button></a></li>
+        
+    </ul>
+<br>
+<h1 style="color: aliceblue; font-size: x-large;text-align: center;"></h1>
+    <br>
+    <ion-card text-center padding >
+      <ion-label style="font-size: x-large;"><li class="list-group-item">
+        {{edit.title}}
+       <ion-button class="btn btn-xs  pull-right" color = "danger"
+       (click)="actions.deleteprop( prop.id)">
+         delete
+       </ion-button>
+       <ion-button class="btn btn-xs  pull-right" color = "warning"
+       (click)="actions.editprop( prop.id)">
+         Edit
+       </ion-button>
+      </li></ion-label>
+
+    
+        
+    </ion-card>
+
+<ion-card>
+ 
+</ion-card>
+
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+<ion-footer  class="ion-footer">
+  <ion-toolbar color="dark" >
+    <ion-title align="center" >2020 Off campus accomodation</ion-title>
+  </ion-toolbar>
+</ion-footer>
+</div>
+</ion-content>

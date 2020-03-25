@@ -1,25 +1,46 @@
-<ion-header>
+ <ion-header>
   <ion-toolbar color="dark">
     <ion-buttons slot="start" >
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title align="center">Landlord Application</ion-title>
-    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/landlord-dash">previous</ion-icon>
+    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/manageprop">previous</ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content style="background-image:url(assets/pics/landlord1.jpg);">
 
+<ion-content>
+  <div style="background-image: url('assets/pics/landlord.jpg');">
+    <br>
+    <br>
+  
+
+    
+      <ul id="nav-mobile" class="hide-on-med-and-down">
+      <li><a routerLink="/landloard-app"> <ion-button class = "ion-text-center" color="primary" 
+        (click)="addprop()">ADD PROPERTIES</ion-button></a></li>
+      
+      <li><a routerLink="/viewproperties"> <ion-button class = "ion-text-center" color="secondary" 
+        (click)="viewprop()">VIEW PROPERTIES</ion-button></a></li>
+     
+      <li><a routerLink="/updateproperties"> <ion-button class = "ion-text-center" color="warning" 
+        (click)="updateprop()">UPDATE PROPERTIES</ion-button></a></li>
+        
+       
+    </ul>
+   
+
+  <form style="background-color: grey;">
 <ion-item>
-    <ion-label position="floating">Name of property</ion-label>
-    <ion-input></ion-input>
+    <ion-label position="floating">Name of your property</ion-label>
+    <ion-input type = "text"  name ="name"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-row>
     <ion-col>
       <ion-title style="margin-left: -25px;" >Address</ion-title>
-      <ion-input placeholder="Address 1"></ion-input>
+      <ion-input type = "text"  name ="add1" placeholder="Address 1"></ion-input>
       <ion-input placeholder="Address 2"></ion-input>
       <ion-input placeholder="City"></ion-input>
       <ion-input placeholder="Zip Code"></ion-input>
@@ -57,7 +78,7 @@
 </ion-item>
 
 <br>
-  <ion-title align="center">NB please insert all the neccesary documents in order for your application to be processed</ion-title>
+  <ion-title style="color: red; text-align: center;">NB please insert all the neccesary documents in order for your application to be processed</ion-title>
 <br>
 
 <ion-item>
@@ -185,9 +206,15 @@
 
 
     </ion-col>
-
-
   </ion-row>
-</ion-item>
+</ion-item> 
+</form>
 
+<ion-button class = "ion-text-center" color="primary" (click) = "add()" >SUMBMIT</ion-button>
+<ion-footer  class="ion-footer">
+  <ion-toolbar color="dark" >
+    <ion-title align="center" >2020 Off campus accomodation</ion-title>
+  </ion-toolbar>
+</ion-footer>
+</div>
 </ion-content>

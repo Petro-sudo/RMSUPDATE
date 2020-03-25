@@ -1,13 +1,24 @@
 ion-content{
 
-    --ion-background-color:#ddb636f3;
+    --ion-background-color:transparent;
 }
-.card
+.cards
 {
    // margin-left:0px ;
-    margin-right: 100px;
+    margin-right: 200px;
+    margin-left: 0px;;
+    color: black;
+    background-color:lightgray;
+
+    
 }
 .ion-text-center
 {
     text-align: right;
+}
+.ion-label
+{
+    color: black;
+    background-color: grey;
+    margin-right: 100;
 }
