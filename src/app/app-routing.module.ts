@@ -34,14 +34,6 @@ const routes: Routes = [
     loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
   },
   {
-    path: 'how-to-apply',
-    loadChildren: () => import('./how-to-apply/how-to-apply.module').then( m => m.HowToApplyPageModule)
-  },
-  {
-    path: 'student-dash',
-    loadChildren: () => import('./student-dash/student-dash.module').then( m => m.StudentDashPageModule)
-  },
-  {
     path: 'stud-profile',
     loadChildren: () => import('./stud-profile/stud-profile.module').then( m => m.StudProfilePageModule)
   },
@@ -76,7 +68,8 @@ const routes: Routes = [
 
     path: 'resproof',
     loadChildren: () => import('./resproof/resproof.module').then( m => m.ResproofPageModule)
-  },  {
+  },
+  {
     path: 'landloard-app',
     loadChildren: () => import('./landloard-app/landloard-app.module').then( m => m.LandloardAppPageModule)
   },
@@ -85,10 +78,26 @@ const routes: Routes = [
     loadChildren: () => import('./landlord-dash/landlord-dash.module').then( m => m.LandlordDashPageModule)
   },
   {
-    path: 'lordprofile',
-    loadChildren: () => import('./lordprofile/lordprofile.module').then( m => m.LordprofilePageModule)
+    path: 'editlordprof',
+    loadChildren: () => import('./editlordprof/editlordprof.module').then( m => m.EditlordprofPageModule)
+  },
+  {
+    path: 'managestud',
+    loadChildren: () => import('./managestud/managestud.module').then( m => m.ManagestudPageModule)
+  },
+  {
+    path: 'manageprop',
+    loadChildren: () => import('./manageprop/manageprop.module').then( m => m.ManagepropPageModule)
+  },
+  {
+    path: 'viewproperties',
+    loadChildren: () => import('./manageprop/viewproperties/viewproperties.module').then( m => m.ViewpropertiesPageModule)
+  },
+  
+  {
+    path: 'studstatus',
+    loadChildren: () => import('./studstatus/studstatus.module').then( m => m.StudstatusPageModule)
   }
-
 
  
 

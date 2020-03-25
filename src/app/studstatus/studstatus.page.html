@@ -4,110 +4,106 @@
       <ion-menu-button style="background-color: red;"></ion-menu-button>
     </ion-buttons>
     <ion-title color="dark" style="color: white;" align="center">{{ folder }} </ion-title>
+    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/stud-profile">previous</ion-icon>
+  
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+  <ion-card style="background-image: url('assets/pics/student.jpg'); padding-top: -200px;">
   <div class="card">
-  <ion-card text-center padding color="warning">
+  <br>
+  
+    
+  <div class="cards">
+  <ion-card text-center padding>
     <p>Student Number:{{result.id}}</p>
     <p>Surname Name:{{result.id}}</p>
   </ion-card>
 </div>
-<br><br>
-<div >
-  <h1 align = "center">RESIDENCE ADMISSION STATUS</h1>
- </div>
 <br>
 
-<form>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-           <ion-item lines="none">
-              <ion-label >STATUS:</ion-label><br/>
-          </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item lines="none">
-           <ion-label >{{result.id}} </ion-label><br/>
-       </ion-item>
-   </ion-col>
-  </ion-row>
-
-  <ion-row>
-        <ion-col>
-          <ion-item lines="none">
-           <ion-label >YEAR:</ion-label><br/>
-         </ion-item>
-      </ion-col>
-
-      <ion-col>
-       <ion-item lines="none">
-         <ion-label > {{result.id}}</ion-label><br/>
+  <h1 style="color: whitesmoke;text-align: center;">RESIDENCE ADMISSION STATUS</h1>
+<br>
+  <ion-card text-center padding color="grey" >
+    
+    <form  style="background-color: lightgray; text-align:center;" >
+      <ion-item >
+       <ion-label >
+        STATUS:{{result.id}}
+       </ion-label>
       </ion-item>
-     </ion-col>
-</ion-row>
+     <br>
+      
+     
+     
+     <ion-item><ion-label >
+      YEAR:{{result.id}}
+     </ion-label></ion-item>
+     
+     <br>
+     <ion-item><ion-label >
+      RESIDENT PERIOD:{{result.id}}
+     </ion-label></ion-item>
+      <br>
+     
+     
+     <ion-item><ion-label >
+      RESIDENT ADDRESS:{{result.id}}
+     </ion-label></ion-item>
+     <br>
+     <ion-item><ion-label >
+       ROOM NUMBER:{{result.id}}
+     </ion-label></ion-item>
+     
+      
+     
+     <br>
+     <ion-item><ion-label >
+       ROOM TYPE:{{result.id}}
+     </ion-label>
+     </ion-item>
+     
+     
+    
+     
+     
+     
+     </form>
+  </ion-card>
+</div>
+<br><br>
 
-<ion-row>
-  <ion-col>
-    <ion-item lines="none">
-      <ion-label>RESIDENT PERIOD</ion-label><br/>
-    </ion-item>
-  </ion-col>
 
-  <ion-col>
-    <ion-item lines="none">
-      <ion-label>{{result.id}}</ion-label><br/>
-    </ion-item>
-  </ion-col>
-</ion-row>
-
-      <ion-row>
-        <ion-col>
-          <ion-item lines="none">
-            <ion-label>RESIDENT ADDRESS</ion-label><br/>
-          </ion-item>
-        </ion-col>
-
-        <ion-col>
-          <ion-item lines="none">
-            <ion-label>{{result.id}}</ion-label><br/>
-          </ion-item>
-        </ion-col>
-    </ion-row>
-
-
-    <ion-row>
-      <ion-col>
-       <ion-item lines="none">
-        <ion-label>ROOM No: </ion-label><br/>
-        </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item lines="none">
-         <ion-label>{{result.userId}}</ion-label><br/>
-         </ion-item>
-       </ion-col>
-    </ion-row>
-
-       <ion-row>
-         <ion-col>
-           <ion-item lines="none">
-             <ion-label >ROOM TYPE:  </ion-label><br/>
-           </ion-item>
-        </ion-col>
-        <ion-col>
-          <ion-item lines="none">
-            <ion-label>{{result.id}} </ion-label><br/>
-          </ion-item>
-       </ion-col>
-      </ion-row>
-
-</ion-grid>
-         
-          <a  routerLink="/student-dash">
-            <ion-button shape=" " color="danger"  position="floating" class = "ion-text-center">Cancel</ion-button>
-          </a>
-</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<ion-footer  class="ion-footer">
+  <ion-toolbar color="dark" >
+    <ion-title align="center" >2020 Off campus accomodation</ion-title>
+  </ion-toolbar>
+</ion-footer>
+   
+</ion-card>
 </ion-content>
+
+
+

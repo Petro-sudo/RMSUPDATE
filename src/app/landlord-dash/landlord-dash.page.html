@@ -6,64 +6,87 @@
     <ion-buttons slot="start">
       <ion-menu-button style="background-color: red;"></ion-menu-button>
     </ion-buttons>
+  <ion-title color="dark" style="color: white; font-size: xx-large; " align="center" >WELCOME LANDLORD</ion-title>
+  <ion-icon style="font-size: 10px;" slot="end" name="log-out-outline" 
+  routerLink="/folder/home">previous</ion-icon>
   
-    <ion-title color="dark" style="color: white; font-size: xx-large; " align="center" >WELCOME LANDLORD</ion-title>
-  </ion-toolbar>
+</ion-toolbar>
 </ion-header>
  
+
+<ion-icon name=""></ion-icon>
  
  
  <ion-content >
   
   <ion-card  style="background-image: url('assets/pics/landlord.jpg');"> 
 
-   <section text-center>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+   <section style = "text-align: center; color:white; font-size: medium;">
+   
+    
+    <div class = "center">
+    <img src="../../assets/pics/user.jpg" class="smallLogo"/>
+  </div>
+   
+  <h2>title Surname Name</h2>
     
 
    </section>
+    
    <ion-grid >
      
-<!--
-      <ion-row>
-        <ion-col col=6>
-          <ion-card text-center padding color="light">
-            <ion-icon name="book"></ion-icon>
-            <h2>Apply</h2>
-          </ion-card>
-        </ion-col>
-
-
-        <ion-col col=6>
-          <ion-card text-center padding color="light">
-            <ion-icon name="eye"></ion-icon>
-            <h2>Residence Status</h2>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col col=6 > 
-         <a routerLink="/stud-profile" ><ion-card  text-center padding color="light">
-           <ion-icon name="person"></ion-icon>
-           <h2>Profile</h2>
-         </ion-card></a>
-       </ion-col>
--->
+    <div class="card">
+  
+  <br>
+    <ion-card text-center padding color="#ed576b">
+      
+      <form  align="center" >
+        <ion-item style="background-color: transparent;">
+         <ion-label >
+           Fullnames:{{result.id}}
+         </ion-label>
+        </ion-item>
+  
+        <br>
+       <ion-item><ion-label >
+        Surname :{{result.id}}
+       </ion-label></ion-item>
+        <br>
+       
+       <ion-item><ion-label >
+         Identity Number:{{result.id}}
+       </ion-label></ion-item>
+       <br>
+       <ion-item><ion-label >
+         E-mail Address:{{result.id}}
+       </ion-label></ion-item>
+       
+        
+       
+       <br>
+       <ion-item><ion-label >
+         Cell Number:{{result.id}}
+       </ion-label>
+       </ion-item>
+       
+       
+       <br>
+       <ion-item><ion-label >
+         Number of properties:{{result.id}}
+       </ion-label></ion-item>
+       
+       
+       
+       </form>
+    </ion-card>
+  </div>
 <ion-row>
        <ion-col col=6>
         
         <a routerLink="/landloard-app">
-        <ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
+        <ion-card align="center" text-center padding color="light" 
+        style="border-radius: 20px; margin-left: 0px;">
           <h2>Add Residence</h2>
           <ion-icon name="add-circle-outline"></ion-icon>
          </ion-card>
@@ -74,21 +97,21 @@
 
    
        <ion-col col=6>
+        <a routerLink="/managestud">
           <ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
-            <h2>View Personal Administrated Residence</h2>
-            <ion-icon name="home-outline"></ion-icon>
+            <h2>Manage Students</h2>
+            <ion-icon name="people-outline"></ion-icon>
          </ion-card>
+        </a>
        </ion-col>
-     </ion-row>
-
      
-
- <ion-row>
      <ion-col col=6> 
+        <a routerLink="/manageprop">
       <ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
-        <h2>View Properties</h2>
+        <h2>Manage Properties</h2>
         <ion-icon name="business-outline"></ion-icon>
       </ion-card>
+    </a>
     </ion-col>
  
 
@@ -97,14 +120,14 @@
 
 
        <ion-col col=6>
-        <a routerLink="/lordprofile">
+        <a routerLink="/editlordprof">
         <ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
-          <h2>View Profile</h2>
-          <ion-icon name="person-circle-outline"></ion-icon>
+          <h2>Edit Profile</h2>
+          <ion-icon name="person-add-outline"></ion-icon>
          </ion-card>
          </a>
-       </ion-col>
-     </ion-row>
+       </ion-col> 
+     </ion-row> 
 
  
    </ion-grid>
@@ -121,16 +144,8 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 
  <ion-footer  class="ion-footer">
    <ion-toolbar color="dark" >
