@@ -4,11 +4,15 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title color="dark" style="color: white; font-size: xx-large; " align="center" >STUDENT PROFILE</ion-title>
-    <ion-icon style="font-size: 30px;" slot="end" name="log-out-outline" 
+
+    <ion-title  align="center" > 
+     <h1>
+      Student Profile
+     </h1> 
+<ion-icon style="font-size: 30px;" slot="end" name="log-out-outline" 
     routerLink="/folder/home">previous</ion-icon>
-   
-  
+    </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
@@ -33,7 +37,9 @@
 <form style=" border-right: 10px solid black;">
 
   <ion-icon style="margin-left: 30px; zoom: 7;"  name="person"></ion-icon>
+
 <h1 style="margin-left: 50px; font-weight: bold; color: whitesmoke;">PERSONAL INFORMATION</h1>
+
     <ion-item lines="none">
       <ion-label position="fixed">Name </ion-label><br/>
 
@@ -99,7 +105,9 @@
  </ion-card>
 </a>
 
+
 <a routerLink="/studstatus">
+
   <ion-card align="center" style="border-radius: 20px;  height: 150px; ">
   <ion-icon style="zoom: 3;" name="eye"></ion-icon>
   <h2>Residence Status</h2>
