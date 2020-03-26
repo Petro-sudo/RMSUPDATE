@@ -1,7 +1,7 @@
 
 ion-content {
     border: thick black ;
-    background-color: gray;
+    
     
 }
 ul
@@ -11,4 +11,8 @@ ul
  ul li 
  {
    display: inline-block;
+ }
+ form{
+   opacity: 0.9;
+   color: black;
  }

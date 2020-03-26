@@ -22,6 +22,7 @@ export class ServiceService {
   image_url = 'http://168.172.185.106:5000/getimage';
   status_url = 'https://jsonplaceholder.typicode.com/posts/2';
   proof_url = 'https://jsonplaceholder.typicode.com/posts/1';
+  lordapp_url = 'https://jsonplaceholder.typicode.com/posts';
 
 
 
@@ -39,12 +40,15 @@ public lordprofile()
 {
   return this.http.get<any>(this.proof_url)
 }
+public lordapp(app:any)
+{
+  return this.http.post<any>(this.lordapp_url, app, {})
+}
 
-
-  public postLogin(loglord:any)
-  {
+public postLogin(loglord:any)
+{
     return this.http.post<any>(this.login_url, loglord, {})
-  }
+}
   public postLandlord(addlord:any)
   {
     return this.http.post<any>(this.reg_url, addlord, {});

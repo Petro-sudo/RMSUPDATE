@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -70,6 +71,10 @@ const routes: Routes = [
     loadChildren: () => import('./resproof/resproof.module').then( m => m.ResproofPageModule)
   },
   {
+  path: 'how-to-apply',
+  loadChildren: () => import('./how-to-apply/how-to-apply.module').then( m => m.HowToApplyPageModule)
+   },
+  {
     path: 'landloard-app',
     loadChildren: () => import('./landloard-app/landloard-app.module').then( m => m.LandloardAppPageModule)
   },
@@ -93,19 +98,16 @@ const routes: Routes = [
     path: 'viewproperties',
     loadChildren: () => import('./manageprop/viewproperties/viewproperties.module').then( m => m.ViewpropertiesPageModule)
   },
+  {
+    path: 'applynow',
+    loadChildren: () => import('./applynow/applynow.module').then( m => m.ApplynowPageModule)
+  },
   
   {
     path: 'studstatus',
     loadChildren: () => import('./studstatus/studstatus.module').then( m => m.StudstatusPageModule)
-  },  {
-    path: 'applynow',
-    loadChildren: () => import('./applynow/applynow.module').then( m => m.ApplynowPageModule)
+
   }
-
-
- 
-
-
 
 
 ];
