@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -97,15 +98,16 @@ const routes: Routes = [
     path: 'viewproperties',
     loadChildren: () => import('./manageprop/viewproperties/viewproperties.module').then( m => m.ViewpropertiesPageModule)
   },
+  {
+    path: 'applynow',
+    loadChildren: () => import('./applynow/applynow.module').then( m => m.ApplynowPageModule)
+  },
   
   {
     path: 'studstatus',
     loadChildren: () => import('./studstatus/studstatus.module').then( m => m.StudstatusPageModule)
+
   }
-
- 
-
-
 
 
 ];
