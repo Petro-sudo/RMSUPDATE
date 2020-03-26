@@ -70,6 +70,10 @@ const routes: Routes = [
     loadChildren: () => import('./resproof/resproof.module').then( m => m.ResproofPageModule)
   },
   {
+  path: 'how-to-apply',
+  loadChildren: () => import('./how-to-apply/how-to-apply.module').then( m => m.HowToApplyPageModule)
+   },
+  {
     path: 'landloard-app',
     loadChildren: () => import('./landloard-app/landloard-app.module').then( m => m.LandloardAppPageModule)
   },

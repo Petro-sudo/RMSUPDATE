@@ -14,19 +14,20 @@
 </ion-header>
  
 
-<ion-icon name=""></ion-icon>
+
  
  
  <ion-content >
   
-  <ion-card  style="background-image: url('assets/pics/landlord.jpg');"> 
+  <div  style="background-image: url('assets/pics/landlord.jpg');"> 
 
     <br>
    <section style = "text-align: center; color:white; font-size: medium;">
    
     
     <div class = "center">
-    <img src="../../assets/pics/user.jpg" class="smallLogo"/>
+    <!-- <img src="../../assets/pics/user.jpg" alt="smallLogo"/> -->
+    <ion-icon style="text-align: center; zoom: 7;"  name="person"></ion-icon>
   </div>
    
   <h2>title Surname Name</h2>
@@ -39,7 +40,7 @@
     <div class="card">
   
   <br>
-    <ion-card text-center padding color="#ed576b">
+    
       
       <form  align="center" >
         <ion-item style="background-color: transparent;">
@@ -79,7 +80,7 @@
        
        
        </form>
-    </ion-card>
+    
   </div>
 <ion-row>
        <ion-col col=6>
@@ -87,7 +88,7 @@
         <a routerLink="/landloard-app">
         <ion-card align="center" text-center padding color="light" 
         style="border-radius: 20px; margin-left: 0px;">
-          <h2>Add Residence</h2>
+          <h2>Register Residence</h2>
           <ion-icon name="add-circle-outline"></ion-icon>
          </ion-card>
         </a>
@@ -157,6 +158,6 @@
   
 
 
-</ion-card>
+</div>
    
  </ion-content>

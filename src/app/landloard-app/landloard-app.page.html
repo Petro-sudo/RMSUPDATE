@@ -19,31 +19,32 @@
       <ul id="nav-mobile" class="hide-on-med-and-down">
       <li><a routerLink="/landloard-app"> <ion-button class = "ion-text-center" color="primary" 
         (click)="addprop()">ADD PROPERTIES</ion-button></a></li>
-      
-      <li><a routerLink="/viewproperties"> <ion-button class = "ion-text-center" color="secondary" 
-        (click)="viewprop()">VIEW PROPERTIES</ion-button></a></li>
-     
-      <li><a routerLink="/updateproperties"> <ion-button class = "ion-text-center" color="warning" 
-        (click)="updateprop()">UPDATE PROPERTIES</ion-button></a></li>
         
        
     </ul>
    
 
-  <form style="background-color: grey;">
+  <form (ngSubmit) = "myform">
+    
 <ion-item>
     <ion-label position="floating">Name of your property</ion-label>
-    <ion-input type = "text"  name ="name"></ion-input>
+    <ion-input [(ngModel)] ="lordData.propName" name = "propName" type = "text"  ></ion-input>
+    <div class="form-control-feedback"
+           *ngIf="propName.errors && (propName.dirty || propName.touched)" color="warning">
+        <p  style="color:red" *ngIf="propName.errors.required" >Property Name is required</p>
+      </div>
 </ion-item>
+
+
 
 <ion-item>
   <ion-row>
     <ion-col>
-      <ion-title style="margin-left: -25px;" >Address</ion-title>
-      <ion-input type = "text"  name ="add1" placeholder="Address 1"></ion-input>
-      <ion-input placeholder="Address 2"></ion-input>
-      <ion-input placeholder="City"></ion-input>
-      <ion-input placeholder="Zip Code"></ion-input>
+      <ion-label >Enter Full Address</ion-label>
+      <ion-input  placeholder="Address 1"></ion-input>
+      <ion-input  placeholder="Address 2"></ion-input>
+      <ion-input  placeholder="City"></ion-input>
+      <ion-input  placeholder="Code"></ion-input>
     </ion-col>
   </ion-row>
 </ion-item>
@@ -51,35 +52,36 @@
 
 <ion-item>
   <ion-label position="floating"> How far is the property from the TUT campus you selected in Killiometers</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)] = "lordData.distance" name="distance"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position="floating"> What is the annaul fee per single room in Rands</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)] = "lordData.feeSingle" name="feeSingle"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position="floating"> Number of spaces available for single rooms</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)] = "lordData.numSingle" name="numSingle"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label position="floating"> What is the annaul fee per sharing room in Rands</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)] = "lordData.feeSharing" name="feeSharing"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position="floating"> Number of spaces available for sharing</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)] = "lordData.numSharing" name="numSharing"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position="floating"> How many spaces(beds) are available ?</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)] = "lordData.totalBed" name="totalBed"></ion-input>
 </ion-item>
 
-<br>
-  <ion-title style="color: red; text-align: center;">NB please insert all the neccesary documents in order for your application to be processed</ion-title>
-<br>
+<ion-item>
+  <h1 style="color: red; text-align: center;background-color: aliceblue;">NB: please scan the 
+    certified copies of the following documents and send them as PDF in order for your application to be processed</h1>
+  </ion-item>
 
 <ion-item>
   <ion-row>
@@ -90,7 +92,7 @@
         Lastest copy of municipal account
         <br>
 
-        <input mbsc-input type="file" placeholder="Select file..." />
+        
     </ion-label>
   </ion-item>
 
@@ -99,7 +101,7 @@
     <ion-label>
       Building plans approved by municipality:
       <br>
-      <input mbsc-input type="file" placeholder="Select file..." />
+      
     </ion-label>
   </ion-item> 
 
@@ -108,7 +110,7 @@
     <ion-label>
       Occupational certificate:
       <br>
-      <input mbsc-input type="file" placeholder="Select file..." />
+     
     </ion-label>
   </ion-item>
 
@@ -118,7 +120,7 @@
     <ion-label>
       Zoning certificate:
       <br>
-      <input mbsc-input type="file" placeholder="Select file..." />
+      
     </ion-label>
 </ion-item>    
  
@@ -128,7 +130,7 @@
   <ion-label>
       ID copy:
       <br>
-      <input mbsc-input type="file" placeholder="Select file..." />
+      
     </ion-label>
   </ion-item>
 
@@ -138,7 +140,7 @@
     <ion-label>
       Proof of ownership:
       <br>
-      <input mbsc-input type="file" placeholder="Select file..." />
+      
   </ion-label>
 </ion-item>
 
@@ -148,7 +150,7 @@
   <ion-label>
     Tax clearance:
     <br>
-    <input mbsc-input type="file" placeholder="Select file..." />
+    
   </ion-label>
 </ion-item>
 
@@ -159,7 +161,7 @@
   <ion-label>
     Company registration document:
     <br>
-    <input mbsc-input type="file" placeholder="Select file..." />
+    
   </ion-label>
 </ion-item>
 
@@ -169,7 +171,7 @@
   <ion-label>
     Proof of public liability cover for an amount of no less than R5 Million:
     <br>
-    <input mbsc-input type="file" placeholder="Select file..." />
+    
   </ion-label>
 </ion-item>
 
@@ -179,7 +181,7 @@
   <ion-label>
     Proof of payment of R1000.00:
     <br>
-    <input mbsc-input type="file" placeholder="Select file..." />
+    
   </ion-label>
 </ion-item>
 
@@ -189,7 +191,7 @@
   <ion-label>
     Latest copy of municipal amount(water/electricity):
     <br>
-    <input mbsc-input type="file" placeholder="Select file..." />
+    
   </ion-label>
 </ion-item>
 
@@ -199,18 +201,21 @@
   <ion-label>
     Valid B-BBEE certificate:
     <br>
-    <input mbsc-input type="file" placeholder="Select file..." />
   </ion-label>
 </ion-item>
+<br>
+<input mbsc-input type="file" name="docs" placeholder="Select scanned files"
+/>
 
 
 
     </ion-col>
   </ion-row>
 </ion-item> 
+
 </form>
 
-<ion-button class = "ion-text-center" color="primary" (click) = "add()" >SUMBMIT</ion-button>
+<ion-button class = "ion-text-center" color="primary" (click) = "registerProp()" >SUMBMIT</ion-button>
 <ion-footer  class="ion-footer">
   <ion-toolbar color="dark" >
     <ion-title align="center" >2020 Off campus accomodation</ion-title>

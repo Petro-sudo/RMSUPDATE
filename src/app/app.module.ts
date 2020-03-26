@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,6 +23,7 @@ import { HttpModule }from '@angular/http';
     IonicModule.forRoot(),
     AppRoutingModule,
     
+    
   ],
   providers: [AuthGuard,
     StatusBar,
@@ -34,6 +35,8 @@ import { HttpModule }from '@angular/http';
     
   ],
   bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA,
+    CUSTOM_ELEMENTS_SCHEMA]
   
 })
 export class AppModule {}

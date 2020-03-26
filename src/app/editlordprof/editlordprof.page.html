@@ -11,50 +11,67 @@
 
 <ion-content>
   <div style="background-image: url('assets/pics/landlord.jpg');">
-  <ion-card text-center padding >
-  <h3 style="font-size: 50px; color: whitesmoke; text-align: center;" >Edit Details</h3>
+  <ion-item>
+  <h3 align ="center">Edit Details</h3>
+</ion-item>
   <br>
  
 
     <form action="" method="post" enctype="multipart/form-data">
 
       <div class="form-group">
+        <ion-item>
         <ion-label for="email">Email</ion-label>
         <ion-input value={{edit.id}} type="email" class="form-control" name="lord_email"></ion-input>
+      </ion-item>
       </div>
 
       <div class="form-group">
+        <ion-item>
         <ion-label for="email">Title</ion-label>
         <ion-input value={{edit.id}} type="email" class="form-control" name="lord_email"></ion-input>
+      </ion-item>
       </div>
 
       <div class="form-group">
+        <ion-item>
         <ion-label for="firstname">Fullnames</ion-label>
         <ion-input value={{edit.id}} type="text" class="form-control" name="lord_firstname"></ion-input>
+      </ion-item>
       </div>
 
       <div class="form-group">
+        <ion-item>
         <ion-label for="lastname">Surname</ion-label>
         <ion-input value={{edit.id}} type="text" class="form-control" name="lord_lastname"></ion-input>
+      </ion-item>
       </div>
 
       <div class="form-group">
+        <ion-item>
         <ion-label for="contact">CellNumbers</ion-label>
         <ion-input value={{edit.id}} type="text" class="form-control" name="lord_cellno"></ion-input>
+      </ion-item>
       </div>
       <div class="form-group">
+        <ion-item>
         <ion-label for="contact">Number of Properties</ion-label>
         <ion-input value={{edit.id}} type="text" class="form-control" name="lord_cellno"></ion-input>
+      </ion-item>
       </div>
 
       <div class="form-group">
+        <ion-item>
         <ion-label for="password">Password</ion-label>
         <ion-input value={{edit.id}} id="myInput" type="password" class="form-control" name="lord_password"></ion-input>
+      </ion-item>
       </div>
 
       <!-- show password in ionic do the function -->
       <div class="form-group">
+        <ion-item>
         <ion-input type="checkbox" onclick= " ">Show Password</ion-input>
+      </ion-item>
             </div>
 
       <div class="form-group">
@@ -62,8 +79,12 @@
       </div>
 
       <div class="form-group">
+        <ion-item>
         <ion-label for="bus-image">User Image</ion-label>
+      </ion-item>
+      <ion-item>
         <ion-input type="file" name="images" ></ion-input>
+      </ion-item>
       </div>
 
       <div class="form-group">
@@ -74,7 +95,7 @@
 
 
 
-</ion-card>
+
 </div>
 <ion-footer  class="ion-footer">
   <ion-toolbar color="dark" >
