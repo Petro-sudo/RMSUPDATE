@@ -14,7 +14,9 @@ export class ServiceService {
 
   reg_url = 'http://168.172.185.106:5000/lord';
   regstu_url = 'http://168.172.185.106:5000/reg';
-  apart_url = 'http://168.172.185.106:5000/getproperty';
+  //apart_url = 'http://168.172.185.106:5000/getproperty';get property API
+
+  apart_url =  'https://jsonplaceholder.typicode.com/posts';
   getstu_url='http://168.172.185.106:5000/getstudent';
   getstud1_url='http://168.172.185.106:5000/getstud/40';
   image_url = 'http://168.172.185.106:5000/getimage';

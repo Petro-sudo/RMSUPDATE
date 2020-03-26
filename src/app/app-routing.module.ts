@@ -97,7 +97,11 @@ const routes: Routes = [
   {
     path: 'studstatus',
     loadChildren: () => import('./studstatus/studstatus.module').then( m => m.StudstatusPageModule)
+  },  {
+    path: 'applynow',
+    loadChildren: () => import('./applynow/applynow.module').then( m => m.ApplynowPageModule)
   }
+
 
  
 
