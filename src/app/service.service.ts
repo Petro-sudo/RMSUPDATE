@@ -17,6 +17,8 @@ export class ServiceService {
   //apart_url = 'http://168.172.185.106:5000/getproperty';get property API
 
   apart_url =  'https://jsonplaceholder.typicode.com/posts';
+  Aplystutest='https://jsonplaceholder.typicode.com/users';//test api
+
   getstu_url='http://168.172.185.106:5000/getstudent';
   getstud1_url='http://168.172.185.106:5000/getstud/40';
   image_url = 'http://168.172.185.106:5000/getimage';
@@ -64,6 +66,12 @@ public postLogin(loglord:any)
   public getApartment()
   {
     return this.http.get<any>(this.apart_url);
+  }
+
+
+  public getAppliedstu()
+  {
+    return this.http.get<any>(this.Aplystutest);
   }
 
   public getimages()

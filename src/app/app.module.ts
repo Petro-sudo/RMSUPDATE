@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ShareService } from '../share/share';
 import { HttpModule }from '@angular/http';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
  
 
 @NgModule({
@@ -22,7 +22,7 @@ import { HttpModule }from '@angular/http';
     HttpModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    
+    FormsModule, ReactiveFormsModule
     
   ],
   providers: [AuthGuard,
