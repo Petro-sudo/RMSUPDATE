@@ -9,6 +9,61 @@
 </ion-header>
 
 
+<ion-content>
+
+
+  <ion-grid style="background-image: url('assets/pics/landlord.jpg');" col="12">
+
+    <ion-card   col="12" *ngFor= "let a of addProp" style="font-weight: bold; background-color:#FFC300 ; color: black; opacity: 0.8;border-radius: 10px;">
+    
+     
+ 
+ 
+     <br>
+     <ion-label>
+      STUDENT NUMBER:{{a.phone}}
+     </ion-label>
+     <br>
+     <ion-label>
+     ID COPY: {{a.phone}} 
+     </ion-label>
+     <br>
+     <ion-label>
+       STUDENT SURNAME: {{a.username}}
+     </ion-label>
+     <br>
+     <ion-label>
+      STUDENT NAME: {{a.name}}
+     </ion-label>
+     <br>
+     <ion-label>
+      STUDENT EMAIL: {{a.email}}
+     </ion-label>
+     <br>
+
+     <ion-button  color="danger" (click)="delete()">
+      <ion-label>Decline {{number}} </ion-label>
+    </ion-button>
+    <ion-button  color="success" (click)=" accept()">
+      <ion-label>Accept</ion-label>
+    </ion-button>
+    
+   </ion-card>
+
+   <br>
+   <br>
+   <br>
+   <br>
+ </ion-grid>
+
+
+
+
+  
+</ion-content>
+
+
+
 
 <ion-footer  class="ion-footer">
   <ion-toolbar color="dark" >
