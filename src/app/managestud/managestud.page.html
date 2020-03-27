@@ -3,7 +3,10 @@
     <ion-buttons slot="start" >
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title align="center">Landlord Manage Student</ion-title>
+    <ion-title align="center"> Manage Student
+      <ion-button   size="small" shape="round" color="danger" style="height: 30px; ">{{addimg}}</ion-button>
+    </ion-title>
+   
     <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/landlord-dash">previous</ion-icon>
   </ion-toolbar>
 </ion-header>
@@ -42,7 +45,7 @@
      <br>
 
      <ion-button  color="danger" (click)="delete()">
-      <ion-label>Decline {{number}} </ion-label>
+      <ion-label>Decline  </ion-label>
     </ion-button>
     <ion-button  color="success" (click)=" accept()">
       <ion-label>Accept</ion-label>
