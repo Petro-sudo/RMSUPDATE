@@ -9,42 +9,71 @@
 </ion-header>
 
 <ion-content>
-  <div style="background-image: url('assets/pics/landlord.jpg');">
-    <br>
-    <br>
+  
+   
   
 
-    
-      <ul id="nav-mobile" class="hide-on-med-and-down">
-      <li><a routerLink="/landloard-app"> <ion-button class = "ion-text-center" color="primary" 
-        (click)="addprop()">ADD PROPERTIES</ion-button></a></li>
+    <ion-grid style="background-image: url('assets/pics/landlord.jpg');" col="12">
+
+      <ion-card   col="12" *ngFor= "let a of addProp" style=" background-color: rosybrown; color: whitesmoke; opacity: 0.8;border-radius: 10px;">
       
-      <li><a routerLink="/viewproperties"> <ion-button class = "ion-text-center" color="secondary" 
-        (click)="viewprop()">VIEW PROPERTIES</ion-button></a></li>
-     
-      <li><a routerLink="/updateproperties"> <ion-button class = "ion-text-center" color="warning"
-        (click)="updateprop()">UPDATE PROPERTIES</ion-button></a></li>
+       
+        <br>
+        <ion-label>
+          PROPERTY NAME: {{a.username}}
+        </ion-label>
+   
+       <br>
+       <br>
+       <ion-label>
+        PROPERTY ADDRESS:{{a.phone}}
+       </ion-label>
+      
+       <br>
+       <br>
+       <ion-label>
+        PROPERTY ADMIN: {{a.name}}
+       </ion-label>
+       <br>
+       <br>
+       <a routerLink="/landloard-app"><ion-button  (click)="add()"><ion-icon name="add">
+       </ion-icon></ion-button></a>
+
+       <ion-button color="success" (click)="update()">
+        <ion-icon name="create"></ion-icon></ion-button>
+   
+
+       
+       <ion-button color="danger" (click)="delete()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+
+      
+
+      <!-- <ion-button  color="success" (click)=" accept()">
+        <ion-label>Accept</ion-label>
+      </ion-button> -->
+
+
+      
+     </ion-card>
+  
+     <br>
+     <br>
+     <br>
+     <br>
+   </ion-grid>
+  
+  
+  
+  
+   
+      
         
       
-    </ul>
+ 
    
     
-
-
-<!-- 
-<ion-card>
-    <ion-segment (ionChange)="filterContacts($event)" value="All">
-      <ion-segment-button value="All" checked>
-        All
-      </ion-segment-button>
-      <ion-segment-button value="Friend">
-        Friends
-      </ion-segment-button>
-      <ion-segment-button value="Family">
-        Family
-      </ion-segment-button>
-    </ion-segment>
-  </ion-card> -->
 
 
 
@@ -62,32 +91,6 @@
 
 
  
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     
     
 <ion-footer  class="ion-footer">
@@ -95,7 +98,7 @@
     <ion-title align="center" >2020 Off campus accomodation</ion-title>
   </ion-toolbar>
 </ion-footer>
-</div>
+
 </ion-content>
 <!-- <nav style="border-bottom: #08acea medium solid; border-top: #08acea medium solid;">
   <div class="container-fluid">
