@@ -15,12 +15,26 @@ export class LandlordDashPage implements OnInit {
   data: Observable<any>;
  
    constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService) { }
- 
+   addProp: any=[];
+   addimg: any=[];
    ngOnInit() {
  
      this.getData();
+     this.applidstu();
    }
  
+
+   applidstu(){
+    return  this._serviceService.getAppliedstu().
+    subscribe((apart:any)=>
+     {this.addProp = apart;
+       console.log(this.addProp);
+       console.log(this.addProp.length);
+       this.addimg = this.addProp.length;
+       
+     });
+   }
+
    getData(){
  
  

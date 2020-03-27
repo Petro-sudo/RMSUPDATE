@@ -64,19 +64,19 @@ export class ManagepropPage implements OnInit {
  
     }
       
-    update() {
-      let alert = this.alertCtrl.create({
+    // update() {
+    //   let alert = this.alertCtrl.create({
           
-          message: 'Type in your new task to update.',
-          inputs: [{ name: 'editTask', placeholder: 'Task' }],
-          buttons: [{ text: 'Cancel', role: 'cancel' },
-                    { text: 'Update', handler: data => {
-                        this.taskList = data.editTask; }
-                    }
-                   ]
-      });
-      alert.present();
-  } 
+    //       message: 'Type in your new task to update.',
+    //       inputs: [{ name: 'editTask', placeholder: 'Task' }],
+    //       buttons: [{ text: 'Cancel', role: 'cancel' },
+    //                 { text: 'Update', handler: data => {
+    //                     this.taskList = data.editTask; }
+    //                 }
+    //                ]
+    //   });
+      
+    //} 
 
 
 

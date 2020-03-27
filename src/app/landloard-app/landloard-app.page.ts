@@ -50,6 +50,7 @@ export class LandloardAppPage implements OnInit {
       await alert.present();
       const result = await alert.onDidDismiss();
       console.log(result);
+    
     }
     else if(this.lordApply.docs.length<2){
       const alert = await this.alertCtrl.create({
