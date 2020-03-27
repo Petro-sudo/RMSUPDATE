@@ -43,13 +43,15 @@ export class LandloardAppPage implements OnInit {
       this.lordApply.add2.length==1||this.lordApply.city.length==1||this.lordApply.code.length==1||
       this.lordApply.feeSharing.length==1||this.lordApply.feesSingle.length==1||this.lordApply.numSharing.length==1||
       this.lordApply.numSingle.length==1||this.lordApply.totalBed.length==1){
-      const alert =await this.alertCtrl.create({
+      
+        const alert =await this.alertCtrl.create({
         message:'please fill in all the fields',
         buttons: ['Ok']
       });
       await alert.present();
       const result = await alert.onDidDismiss();
       console.log(result);
+    
     }
     else if(this.lordApply.docs.length<2){
       const alert = await this.alertCtrl.create({

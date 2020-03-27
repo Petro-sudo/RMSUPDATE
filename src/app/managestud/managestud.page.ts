@@ -38,12 +38,12 @@ export class ManagestudPage implements OnInit {
      {this.addProp = apart;
        console.log(this.addProp);
        console.log(this.addProp.length);
-       var number =this.addProp.length;
+       this.addimg = this.addProp.length;
        
      });
    }
  
-   
+
  
    async delete() {
 
