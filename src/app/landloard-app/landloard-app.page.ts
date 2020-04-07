@@ -13,24 +13,24 @@ import { ServiceService } from '../service.service';
 })
 export class LandloardAppPage implements OnInit {
   loading: boolean = false;
-  @Input() lordApply= {propName:" ", add1:" ",add2:" ",
+  @Input() lordApply= {propName:" ",add1:" ",add2:" ",
    city:" ",code:" ",distance:" " ,feesSingle:" ",feeSharing:" "
    ,numSingle:" ",numSharing:" " ,totalBed:" ",docs:" "}
   constructor(public alertCtrl: AlertController, private _serviceService : ServiceService ) { }
   addlord: any = [];
 
-  myform: FormGroup;
-  propName: FormControl;
+
+  // propName: FormControl;
   // add1: FormControl;
   // add2: FormControl;
   // city: FormControl;
   // code=new FormControl;
-  // distance= new FormControl;
-  // feeSingle= new FormControl;
-  // feeSharing=new FormControl;
-  // numSingle= new FormControl;
-  // numSharing= new FormControl;
-  // totalBed= new FormControl;
+  //  distance= new FormControl;
+  //  feeSingle= new FormControl;
+  //  feeSharing=new FormControl;
+  //  numSingle= new FormControl;
+  //  numSharing= new FormControl;
+  //  totalBed= new FormControl;
   // docs= new FormControl;
 
   ngOnInit() {
@@ -39,15 +39,14 @@ export class LandloardAppPage implements OnInit {
 
  
   async registerProp() {
-    if(this.lordApply.propName.length==1||this.lordApply.add1.length==1||this.lordApply.distance.length==1||
-      this.lordApply.add2.length==1||this.lordApply.city.length==1||this.lordApply.code.length==1||
-      this.lordApply.feeSharing.length==1||this.lordApply.feesSingle.length==1||this.lordApply.numSharing.length==1||
-      this.lordApply.numSingle.length==1||this.lordApply.totalBed.length==1){
-      
-        const alert =await this.alertCtrl.create({
+    if(this.lordApply.propName.length==1||this.lordApply.add1.length==1||this.lordApply.add2.length==1||
+      this.lordApply.city.length==1||this.lordApply.code.length==1||this.lordApply.distance.length==1||
+      this.lordApply.feeSharing.length==1){
+      const alert =await this.alertCtrl.create({
         message:'please fill in all the fields',
         buttons: ['Ok']
-      });
+      }
+      );
       await alert.present();
       const result = await alert.onDidDismiss();
       console.log(result);
@@ -64,7 +63,7 @@ export class LandloardAppPage implements OnInit {
       console.log(result);
     }
     else{
-      this._serviceService.lordapp(this.lordApply).subscribe(
+      this._serviceService.postLandlord(this.lordApply).subscribe(
         data =>
         console.log(data));
 
@@ -90,7 +89,7 @@ export class LandloardAppPage implements OnInit {
         const result = await alert.onDidDismiss();  
         console.log(result);
 
-        this.lordApply.docs = " ";
+        
         this.lordApply.add1 = " ";
         this.lordApply.add2 = " ";
         this.lordApply.propName= " ";
@@ -102,6 +101,7 @@ export class LandloardAppPage implements OnInit {
         this.lordApply.feesSingle = " ";
         this.lordApply.distance = " ";
         this.lordApply.totalBed = " ";
+        this.lordApply.docs = " ";
 
 
     }

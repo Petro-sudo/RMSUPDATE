@@ -15,20 +15,13 @@
     <br>
   
 
-    
-      <ul id="nav-mobile" class="hide-on-med-and-down">
-      <li><a routerLink="/landloard-app"> <ion-button class = "ion-text-center" color="primary" 
-        (click)="addprop()">ADD PROPERTIES</ion-button></a></li>
-        
-       
-    </ul>
+  
    
 
-  <form (ngSubmit) = "myform">
     
 <ion-item>
     <ion-label >Name of your property:</ion-label>
-    <ion-input [(ngModel)] ="lordApply.propName" name = "property" FormControl = "propName" type = "text"  ></ion-input>
+    <ion-input [(ngModel)] ="lordApply.propName" name = "property" type = "text"  ></ion-input>
     
 </ion-item>
 
@@ -36,12 +29,16 @@
 
 <ion-item>
   <ion-row>
-    <ion-col>
-      <ion-label>Enter Full Address</ion-label>
-      <ion-input FormControl = "add1" placeholder="Address 1"></ion-input>
-      <ion-input FormControl = "add2" placeholder="Address 2"></ion-input>
-      <ion-input FormControl = "city" placeholder="City"></ion-input>
-      <ion-input  FormControl = "code" placeholder="Code"></ion-input>
+    <ion-col style="border-radius: 1px;">
+      <ion-label >Enter Full Address</ion-label>
+      <ion-label position = "floating">Number</ion-label>
+      <ion-input [(ngModel)] ="lordApply.add1" name = "add1" placeholder="Address 1"></ion-input>
+      <ion-label position = "floating">Street/Block</ion-label>
+      <ion-input [(ngModel)] ="lordApply.add2" name = "add2" placeholder="Address 2"></ion-input>
+      <ion-label position = "floating">City</ion-label>
+      <ion-input [(ngModel)] ="lordApply.city" name = "city" placeholder="City"></ion-input>
+      <ion-label position = "floating">Code</ion-label>
+      <ion-input [(ngModel)] ="lordApply.code" name = "code" placeholder="Code"></ion-input>
     </ion-col>
   </ion-row>
 </ion-item>
@@ -63,14 +60,14 @@
 </ion-item>
 
 <ion-item>
-  <ion-label position = "floating" > Number of single rooms?</ion-label>
-  <ion-input [(ngModel)] = "lordApply.numSingle" name="numSingle" FormControl = "numSingle"></ion-input>
+  <ion-label position = "floating"  > Number of sharing rooms?</ion-label>
+  <ion-input [(ngModel)] = "lordApply.numSharing" name="numSharing" FormControl = "numSharing"></ion-input>
 </ion-item>
 
 
 <ion-item>
-  <ion-label position = "floating"  > Number of sharing rooms?</ion-label>
-  <ion-input [(ngModel)] = "lordApply.numSharing" name="numSharing" FormControl = "numSharing"></ion-input>
+  <ion-label position = "floating" > Number of single rooms?</ion-label>
+  <ion-input [(ngModel)] = "lordApply.numSingle" name="numSingle" FormControl = "numSingle"></ion-input>
 </ion-item>
 
 <ion-item>
@@ -212,7 +209,7 @@
 
     
   </div>
-</form>
+
 
 <ion-button class = "ion-text-center" color="primary" (click) = "registerProp()" >SUBMIT</ion-button>
 <ion-footer  class="ion-footer">
