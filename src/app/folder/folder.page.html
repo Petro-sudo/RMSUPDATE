@@ -1,11 +1,11 @@
 
  
-<!--
-<ion-header style="background-color: black;">
+
+<!--<ion-header style="background-color: black;">
   <ion-toolbar color="dark">
-    <!-- <ion-buttons slot="start">
+    <ion-buttons slot="start">
       <ion-menu-button style="background-color: rgba(255, 0, 0, 0.664);"></ion-menu-button>
-    </ion-buttons> -->
+    </ion-buttons>
     <ion-title color="dark" style="color: white;" align="center">{{ folder }} </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -151,11 +151,12 @@
 
 <ion-header style="background-color: black;">
   <ion-toolbar color="dark">
-    <ion-buttons slot="start">
+    <!-- <ion-buttons slot="start">
       <ion-menu-button style="background-color: red;"></ion-menu-button>
-    </ion-buttons>
-    <ion-title color="dark" style="color: white;" align="center"></ion-title>
-    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/studapply">previous</ion-icon>
+    </ion-buttons> -->
+    <ion-title color="dark" style="color:chartreuse; text-align: center;" align="center;">WELCOME TO T-Res <ion-icon name="happy-outline"></ion-icon></ion-title>
+    <ion-icon style="font-size: 30px;" slot="end" name="log-in-outline" routerLink="/login">previous</ion-icon>
+    
   </ion-toolbar>
 </ion-header>
 
@@ -266,25 +267,20 @@
 <ion-grid>
   <ion-row>
     <ion-col col=6>
-
+      <a routerLink="/sturegister">
       <ion-button style="width: 350px; height:45px;" color="success" shape="round">
-       
-        
-          ARE YOU A STUDENT?
-        
-      </ion-button>
+          ARE YOU A STUDENT
+      </ion-button></a>
     </ion-col>
 
 
 
 
     <ion-col col=6>
-      <ion-button style="width: 350px; height:45px;" color="success" shape="round">
-       
-        
+      <a routerLink="/landlord-reg">
+      <ion-button style="width: 350px; height:45px;" color="success" shape="round"> 
           ARE YOU AN ACCOMODATION PROVIDER?
-      
-      </ion-button>
+      </ion-button></a>
     </ion-col>
   </ion-row>
 </ion-grid>

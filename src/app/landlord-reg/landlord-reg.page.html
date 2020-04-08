@@ -3,6 +3,8 @@
     <ion-buttons slot="start" >
     </ion-buttons>
     <ion-title align="center">Landlord Registration</ion-title>
+    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/folder/Home">previous</ion-icon>
+  
   </ion-toolbar>
 </ion-header>
 
@@ -16,6 +18,14 @@
 
 -->
 <ion-content >
+  <ion-header>
+    <ul class="sidebar-nav">
+      
+      <li><a routerLink="/login">LOG IN</a></li>
+      
+    </ul>
+  </ion-header>
+  <br><br>
   <ion-list>
     <ion-grid>
       
@@ -116,7 +126,6 @@
     <ion-button expand="block" color="dark" (click)=" addreg()">
       <ion-icon name="add"></ion-icon>
       Submit Registration
-
     </ion-button>
     
   </ion-list>

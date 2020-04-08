@@ -1,6 +1,6 @@
 ion-content{
 
-    --ion-background-color:chartreuse;
+    --ion-background-color:rgb(95, 248, 95);
 }
 ion-label{
     color: black;
@@ -11,3 +11,26 @@ ion-input{
     color: black;
     font-size: 11px;
 }
+li{
+    float: right;
+   list-style:none;
+   text-align: center;
+   width: 100px;
+   height: 20px;
+   line-height: 20px;
+   color: aliceblue;
+  
+  
+  }
+  a {
+
+    display: inline-block;
+    padding: 8px 16px;
+    text-align: left;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
