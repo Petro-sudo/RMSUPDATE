@@ -23,7 +23,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 })
 export class LandlordRegPage implements OnInit {
 
-  @Input() lordData= {fname:" ", lname:" ",id_no:" ", email:" " ,cell:" ",title:" ",campus_loc:" ",pwd:" " }
+  @Input() lordData= {fname:" ", lname:" ",id_no:" ", email:" " ,cell:" ",title:" ",campus_loc:" ",pwd:" ", gender:" " }
   navCtrl: any;
 
   
@@ -56,6 +56,7 @@ console.log(this.lordData.cell);
 console.log(this.lordData.title);
 console.log(this.lordData.campus_loc);
 console.log(this.lordData.pwd);
+console.log(this.lordData.gender)
     
   }
 
