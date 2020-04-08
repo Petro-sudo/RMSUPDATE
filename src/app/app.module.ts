@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ShareService } from '../share/share';
 import { HttpModule }from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
- 
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+   
     FormsModule, ReactiveFormsModule
     
   ],
@@ -30,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SplashScreen,
     HttpModule,
     ShareService,
+    
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     
     

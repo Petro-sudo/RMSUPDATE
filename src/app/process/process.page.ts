@@ -13,7 +13,7 @@ export class ProcessPage implements OnInit {
   ngOnInit() {
 
     this.getProperty();
-    this.img();
+    
   }
 
 
@@ -29,13 +29,7 @@ export class ProcessPage implements OnInit {
  
  
  
-   img(){
-     return  this._serviceService.getApartment().
-     subscribe((img:any)=>
-      {this.addProp = img;
-        console.log(this.addimg);
-      });
-    }
+  
  
 
 
