@@ -15,25 +15,25 @@
   <ion-grid style="color: black;" col="12">
 
     <ion-card col="12" *ngFor= "let a of addProp" style="font-weight: bold;">
-     <h1 style="color: black;" >{{a.property_name}} </h1>
+     <h1 style="color: black;" >{{a.name}} </h1>
      
  
  
      <br>
      <ion-label>
-      PROPERTY OWNER:{{a.property_owner}}
+      PROPERTY OWNER:{{a.username}}
      </ion-label>
      <br>
      <ion-label>
-     CITY: {{a.city}} 
+     CITY: {{a.address.city}} 
      </ion-label>
      <br>
      <ion-label>
-       STREET ADDRESS: {{a.street_address}}
+       STREET ADDRESS: {{a.address.street}}
      </ion-label>
      <br>
      <ion-label>
-       POSTAL CODE: {{a.postal_code}}
+       POSTAL CODE: {{a.address.zipcode}}
      </ion-label>
      <br>
 

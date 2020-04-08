@@ -16,7 +16,7 @@ export class ServiceService {
   regstu_url = 'http://168.172.185.106:5000/reg';
   //apart_url = 'http://168.172.185.106:5000/getproperty';get property API
 
-  apart_url =  'https://jsonplaceholder.typicode.com/posts';
+  apart_url =  'https://jsonplaceholder.typicode.com/users';
   Aplystutest='https://jsonplaceholder.typicode.com/users';//test api
 
   getstu_url='http://168.172.185.106:5000/getstudent';
@@ -65,6 +65,7 @@ public postLogin(loglord:any)
 
   public getApartment()
   {
+    // return this.http.get<any>(this.apart_url);
     return this.http.get<any>(this.apart_url);
   }
 
