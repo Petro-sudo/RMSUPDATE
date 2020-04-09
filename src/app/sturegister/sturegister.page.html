@@ -112,19 +112,29 @@
   <ion-header>
     <ion-toolbar    color="dark"  >
    
-      <ion-buttons style="background-color: red;" slot="start">
+      <!-- <ion-buttons style="background-color: red;" slot="start">
         <ion-menu-button></ion-menu-button>
-      </ion-buttons>
+      </ion-buttons> -->
       <ion-title  align="center" > 
      
         
-        Register Here AS Student</ion-title>
+     Student Register Here </ion-title>
+        <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/folder/Home">previous</ion-icon>
+  
     </ion-toolbar>
   </ion-header>
-<ion-card>
+<!-- <ion-card>
   <img src="assets/pics/tut1.jpg" width="1500px" height="200px" alt="">
-</ion-card>
+</ion-card> -->
 <ion-content>
+  <ion-header>
+    <ul class="sidebar-nav">
+      
+      <li><a routerLink="/login">LOG IN</a></li>
+      
+    </ul>
+  </ion-header>
+  <br><br>
   <div class="container">
   <form novalidate
       [formGroup]="myform" >
@@ -141,11 +151,9 @@
         'has-danger': firstName.invalid && (firstName.dirty || firstName.touched),
         'has-success': firstName.valid && (firstName.dirty || firstName.touched)
       }">
-
-      <ion-label position="fixed">First Name:</ion-label>
       <ion-item>
-    
-      
+      <ion-label position="fixed">First Name:</ion-label>
+    <br>
       <ion-input type="text"
       
              class="form-control"
@@ -177,9 +185,10 @@
         'has-danger': lastName.invalid && (lastName.dirty || lastName.touched),
         'has-success': lastName.valid && (lastName.dirty || lastName.touched)
       }">
-      <ion-label position="fixed">Last Name:</ion-label>
       <ion-item>
+      <ion-label position="fixed">Last Name:</ion-label>
       
+      <br>
       <ion-input type="text"
       required  [(ngModel)] = "stuData.lastName"
              class="form-control"
@@ -192,31 +201,25 @@
       </div>
     </ion-item>
     </div>
+    <!-- <ion-item>
+      <ion-label position="fixed">Gender</ion-label>
+      <br>
+      <ion-input [(ngModel)] = "stuData.gender" type="gender"
+       
+             
+             required>
+             </ion-input></ion-item> -->
 
-
-
-
-
-
-
-
-    
   </fieldset>
-
-
-
-
-
-
-
 
   <div class="form-group"
        [ngClass]="{
         'has-danger': email.invalid && (email.dirty || email.touched),
         'has-success': email.valid && (email.dirty || email.touched)
    }">
-   <ion-label position="fixed">Email:</ion-label>
    <ion-item>
+   <ion-label position="fixed">Email:</ion-label>
+   <br>
     
     <ion-input type="email"
     required  [(ngModel)] = "stuData.email"
@@ -238,16 +241,8 @@
 
   </div>
 
-
-
-
-
-
-
-
-
-
-
+  
+  
 
 
 
@@ -258,9 +253,10 @@
         'has-danger': studno.invalid && (studno.dirty || studno.touched),
         'has-success': studno.valid && (studno.dirty || studno.touched)
    }">
-   <ion-label position="fixed">Student NO:</ion-label>
    <ion-item>
-    
+   <ion-label position="fixed">Student NO:</ion-label>
+   
+    <br>
     <ion-input type="number"
     required  [(ngModel)] = "stuData.studno"
            class="form-control"
@@ -307,9 +303,10 @@
         'has-danger': id_no.invalid && (id_no.dirty || id_no.touched),
         'has-success': id_no.valid && (id_no.dirty || id_no.touched)
    }">
-   <ion-label position="fixed">ID Number:</ion-label>
    <ion-item>
-    
+   <ion-label position="fixed">ID Number:</ion-label>
+  
+    <br>
     <ion-input type="number"
     required  [(ngModel)] = "stuData.id_no"
            class="form-control"
@@ -446,8 +443,9 @@
         'has-danger': password.invalid && (password.dirty || password.touched),
         'has-success': password.valid && (password.dirty || password.touched)
    }">
-   <ion-label position="fixed">Password: </ion-label>
    <ion-item>
+   <ion-label position="fixed">Password: </ion-label>
+   <br>
    
     <ion-input   
     required  [(ngModel)] = "stuData.password"
@@ -520,7 +518,18 @@
   -->
   <!--   *ngIf="(passwordControl.value != rPasswordControl.value) && !rPasswordControl.errors?.required"          -->
   
-
+  <div class="form-group">
+    <ion-item>
+      <ion-label for="image">Insert Image</ion-label>
+    </ion-item>
+    <img width="100" src="../../assets/pics/user1.jpg">
+  </div>
+  <div class="form-group">
+   
+  <ion-item>
+    <ion-input type="file" name="images" ></ion-input>
+  </ion-item>
+  </div>
 
   <ion-button   (click)=" add()" shape="round" color="dark" position="floating">Register </ion-button>
   <a routerLink="/login"> <ion-button  shape="round" color="dark"  position="floating">Sign In</ion-button> </a>

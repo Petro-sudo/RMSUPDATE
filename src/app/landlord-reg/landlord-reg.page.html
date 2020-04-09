@@ -1,9 +1,10 @@
  <ion-header>
   <ion-toolbar color="dark">
     <ion-buttons slot="start" >
-      <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title align="center">Landlord Registration</ion-title>
+    <ion-title align="center">Accomodation Provider Register Here</ion-title>
+    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/folder/Home">previous</ion-icon>
+  
   </ion-toolbar>
 </ion-header>
 
@@ -16,7 +17,15 @@
 </ion-header>
 
 -->
-<ion-content>
+<ion-content >
+  <ion-header>
+    <ul class="sidebar-nav">
+      
+      <li><a routerLink="/login">LOG IN</a></li>
+      
+    </ul>
+  </ion-header>
+  <br><br>
   <ion-list>
     <ion-grid>
       
@@ -40,6 +49,11 @@
     <ion-item>
       <ion-label position="floating">Surname</ion-label>
       <ion-input [(ngModel)] ="lordData.lname" name="lname"  type= "text" required ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Gender</ion-label>
+      <ion-input [(ngModel)] ="lordData.gender" name="gender"  type= "text" required ></ion-input>
     </ion-item>
 
     <ion-item>
@@ -85,6 +99,19 @@
       </ion-select>
     </ion-item>
 
+    <div class="form-group">
+      <ion-item>
+        <ion-label for="image">Insert Image</ion-label>
+      </ion-item>
+      <img width="100" src="../../assets/pics/user1.jpg">
+    </div>
+    <div class="form-group">
+     
+    <ion-item>
+      <ion-input type="file" name="images" ></ion-input>
+    </ion-item>
+    </div>
+
     <ion-item>
       <ion-label position= "floating" stacked>Enter password  :</ion-label>
       <ion-input  type="password" name="pwd"  [(ngModel)] ='lordData.pwd'></ion-input>
@@ -99,7 +126,6 @@
     <ion-button expand="block" color="dark" (click)=" addreg()">
       <ion-icon name="add"></ion-icon>
       Submit Registration
-
     </ion-button>
     
   </ion-list>

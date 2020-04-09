@@ -1,8 +1,10 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-buttons slot="start" >
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button style="background-color: success;"></ion-menu-button>
+      <ion-button   size="small" shape="round" color="danger" 
+            style="height: 30px; ">{{addimg}}</ion-button>  
+    </ion-buttons> 
     <ion-title align="center">Landlord Manage Properties</ion-title>
     <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/landlord-dash">previous</ion-icon>
   </ion-toolbar>
@@ -15,7 +17,7 @@
 
     <ion-grid style="background-image: url('assets/pics/landlord.jpg');" col="12">
 
-      <ion-card   col="12" *ngFor= "let a of addProp" style=" background-color: rosybrown; color: whitesmoke; opacity: 0.8;border-radius: 10px;">
+      <ion-card   col="12" *ngFor= "let a of addProp" style=" background-color:chartreuse; color: black; opacity: 0.8;border-radius: 10px;">
       
        
         <br>

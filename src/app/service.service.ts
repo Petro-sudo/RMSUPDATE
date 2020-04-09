@@ -23,7 +23,7 @@ export class ServiceService {
   getstud1_url='http://168.172.185.106:5000/getstud/40';
   image_url = 'http://168.172.185.106:5000/getimage';
   status_url = 'https://jsonplaceholder.typicode.com/posts/2';
-  proof_url = 'https://jsonplaceholder.typicode.com/users/2';
+  proof_url = 'https://jsonplaceholder.typicode.com/users/1';
   lordapp_url = 'https://168.172.185.106:5000/lord';
 
 

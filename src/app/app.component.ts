@@ -12,44 +12,35 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
+    
     {
-      title: 'Welcome..',
-      url: '/folder/Welcome',
-      icon: 'arrow-forward'
-    },
-    {
-      title: 'Login ',
-      url: 'login',
-      icon: 'log-in'
+      title: 'Register Resident',
+      url: 'landloard-app',
+      icon: 'add'
     },
 
     {
-      title: 'Logout ',
-      url: '/folder/folder',
-      icon: 'log-in'
-    },
-
-    {
-      title: 'Student Registration',
-      url: 'sturegister',
-      icon: 'clipboard'
-    },
-    {
-      title: 'Landlord Registration',
-      url: 'landlord-reg',
-      icon: 'clipboard'
-    },
-    {
-      title: 'How to Apply',
-      url: 'how-to-apply',
+      title: 'Manage Student',
+      url: 'managestud',
       icon: 'people'
+    },
+    {
+      title: 'Manage Properties',
+      url: 'manageprop',
+      icon: 'business'
     }
     ,
     {
-      title: 'Contact',
-      url: 'contact',
-      icon: 'people'
+      title: 'Edit Profile',
+      url: 'editlordprof',
+      icon: 'person-add'
     }
+    ,
+    {
+      title: 'Logout ',
+      url: '/folder/folder',
+      icon: 'log-out'
+    },
 
   ];
 

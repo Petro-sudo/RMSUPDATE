@@ -1,8 +1,10 @@
  <ion-header>
   <ion-toolbar color="dark">
-    <ion-buttons slot="start" >
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button style="background-color: red;"></ion-menu-button>
+      <ion-button   size="small" shape="round" color="danger" 
+            style="height: 30px; ">{{addimg}}</ion-button>  
+    </ion-buttons> 
     <ion-title align="center">Landlord Application</ion-title>
     <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/landlord-dash">previous</ion-icon>
   </ion-toolbar>
@@ -21,6 +23,7 @@
     
 <ion-item>
     <ion-label >Name of your property:</ion-label>
+    <br>
     <ion-input [(ngModel)] ="lordApply.propName" name = "property" type = "text"  ></ion-input>
     
 </ion-item>
@@ -31,47 +34,60 @@
   <ion-row>
     <ion-col style="border-radius: 1px;">
       <ion-label >Enter Full Address</ion-label>
+      <br>
       <ion-label position = "floating">Number</ion-label>
+      <br>
       <ion-input [(ngModel)] ="lordApply.add1" name = "add1" placeholder="Address 1"></ion-input>
+      <br>
       <ion-label position = "floating">Street/Block</ion-label>
+     <br>
       <ion-input [(ngModel)] ="lordApply.add2" name = "add2" placeholder="Address 2"></ion-input>
+      <br>
       <ion-label position = "floating">City</ion-label>
+      <br>
       <ion-input [(ngModel)] ="lordApply.city" name = "city" placeholder="City"></ion-input>
+      <br>
       <ion-label position = "floating">Code</ion-label>
+      <br>
       <ion-input [(ngModel)] ="lordApply.code" name = "code" placeholder="Code"></ion-input>
     </ion-col>
   </ion-row>
 </ion-item>
 
-
 <ion-item>
-  <ion-label position = "floating" > How far is the property from the TUT campus you selected in Killiometers:</ion-label>
+  <ion-label  > How far is the property from the TUT campus you selected in Killiometers:</ion-label>
+  <br>
   <ion-input [(ngModel)] = "lordApply.distance" name="distance" FormControl = "distance"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position = "floating" > Annaul fee per single room in R?</ion-label>
+  <br>
   <ion-input [(ngModel)] = "lordApply.feeSingle" name="feeSingle" FormControl = "feeSingle"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position = "floating" > Annaul fee per sharing room in R?</ion-label>
+  <br>
   <ion-input [(ngModel)] = "lordApply.feeSharing" name="feeSharing" FormControl = "feeSharing"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position = "floating"  > Number of sharing rooms?</ion-label>
+ <br>
   <ion-input [(ngModel)] = "lordApply.numSharing" name="numSharing" FormControl = "numSharing"></ion-input>
 </ion-item>
 
 
 <ion-item>
   <ion-label position = "floating" > Number of single rooms?</ion-label>
+  <br>
   <ion-input [(ngModel)] = "lordApply.numSingle" name="numSingle" FormControl = "numSingle"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position = "floating" > How many rooms in total?</ion-label>
+ <br>
   <ion-input [(ngModel)] = "lordApply.totalBed" name="totalBed" FormControl = "totalBed"></ion-input>
 </ion-item>
 
@@ -199,8 +215,6 @@
     <br>
   </ion-label>
 </ion-item>
-
-<br>
 <ion-item>
 <ion-input    [(ngModel)] = "lordApply.docs" type="file" name="docs" accept=".pdf"  required ></ion-input>
 </ion-item>  

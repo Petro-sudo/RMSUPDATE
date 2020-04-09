@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, MenuController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ServiceService } from '../service.service';
+import { Router, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-landlord-dash',
@@ -13,8 +14,17 @@ export class LandlordDashPage implements OnInit {
 
   result: any = [];
   data: Observable<any>;
+
+  
+
  
-   constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService) { }
+   constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService,
+    public menuCtrl: MenuController, private router: Router) {
+    
+     }
+
+     
+
    addProp: any=[];
    addimg: any=[];
    ngOnInit() {
@@ -36,11 +46,19 @@ export class LandlordDashPage implements OnInit {
    }
 
    getData(){
- 
- 
     this. _serviceService.lordprofile().subscribe(data=>{
      this.result = data;
      });
      
    }
+
+  //  openMenu(){
+  //    this.menuCtrl.open();
+  //  }
+  //  toggleLeftMenu() {
+  //   this.menuCtrl.toggle();
+  // }
+
+
+   
 }
