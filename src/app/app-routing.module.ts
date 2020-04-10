@@ -27,10 +27,6 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'stud-orlord',
-    loadChildren: () => import('./stud-orlord/stud-orlord.module').then( m => m.StudORlordPageModule)
-  },
-  {
     path: 'contact',
     loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
   },
@@ -107,7 +103,12 @@ const routes: Routes = [
     path: 'studstatus',
     loadChildren: () => import('./studstatus/studstatus.module').then( m => m.StudstatusPageModule)
 
+  },
+  {
+    path: 'login1',
+    loadChildren: () => import('./login1/login1.module').then( m => m.Login1PageModule)
   }
+
 
 
 ];

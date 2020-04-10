@@ -1,69 +1,35 @@
-<ion-header style="background-color: black;">
+<!-- <ion-header style="background-color: black;">
   <ion-toolbar color="dark">
-    <!-- <ion-buttons slot="start">
-      <ion-menu-button style="background-color: red;"></ion-menu-button>
-    </ion-buttons> -->
+  
     <ion-title color="dark" style="color: white;" align="center">{{ folder }} </ion-title>
     <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/folder/hom">previous</ion-icon>
   
   </ion-toolbar>
-</ion-header>
-
-
-
-
+</ion-header> -->
 <ion-content login-header ion-padding>
-  
-  <div class = "ion-text-center">
-          <div heading-column-lr>
-            <h1 medium-heading align="center">WELCOME TO TUTEH PROPERTIES</h1>
-           </div>
+  <div style="text-align:center;">
+    <ion-header>
+    <h1 style="text-align: center;">T Res</h1>
+  </ion-header>
+    <ul class="sidebar-nav" style="text-align: center;">
+      <li><a routerLink="/folder/home">HOME</a></li>
+      <li><a routerLink="#">FAQS</a></li>
+      <li><a routerLink="#">HELP</a></li>
+    </ul>
+  </div>
+  <br><br> <br> <br>
+
+  <p style="color: white;">Sign in to access your account</p>
       
    
   <form>
-<div class="ion-radio">
-
-  <ion-radio-group >
-      <ion-row radio-group name = "userType" >
-        
-      <ion-col>
-      <ion-item lines="none">
-        <ion-label>
-          Admin
-        </ion-label>
-       <ion-radio (click)="getUserType(3)" value = "3" ></ion-radio>
-      </ion-item>
-      </ion-col>
-
-       <ion-col>
-      <ion-item lines="none">
-        <ion-label >
-          Student
-        </ion-label>
-        <ion-radio  (click)="getUserType(1)" value = "1" ></ion-radio>
-      </ion-item>
-    </ion-col>
-
-    <ion-col>
-      <ion-item lines="none">
-        <ion-label >
-          Landlord
-        </ion-label>
-       <ion-radio (click)="getUserType(2)" value = "2" ></ion-radio>
-      </ion-item>
-    </ion-col>
-
-  </ion-row>   
-</ion-radio-group> 
-    
-  </div>
 
     <div linespace></div>
 
     <br>
 
 <ion-item transparent>
-  <ion-label position = "floating">EMAIL</ion-label>
+  <ion-label position = "floating"><ion-icon name="mail"></ion-icon> EMAIL</ion-label>
 <ion-input [(ngModel)] = "loginUserData.email" type="email" id = "email" name ="email" class="form-control"
 #email = "ngModel" autofocus required email ngModel></ion-input>    
 </ion-item>
@@ -72,29 +38,23 @@
 </div>
 
 <ion-item transparent> 
-<ion-label position = "floating">PASSWORD</ion-label>
+<ion-label position = "floating"><ion-icon name="lock-closed"></ion-icon> PASSWORD</ion-label>
 <ion-input [(ngModel)]="loginUserData.password" type="password" name="password" id="password" class="form-control"
 placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel ></ion-input> 
 </ion-item>
 <div class="alert alert-danger" role="alert" *ngIf="Password.invalid && (Password.dirty || Password.touched)" style="color:red">
   Please enter a valid password between 8 to 20 chars.
 </div>
+<br>
 
-<div class="log">
-
-<a routerLink="/forget">Forget Password</a>
-</div>
-<div linespace></div>
-
-<ion-button class = "ion-text-center" color="primary" 
+<ion-button class = "ion-text-center" color="secondary"  expand="block"
 (click)="loginUser()">Sign In</ion-button>
 <br>
 
-<br><br>
 
-<p>New User?  <a routerLink="/stud-orlord">Create Account</a></p>
+<p style="text-align: left; color: white;">No account? sign up<a routerLink="/landlord-reg" style="color: rgb(27, 219, 245);">here</a></p>
 
 
 </form>
-</div> 
+
 </ion-content>
