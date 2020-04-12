@@ -1,84 +1,151 @@
 ion-content{
 
-    --ion-background-color:rgb(95, 248, 95);
-}
-.login-header{
-    position: relative;
+    --ion-background-color:rgb(3, 1, 32);
+    text-align: center;
     
 }
-.logo-img{
-    display: block;
-    width: 120px;
-    text-align: left;
-}
-[heading-column-lr]{
-    display: flex;
-    text-align:center;
-    padding : 15px;
-}
-[medium-heading]{
 
-  font-family: "Heebo-Bold" !important;  
-  font-size: 30px !important;
-  color: var(--theme-black);
-  font-style: bold;
+ion-label{
+    color:rgb(27, 219, 245)
 }
-[small-heading]{
-    font-family: "Heebo-Regular" !important;
-    margin-left: auto;padding-right: 15px; font-size: 15px; ;
-    font-style: oblique;
-}
-[transparent]
-{
-    --background: transparent;
+
+ion-item{
+    color:white;
+    text-align: left;
+    color: rgb(27, 219, 245);
+    border-bottom: solid 2px;
 }
 ion-input
 {
-    --color:#000;
-    font-size: 15px;
-     position: floating;
-     text-align: center;
+    color: white;
+}
+ion-button{
+
+color: black;
+}
+ion-icon{
+    color: white;
+}
+
+h1{
+    background-color: rgb(8, 243, 106);
+    color:rgb(3, 1, 32) ;
+    margin-right: 340px;
+    margin-left: 340px;
+}
+li{
+   float: right;
+   list-style:none;
+   text-align: center;
+   width: 100px;
+   height: 15px;
+   line-height: 10px;
+   color: aliceblue;
+  
+  
+  }
+  a {
+
+    text-decoration-line: none;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    font-style: initial;
+  }
+  
+  a:hover {
+    background-color: rgb(132, 72, 243);
+    color: black;
+  }
+  ul{
+    text-align: center;
+  }
+
+
+
+
+
+// ion-content{
+
+//     --ion-background-color:rgb(95, 248, 95);
+// }
+// .login-header{
+//     position: relative;
+    
+// }
+// .logo-img{
+//     display: block;
+//     width: 120px;
+//     text-align: left;
+// }
+// [heading-column-lr]{
+//     display: flex;
+//     text-align:center;
+//     padding : 15px;
+// }
+// [medium-heading]{
+
+//   font-family: "Heebo-Bold" !important;  
+//   font-size: 30px !important;
+//   color: var(--theme-black);
+//   font-style: bold;
+// }
+// [small-heading]{
+//     font-family: "Heebo-Regular" !important;
+//     margin-left: auto;padding-right: 15px; font-size: 15px; ;
+//     font-style: oblique;
+// }
+// [transparent]
+// {
+//     --background: transparent;
+// }
+// ion-input
+// {
+//     --color:#000;
+//     font-size: 15px;
+//      position: floating;
+//      text-align: center;
      
     
-}
-[icon-small]{
-    width:35px;
-}
-ion-item{
-    --highlight-color-focused:transparent;
-    padding:10px;
-}
-[linespace]
-{
-    height: 20px;
-}
-ion-label{
-    color:#000;
-    opacity: .8;
-    font-size: 15px;
-    display: block;
-}
-.forget-password
-{
-    color:#000;
-    font-size: 15px;
-    display: block;
-    text-align: right;
-    padding: 10px;
-}
-ion-button
-{
-    text-align: center;
-}
-.log
-{
-    text-align: right;
-}
-h1
-{
-   text-align:center; 
-}
-.ion-radio
-{
-    text-align: center;
-}
+// }
+// [icon-small]{
+//     width:35px;
+// }
+// ion-item{
+//     --highlight-color-focused:transparent;
+//     padding:10px;
+// }
+// [linespace]
+// {
+//     height: 20px;
+// }
+// ion-label{
+//     color:#000;
+//     opacity: .8;
+//     font-size: 15px;
+//     display: block;
+// }
+// .forget-password
+// {
+//     color:#000;
+//     font-size: 15px;
+//     display: block;
+//     text-align: right;
+//     padding: 10px;
+// }
+// ion-button
+// {
+//     text-align: center;
+// }
+// .log
+// {
+//     text-align: right;
+// }
+// h1
+// {
+//    text-align:center; 
+// }
+// .ion-radio
+// {
+//     text-align: center;
+// }

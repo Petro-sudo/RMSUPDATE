@@ -2,13 +2,7 @@ fieldset {
     border: 0;
     margin-left: -10px;  
 }
-ion-input
-{
-    
-    border-radius: 10px;
-    border: solid white 1px;
 
-}
 ion-select-option 
 {
     border: solid black 1px;
@@ -23,15 +17,41 @@ on-select
 
 ion-content{
 
-    --ion-background-color:rgb(95, 248, 95);
+    --ion-background-color:rgb(3, 1, 32);
+    
+}
+
+ion-item{
+    color:white;
+    text-align: left;
+    color: rgb(8, 243, 106);
+    border-bottom: solid 1px;
+}
+ion-input
+{
+    color: white;
+}
+ion-button{
+
+color: black;
+}
+ion-icon{
+    color: white;
+}
+
+h1{
+    background-color: rgb(8, 243, 106);
+    color:rgb(3, 1, 32) ;
+    margin-right: 340px;
+    margin-left: 340px;
 }
 li{
-    float: right;
+   float: right;
    list-style:none;
    text-align: center;
    width: 100px;
-   height: 20px;
-   line-height: 20px;
+   height: 15px;
+   line-height: 10px;
    color: aliceblue;
   
   
@@ -39,12 +59,17 @@ li{
   a {
 
     display: inline-block;
-    padding: 8px 16px;
-    text-align: left;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    font-style: initial;
+    text-decoration-line: none;
   }
   
   a:hover {
-    background-color: #ddd;
+    background-color: rgb(132, 72, 243);
     color: black;
   }
-  
+  ul{
+    text-align: center;
+  }

@@ -1,12 +1,10 @@
 <ion-header style="background-color: black;">
   <ion-toolbar color="dark">
-    <ion-buttons slot="start">
-      <ion-menu-button style="background-color: success;"></ion-menu-button>
-  
+    <ion-buttons slot="start" color = "success">
+       <ion-icon name="menu" (click)="presentMenu()"></ion-icon>
     </ion-buttons> 
   <ion-title color="dark" style="color: white; font-size: xx-large; " align="center" >WELCOME LANDLORD</ion-title>
-  <ion-icon style="font-size: 10px;" slot="end" name="log-out-outline" 
-  routerLink="/folder/home">previous</ion-icon>
+  
   
 </ion-toolbar>
 </ion-header>
