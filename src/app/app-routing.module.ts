@@ -107,7 +107,16 @@ const routes: Routes = [
   {
     path: 'login1',
     loadChildren: () => import('./login1/login1.module').then( m => m.Login1PageModule)
+  },
+  {
+    path: 'help/helplord',
+    loadChildren: () => import('./help/helplord/helplord.module').then( m => m.HelplordPageModule)
+  },
+  {
+    path: 'help/helpstud',
+    loadChildren: () => import('./help/helpstud/helpstud.module').then( m => m.HelpstudPageModule)
   }
+
 
 
 

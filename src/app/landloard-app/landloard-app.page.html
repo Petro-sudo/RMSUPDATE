@@ -1,13 +1,10 @@
  <ion-header>
   <ion-toolbar color="dark">
-    <ion-buttons slot="start">
-      <ion-menu-button style="background-color: red;"></ion-menu-button>
-      <ion-button   size="small" shape="round" color="danger" 
-            style="height: 30px; ">{{addimg}}</ion-button>  
-    </ion-buttons> 
+    <ion-buttons slot="start" color = "success">
+      <ion-icon name="menu" (click)="presentMenu()"></ion-icon>
+   </ion-buttons>
     <ion-title align="center">Landlord Application</ion-title>
-    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/landlord-dash">previous</ion-icon>
-  </ion-toolbar>
+    </ion-toolbar>
 </ion-header>
 
 

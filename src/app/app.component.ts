@@ -10,39 +10,39 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public selectedIndex = 0;
-  public appPages = [
+  // public selectedIndex = 0;
+  // public appPages = [
     
-    {
-      title: 'Register Resident',
-      url: 'landloard-app',
-      icon: 'add'
-    },
+  //   {
+  //     title: 'Register Resident',
+  //     url: 'landloard-app',
+  //     icon: 'add'
+  //   },
 
-    {
-      title: 'Manage Student',
-      url: 'managestud',
-      icon: 'people'
-    },
-    {
-      title: 'Manage Properties',
-      url: 'manageprop',
-      icon: 'business'
-    }
-    ,
-    {
-      title: 'Edit Profile',
-      url: 'editlordprof',
-      icon: 'person-add'
-    }
-    ,
-    {
-      title: 'Logout ',
-      url: '/folder/folder',
-      icon: 'log-out'
-    },
+  //   {
+  //     title: 'Manage Student',
+  //     url: 'managestud',
+  //     icon: 'people'
+  //   },
+  //   {
+  //     title: 'Manage Properties',
+  //     url: 'manageprop',
+  //     icon: 'business'
+  //   }
+  //   ,
+  //   {
+  //     title: 'Edit Profile',
+  //     url: 'editlordprof',
+  //     icon: 'person-add'
+  //   }
+  //   ,
+  //   {
+  //     title: 'Logout ',
+  //     url: '/folder/folder',
+  //     icon: 'log-out'
+  //   },
 
-  ];
+  // ];
 
 
   constructor(
@@ -61,9 +61,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
+    // const path = window.location.pathname.split('folder/')[1];
+    // if (path !== undefined) {
+    //   this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    // }
   }
 }

@@ -46,7 +46,7 @@ h1{
     margin-left: 340px;
 }
 li{
-   float: left;
+   float: right;
    list-style:none;
    text-align: center;
    width: 100px;
@@ -58,11 +58,12 @@ li{
   }
   a {
 
-    // display: inline-block;
+    display: inline-block;
     color: white;
     padding: 8px 8px;
     text-align: center;
     font-style: initial;
+    text-decoration-line: none;
   }
   
   a:hover {
