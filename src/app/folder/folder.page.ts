@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { IonSlides } from '@ionic/angular';
+import {FormsModule } from '@angular/forms';
+
 import {ServiceService} from './../service.service';
 
 @Component({
@@ -17,52 +19,71 @@ export class FolderPage implements OnInit {
     slidesPerView: 1,
     autoplay:true
    };
+  filterData: any;
  
   //added 
  
  
 
   constructor(private activatedRoute: ActivatedRoute,private _serviceService: ServiceService) { }
-  addProp: any=[];
+  public addProp: any=[];
+  public addProps: any=[];
   addimg: any=[];
+  public searchTerm: string = "";
+  public items: any;
+
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
 
+    
     this.getProperty();
-    this.img();
-
- 
+    // this.setFilteredItems();
   }
 
+
+
+  filterItems(searchTerm) {
+    return this.addProp.filter(item => {
+      return item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+    });
+  }
+
+ 
+  setFilteredItems() {
+    this.items = this.filterItems(this.searchTerm);
+  }
 
   slidesDidLoad(slides: IonSlides) {
     slides.startAutoplay();
-    this.getProperty();
-   this.img();
+    // this.getProperty();
+   
+  
 
   }
+
+
+
+
+
+
+
 
 
 
 
   getProperty(){
+   var searchTerm= "";
     return  this._serviceService.getApartment().
     subscribe((apart:any)=>
      {this.addProp = apart;
        console.log(this.addProp
          );
+        this.filterItems(searchTerm); 
      });
    }
  
  
- 
-   img(){
-     return  this._serviceService.getApartment().
-     subscribe((img:any)=>
-      {this.addProp = img;
-        console.log(this.addimg);
-      });
-    }
+
  
   
  
