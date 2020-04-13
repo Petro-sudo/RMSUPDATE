@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(),
+    ReactiveFormsModule,
     AppRoutingModule,
    
     FormsModule, ReactiveFormsModule
