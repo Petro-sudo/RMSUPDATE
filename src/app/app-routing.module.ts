@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { FilterPipe} from './filter.pipe';
 const routes: Routes = [
   {
     path: '',
@@ -126,6 +126,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
+ 
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

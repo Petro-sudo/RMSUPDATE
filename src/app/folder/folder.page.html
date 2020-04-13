@@ -149,19 +149,17 @@
 
 
 
-<ion-header style="background-color: black;">
-  <ion-toolbar color="dark">
-  
-    <ion-title color="dark" style="color:chartreuse; text-align: center;" align="center;">WELCOME TO T-Res <ion-icon name="happy-outline"></ion-icon></ion-title>
+
+<ion-header style="background-color:#00003f">
+  <ion-toolbar color="primary">
+   
+     <ion-title color="dark" style="color:chartreuse; text-align: center;" align="center;">WELCOME TO T-Res <ion-icon name="happy-outline"></ion-icon></ion-title>
     
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
-
-
-
+<ion-content style="text-align: center; background-color: #00003f ;">
 
 
   <ion-grid style="color: black; background-color: #DCDCDC;" >
@@ -259,14 +257,15 @@
 <br>
 <button style="font-size: 30px;" class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
 </ion-slides>
-<h1 style="font-size: 50px;font-weight: bolder;color: black;">Be part of a growing community</h1>
-
 <ion-grid>
   <ion-row>
+<h1 style="font-size: 50px;font-weight: bolder;color: black;">Be part of a growing community</h1>
+
+
     <ion-col col=6>
       <a routerLink="/login1">
       <ion-button style="width: 350px; height:45px;" color="success" shape="round">
-          ARE YOU A STUDENT
+          ARE YOU A STUDENT ?
       </ion-button></a>
     </ion-col>
 
@@ -287,35 +286,71 @@
 
 
 
+<ion-row>
 
 
-<h4 ><ion-icon style="color:#FFA500; font-size:20px ; " name="trophy"></ion-icon>Leased  residences
-  <ion-icon style="color:#FFA500; font-size:20px ;" name="podium"></ion-icon> Accredited Residences
-  <ion-icon style="color:#FFA500; font-size:20px ;" name="podium"></ion-icon> Non Accredited Residences
-</h4>
 
-    <ion-row>
-      <ion-col col="4"> 
-    <ion-card  *ngFor= "let a of addProp" style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
+<ion-col>
+<ion-icon style="color:#FFA500; font-size:15px ; " name="trophy"></ion-icon>Leased  residences
+</ion-col>
+
+<ion-col>
+  <ion-icon style="color:#FFA500; font-size:15px ;" name="podium"></ion-icon> Accredited Residences
+</ion-col>
+
+<ion-col>
+  <ion-icon style="color:#FFA500; font-size:15px ;" name="home"></ion-icon> Non Accredited Residences
+</ion-col>
+
+</ion-row>
+
+  
+ 
+  <ion-icon color="success" name="search-outline"></ion-icon>
+  <ion-select     name="search-outline"  style="border-bottom: 5px blue; background-color:#DCDCDC ;"
+  [(ngModel)]="searchTerm"
+  (ionChange)="setFilteredItems()"
+  placeholder="Which campus would you like to view for?"    required >
+  <ion-icon color="success" name="search-outline"></ion-icon>
+
+   <ion-select-option value="POLOKWANE CAMPUS">POLOKWANE CAMPUS</ion-select-option>
+   <ion-select-option value="SOSHAGUVE CAMPUS">SOSHAGUVE CAMPUS</ion-select-option>
+   <ion-select-option value="ARCADIA CAMPUS">ARCADIA CAMPUS</ion-select-option>
+  <ion-select-option value="ARTS CAMPUS">ARTS CAMPUS</ion-select-option>
+    <ion-select-option value="EMALAHLENI CAMPUS">EMALAHLENI CAMPUS</ion-select-option>
+    <ion-select-option value="GA-RANKUWA CAMPUS">GA-RANKUWA CAMPUS</ion-select-option>
+    <ion-select-option value="MBOMBELA CAMPUS">MBOMBELA CAMPUS</ion-select-option>
+    <ion-select-option value="PRETORIA MAIN CAMPUS">PRETORIA MAIN CAMPUS</ion-select-option>
+ 
+
+    
+  </ion-select>
+
+
+
+ 
+    <!-- <ion-row>
+      <ion-col col="6">  -->
+    <ion-card  *ngFor= "let item of addProp   " style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
      
      
-      <h1 style="color: black;" >{{a.name}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
+      <h1 style="color: black;margin-right: 120px;" >{{item.name}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
      
   
-     <ion-label  >
-      PROPERTY OWNER:{{a.username}}
+     <ion-label >
+      PROPERTY OWNER:{{item.username}}
      </ion-label>
      <br>
-     <ion-label>
-     CITY: {{a.address.city}} 
+     <ion-label >
+     CITY: {{item.address.city}} 
      </ion-label>
      <br>
-     <ion-label>
-       STREET ADDRESS: {{a.address.street}}
+     <ion-label >
+       STREET ADDRESS: {{item.address.street}}
      </ion-label>
      <br>
-     <ion-label>
-       POSTAL CODE: {{a.address.zipcode}} <ion-icon style="color:#00003f; font-size:20px ; margin-right:10px;" name="call"></ion-icon>
+     <ion-label >
+       POSTAL CODE: {{item.address.zipcode}} <ion-icon style="color:#00003f; font-size:20px ; margin-right:10px;" name="call"></ion-icon>
        <ion-icon  style="color:#00003f; font-size:20px ; margin-right:20px;" name="mail"></ion-icon>
      </ion-label>
      <br>
@@ -324,12 +359,72 @@
      
     
    </ion-card>
-</ion-col>
+<!-- </ion-col>
    
-  </ion-row>
+  </ion-row> -->
+<h1 style="font-weight: bold; width:300px;border-left: 20px solid #00003f;color: #00003f ; ">Who we Are</h1>
+<br>
+<p  style="color: #00003f ; ">
+  TRes is a digital platform built to enhance the quality of life for students in student 
+  accommodation while providing appropriate tools and support to accommodation providers. 
+  The design and functionality of the platform aims to create ongoing interaction between students, 
+  accommodation providers and University administrators in a spirit of cooperation and mutual respect.
+   Each of the participants must always feel like their voice is heard.
+</p>
+<br>
+<p  style="color: #00003f ; ">
+  The core idea behind TRes is that student accommodation is not only big business,
+   it is more importantly about human dignity. It is about the totality of the experience of being a university student.
+   It is one of the critical contributory factors to student performance.
+</p>
+<br>
+<p style="color: #00003f ; ">
+  Every aspect of TRes reflects this core idea. From students searching for accommodation through to 
+  their daily lived experience; and from accommodation providers applying for accreditation or tendering
+   a lease through to the daily management of the accommodation facility,
+   TRes makes interactions seamless, experiences memorable and results pleasing
+</p>
+<br>
+
+<p  style="color: #00003f ; ">
+  In essence, TRes is the one stop
+   shop for student accommodation and soon to be one stop shop for student living.
+</p>
  </ion-grid>
 
+<form action="" style="background-color: #00003f; margin-top: -40px;">
+  <h1 style="font-weight: bold; width:400px;border-left: 20px solid rgb(122, 243, 122);color:rgb(122, 243, 122) ; ">Get in touch with Us</h1>
 
+  <ion-input style="font-weight: bold; border: 1px solid rgb(122, 243, 122); border-radius:5px ;" required>
+    <ion-label style="color:white ;">Full Names</ion-label>
+  </ion-input>
+
+  <ion-input style="font-weight: bold; border: 1px solid rgb(122, 243, 122); border-radius:5px ;" required>
+    <ion-label style="color:white ;" >Full Names</ion-label>
+  </ion-input>
+
+  <ion-input style="font-weight: bold; border: 1px solid rgb(122, 243, 122);border-radius:5px ;" type="text" required>
+    <ion-label style="color:white ;">Message</ion-label>
+  </ion-input>
+  
+<ion-button>
+  Submit
+</ion-button>
+<h1 style="font-weight: bold; width:400px;border-left: 20px solid rgb(122, 243, 122);color:rgb(122, 243, 122) ; ">Where to find us</h1>
+
+<p style="color:white ;">
+  TEL : 012 111 7860 | EMAIL : info@t-res.co.za
+</p>
+
+<p style="color:white ; width: 350px;">
+  TUT Enterprise Holdings, Building 23
+23 Meiring Naude Rd, Scientia 627-Jr
+Pretoria
+0184
+</p>
+
+
+</form>
 
 
   
