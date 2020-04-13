@@ -2,14 +2,18 @@ li{
     float: right;
     list-style:none;
     text-align: center;
-    width: 170px;
-    height: 15px;
-    line-height: 10px;
+    width: 200px;
+    height: 6px;
+    line-height: 6px;
     color: aliceblue;
    }
    ion-content{
       //  --background-color: #ebebeb;
        --ion-background-color:#ebebeb;
+   }
+   img{
+    text-align:left;
+    font-size: small; 
    }
 a {
 
@@ -27,6 +31,4 @@ a {
     text-decoration-line: solid 2px;
     border-bottom: solid 2px;
   }
-  ul{
-    text-align: center;
-  }
+  

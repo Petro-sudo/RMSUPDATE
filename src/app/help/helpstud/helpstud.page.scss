@@ -11,6 +11,10 @@ li{
    ion-content{
     --ion-background-color:#ebebeb;
    }
+   img{
+    text-align:left;
+    font-size: small; 
+   }
 a {
 
     display: inline-block;
@@ -27,6 +31,4 @@ a {
     text-decoration-line: solid 2px;
     border-bottom: solid 2px;
   }
-  ul{
-    text-align: center;
-  }
+ 
