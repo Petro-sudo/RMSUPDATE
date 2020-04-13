@@ -1,0 +1,31 @@
+li{
+    float: right;
+    list-style:none;
+    text-align: center;
+    width: 170px;
+    height: 15px;
+    line-height: 10px;
+    color: aliceblue;
+   }
+   ion-content{
+       background-color: #ebebeb;
+   }
+a {
+
+    display: inline-block;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    font-style: initial;
+    text-decoration-line: none;
+  }
+  
+  a:hover {
+    background-color: transparent;
+    color: white;
+    text-decoration-line: solid 2px;
+    border-bottom: solid 2px;
+  }
+  ul{
+    text-align: center;
+  }

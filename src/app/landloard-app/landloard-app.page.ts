@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ActionSheetController, LoadingController } from '@ionic/angular';
 import {FormGroup, Validators, FormControl} from '@angular/forms';
 import {ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ServiceService } from '../service.service';
@@ -16,7 +16,9 @@ export class LandloardAppPage implements OnInit {
   @Input() lordApply= {propName:" ",add1:" ",add2:" ",
    city:" ",code:" ",distance:" " ,feesSingle:" ",feeSharing:" "
    ,numSingle:" ",numSharing:" " ,totalBed:" ",docs:" "}
-  constructor(public alertCtrl: AlertController, private _serviceService : ServiceService ) { }
+  constructor(public alertCtrl: AlertController,private router: Router, private _serviceService : ServiceService,
+    public actionSheetCtrl: ActionSheetController,
+    private loadingCtrl: LoadingController ) { }
   addlord: any = [];
 
 
@@ -32,6 +34,55 @@ export class LandloardAppPage implements OnInit {
   //  numSharing= new FormControl;
   //  totalBed= new FormControl;
   // docs= new FormControl;
+  async presentMenu() {
+    const actionSheet = await this.actionSheetCtrl.create({
+      header:'Land-Lord Menu',
+      buttons:[{
+        text: 'Profile',
+        role: 'destrustctive',
+        icon: 'person-circle-outline',
+        handler:()=>{
+          
+          this.router.navigateByUrl('landlord-dash');
+        }
+      },{
+        text: 'Register Resident',
+        icon: 'add',
+        handler: () =>{
+        this.router.navigateByUrl('/landloard-app'); 
+        }
+      },{
+      text: 'Manage Student',
+      icon: 'people',
+      handler: () =>{
+        this.router.navigateByUrl('managestud');
+      }
+      },
+      {
+        text: 'Manage Properties',
+        icon: 'business',
+        handler: () =>{
+          this.router.navigateByUrl('manageprop');
+        }
+      },
+      {
+        text:'Edit Your Profile',
+        icon:'person-add',
+        handler: () =>{
+          this.router.navigateByUrl('editlordprof');
+        }
+      },
+      {
+        text: 'Logout ',
+        icon: 'log-out',
+        handler: () =>{
+          this.router.navigateByUrl('/folder/folder');
+        }
+      }
+     ]
+    });
+    await actionSheet.present();
+  }
 
   ngOnInit() {
   

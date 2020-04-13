@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { LandlordDashPageRoutingModule } from './landlord-dash-routing.module';
-import { LandlordDashPage } from './landlord-dash.page';
+
+import { HelplordPageRoutingModule } from './helplord-routing.module';
+
+import { HelplordPage } from './helplord.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LandlordDashPageRoutingModule
+    HelplordPageRoutingModule
   ],
-  declarations: [LandlordDashPage]
+  declarations: [HelplordPage]
 })
-export class LandlordDashPageModule {}
+export class HelplordPageModule {}
