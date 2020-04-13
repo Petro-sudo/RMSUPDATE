@@ -11,10 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { ShareService } from '../share/share';
 import { HttpModule }from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FilterPipe],
   entryComponents: [],
   imports: [
     HttpClientModule,

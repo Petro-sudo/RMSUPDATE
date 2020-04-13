@@ -7,6 +7,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ServiceService {
   display: any;
+  public addProp: any=[];
 
   constructor(private http: HttpClient) { }
 
@@ -80,6 +81,10 @@ public postLogin(loglord:any)
     return this.http.get<any>(this.image_url);
   }
 
+ 
+
   
+
+ 
 
 }
