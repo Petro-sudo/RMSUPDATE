@@ -115,7 +115,15 @@ const routes: Routes = [
   {
     path: 'help/helpstud',
     loadChildren: () => import('./help/helpstud/helpstud.module').then( m => m.HelpstudPageModule)
+  },  {
+    path: 'manageprovider',
+    loadChildren: () => import('./admin/manageprovider/manageprovider.module').then( m => m.ManageproviderPageModule)
+  },
+  {
+    path: 'managesystem',
+    loadChildren: () => import('./admin/managesystem/managesystem.module').then( m => m.ManagesystemPageModule)
   }
+
 
 
 
