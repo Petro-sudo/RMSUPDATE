@@ -10,39 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  // public selectedIndex = 0;
-  // public appPages = [
-    
-  //   {
-  //     title: 'Register Resident',
-  //     url: 'landloard-app',
-  //     icon: 'add'
-  //   },
-
-  //   {
-  //     title: 'Manage Student',
-  //     url: 'managestud',
-  //     icon: 'people'
-  //   },
-  //   {
-  //     title: 'Manage Properties',
-  //     url: 'manageprop',
-  //     icon: 'business'
-  //   }
-  //   ,
-  //   {
-  //     title: 'Edit Profile',
-  //     url: 'editlordprof',
-  //     icon: 'person-add'
-  //   }
-  //   ,
-  //   {
-  //     title: 'Logout ',
-  //     url: '/folder/folder',
-  //     icon: 'log-out'
-  //   },
-
-  // ];
+  
 
 
   constructor(

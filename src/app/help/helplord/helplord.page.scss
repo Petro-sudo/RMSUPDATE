@@ -31,4 +31,23 @@ a {
     text-decoration-line: solid 2px;
     border-bottom: solid 2px;
   }
-  
+  ion-toolbar{
+    --ion-background-color:rgb(3, 1, 32);
+  }
+  option:hover
+  {
+    background-color: transparent;
+  }
+  select:hover{
+    background-color: transparent;
+  }
+  option{
+    list-style: none;
+    border-style: none;
+    background-color: transparent;
+  }
+  select{
+    list-style: none;
+    border-style: none;
+    background-color: transparent;
+  }

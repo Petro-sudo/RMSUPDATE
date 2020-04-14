@@ -1,6 +1,6 @@
 ion-content{
     --ion-background-color:rgb(3, 1, 32);
-    text-align: center;
+   
 }
 
 ion-input
@@ -44,22 +44,20 @@ ion-item{
     border-bottom: solid 2px;
 }
   a {
-
-   
     color: white;
     padding: 8px 8px;
     text-align: center;
-    text-decoration-line: none;
-   
-    
+    text-decoration-line: none;  
   }
+  img{
+    text-align:left;
+    font-size: small; 
+   }
   
   // a:hover {
     
   //    color: black;
   // }
-  ul{
-    text-align: center;
-  }
+ 
 
   
