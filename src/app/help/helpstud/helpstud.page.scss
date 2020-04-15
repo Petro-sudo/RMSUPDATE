@@ -9,7 +9,11 @@ li{
     color: aliceblue;
    }
    ion-content{
-       background-color: #ebebeb;
+    --ion-background-color:#ebebeb;
+   }
+   img{
+    text-align:left;
+    font-size: small; 
    }
 a {
 
@@ -27,6 +31,6 @@ a {
     text-decoration-line: solid 2px;
     border-bottom: solid 2px;
   }
-  ul{
-    text-align: center;
-  }
+ ion-toolbar{
+  --ion-background-color:rgb(3, 1, 32);
+ }

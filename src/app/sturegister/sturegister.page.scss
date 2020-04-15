@@ -65,11 +65,15 @@ li{
     font-style: initial;
     text-decoration-line: none;
   }
+  img{
+    text-align:left;
+    font-size: small; 
+   }
   
-  a:hover {
-    background-color: rgb(132, 72, 243);
-    color: black;
-  }
+//   a:hover {
+    
+//     color: black;
+//   }
   ul{
     text-align: center;
   }

@@ -22,6 +22,7 @@ import { FilterPipe } from './filter.pipe';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(),
+    ReactiveFormsModule,
     AppRoutingModule,
    
     FormsModule, ReactiveFormsModule

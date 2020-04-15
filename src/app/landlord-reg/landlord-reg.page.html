@@ -9,21 +9,28 @@
 </ion-header>
 
 -->
-<ion-content >
-  <ion-content login-header ion-padding>
-    <div style="text-align:center;">
-      <h1 style="text-align: center;">T Res</h1>
-      <ul class="sidebar-nav" style="text-align: center; font-size: small;">
+
+  <!-- <div style="text-align:center;font-size: small; ">
+    <img src="assets/pics/logo.png" width="100px" height="50px" alt="">
+   </div> -->
+  <ion-content >
+
+    <ion-toolbar>
+      <ul class="sidebar-nav" style="text-align: center;font-size: small">
+        <div style="text-align:left;font-size: small; ">
+          <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
+         </div>
         <li><a routerLink="/help/helplord">HELP</a></li>
-      <li><a routerLink="#">FAQS</a></li>
-      <li><a routerLink="/folder/home">HOME</a></li>
+        <li><a routerLink="#">FAQS</a></li>
+        <li><a routerLink="/folder/home">HOME</a></li>
       </ul>
-    </div>
+    </ion-toolbar>
     <br><br> <br> <br>
   
     <p style="color: white;">Register to create an account</p>
         
   <br>
+  <form #form="ngForm" (ngSubmit)="register(form)">
   <ion-list>
   
     <!-- <ion-item>
@@ -49,7 +56,8 @@
 
     <ion-item>
       <ion-label position = "floating"><ion-icon name="mail"></ion-icon> EMAIL</ion-label>
-      <ion-input [(ngModel)] = "lordData.email" name="email"  type= "Email" required ></ion-input>
+      <ion-input [(ngModel)] = "lordData.email" name ="email"type= "email" 
+      pattern ="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="land.lord@gmail.com" required ></ion-input>
     </ion-item>
 
     
@@ -63,23 +71,28 @@
 
     <ion-item>
       <ion-label position= "floating"><ion-icon name="lock-closed"></ion-icon> PASSWORD</ion-label>
-      <ion-input  type="password" name="pwd"  [(ngModel)] ='lordData.pwd'></ion-input>
+      <ion-input [(ngModel)] ='lordData.pwd' name ="pwd"type="password" required></ion-input>
     </ion-item>
 
      <ion-item>
       <ion-label position= "floating"><ion-icon name="lock-closed"></ion-icon> CONFIRM PASSWORD</ion-label>
-      <ion-input name="password-repeat" type="password"  equals-to="Form.password"  placeholder=""></ion-input>  
+      <ion-input  type="password" [(ngModel)]='lordData.confirmPwd' name ="confirmPwd"  required></ion-input>  
     </ion-item>
     <br>
     <p style="color: white;">By signing up, you confirm that you've read
-       and accepted our <a routerLink="#" style="color: rgb(8, 243, 106);;">Terms of Service and Privacy Policy</a></p>
+       and accepted our <a href="https://tres-images-storage.s3-eu-west-1.amazonaws.com/Privacy+Policy+20200408.pdf" style="color: rgb(8, 243, 106);;">Terms of Service and Privacy Policy</a></p>
     <br>
 
-    <ion-button expand="block" color="secondary" (click)=" addreg()">
+    <!-- <ion-button  
+    color="secondary" >
       
       SIGN UP
-    </ion-button>
+    </ion-button> -->
+  
+      <ion-button type="submit"  expand="block" color="secondary">SIGN UP</ion-button>
+    
   <p style="color: white; text-align: right;">Have an account? sign in <a routerLink="/login" style="color: rgb(27, 219, 245);">here</a></p>
  
   </ion-list>
+</form>
 </ion-content>
