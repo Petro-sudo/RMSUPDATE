@@ -1,10 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { MenuController, Platform } from '@ionic/angular';
 import { IonSlides } from '@ionic/angular';
 import {FormsModule } from '@angular/forms';
 
 import {ServiceService} from './../service.service';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
 @Component({
   selector: 'app-folder',
@@ -25,20 +27,111 @@ export class FolderPage implements OnInit {
  
  
 
-  constructor(private activatedRoute: ActivatedRoute,private _serviceService: ServiceService) { }
+  constructor(private activatedRoute: ActivatedRoute,private _serviceService: ServiceService,
+    
+    private platform    : Platform,
+              private splashScreen: SplashScreen,
+              private statusBar   : StatusBar
+      
+    ) { }
   public addProp: any=[];
   public addProps: any=[];
   addimg: any=[];
   public searchTerm: string = "";
   public items: any;
+  navigate : any;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
 
-    
+    this.sideMenu();
+    this.initializeApp();
     this.getProperty();
     // this.setFilteredItems();
   }
+
+
+
+
+
+
+
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+    });
+  }
+
+  sideMenu()
+  {
+    this.navigate =
+    [
+      {
+        title : "HOME",
+        url   : "/home",
+        icon  : "home"
+      },
+      {
+        title : "RESIDENCES",
+        url   : "#properties",
+        icon  : "chatboxes"
+      },
+      {
+        title : "WHO WE ARE",
+        url   : "/contacts",
+        icon  : "contacts"
+      },
+
+
+      {
+        title : "TALK TO US",
+        url   : "/contacts",
+        icon  : "contacts"
+      },
+    ]
+  }
+
+
+
+
+
+
+
+
 
 
 

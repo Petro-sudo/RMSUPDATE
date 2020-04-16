@@ -149,17 +149,36 @@
 
 
 
-<<<<<<< HEAD
-=======
+<ion-menu side="start" menuId="first" contentId="content1">
+  <ion-header>
+    <ion-toolbar >
+      
+    </ion-toolbar >
+  </ion-header >
+  <ion-content>
+    <ion-list *ngFor="let pages of navigate">
+    <ion-menu-toggle auto-hide="true">
+      <ion-item [routerLink]="pages.url" routerDirection="forward">
+          <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+             {{pages.title}} 
+      </ion-item>
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content1"></ion-router-outlet>
 
->>>>>>> c7091d6c9e00a6f5f622d8bd1c6a756df6ffb394
-<ion-header style="background-color:#00003f">
-  <ion-toolbar color="primary">
-   
-     <ion-title color="dark" style="color:chartreuse; text-align: center;" align="center;">WELCOME TO T-Res <ion-icon name="happy-outline"></ion-icon></ion-title>
-    
+<ion-header style=" background-color: #00003f ;">
+  <ion-toolbar style=" background-color: #00003f ;">
+      <ion-buttons slot="end">
+      <ion-menu-button ></ion-menu-button>
+      </ion-buttons>
+      <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
   </ion-toolbar>
 </ion-header>
+
+
+
 
 
 <ion-content style="text-align: center; background-color: #00003f ;">
@@ -341,11 +360,11 @@
     <ion-card  *ngFor= "let item of addProp   " style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
      
      
-      <h1 style="color: black;margin-right: 120px;" >{{item.name}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
+      <h1 style="color: black;margin-right: 120px;" >{{item.id}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
      
   
-     <ion-label >
-      PROPERTY OWNER:{{item.username}}
+     <ion-label id="properties" >
+      PROPERTY OWNER:{{item.capacity}}
      </ion-label>
      <br>
      <ion-label >
