@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { FilterPipe} from './filter.pipe';
+import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   {
     path: '',
@@ -32,7 +33,9 @@ const routes: Routes = [
   },
   {
     path: 'stud-profile',
-    loadChildren: () => import('./stud-profile/stud-profile.module').then( m => m.StudProfilePageModule)
+    loadChildren: () => import('./stud-profile/stud-profile.module').then( m => m.StudProfilePageModule),
+    // canActivate:[AuthGuard]
+    
   },
   {
     path: 'soshanguve',
@@ -115,7 +118,8 @@ const routes: Routes = [
   {
     path: 'help/helpstud',
     loadChildren: () => import('./help/helpstud/helpstud.module').then( m => m.HelpstudPageModule)
-  },  {
+  },
+  {
     path: 'manageprovider',
     loadChildren: () => import('./admin/manageprovider/manageprovider.module').then( m => m.ManageproviderPageModule)
   },

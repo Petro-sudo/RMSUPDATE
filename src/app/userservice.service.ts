@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class UserserviceService {
 
-  login_url1 = 'http://168.172.185.106:5000/login';
+  // login_url1 = 'http://192.168.43.75:7000/lordlogin';
+  login_url1 ='https://jsonplaceholder.typicode.com/users/1';
     userType = 'http://168.172.185.106:5000/userType';
 
   login_url = 'http://168.172.185.106:7000/login';
@@ -40,8 +41,8 @@ getToken(){
   return localStorage.getItem('token')
 }
 
-public getUserType() {
-  return this.http.get<any>(this.userType);
-}
+// public getUserType() {
+//   return this.http.get<any>(this.userType);
+// }
 
 }

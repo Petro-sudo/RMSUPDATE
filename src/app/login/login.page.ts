@@ -9,11 +9,6 @@ import { UserserviceService } from '../userservice.service';
 import { LoaderService } from '../loader.service';
 
 
-
-
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -64,43 +59,34 @@ this.userserviceService.userLogin(this.loginUserData).subscribe(
       this.errorMessage =" ";
       this._loaderservice.display(false);
 
-      if(this.userID == 1){
-        this.router.navigate(['/stud-profile']);
+      if(this.email=this.loginUser){
+        this.router.navigate(['/landlord-dash']);
         localStorage.setItem('token', res.token)
       }else{
         this.router.navigate(['/login']);
       }
+    }
 
-      
-      if(this.userID == 2){
-        console.log(res)
-        localStorage.setItem('token',res.token)
-        this.router.navigate(['landlord-dash'])
-      }
-    }else{
-        this.error = true;
-        this.errorMessage = res["errorMessage"];
-        this._loaderservice.display(false);
-      }
-
-    },
-     err=>{console.log(err)
-     this.error  = true;
-     this.errorMessage = err.message;
-     this._loaderservice.display(false);
+    }
+    // ,
+    //  err=>{console.log(err)
+    //  this.error  = true;
+    //  this.errorMessage = err.message;
+    //  this._loaderservice.display(false);
      
-     },
-     ()=>{
+    //  }
+    //  ,
+    //  ()=>{
 
-      this._loaderservice.display(false);
-     } 
-);
+    //   this._loaderservice.display(false);
+    //  } 
+     );
  }
- getUserType(e){
-   this.userID = e;
-   console.log(e);
+//  getUserType(e){
+//    this.userID = e;
+//    console.log(e);
 
- }
+//  }
 
 
 
@@ -119,10 +105,7 @@ this.userserviceService.userLogin(this.loginUserData).subscribe(
 //   console.log(this.postData);
 //    }
    
-    getUserID(e) {
-
-      console.log(e);
-}
+//    
 
 
 };

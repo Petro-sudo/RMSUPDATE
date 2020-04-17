@@ -12,6 +12,7 @@ import { ShareService } from '../share/share';
 import { HttpModule }from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
+import {IonicStorageModule} from '@ionic/storage';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FilterPipe } from './filter.pipe';
   entryComponents: [],
   imports: [
     HttpClientModule,
+    IonicStorageModule.forRoot(),
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(),

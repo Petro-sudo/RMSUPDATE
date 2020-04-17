@@ -43,7 +43,7 @@
 
 <ion-item transparent> 
 <ion-label position = "floating"><ion-icon name="lock-closed"></ion-icon> PASSWORD</ion-label>
-<ion-input [(ngModel)]="loginUserData.password" type="password" name="password" id="password" class="form-control"
+<ion-input [(ngModel)]="loginUserData.email" type="password" name="password" id="password" class="form-control"
 placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel ></ion-input> 
 </ion-item>
 <div class="alert alert-danger" role="alert" *ngIf="Password.invalid && (Password.dirty || Password.touched)" style="color:red">
