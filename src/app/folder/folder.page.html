@@ -360,11 +360,12 @@
     <ion-card  *ngFor= "let item of addProp   " style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
      
      
-      <h1 style="color: black;margin-right: 120px;" >{{item.id}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
+      <h1 style="color: black;margin-right: 120px;" >{{item.name}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
      
   
      <ion-label id="properties" >
-      PROPERTY OWNER:{{item.capacity}}
+      PROPERTY OWNER:{{item.username
+      }}
      </ion-label>
      <br>
      <ion-label >
