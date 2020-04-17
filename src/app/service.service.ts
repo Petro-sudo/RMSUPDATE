@@ -15,9 +15,10 @@ export class ServiceService {
 
   reg_url = 'http://168.172.185.106:5000/lord';
   regstu_url = 'http://168.172.185.106:5000/reg';
-  //apart_url = 'http://168.172.185.106:5000/getproperty';get property API
+   apart_url = 'http://192.168.43.75:700/viewPropety';
+  //get property API
 
-  apart_url =  'https://jsonplaceholder.typicode.com/users';
+  // apart_url =  'https://jsonplaceholder.typicode.com/users';
   Aplystutest='https://jsonplaceholder.typicode.com/users';//test api
 
   getstu_url='http://168.172.185.106:5000/getstudent';
