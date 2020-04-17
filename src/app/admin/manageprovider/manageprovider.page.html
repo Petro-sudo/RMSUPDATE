@@ -1,9 +1,50 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>manageprovider</ion-title>
-  </ion-toolbar>
+<ion-header style="background-color: black;">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start" color = "success">
+       <ion-icon name="menu" (click)="presentMenu()"></ion-icon>
+    </ion-buttons> 
+  <ion-title color="dark" style="color: white; font-size: large; " align="center" >Manage Provider</ion-title>
+  
+  
+</ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  
+
+    <ion-grid>
+      <ion-row class="ion-header" >
+        <ion-col size="4" size-md="4" size-lg="2"  >
+          Name
+      </ion-col>
+  
+      <ion-col size="6" size-md="4" size-lg="2"  >
+        Property
+      </ion-col>
+  
+      <ion-col size="2" size-md="4" size-lg="2"  >
+        Action
+      </ion-col>
+    </ion-row>
+  
+    <ion-row *ngFor='let row of data; let i=index;'>
+      <ion-col size="4" size-md="4" size-lg="2"  >
+        {{row.name?.first}}
+      </ion-col>
+  
+      <ion-col size="6" size-md="4" size-lg="2"  >
+        {{row.email}}
+      </ion-col>
+  
+      <ion-col size="2" size-md="4" size-lg="2"  >
+        <ion-button size="small" (click)="removeRow(i)" color="dark" fill="clear">
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+   
+
 
 </ion-content>
