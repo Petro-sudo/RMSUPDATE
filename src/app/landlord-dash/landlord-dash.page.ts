@@ -97,6 +97,57 @@ export class LandlordDashPage implements OnInit {
     this.initializeApp();
    }
  
+   initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+    });
+  }
+
+  sideMenu()
+  {
+    this.navigate =
+    [
+      {
+        title : "PROFILE",
+        url   : "landlord-dash",
+        icon  : "person-circle-outline"
+      },
+      {
+        title : "REGISTER RESIDENCES",
+        url   : "/landloard-app",
+        icon  : "add"
+      },
+      {
+        title : "MANAGE STUDENT",
+        url   : "/managestud",
+        icon  : "people"
+      },
+
+
+      {
+        title : "MANAGE PROPARTIES",
+        url   : "/manageprop",
+        icon  : "business"
+      },
+      
+
+      {
+        title : "EDIT PROFILE",
+        url   : "/editlordprof",
+        icon  : "person-add"
+      },
+      {
+        title : "LOG-OUT",
+        url   : "/folder/folder",
+        icon  : "log-out"
+      },
+
+    ]
+  }
+
+
+
 
    applidstu(){
     return  this._serviceService.getAppliedstu().
@@ -164,44 +215,6 @@ export class LandlordDashPage implements OnInit {
 
 
 
-
-
-
-  initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-    });
-  }
-
-  sideMenu()
-  {
-    this.navigate =
-    [
-      {
-        title : "HOME",
-        url   : "/home",
-        icon  : "home"
-      },
-      {
-        title : "RESIDENCES",
-        url   : "#properties",
-        icon  : "chatboxes"
-      },
-      {
-        title : "WHO WE ARE",
-        url   : "/contacts",
-        icon  : "contacts"
-      },
-
-
-      {
-        title : "TALK TO US",
-        url   : "/contacts",
-        icon  : "contacts"
-      },
-    ]
-  }
 
 
 
