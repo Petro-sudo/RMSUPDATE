@@ -7,36 +7,90 @@
   
   </ion-toolbar>
 </ion-header>
-
-
+<h1 style="color:#00003f">Choose a File And Upload the Samples of your Proparties</h1>
 <ion-content>
-  <ion-card>
+  
     <h1>KITCHEN</h1>
 
     <div style="text-align: center;">
        <!-- <img src="assets/pics/logo.png" width="" height="" alt=""> -->
-       <img [src] ="url1" height="200" width="500">
+       <img [src] ="url1" height="200" width="400">
     </div>
 
     <!-- 
        <ion-button color="secondary" (click)="editprop()" >POST</ion-button>
     </div> -->
-  </ion-card>
-  <div>
-  <ion-input type="file" (change)= "onFileSelected($event)" style="color:whitesmoke"></ion-input>
-  <div>
-    <ion-button type = "button" (click)="onUpload()">Upload</ion-button>
+
+ <ion-toolbar >
+  <div slot="start">
+    <ion-input type="file" (change)= "onFileSelected($event)" style="color:whitesmoke"></ion-input>
   </div>
-</div>
-  <ion-card>
+
+    <div slot="end">
+      <ion-button type = "button" (click)="onUpload()">Upload</ion-button>
+    </div>
+  
+ </ion-toolbar>
+  
+  
+<br>
+  
     <h1>BED-ROOM</h1>
-  </ion-card>
 
-  <ion-card>
+    <div style="text-align: center;">
+      <!-- <img src="assets/pics/logo.png" width="" height="" alt=""> -->
+      <img [src] ="url2" height="200" width="400">
+   </div>
+
+   <!-- 
+      <ion-button color="secondary" (click)="editprop()" >POST</ion-button>
+   </div> -->
+   <ion-toolbar >
+ <div slot="start" >
+   <ion-input type="file" (change)= "onBed($event)" style="color:whitesmoke"></ion-input>
+ </div>
+
+ <div slot="end">
+   <ion-button type = "button" (click)="onUpload()">Upload</ion-button>
+</div>
+</ion-toolbar>
+  <br>
+
+  
     <h1>BATH-ROOM</h1>
-  </ion-card>
+    <div style="text-align: center;">
+      <!-- <img src="assets/pics/logo.png" width="" height="" alt=""> -->
+      <img [src] ="url3" height="200" width="400">
+   </div>
 
-  <ion-card>
+   <!-- 
+      <ion-button color="secondary" (click)="editprop()" >POST</ion-button>
+   </div> -->
+ <ion-toolbar >
+ <div slot="start">
+  <ion-input type="file" (change)= "onBath($event)" style="color:whitesmoke"></ion-input>
+ </div>
+  <div slot="end">
+   <ion-button type = "button" (click)="onUpload()">Upload</ion-button>
+</div>
+</ion-toolbar>
+  <br>
     <h1>STUDY-ROOM</h1>
-  </ion-card>
+    <div style="text-align: center;">
+      <!-- <img src="assets/pics/logo.png" width="" height="" alt=""> -->
+      <img [src] ="url4" height="200" width="400">
+   </div>
+
+   <!-- 
+      <ion-button color="secondary" (click)="editprop()" >POST</ion-button>
+   </div> -->
+   <ion-toolbar >
+ <div slot="start">
+  <ion-input type="file" (change)= "onStudy($event)" style="color:whitesmoke"></ion-input>
+ </div>
+ <div slot="end">
+   <ion-button type = "button" (click)="onUpload()">Upload</ion-button>
+ </div>
+
+   </ion-toolbar>
 </ion-content>
