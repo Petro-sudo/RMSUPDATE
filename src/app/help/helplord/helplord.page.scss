@@ -2,7 +2,7 @@ li{
     float: right;
     list-style:none;
     text-align: center;
-    width: 200px;
+    width: 180px;
     height: 6px;
     line-height: 6px;
     color: aliceblue;
@@ -50,4 +50,11 @@ a {
     list-style: none;
     border-style: none;
     background-color: transparent;
+  }
+  ion-toolbar{
+    --ion-background-color:rgb(3, 1, 32);
+   }
+  h1{
+    font-weight: bold;
+    font-size: 18px;
   }
