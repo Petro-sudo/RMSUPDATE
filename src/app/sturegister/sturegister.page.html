@@ -278,7 +278,12 @@
    <ion-label position="floating"> <ion-icon name="lock-closed"></ion-icon> CONFIRM PASSWORD</ion-label>
    
    
-    <ion-input>   
+    <ion-input required  [(ngModel)] = "stuData.confirm"
+    type="password"
+    class="form-control"
+           formControlName="password"
+        
+           required>   
    
            </ion-input>
    

@@ -1,0 +1,42 @@
+<ion-header style=" background-color: #00003f ;">
+  <ion-toolbar style=" background-color: #00003f ;">
+      
+      <img src="assets/pics/logo.png" width="80px" height="40px" alt="" slot="start">
+      <ion-icon style="font-size: 30px;color:whitesmoke" slot="end" name="arrow-undo" 
+      routerLink="/manageprop">previous</ion-icon>
+  
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <h1>KITCHEN</h1>
+
+    <div style="text-align: center;">
+       <!-- <img src="assets/pics/logo.png" width="" height="" alt=""> -->
+       <img [src] ="url1" height="200" width="500">
+    </div>
+
+    <!-- 
+       <ion-button color="secondary" (click)="editprop()" >POST</ion-button>
+    </div> -->
+  </ion-card>
+  <div>
+  <ion-input type="file" (change)= "onFileSelected($event)" style="color:whitesmoke"></ion-input>
+  <div>
+    <ion-button type = "button" (click)="onUpload()">Upload</ion-button>
+  </div>
+</div>
+  <ion-card>
+    <h1>BED-ROOM</h1>
+  </ion-card>
+
+  <ion-card>
+    <h1>BATH-ROOM</h1>
+  </ion-card>
+
+  <ion-card>
+    <h1>STUDY-ROOM</h1>
+  </ion-card>
+</ion-content>

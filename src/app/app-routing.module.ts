@@ -126,6 +126,10 @@ const routes: Routes = [
   {
     path: 'managesystem',
     loadChildren: () => import('./admin/managesystem/managesystem.module').then( m => m.ManagesystemPageModule)
+  },
+  {
+    path: 'editprop',
+    loadChildren: () => import('./manageprop/editprop/editprop.module').then( m => m.EditpropPageModule)
   }
 
 

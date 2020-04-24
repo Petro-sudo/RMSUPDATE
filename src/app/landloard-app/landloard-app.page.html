@@ -19,7 +19,7 @@
 
     
 <ion-item>
-    <ion-label >Name of your property:</ion-label>
+    <ion-label  position = "floating">Name of your property:</ion-label>
     <br>
     <ion-input [(ngModel)] ="lordApply.propName" name = "property" type = "text"  ></ion-input>
     
@@ -32,19 +32,19 @@
     <ion-col style="border-radius: 1px;">
       <ion-label >Enter Full Address</ion-label>
       <br>
-      <ion-label position = "floating">Number</ion-label>
+      <ion-label position = "fixed">Number</ion-label>
       <br>
       <ion-input [(ngModel)] ="lordApply.add1" name = "add1" placeholder="Address 1"></ion-input>
       <br>
-      <ion-label position = "floating">Street/Block</ion-label>
+      <ion-label position = "fixed">Street/Block</ion-label>
      <br>
       <ion-input [(ngModel)] ="lordApply.add2" name = "add2" placeholder="Address 2"></ion-input>
       <br>
-      <ion-label position = "floating">City</ion-label>
+      <ion-label position = "fixed">City</ion-label>
       <br>
       <ion-input [(ngModel)] ="lordApply.city" name = "city" placeholder="City"></ion-input>
       <br>
-      <ion-label position = "floating">Code</ion-label>
+      <ion-label position = "fixed">Code</ion-label>
       <br>
       <ion-input [(ngModel)] ="lordApply.code" name = "code" placeholder="Code"></ion-input>
     </ion-col>
@@ -52,19 +52,19 @@
 </ion-item>
 
 <ion-item>
-  <ion-label  > How far is the property from the TUT campus you selected in Killiometers:</ion-label>
-  <br>
+  <ion-label > How far is your property from selected campus in kilometers</ion-label>
+  <br><br>
   <ion-input [(ngModel)] = "lordApply.distance" name="distance" FormControl = "distance"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label position = "floating" > Annaul fee per single room in R?</ion-label>
+  <ion-label position = "floating" > Annaul fee single room in R?</ion-label>
   <br>
   <ion-input [(ngModel)] = "lordApply.feeSingle" name="feeSingle" FormControl = "feeSingle"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label position = "floating" > Annaul fee per sharing room in R?</ion-label>
+  <ion-label position = "floating" > Annaul fee sharing room in R?</ion-label>
   <br>
   <ion-input [(ngModel)] = "lordApply.feeSharing" name="feeSharing" FormControl = "feeSharing"></ion-input>
 </ion-item>
