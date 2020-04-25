@@ -5,11 +5,13 @@
     <div slot="start" style="font-size: small; ">
       <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
      </div>
-    <ul class="sidebar-nav" style="font-size: small">
+     <div >
+    <ul class="sidebar-nav" style="font-size: small; float: right;">
       <li><a routerLink="/help/helpstud">HELP</a></li>
       <li><a routerLink="#">FAQS</a></li>
       <li><a routerLink="/folder/home">HOME</a></li>
     </ul>
+  </div>
   </ion-toolbar>
 
   <br><br> <br> <br>
@@ -51,8 +53,18 @@ placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
 <ion-button class = "ion-text-center" expand="block" color="success" 
 (click)="loginStud()">Sign In</ion-button>
 <br>
-<p style="text-align: left;color: white;">No account? sign up<a routerLink="/sturegister" style="color: rgb(8, 243, 106);">here</a></p>
 
+<ion-toolbar>
+  <div slot="end" >
+    <a routerLink="/sturegister" style="color: rgb(8, 243, 106);">
+    <p style="color: rgb(8, 243, 106);border-bottom: solid 2px;">No account? sign up here</p>
+    </a>
+  </div>
+
+  <div slot="start" >
+    <a routerLink="/popemail" ><p style="color: rgb(8, 243, 106);border-bottom: solid 2px;">Forget your password</p></a>
+  </div>
+  </ion-toolbar>
 
 
 
