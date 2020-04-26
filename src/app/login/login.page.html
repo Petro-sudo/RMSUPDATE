@@ -9,10 +9,10 @@
 
 <ion-content login-header ion-padding>
   <ion-toolbar>
-    <ul class="sidebar-nav" style="text-align: center;font-size: small">
-      <div style="text-align:left;font-size: small; ">
-        <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
-       </div>
+    <div slot="start" style="font-size: small; ">
+      <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
+     </div>
+    <ul class="sidebar-nav" style=" font-size: small">
       <li><a routerLink="/help/helplord">HELP</a></li>
       <li><a routerLink="#">FAQS</a></li>
       <li><a routerLink="/folder/home">HOME</a></li>
@@ -53,11 +53,21 @@ placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
 
 <ion-button class = "ion-text-center" color="secondary"  expand="block"
 (click)="loginUser()">Sign In</ion-button>
-<br>
+
+<ion-toolbar>
+<div slot="start">
+   <p style="text-align: left; color: white;">No account? sign up<a routerLink="/landlord-reg" style="color: rgb(27, 219, 245);">here</a></p>
+</div>
 
 
-<p style="text-align: left; color: white;">No account? sign up<a routerLink="/landlord-reg" style="color: rgb(27, 219, 245);">here</a></p>
-
+<div slot="end" >
+  <!-- <a routerLink="/popemail" ><p style="color: rgb(27, 219, 245);border-bottom: solid 2px;">Forget your password</p></a>
+   -->
+  <p><ion-button style="color: rgb(27, 219, 245);border-bottom: solid 2px;" size="small"
+    color= "transparent" (click)= "popover($event)" >Forgot your password</ion-button></p>
+  
+</div>
+</ion-toolbar>
 
 </form>
 

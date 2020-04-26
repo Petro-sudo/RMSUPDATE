@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: ManagepropPage
+  },  {
+    path: 'editprop',
+    loadChildren: () => import('./editprop/editprop.module').then( m => m.EditpropPageModule)
   }
+
 ];
 
 @NgModule({

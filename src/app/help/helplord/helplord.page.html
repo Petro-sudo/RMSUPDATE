@@ -1,43 +1,58 @@
 <ion-header>
-  <ion-toolbar color="dark">
-     
+  <ion-toolbar >
+    <div slot="start">
+      <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
+      </div>
+      <div slot="end">
       <ul class="sidebar-nav" style="font-size: small">
-        <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
-        <li><a routerLink="/login1">LOGIN AS A STUDENT</a></li>
+        <li><a routerLink="/login">LOGIN AS A LANDLORD</a></li>
         <li><a routerLink="/folder/home">HOME</a></li>
+        
       </ul>
-    <br>
+      </div>
      </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<br>
-<h1 style="font-style: oblique; color: black;">What is TRES</h1>
-<br>
+
+<h1 style="font:bold; color: black;">What is TRES</h1>
+
 <p>Based on the estimates of the magnitude of the shortage of student accommodation ,we developed T_Res .T_Res is a digital platform started in January 2020 with the intention of enhancing the process of 
   applying for student accommodation and Registration of the prospective residential Complexes by the owners. In keeping with the technological changes, we have opted to provide our services on the digital platforms to enable our clients to access our services at any time to their convenience.
   Students can apply for their accommodation and receive frequent feedback 
   on the status of their application without the need to visit a physical 
   office. The same functionality is available for the residential companies 
   to register their companies online.</p>
-<br>
-<h1 style="font-style: oblique;color:black">How do I use TRES</h1>
-<br>
+
+<h1 style="color:black">How do I use TRES</h1>
+
 <p>Please follow the step by step guide in document below to
    learn more about TRes</p>
-<br><br>
-   <!-- user guide link-->
-   <br>
-   <h1 style="font-style: oblique;color:black">FAQs</h1>
 <br>
-<p style="font-style: oblique;color:black">Frequently Asked Questions : Accommodation provider</p>
+  
+<ion-icon name="attach-outline"></ion-icon><a routerLink="https://tres-images-storage.s3-eu-west-1.amazonaws.com/2020+User+Guide.pdf"
+ style="text-decoration-line: none;color: rgb(18, 193, 252);"><h1 style="font-size: 16px;">TRES USER GUIDE</h1></a>
+   
+   <!-- AND ATTCHMENT user guide link 
+URL
+        https://tres-images-storage.s3-eu-west-1.amazonaws.com/2020+User+Guide.pdf
+      and video
+      
+      -->
+
+   <div>
+     <ion-button type="submit"  color="secondary" (click)="startVideo()" >start video</ion-button>
+   </div>
+   <h1 style="font: bold;color:black">FAQs</h1>
+
+<p style="font-weight:bold;color:black">Frequently Asked Questions : Accommodation provider</p>
  
 <ion-card>
 
   
   <ion-card>
     <ion-item>
-    <label class="item-input">
+    <label  class="item-input">
      <select >
       <option style="font-size: 16px; color: black; ">Q1. What are the documents required to apply for accreditation?</option>
       <option>1.Proof of ownership of the property</option>

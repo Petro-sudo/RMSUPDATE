@@ -26,7 +26,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./sturegister.page.scss'],
 })
 export class SturegisterPage implements OnInit {
-  @Input() stuData= {firstName:" ", lastName:" ",email:" ", password:" ",campus_loc:" ",studno:" " ,id_no:" ",cell_no:" ", gender:" "}
+  @Input() stuData= {firstName:" ", lastName:" ",email:" ", password:" ",campus_loc:" ",studno:" " ,id_no:" ",cell_no:" ", confirm:" "}
  // name = new FormControl('');
   constructor(public alertCtrl: AlertController, private _serviceService : ServiceService ) { }
   addstu: any = [];
@@ -109,12 +109,12 @@ console.log(data));
 console.log(this.stuData.firstName);
 console.log(this.stuData.lastName);
 console.log(this.stuData.email);
-console.log(this.stuData.gender)
 console.log(this.stuData.password);
 console.log(this.stuData.campus_loc);
 console.log(this.stuData.studno);
 console.log(this.stuData.id_no);
 console.log(this.stuData.cell_no);
+console.log(this.stuData.confirm);
 
 
   

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, PopoverController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
+import { PopstdPage } from '../popover/popstd/popstd.page';
 
 @Component({
   selector: 'app-login1',
@@ -9,7 +10,7 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./login1.page.scss'],
 })
 export class Login1Page implements OnInit {
-  
+  value=0;
   // credentials = { 
   //   email: 'petro,malele@gmail.com',
   //   pwd: '123'
@@ -18,7 +19,7 @@ export class Login1Page implements OnInit {
 
   
   constructor( private alertCtrl: AlertController, 
-    private router: Router) { }
+    private router: Router, private popoverController: PopoverController) { }
 
   ngOnInit() {
   }
@@ -37,5 +38,16 @@ export class Login1Page implements OnInit {
   //       await alert.present();
   //     }
   //   });
-  // }
+  // }pop
+
+  async popOver(ev: Event)  {
+    const pop = await this.popoverController.create({
+     component: PopstdPage,
+     componentProps:{
+       custom_id: this.value
+     },
+     
+    });
+  pop.present();
+  }
 }

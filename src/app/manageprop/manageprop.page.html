@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar color="dark">
-    <ion-buttons slot="start">
+  <ion-toolbar >
+    <ion-buttons slot="start" style="color: whitesmoke;">
         <ion-icon name="menu" (click)="presentMenu()"></ion-icon>
     </ion-buttons> 
     <ion-title align="center">Landlord Manage Properties</ion-title>
@@ -37,9 +37,9 @@
        <br>
        <a routerLink="/landloard-app"><ion-button  (click)="add()"><ion-icon name="add">
        </ion-icon></ion-button></a>
-
+       <a routerLink="/editprop">
        <ion-button color="success" (click)="update()">
-        <ion-icon name="create"></ion-icon></ion-button>
+        <ion-icon name="create"></ion-icon></ion-button></a>
    
 
        
@@ -91,9 +91,9 @@
 
  
     
-    
+  
 <ion-footer  class="ion-footer">
-  <ion-toolbar color="dark" >
+  <ion-toolbar >
     <ion-title align="center" >2020 Off campus accomodation</ion-title>
   </ion-toolbar>
 </ion-footer>

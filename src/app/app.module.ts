@@ -13,6 +13,10 @@ import { HttpModule }from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
 import {IonicStorageModule} from '@ionic/storage';
+import {StreamingMedia} from '@ionic-native/streaming-media/ngx';
+import { PopemailPageModule } from './popover/popemail/popemail.module';
+import { PopstdPageModule } from './popover/popstd/popstd.module';
+
 
 
 @NgModule({
@@ -26,6 +30,10 @@ import {IonicStorageModule} from '@ionic/storage';
     IonicModule.forRoot(),
     ReactiveFormsModule,
     AppRoutingModule,
+    //
+   PopemailPageModule,
+   PopstdPageModule,
+         
    
     FormsModule, ReactiveFormsModule
     
@@ -35,9 +43,8 @@ import {IonicStorageModule} from '@ionic/storage';
     SplashScreen,
     HttpModule,
     ShareService,
-    
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-    
+    ,StreamingMedia
     
   ],
   bootstrap: [AppComponent],
