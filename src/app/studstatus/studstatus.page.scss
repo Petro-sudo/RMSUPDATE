@@ -26,7 +26,7 @@ li{
     float: right;
     list-style:none;
     text-align: center;
-    width: 50px;
+    width: 70px;
     height: 15px;
     line-height: 10px;
     color: aliceblue;
@@ -34,6 +34,9 @@ li{
     font-weight: bold;
   
   
+  }
+  ion-icon{
+      color:rgb(6, 2, 73);
   }
   a {
 
@@ -43,7 +46,7 @@ li{
     text-align: center;
   }
   ion-button{
-      font-size: 10px;
+      font-size: 12px;
       text-align: center;  
       text-transform: none;
     
