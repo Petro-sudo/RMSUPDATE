@@ -1,109 +1,153 @@
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-card>86543</ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card>cfgvbhjnkm,</ion-card>
-    </ion-col>
-  </ion-row>
+<ion-menu side="start" menuId="first" contentId="content1">
+  <ion-header>
+    <ion-toolbar >
+      
+    </ion-toolbar >
+  </ion-header >
+  <ion-content>
+    <ion-list *ngFor="let pages of navigate">
+    <ion-menu-toggle auto-hide="true">
+      <ion-item [routerLink]="pages.url" routerDirection="forward">
+          <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+             {{pages.title}} 
+      </ion-item>
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content1"></ion-router-outlet>
 
 
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" style="color: rgb(6, 2, 73);">
+      <ion-menu-button sytle="background-color:white"></ion-menu-button>
+      </ion-buttons>
+
+    <ul class="sidebar-nav" style=" font-size: small">
+      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+      ; color: white ;" >previous</ion-icon></a></li>
+      <li><a routerLink="/help/helpstud">HELP</a></li>
+    </ul>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="text-align: center;">
+
+ <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-card style="font-size: 16px;color: rgb(6, 2, 73); 
+             margin-right: unset; text-align: center;" class="card1">
+              Dashboard <br>
+            </ion-card>
+        </ion-col>
   
-
-
- 
-  <ion-button expand="block" shape="round">Round Button</ion-button>
-
-  <ion-row>
-    <ion-col size="6">
-      ion-col [size="6"]
-    </ion-col>
-    <ion-col>
-      ion-col
-    </ion-col>
-    
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="3">
-      ion-col [size="3"]
-    </ion-col>
-    <ion-col>
-      ion-col
-    </ion-col>
-   
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="3">
-      ion-col [size="3"]
-    </ion-col>
-    <ion-col size="3" offset="3">
-      ion-col [size="3"] [offset="3"]
-    </ion-col>
-  </ion-row>
-
+         <ion-col>
+           <ion-card style="font-size: 16px;margin-left: unset; 
+              background-color: rgb(6, 2, 73);color: white; text-align: center; " class="card2">My Room <br>
+           </ion-card>
+         </ion-col>
+    </ion-row>
   
-
-  <ion-row>
-    <ion-col class="ion-align-self-start">
-      ion-col [start]
-    </ion-col>
-    <ion-col class="ion-align-self-center">
-      ion-col [center]
-    </ion-col>
-   
+    <h1 style="font-size: 18px; font-weight: bold;color: rgb(6, 2, 73) ">My Room</h1>
+  
+    <!-- <ion-button ><ion-icon name="heart-outline"></ion-icon>n</ion-button> 
     
-  </ion-row>
-
-  <ion-row class="ion-align-items-start">
-    <ion-col>
-      [start] ion-col
-    </ion-col>
-    <ion-col>
-      [start] ion-col
-    </ion-col>
-   
+    love
+    <ion-icon name="heart-outline"></ion-icon> <div class="">
+  
+      sad
+      <ion-icon name="heart-outline"></ion-icon>
+  
+      happy
+      <ion-icon name="happy-outline"></ion-icon>
+  
+      delete x
+      
+      <ion-icon name="close-outline"></ion-icon>
+    </div>-->
+  
     
-  </ion-row>
-
-  <ion-row class="ion-align-items-center">
-    <ion-col>
-      [center] ion-col
-    </ion-col>
-    <ion-col>
-      [center] ion-col
-    </ion-col>
-   
-    
-  </ion-row>
-
-  <ion-row class="ion-align-items-end">
-    <ion-col>
-      [end] ion-col
-    </ion-col>
-    <ion-col class="ion-align-self-start">
-      [end] ion-col [start]
-    </ion-col>
-    
-    
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="12" size-sm>
-      ion-col [size="12"] [size-sm]
-    </ion-col>
-    <ion-col size="12" size-sm>
-      ion-col [size="12"] [size-sm]
-    </ion-col>
-   >
-    
-  </ion-row>
-
   
   
-</ion-grid>
+   
+    
+   
+  
+    <ion-row>
+        <ion-col size="12" size-sm>
+          <ion-card>
+            <ion-slide  class="mySlides"  style="background-image:url(assets/pics/build.jpg) ;background-size: cover;">
+                   <!-- <a routerLink="/login1"> -->
+             <ion-toolbar>
+               <div slot="start" class="bstyle">
+                  <ion-button  color="primary" shape="round" (click)= "popOver($event)">
+                     <ion-icon name="heart"></ion-icon>Rate
+                  </ion-button>
+                 </div>
+              </ion-toolbar>
+
+                    <!-- </a> -->
+      
+                        <br><br><br><br>
+                           <br><br><br><br>
+                                     <br>
+                                     <br>
+                                     
+             </ion-slide>
+          </ion-card> 
+       </ion-col>
+
+      <ion-col size="12" size-sm style="text-align: center;"> 
+          <ion-card>
+            <h1 style="font-size: 14px; font-weight: bold;color: black; ">TUTEH Residence</h1>
+               <ion-toolbar>
+                  <div slot="start">
+                     <p style="font-size: 14px; font-weight: bold;color: black">
+                      Contact Person: Aaron Mogashoa</p>
+                  </div >
+
+                  <div>
+                    <ul class="sidebar-nav" style=" font-size: small">
+                      <li><ion-button color="light"><ion-icon name="mail" color="tertiary" style="font-size: 10px; color:rgb(6, 2, 73)
+                      " ></ion-icon></ion-button></li>
+                      <li><ion-button color="light"><ion-icon name="call" style="font-size: 10px; color:rgb(6, 2, 73)
+                         ;" ></ion-icon></ion-button></li>
+                    </ul>
+                 </div>
+                 
+                </ion-toolbar>
+
+                <ion-button color="dark" expand="block" shape="round">
+                    <ion-icon name="chevron-forward-outline"color="success"></ion-icon>
+                    I would like to move to a different residence
+                </ion-button>
+
+               <ion-button color="dark" expand="block" shape="round" >
+                 <ion-icon slot="start" name="chevron-forward-outline" color="success" ></ion-icon>
+                
+                   I would like to transfer to a different room
+                </ion-button>
+
+              <ion-button color="dark" expand="block" shape="round">
+                
+                  <ion-icon name="chevron-forward-outline" color="success"></ion-icon>
+                
+                  I would like to reserve my current room</ion-button>
+                  
+         </ion-card>
+        </ion-col>
+   </ion-row>
+  
+    
+    
+  </ion-grid>
+</ion-content>
+
+
+
 
 
 

@@ -22,3 +22,50 @@ ion-content{
     background-color: grey;
     margin-right: 100;
 }
+li{
+    float: right;
+    list-style:none;
+    text-align: center;
+    width: 50px;
+    height: 15px;
+    line-height: 10px;
+    color: aliceblue;
+    text-decoration-line: none;
+    font-weight: bold;
+  
+  
+  }
+  a {
+
+    text-decoration-line: none;
+    padding: 8px 8px;
+    font-style: initial;
+    text-align: center;
+  }
+  ion-button{
+      font-size: 10px;
+      text-align: center;  
+      text-transform: none;
+    
+    }
+    .data{
+        margin-left: 200;
+       // padding-right: 200;
+    }
+    .bstyle{
+    margin-top: 0px;
+    }
+ion-card{
+    border-radius: 10% 10% 
+}
+
+.card1{
+    margin-right: 100;
+    border-radius: 5% 5% /5% 5%;
+}
+    
+
+    .card2{
+        margin-right: 100;
+        border-radius: 5% 5% /5% 5%;
+    }

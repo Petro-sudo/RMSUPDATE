@@ -1,9 +1,49 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>poprate</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<ion-content style="text-align: center;">
+
+  <ion-toolbar>
+    <div slot="start">
+     
+      <h1 style="font-size: 16px; font-weight: bold; text-align: center;">Rate your stay</h1>
+    </div>
+
+    <div slot="end">
+      <ion-button (click)="closePop()" color="light" ><ion-icon name="close-outline" color="danger"></ion-icon></ion-button>
+    </div>
+    
+  </ion-toolbar>
+
+
+
+  <h1 style="font-size: 14px; font-weight: bold; text-align: center;">how happy are you?</h1>
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-col>
+        <ion-button color="light" ><ion-icon name="sad-outline"></ion-icon></ion-button>  
+      </ion-col>
+
+      <ion-col>
+        <ion-button color="light" ><ion-icon name="happy-outline"></ion-icon></ion-button>  
+      </ion-col>
+
+      <ion-button color="light" ><ion-icon name="heart-outline"></ion-icon></ion-button>  
+    </ion-col>
+    
+    
+
+  </ion-row>
+
+
+  <h1 style="font-size: 12px; font-weight: bold;">Please choose one</h1>
+
+<ion-input placeholder="Comment(optional)" ></ion-input>
+ 
+  <ion-button  color = "success">submit</ion-button>
+  
+</ion-grid>
+
 
 </ion-content>

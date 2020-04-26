@@ -1,8 +1,176 @@
+<ion-menu side="start" menuId="first" contentId="content1">
+  <ion-header>
+    <ion-toolbar >
+      
+    </ion-toolbar >
+  </ion-header >
+  <ion-content>
+    <ion-list *ngFor="let pages of navigate">
+    <ion-menu-toggle auto-hide="true">
+      <ion-item [routerLink]="pages.url" routerDirection="forward">
+          <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+             {{pages.title}} 
+      </ion-item>
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content1"></ion-router-outlet>
+
+
 <ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" style="color: rgb(6, 2, 73);">
+      <ion-menu-button sytle="background-color:white"></ion-menu-button>
+      </ion-buttons>
+
+    <ul class="sidebar-nav" style=" font-size: small">
+      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+      ; color: white ;" >previous</ion-icon></a></li>
+      <li><a routerLink="/help/helpstud">HELP</a></li>
+    </ul>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="text-align: left;">
+
+ <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-card style="font-size: 16px;color: rgb(6, 2, 73); 
+             margin-right: unset; text-align: center;" class="card1">
+              Dashboard <br>
+            </ion-card>
+        </ion-col>
+  
+         <ion-col>
+           <ion-card style="font-size: 16px;margin-left: unset; 
+              background-color: rgb(6, 2, 73);color: white; text-align: center; " class="card2">My Room <br>
+           </ion-card>
+         </ion-col>
+    </ion-row>
+  
+    <h1 style="font-size: 18px; font-weight: bold;color: rgb(6, 2, 73) ">Issue log</h1>
+  
+    <ion-button (click)= "popOver($event)" color="light" color="tertiary" shape="round">
+      <ion-icon name="add" color=""></ion-icon></ion-button>
+    
+<ion-card>
+  <p>No issues have been logged, press(+) to log an Issue</p>
+  <br>
+</ion-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-header>
   <ion-toolbar color="dark">
-    <!-- <ion-buttons slot="start" >
+    <ion-buttons slot="start" >
       <ion-menu-button></ion-menu-button>
-    </ion-buttons> -->
+    </ion-buttons>
     <ion-title align="center">STUDENT APPLICATION</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -35,4 +203,4 @@
 
   <ion-button class = "ion-text-center" expand="block" color="dark" shape="round">SUBMIT APPLICATION</ion-button>
 
-</ion-content>
+</ion-content> -->

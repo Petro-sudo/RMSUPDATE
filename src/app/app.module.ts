@@ -16,6 +16,8 @@ import {IonicStorageModule} from '@ionic/storage';
 import {StreamingMedia} from '@ionic-native/streaming-media/ngx';
 import { PopemailPageModule } from './popover/popemail/popemail.module';
 import { PopstdPageModule } from './popover/popstd/popstd.module';
+import { PopratePageModule } from './popover/poprate/poprate.module';
+import { PopreportPageModule } from './popover/popreport/popreport.module';
 
 
 
@@ -33,6 +35,8 @@ import { PopstdPageModule } from './popover/popstd/popstd.module';
     //
    PopemailPageModule,
    PopstdPageModule,
+   PopratePageModule,
+   PopreportPageModule,
          
    
     FormsModule, ReactiveFormsModule
