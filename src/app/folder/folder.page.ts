@@ -100,10 +100,12 @@ export class FolderPage implements OnInit {
   {
     this.navigate =
     [
+      
       {
         title : "HOME",
-        url   : "/home",
-        icon  : "home"
+        url   : "/Home",
+       
+       
       },
       {
         title : "RESIDENCES",

@@ -1,9 +1,10 @@
 ion-card{
-    margin-top: 50px;
-    margin-left:200px;
-    height:100px;
-    width: 30%;
-    background-color: rgb(106, 252, 138);}
+    margin-top: 40px;
+   
+    height:110px;
+    width: 40%;
+  
+    }
 //icons
 #back{
     float: right;
@@ -40,13 +41,13 @@ ion-label{
     text-align: right;
    
 }
-ion-item{
-    margin-top: 15px;
-    margin-left:5px;
-    width: auto;
-    opacity: 0.8;
+// ion-item{
+//     margin-top: 15px;
+//     margin-left:5px;
+//     width: auto;
+//     opacity: 0.8;
    
-}
+// }
 //links
 #back{
     color: black;
@@ -67,22 +68,22 @@ strong{
     
 }
 
-ion-card:hover
-{
+// ion-card:hover
+// {
 
-    background-color:rgb(106, 252, 138);
-    width:180px;
-    height:180px;
-    opacity: 1;
-}
+//     background-color:rgb(106, 252, 138);
+//     width:180px;
+//     height:180px;
+//     opacity: 1;
+// }
 
 
 
-ion-card{
-    color:black;
-    opacity: 0.8;
-    transition: width 0.5s, height 0.5s;
-}
+// ion-card{
+//     color:black;
+//     opacity: 0.8;
+//     transition: width 0.5s, height 0.5s;
+// }
 
 a{
     text-decoration: none;

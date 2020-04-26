@@ -1,6 +1,5 @@
 
- 
-
+	
 <!--<ion-header style="background-color: black;">
   <ion-toolbar color="dark">
     <ion-buttons slot="start">
@@ -149,16 +148,19 @@
 
 
 
-<ion-menu side="start" menuId="first" contentId="content1">
-  <ion-header>
-    <ion-toolbar >
+<ion-menu side="start" menuId="first" contentId="content1" color="dark">
+  <ion-header color="dark" >
+    <ion-toolbar color="dark">
       
     </ion-toolbar >
   </ion-header >
-  <ion-content>
-    <ion-list *ngFor="let pages of navigate">
-    <ion-menu-toggle auto-hide="true">
-      <ion-item [routerLink]="pages.url" routerDirection="forward">
+  <ion-content color="dark">
+   
+    <ion-list  color="dark" *ngFor="let pages of navigate"  >
+    
+    <ion-menu-toggle auto-hide="true" color="dark">
+     
+      <ion-item [routerLink]="pages.url" routerDirection="forward" lines="none" color="dark"   >
           <ion-icon [name]="pages.icon" slot="start"></ion-icon>
              {{pages.title}} 
       </ion-item>
@@ -166,12 +168,12 @@
     </ion-list>
   </ion-content>
 </ion-menu>
-<ion-router-outlet id="content1"></ion-router-outlet>
+<ion-router-outlet id="content1" color="dark" ></ion-router-outlet>
 
-<ion-header style=" background-color: #00003f ;">
-  <ion-toolbar style=" background-color: #00003f ;">
-      <ion-buttons slot="end">
-      <ion-menu-button ></ion-menu-button>
+<ion-header color="dark">
+  <ion-toolbar color="dark">
+      <ion-buttons slot="end" color="light">
+      <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
   </ion-toolbar>
@@ -195,9 +197,9 @@
 
 
 
-  
+    
 
-  <ion-card lines="none" style="background-image: url('assets/pics/land.jpg');  background-repeat: no-repeat; background-attachment: fixed;">
+  <ion-card  lines="none" style="background-image: url('assets/pics/land.jpg');  background-repeat: no-repeat; background-attachment: fixed;">
 <ion-slides autoplay="5000" loop="true" speed="300" pager="true"  [options]="slideOptsOne"
 style=" position: relative;z-index: 1;" >
   <button style="font-size: 30px;" class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
@@ -221,7 +223,8 @@ style=" position: relative;z-index: 1;" >
   <ion-row >
     <h1 style="font-size: 50px;font-weight: bolder;color: white; ">Be part of a growing community</h1>
   <h3 style="font-size: 30px;font-weight: bolder;color:rgb(36, 207, 36); ">Making a difference, check out our available residences</h3>
-        <ion-col col=6>
+      
+  <ion-col col=6>
           <a routerLink="/login1">
           <ion-button style="width: 350px; height:45px;" color="success" shape="round">
               ARE YOU A STUDENT ?
@@ -507,6 +510,7 @@ style=" position: relative;z-index: 1;" >
 <ion-button>
   Submit
 </ion-button>
+ 
 <h1 style="font-weight: bold; width:400px;border-left: 20px solid rgb(122, 243, 122);color:rgb(122, 243, 122) ; ">Where to find us</h1>
 
 <p style="color:white ;">
