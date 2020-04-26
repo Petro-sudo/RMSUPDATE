@@ -3,11 +3,10 @@ import {ServiceService} from './../service.service';
 import {ReactiveFormsModule, FormGroup, FormControl, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
-import { ShareService } from 'src/share/share';
+import { AlertController, PopoverController } from '@ionic/angular';
 import { UserserviceService } from '../userservice.service';
 import { LoaderService } from '../loader.service';
-
+import { PopemailPage } from '../popover/popemail/popemail.page';
 
 @Component({
   selector: 'app-login',
@@ -31,11 +30,11 @@ export class LoginPage implements OnInit {
  CheckArrary = "this.loginuser"
 
 
-  
+  value = 0;
   _ServiceService: any;
   constructor(public alertCtrl: AlertController,private router: Router,
     private _serviceService : ServiceService, private userserviceService: UserserviceService,
-    private _loaderservice: LoaderService) { }
+    private _loaderservice: LoaderService, private popoverController: PopoverController) { }
 addprofile: any=[];
 myform: FormGroup;
 //email: FormControl;
@@ -105,7 +104,18 @@ this.userserviceService.userLogin(this.loginUserData).subscribe(
 //   console.log(this.postData);
 //    }
    
-//    
+//  popover
+
+async popover(ev: Event)  {
+  const popo = await this.popoverController.create({
+   component: PopemailPage,
+   componentProps:{
+     custom_id: this.value
+   },
+   
+  });
+popo.present();
+}
 
 
 };

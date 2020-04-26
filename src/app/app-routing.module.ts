@@ -130,7 +130,19 @@ const routes: Routes = [
   {
     path: 'editprop',
     loadChildren: () => import('./manageprop/editprop/editprop.module').then( m => m.EditpropPageModule)
+  },  {
+    path: 'popemail',
+    loadChildren: () => import('./popover/popemail/popemail.module').then( m => m.PopemailPageModule)
+  },
+  {
+    path: 'poprate',
+    loadChildren: () => import('./popover/poprate/poprate.module').then( m => m.PopratePageModule)
+  },
+  {
+    path: 'popstd',
+    loadChildren: () => import('./popover/popstd/popstd.module').then( m => m.PopstdPageModule)
   }
+
 
 
 

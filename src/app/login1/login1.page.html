@@ -62,7 +62,11 @@ placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
   </div>
 
   <div slot="start" >
-    <a routerLink="/popemail" ><p style="color: rgb(8, 243, 106);border-bottom: solid 2px;">Forget your password</p></a>
+    <!-- <a routerLink="/popemail" ><p style="color: rgb(8, 243, 106);border-bottom: solid 2px;">Forget your password</p></a>
+   -->
+   <p><ion-button style="color: rgb(8, 243, 106);border-bottom: solid 2px;" size="small"
+    color= "transparent" (click)= "popOver($event)" >Forgot your password</ion-button></p>
+  
   </div>
   </ion-toolbar>
 
