@@ -56,12 +56,12 @@
  border-radius: 20px; height:50px ;" >
   
   <ion-label style="color: black ;margin-left: 60px;margin-top:-30px;color:white; font-size:14px">
-   My Room
+   Overview
   </ion-label>
  </ion-card>
     
   
-    <h1 style="font-size: 18px; font-weight: bold;color: rgb(6, 2, 73) ">My Room</h1>
+    <h1 style="font-size: 18px; font-weight: bold;color: rgb(6, 2, 73) ">Overview</h1>
   
     <!-- <ion-button ><ion-icon name="heart-outline"></ion-icon>n</ion-button> 
     
@@ -89,64 +89,67 @@
     <ion-row>
         <ion-col size="12" size-sm>
           <ion-card>
+            <ion-toolbar>
+              <div slot="end" >
             <ion-slide  class="mySlides"  style="background-image:url(assets/pics/sl.jpg) ;background-size: cover;">
                    <!-- <a routerLink="/login1"> -->
-             <ion-toolbar>
-               <div slot="start" class="bstyle">
-                  <ion-button  color="primary" shape="round" (click)= "popOver($event)">
-                     <ion-icon name="heart" color="light"></ion-icon>Rate
-                  </ion-button>
-                 </div>
-              </ion-toolbar>
-
+             
                     <!-- </a> -->
       
                         <br><br><br><br>
                            <br><br><br><br>
-                                     <br>
-                                     <br>
+                                    
                                      
              </ion-slide>
+              </div>
+
+              <div slot="start" class="bstyle">
+                <h1 style="font-size: 14px; font-weight: bold;color: rgb(6, 2, 73); margin-left: 20px;">My room</h1>
+                <h1 style="font-size: 16px; font-weight: bold;color: rgb(6, 2, 73); margin-left: 20px;">TUTEH Residence</h1>
+                 <ion-label>
+                   Block
+                 </ion-label>
+                 <br>
+                 <ion-label>
+                  Floor
+                </ion-label>
+                <br>
+                <ion-label>
+                  Room
+                </ion-label>
+                <br>
+                <ion-label>
+                  Bed
+                </ion-label>
+
+                <br>
+                <br><br><br>
+              </div>
+
+            </ion-toolbar>
           </ion-card> 
        </ion-col>
 
       <ion-col size="12" size-sm style="text-align: center;"> 
           <ion-card>
-            <h1 style="font-size: 14px; font-weight: bold;color: black; ">TUTEH Residence</h1>
-               <ion-toolbar>
+             <ion-toolbar>
                   <div slot="start">
-                     <p style="font-size: 14px; font-weight: bold;color: black">
-                      Contact Person: Aaron </p>
+                     <p style="font-size: 16px; font-weight: bold;color: black; margin-left: 20px;">
+                           Notification </p>
                   </div >
 
-                  <div style="color: rgb(6, 2, 73);">
+                  <div style="color: rgb(6, 2, 73);" slot="end">
                     <ul class="sidebar-nav" style=" font-size: small">
-                      <li><ion-button color="light"><ion-icon name="mail" color="tertiary" 
-                       ></ion-icon></ion-button></li>
-                      <li><ion-button color="light"><ion-icon name="call" 
-                          ></ion-icon></ion-button></li>
+                      <li><ion-button color="dark"><ion-icon name="notifications-outline"></ion-icon> 0</ion-button></li>
+                      
                     </ul>
                  </div>
-                 
                 </ion-toolbar>
-
-                <ion-button color="dark" expand="block" shape="round">
-                    <ion-icon name="chevron-forward-outline"color="success"></ion-icon>
-                    I would like to move to a different residence
-                </ion-button>
-
-               <ion-button color="dark" expand="block" shape="round" >
-                 <ion-icon slot="start" name="chevron-forward-outline" color="success" ></ion-icon>
+                <p style="font-size: 14px;color: black">
+                  No notice have been posted </p>
                 
-                   I would like to transfer to a different room
-                </ion-button>
-
-              <ion-button color="dark" expand="block" shape="round">
-                
-                  <ion-icon name="chevron-forward-outline" color="success"></ion-icon>
-                
-                  I would like to reserve my current room</ion-button>
-                  
+                <br><br><br><br>
+                <br><br>
          </ion-card>
         </ion-col>
    </ion-row>

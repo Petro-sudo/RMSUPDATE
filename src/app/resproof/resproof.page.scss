@@ -1,1 +1,29 @@
 
+.mySlides{
+    width: 300px;
+}
+li{
+    float: right;
+    list-style:none;
+    text-align: center;
+    width: 70px;
+    height: 15px;
+    line-height: 10px;
+    color: aliceblue;
+    text-decoration-line: none;
+    font-weight: bold;
+  }
+  ion-card{
+    border-radius: 5% 
+}
+  a {
+
+    text-decoration-line: none;
+    padding: 8px 8px;
+    font-style: initial;
+    text-align: center; 
+    color:rgb(6, 2, 73);
+  }
+  ion-label{
+      margin-left: 20px;
+  }
