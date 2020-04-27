@@ -42,7 +42,7 @@ export class StudAppPage implements OnInit {
           },
           {
             title : "Overview",
-            url   : "/Home",
+            url   : "/resproof",
             icon  :"eye-outline"
            
           },

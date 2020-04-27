@@ -56,7 +56,7 @@ export class StudstatusPage implements OnInit{
           
           {
             title : "Overview",
-            url   : "/Home",
+            url   : "/resproof",
             icon  :"eye-outline"
            
           },

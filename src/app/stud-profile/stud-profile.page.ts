@@ -50,7 +50,7 @@ this. sideMenu();
       },
       {
         title : "Overview",
-        url   : "/Home",
+        url   : "/resproof",
         icon :"eye-outline"
        
        
