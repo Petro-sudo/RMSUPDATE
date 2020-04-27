@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PopoverController } from '@ionic/angular';
+import { PopoverController, Platform } from '@ionic/angular';
 import { PopreportPage } from '../popover/popreport/popreport.page';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
 @Component({
   selector: 'app-stud-app',
@@ -9,10 +11,58 @@ import { PopreportPage } from '../popover/popreport/popreport.page';
 })
 export class StudAppPage implements OnInit {
  value = 0;
-  constructor(private popoverController: PopoverController) { }
-
+  constructor(private popoverController: PopoverController,private platform    : Platform,
+    private splashScreen: SplashScreen,
+    private statusBar   : StatusBar) { }
+    navigate : any;
   ngOnInit() {
-  }
+    this.initializeApp();
+    this. sideMenu();
+      }
+    
+    
+    
+      initializeApp() {
+        this.platform.ready().then(() => {
+          this.statusBar.styleDefault();
+          this.splashScreen.hide();
+        });
+      }
+    
+      sideMenu()
+      {
+        this.navigate =
+        [
+          {
+            title : "Profile",
+            url   : "/stud-profile",
+            icon :"person-outline"
+           
+           
+          },
+          {
+            title : "Overview",
+            url   : "/Home",
+            icon  :"eye-outline"
+           
+          },
+          {
+            title : "My rooms",
+            url   : "/studstatus",
+            icon  : "bed-outline"
+          },
+          {
+            title : "Issues",
+            url   : "/stud-app",
+            icon  : "add"
+          },
+    
+    
+          
+        ]
+      }
+    
+    
 
 
   async popOver(ev: Event)  {
