@@ -30,7 +30,7 @@ export class StudProfilePage implements OnInit {
     this.getData();
 this.initializeApp();
 this.sideMenu();
-this.profile();
+// this.profile();
   }
 
 
