@@ -141,6 +141,10 @@ const routes: Routes = [
   {
     path: 'popstd',
     loadChildren: () => import('./popover/popstd/popstd.module').then( m => m.PopstdPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
 
 
