@@ -1,8 +1,185 @@
+<ion-menu side="start" menuId="first" contentId="content1" color="dark">
+  <ion-header color="dark" >
+    <ion-toolbar color="dark">
+      
+    </ion-toolbar >
+  </ion-header >
+  <ion-card color="dark" style="  background: linear-gradient(60deg, #00FF7F 50%, lightseagreen 50%);border-radius: 50%; 
+  margin-left: 70px; text-align:center; margin-top: 40px;height:110px;width: 40%;" > 
+    hello50
+  </ion-card>
+
+  <ion-content color="dark">
+  
+    <ion-list  color="dark" lines="none" *ngFor="let pages of navigate"  >
+     
+    <ion-menu-toggle auto-hide="true" color="dark">
+      <ion-item [routerLink]="pages.url" routerDirection="forward" lines="none" color="dark"  >
+          <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+             {{pages.title}} 
+      </ion-item>
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content1" color="dark" ></ion-router-outlet>
+
+
+
 <ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" style="color: rgb(6, 2, 73);">
+      <ion-menu-button sytle="background-color:white"></ion-menu-button>
+      </ion-buttons>
+
+    <ul class="sidebar-nav" style=" font-size: small">
+      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+      ; color: white ;" >previous</ion-icon></a></li>
+      <li><a routerLink="/help/helpstud">HELP</a></li>
+    </ul>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="text-align: left;">
+
+ <ion-grid>
+  <ion-card style="margin-left:60px ;border-radius: 20px; height:50px ;">
+   
+    <ion-label style="color: black ;margin-left: 60px;margin-top:-30px;font-size:14px">
+     Dashboard
+    </ion-label>
+   </ion-card>
+ <ion-card style="background-color: rgb(6, 2, 73);
+ margin-left: 250px;margin-top: -60px;
+ border-radius: 20px; height:50px ;" >
+  
+  <ion-label style="color: black ;margin-left: 60px;margin-top:-30px;color:white; font-size:14px">
+   Issues
+  </ion-label>
+ </ion-card>
+ 
+  
+    <h1 style="font-size: 18px; font-weight: bold;color: rgb(6, 2, 73) ">Issue log</h1>
+  
+    <ion-button (click)= "popOver($event)" color="light" color="tertiary" shape="round">
+      <ion-icon name="add" color=""></ion-icon></ion-button>
+    
+<ion-card>
+  <p>No issues have been logged, press(+) to log an Issue</p>
+  <br>
+</ion-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-header>
   <ion-toolbar color="dark">
-    <!-- <ion-buttons slot="start" >
+    <ion-buttons slot="start" >
       <ion-menu-button></ion-menu-button>
-    </ion-buttons> -->
+    </ion-buttons>
     <ion-title align="center">STUDENT APPLICATION</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -35,4 +212,4 @@
 
   <ion-button class = "ion-text-center" expand="block" color="dark" shape="round">SUBMIT APPLICATION</ion-button>
 
-</ion-content>
+</ion-content> -->

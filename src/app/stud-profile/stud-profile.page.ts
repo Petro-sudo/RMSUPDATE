@@ -46,22 +46,29 @@ this.profile();
   {
     this.navigate =
     [
-      
+      {
+        title : "Profile",
+        url   : "/stud-profile",
+        icon :"person-outline"
+       
+       
+      },
       {
         title : "Overview",
         url   : "/Home",
+        icon :"eye-outline"
        
        
       },
       {
         title : "My rooms",
-        url   : "#properties",
-        icon  : "chatboxes"
+        url   : "/studstatus",
+        icon  : "bed-outline"
       },
       {
         title : "Issues",
-        url   : "/contacts",
-        icon  : "contacts"
+        url   : "/stud-app",
+        icon  : "add"
       },
 
 

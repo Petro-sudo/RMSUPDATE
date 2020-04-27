@@ -22,3 +22,114 @@ ion-content{
     background-color: grey;
     margin-right: 100;
 }
+li{
+    float: right;
+    list-style:none;
+    text-align: center;
+    width: 70px;
+    height: 15px;
+    line-height: 10px;
+    color: aliceblue;
+    text-decoration-line: none;
+    font-weight: bold;
+  
+  
+  }
+ 
+  a {
+
+    text-decoration-line: none;
+    padding: 8px 8px;
+    font-style: initial;
+    text-align: center; 
+    color:rgb(6, 2, 73);
+
+  }
+  ion-button{
+      font-size: 12px;
+      text-align: center;  
+      text-transform: none;
+    
+    }
+    .data{
+        margin-left: 200;
+       // padding-right: 200;
+    }
+    .bstyle{
+    margin-top: 0px;
+    }
+ion-card{
+    border-radius: 10% 10% 
+}
+
+.card1{
+    margin-right: 100;
+    border-radius: 5% 5% /5% 5%;
+}
+    
+
+    .card2{
+        margin-right: 100;
+        border-radius: 5% 5% /5% 5%;
+    }
+
+
+
+    #back{
+        float: right;
+        zoom:2;
+    }
+    #add{
+        zoom:4;
+        margin-top: 20px;
+        margin-left: 40%;
+    }
+    #upload{
+        
+        zoom:2;
+        margin-left: 50%;
+    }
+    
+    ion-label{
+        margin-top: 10px;
+        
+    }
+    
+    #names{
+        border-left: 1px solid grey;
+        border-radius: 5px;
+        width: 20px;
+    }
+    
+    
+    #res{
+        height: 100px;
+        border-left: 1px solid grey;
+        border-radius: 5px;
+        width: auto;
+        text-align: right;
+       
+    }
+  
+    #back{
+        color: black;
+        zoom:2;
+    }
+    
+    
+    #edit{
+        float:right;
+    }
+    
+    #doc{
+        margin-left:20% ;
+    }
+    
+    strong{
+        font-weight:medium;
+        
+    }
+    
+    
+   
+    
