@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
 import {ServiceService} from './../service.service';
 import { Platform, AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
-
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 @Component({
   selector: 'app-resproof',
   templateUrl: './resproof.page.html',
@@ -15,9 +16,12 @@ import { Router } from '@angular/router';
 export class ResproofPage implements OnInit{
   result: any = [];
  data: Observable<any>;
+ navigate : any;
 
   constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService,
-   
+    private platform    : Platform,
+    private splashScreen: SplashScreen,
+    private statusBar   : StatusBar,
     public alertCtrl: AlertController,
     private router: Router ) { }
 
@@ -25,6 +29,56 @@ export class ResproofPage implements OnInit{
 
     this.getData();
     this.profile();
+    this.initializeApp();
+    this.sideMenu();
+  }
+
+
+
+
+
+
+
+  
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+    });
+  }
+
+  sideMenu()
+  {
+    this.navigate =
+    [
+      {
+        title : "Profile",
+        url   : "/stud-profile",
+        icon :"person-outline"
+       
+       
+      },
+      {
+        title : "Overview",
+        url   : "/resproof",
+        icon :"eye-outline"
+       
+       
+      },
+      {
+        title : "My rooms",
+        url   : "/studstatus",
+        icon  : "bed-outline"
+      },
+      {
+        title : "Issues",
+        url   : "/stud-app",
+        icon  : "add"
+      },
+
+
+      
+    ]
   }
 
 
