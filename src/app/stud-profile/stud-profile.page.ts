@@ -5,8 +5,8 @@ import {Observable} from 'rxjs';
 import {ServiceService} from './../service.service';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { Platform } from '@ionic/angular';
-
+import { Platform, AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-stud-profile',
   templateUrl: './stud-profile.page.html',
@@ -16,16 +16,21 @@ export class StudProfilePage implements OnInit {
 
   result: any=[];
   data: Observable<any>;
+  
   constructor(/*public navCtrl: NavController,*/ public http: HttpClient,
     private platform    : Platform,
     private splashScreen: SplashScreen,
-    private statusBar   : StatusBar) { }
+    private statusBar   : StatusBar,
+    public alertCtrl: AlertController,
+    private router: Router
+    ) { }
     navigate : any;
   ngOnInit() {
 
     this.getData();
 this.initializeApp();
-this. sideMenu();
+this.sideMenu();
+// this.profile();
   }
 
 
@@ -70,6 +75,56 @@ this. sideMenu();
       
     ]
   }
+
+
+
+
+
+
+
+
+  async profile() {
+
+    
+
+    const alert = await this.alertCtrl.create({  
+     header:'Profile Dialog',
+      message:'Please complete your profile' ,
+      buttons: [
+        {
+          text: 'Update',
+          role: 'update',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm update: blah');
+            this.router.navigate(['/profile']);
+          }
+        }, {
+          text: 'Later',
+          handler: () => {
+            console.log('Confirm later');
+          }
+        }
+      ]
+      
+    }
+   
+    
+
+
+    
+    );  
+
+    await alert.present();  
+    const result = await alert.onDidDismiss();  
+    console.log(result);
+
+
+
+   }
+
+
+
 
 
 
