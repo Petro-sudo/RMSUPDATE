@@ -193,21 +193,144 @@
 
 
 
-<ion-card style="margin-left:60px ;border-radius: 20px; height:50px ;">
+<ion-card style="margin-left:60px ;border-radius: 20px; height:50px ;background-color: white;color: rgb(6, 2, 73);">
    
-   <ion-label style="color: black ;margin-left: 60px;margin-top:-30px;font-size:14px">
-    Dashboard
-   </ion-label>
-  </ion-card>
+  <ion-label style="color: rgb(6, 2, 73) ;margin-left: 60px;margin-top:-30px;font-size:14px; text-align: left;">
+  Profile
+  </ion-label>
+ </ion-card>
 <ion-card style="background-color: rgb(6, 2, 73);
 margin-left: 250px;margin-top: -60px;
 border-radius: 20px; height:50px ;" >
- 
- <ion-label style="color: black ;margin-left: 60px;margin-top:-30px;color:white; font-size:14px">
-  Profile
- </ion-label>
+
+<ion-label style="color: black ;margin-left: 60px;margin-top:-30px;color:white; font-size:14px">
+Update
+</ion-label>
 </ion-card>
 
+<ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78); font-weight: bold;"> Update Profile</ion-label>
+
+<br>
+<br>
+<ion-card style="width: 500px;height: 400px;">
+<form action="">
+  <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;"> Personal Details</ion-label>
+<br>
+  <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Student Number"></ion-input>
+<br>
+<ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Last Name"></ion-input>
+<br>
+<ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Select gender">
+  <ion-select-option value="FEMALE">FEMALE</ion-select-option>
+  <ion-select-option value="MALE">MALE</ion-select-option>
+</ion-select>
+<br>
 
 
+<ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;"> Desability Details</ion-label>
+<br>
+
+<ion-toggle checked="false"size="">
+ 
+</ion-toggle>
+<ion-label> Do you have disability?</ion-label>
+<br>
+
+
+</form>
+
+</ion-card>
+<br>
+<ion-card  style="width: 500px;height: 200px;">
+ 
+  <ion-item >
+   
+   <ion-label>
+    Contact Details
+   </ion-label>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>
+      Medical Details
+     </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Course Details
+     </ion-label>
+  </ion-item>
+
+</ion-card>
+
+<br>
+
+<ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;"> Update Profile</ion-label>
+<br>
+
+
+
+
+<ion-card  style="width: 500px;height: 200px;">
+ 
+  <ion-item >
+   
+   <ion-label>
+    Personal Details
+   </ion-label>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>
+      Contact Details
+     </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Medical Details
+     </ion-label>
+  </ion-item>
+
+</ion-card>
+<br>
+<ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;"> Course Details</ion-label>
+<br>
+<ion-card  style="width: 500px;height: 400px;">
+
+  <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Campus of study">
+    <ion-select-option value="FEMALE">Soshanguve south</ion-select-option>
+    <ion-select-option value="MALE">Arcadia</ion-select-option>
+    <ion-select-option value="MALE">Main Camp</ion-select-option>
+  </ion-select>
+  <br>
+  <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Select your course">
+    <ion-select-option value="FEMALE">Information Technology</ion-select-option>
+    <ion-select-option value="MALE">Electrical engineering</ion-select-option>
+    <ion-select-option value="MALE">Bio-Tech</ion-select-option>
+  </ion-select>
+  <br>
+  <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Select your sponsor">
+    <ion-select-option value="FEMALE">NSFAS</ion-select-option>
+    <ion-select-option value="MALE">Other bursaries</ion-select-option>
+   
+  </ion-select>
+
+
+
+  <br>
+  <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Select your faculty">
+    <ion-select-option value="ICT">ICT</ion-select-option>
+    <ion-select-option value="Science">Science</ion-select-option>
+   
+  </ion-select>
+  <br>
+  <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Year of adimission"></ion-input>
+
+  <br>
+
+  <ion-button outline color="danger">Previous</ion-button>
+  <ion-button outline color="primary">Finish</ion-button>
+</ion-card>
 </ion-content>
