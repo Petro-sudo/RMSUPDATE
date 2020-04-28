@@ -1,6 +1,5 @@
-
 import { Component, OnInit} from '@angular/core';
-import { NavController, Platform } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {ServiceService} from './../service.service';
@@ -25,23 +24,19 @@ export class ResproofPage implements OnInit{
 
    
     public alertCtrl: AlertController,
-    private router: Router ) { }
-
-  ngOnInit() {
-
-    this.getData();
-    this.profile();
-  }
-
+    private router: Router,
     private platform    : Platform,
     private splashScreen: SplashScreen,
     private statusBar   : StatusBar) { }
+
     navigate : any;
   ngOnInit() {
 
-    this.getData();
+    // this.getData();
     this.initializeApp();
     this. sideMenu();
+    this.getData();
+    this.profile();
       }
     
     
@@ -87,16 +82,6 @@ export class ResproofPage implements OnInit{
       }
     
 
-
-
-
-
-
-
-
-
-
-
   async profile() {
 
     
@@ -133,26 +118,7 @@ export class ResproofPage implements OnInit{
     const result = await alert.onDidDismiss();  
     console.log(result);
 
-
-
    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   getData(){
 
 
