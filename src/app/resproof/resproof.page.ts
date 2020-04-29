@@ -3,14 +3,10 @@ import { NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {ServiceService} from './../service.service';
-
 import { Platform, AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
-
-import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-
-
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 @Component({
   selector: 'app-resproof',
   templateUrl: './resproof.page.html',
@@ -19,68 +15,80 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 export class ResproofPage implements OnInit{
   result: any = [];
  data: Observable<any>;
+ navigate : any;
 
   constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService,
-
-   
-    public alertCtrl: AlertController,
-    private router: Router,
     private platform    : Platform,
     private splashScreen: SplashScreen,
-    private statusBar   : StatusBar) { }
+    private statusBar   : StatusBar,
+    public alertCtrl: AlertController,
+    private router: Router ) { }
 
-    navigate : any;
   ngOnInit() {
 
-    // this.getData();
-    this.initializeApp();
-    this. sideMenu();
     this.getData();
     this.profile();
-      }
-    
-    
-    
-      initializeApp() {
-        this.platform.ready().then(() => {
-          this.statusBar.styleDefault();
-          this.splashScreen.hide();
-        });
-      }
-    
-      sideMenu()
+    this.initializeApp();
+    this.sideMenu();
+  }
+
+
+
+
+
+
+
+  
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+    });
+  }
+
+  sideMenu()
+  {
+    this.navigate =
+    [
       {
-        this.navigate =
-        [
-          {
-            title : "Profile",
-            url   : "/stud-profile",
-            icon :"person-outline"
-           
-           
-          },
-          {
-            title : "Overview",
-            url   : "/resproof",
-            icon  :"eye-outline"
-           
-          },
-          {
-            title : "My rooms",
-            url   : "/studstatus",
-            icon  : "bed-outline"
-          },
-          {
-            title : "Issues",
-            url   : "/stud-app",
-            icon  : "add"
-          },
-    
-    
-          
-        ]
-      }
-    
+        title : "Profile",
+        url   : "/stud-profile",
+        icon :"person-outline"
+       
+       
+      },
+      {
+        title : "Overview",
+        url   : "/resproof",
+        icon :"eye-outline"
+       
+       
+      },
+      {
+        title : "My rooms",
+        url   : "/studstatus",
+        icon  : "bed-outline"
+      },
+      {
+        title : "Issues",
+        url   : "/stud-app",
+        icon  : "add"
+      },
+
+
+      
+    ]
+  }
+
+
+
+
+
+
+
+
+
+
 
   async profile() {
 
@@ -131,4 +139,4 @@ export class ResproofPage implements OnInit{
   
 
 
-}
+}g
