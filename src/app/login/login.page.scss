@@ -60,11 +60,17 @@ li{
     text-align: center;
     font-style: initial;
   }
-  
+
+
+  .ahover{
   a:hover {
-    background-color: rgb(132, 72, 243);
-    color: black;
+    background-color: transparent;
   }
+}
+a:hover {
+  background-color: rgb(132, 72, 243);
+  color: black;
+}
   ul{
     text-align: center;
   }

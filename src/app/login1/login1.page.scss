@@ -52,7 +52,11 @@ li{
     font-style: initial;
     text-align: center;
   }
-  
+  .ahover{
+    a:hover{
+      background-color: transparent;
+    }
+  }
   a:hover {
     background-color: rgb(244, 241, 248);
     color: black;

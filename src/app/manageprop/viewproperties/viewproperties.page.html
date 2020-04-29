@@ -1,4 +1,272 @@
+
+<ion-menu side="start" menuId="first" contentId="content1" color="dark">
+  <ion-header color="dark" >
+    <ion-toolbar color="dark">
+      
+    </ion-toolbar >
+  </ion-header >
+  <ion-card color="dark" style="  background: linear-gradient(60deg, #00FF7F 50%, lightseagreen 50%);border-radius: 50%; margin-left: 70px; text-align:center" > 
+    hello50
+  </ion-card>
+
+  <ion-content color="dark">
+  
+    <ion-list  color="dark" lines="none" *ngFor="let pages of navigate"  >
+     
+    <ion-menu-toggle auto-hide="true" color="dark">
+      <ion-item [routerLink]="pages.url" routerDirection="forward" lines="none" color="dark"  >
+          <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+             {{pages.title}} 
+      </ion-item>
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content1" color="dark" ></ion-router-outlet>
+
 <ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" style="color: rgb(6, 2, 73);">
+      <ion-menu-button sytle="background-color:white"></ion-menu-button>
+      </ion-buttons>
+
+    
+      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+      ; color: white ;" >previous</ion-icon></a></li>
+      <li> <div class="border">
+        <ion-input placeholder ="search">
+          <ion-icon slot="start" color="dark" name="search-outline"></ion-icon></ion-input>
+        </div>
+      </li>
+      <li><a routerLink="/help/helpstud">HELP</a></li>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+ <ion-grid>
+
+
+  <ion-card style="margin-left:60px ;border-radius: 20px; height:50px ;background-color: white;color: rgb(6, 2, 73);">
+   
+    <ion-label style="color: rgb(6, 2, 73) ;margin-left: 60px;margin-top:-30px;font-size:14px; text-align: left;">
+     Dashboard
+    </ion-label>
+   </ion-card>
+ <ion-card style="background-color: rgb(6, 2, 73);
+ margin-left: 250px;margin-top: -60px;
+ border-radius: 20px; height:50px ;" >
+  
+  <ion-label style="color: black ;margin-left: 60px;margin-top:-30px;color:white;
+   font-size:14px;margin-left: 30px;">
+   Properties
+  </ion-label>
+ </ion-card>  
+   
+    <div class="card11">
+    <ion-row>
+      <ion-col size="12" size-sm style="text-align: center;"> 
+        <ion-card>
+           <ion-toolbar>
+                <div slot="start">
+                  <ion-title style="font-size: 18px; font-weight: bold;color: 
+                  rgb(6, 2, 73) ">Bed Statistics</ion-title>
+                </div >
+                <div style="color: rgb(6, 2, 73);" slot="end">
+                  <ion-button color="dark" shape="round"><ion-icon name="bed-outline"></ion-icon> 
+                  </ion-button>
+               </div>
+              </ion-toolbar>
+              <ion-card-content>
+                <canvas #doughnutCanvas></canvas>
+              </ion-card-content>
+              
+              <br><br><br><br>
+              <br>
+       </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-sm style="text-align: center;"> 
+          <ion-card>
+             <ion-toolbar>
+                  <div slot="start">
+                    <ion-title style="font-size: 18px; font-weight: bold;color: 
+                    rgb(6, 2, 73) ">Issues</ion-title>
+                  </div >
+
+                  <div style="color: rgb(6, 2, 73);" slot="end">
+                      <ion-button shape="round" color="dark">
+                        <ion-icon   name="settings-outline">
+                        </ion-icon> 1</ion-button>             
+                 </div>
+                </ion-toolbar>
+                <ion-card-content>
+                  <canvas #doughnutCanvas1></canvas>
+                </ion-card-content>
+                <br><br><br><br>
+                <br>
+         </ion-card>
+        </ion-col>
+   </ion-row>
+  </div>
+
+  <h1 style="font-size: 20px; font-weight: bold;color: rgb(6, 2, 73) ">Communique & Report</h1>
+  
+  <div class="card11">
+    <ion-row>
+      <ion-col size="12" size-sm style="text-align: center;"> 
+        <ion-card>
+           <ion-toolbar>
+                <div slot="start">
+                  <ion-title style="font-size: 18px; font-weight: bold;color: 
+                  rgb(6, 2, 73) ">Tenants Issues</ion-title>
+                </div >
+
+                <div style="color: rgb(6, 2, 73);" slot="end">
+                  
+                    <ion-button shape="round" color="dark">
+                      <ion-icon name="notifications-outline"></ion-icon> 0</ion-button>
+               </div>
+              </ion-toolbar>
+              <p style="font-size: 14px;color: black">
+                No issues posted </p>
+              
+              <br><br><br><br>
+              <br>
+       </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-sm style="text-align: center;"> 
+          <ion-card>
+             <ion-toolbar>
+                  <div slot="start">
+                    <ion-title style="font-size: 18px; font-weight: bold;color: 
+                    rgb(6, 2, 73) ">queries</ion-title>
+                  </div >
+
+                  <div style="color: rgb(6, 2, 73);" slot="end">
+                      <ion-button shape="round" color="dark"><ion-icon name="notifications-outline"></ion-icon> 0
+                      </ion-button>
+                 </div>
+                </ion-toolbar>
+                <p style="font-size: 14px;color: black">
+                  No on going queries </p>
+                
+                <br><br><br><br>
+                <br>
+         </ion-card>
+        </ion-col>
+   </ion-row>
+  </div>
+  </ion-grid>
+
+
+
+
+  
+  
+  <!-- <ion-content color = "dark"> -->
+  <!-- <div class="mycard">
+    <ion-router-outlet id="main"></ion-router-outlet>
+  
+    <ion-router-outlet id="main"></ion-router-outlet>
+  
+    <div class="ion-padding">
+     
+  
+      <ion-card color = "light">
+        <ion-card-header>
+          Head to Head comparisons
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #doughnutCanvas1></canvas>
+        </ion-card-content>
+      </ion-card>
+  
+      
+    </div>
+  </div> -->
+   <!-- </ion-content> -->
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-header>
   <ion-toolbar color="dark">
     <ion-buttons slot="start" >
       <ion-menu-button></ion-menu-button>
@@ -50,45 +318,11 @@
 
 <ion-card>
  
-</ion-card>
-
-
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    
+</ion-card> 
 <ion-footer  class="ion-footer">
   <ion-toolbar color="dark" >
     <ion-title align="center" >2020 Off campus accomodation</ion-title>
   </ion-toolbar>
 </ion-footer>
 </div>
-</ion-content>
+</ion-content> -->

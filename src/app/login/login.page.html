@@ -50,12 +50,12 @@ placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
   Please enter a valid password between 8 to 20 chars.
 </div>
 <br>
-
-<ion-button class = "ion-text-center" color="secondary"  expand="block"
-(click)="loginUser()">Sign In</ion-button>
-
+<div class ="ahover">
+<a routerLink = "/viewproperties"><ion-button class = "ion-text-center" color="secondary"  expand="block"
+(click)="loginUser()">Sign In</ion-button></a>
+</div>
 <ion-toolbar>
-<div slot="start">
+<div slot="start" >
    <p style="text-align: left; color: white;">No account? sign up<a routerLink="/landlord-reg" style="color: rgb(27, 219, 245);">here</a></p>
 </div>
 

@@ -1,8 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs';
-import { NavController } from '@ionic/angular';
+import { NavController, Platform, AlertController, MenuController, ModalController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { ServiceService } from 'src/app/service.service';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { Router } from '@angular/router';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Chart } from 'chart.js';
+import { type } from 'os';
+
+// import { async } from 'rxjs/internal/scheduler/async';
+// import { profile } from 'console';
 
 @Component({
   selector: 'app-viewproperties',
@@ -10,17 +18,170 @@ import { ServiceService } from 'src/app/service.service';
   styleUrls: ['./viewproperties.page.scss'],
 })
 export class ViewpropertiesPage implements OnInit {
+  
+  @ViewChild('barCanvas',  { static: true }) barCanvas: ElementRef;
+  @ViewChild('doughnutCanvas',  { static: true }) doughnutCanvas: ElementRef;
+  @ViewChild('doughnutCanvas1',  { static: true }) doughnutCanvas1: ElementRef;
+  @ViewChild('lineCanvas',  { static: true }) lineCanvas: ElementRef;
+
+  private barChart: Chart;
+  private doughnutChart: Chart;
+  private issueChart: Chart;
+  private lineChart: Chart;
+  
+
 
   edit: any = [];
   data: Observable<any>;
  
-   constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService) { }
- 
+   constructor(private menu: MenuController, private modalCtrl: ModalController,
+    public navCtrl: NavController, public http: HttpClient, 
+    private _serviceService : ServiceService,
+    private platform    : Platform,
+    private splashScreen: SplashScreen,
+    private statusBar   : StatusBar,
+    public alertCtrl: AlertController,
+    private router: Router ) { }
+    navigate : any;
    ngOnInit() {
- 
-     this.getData();
+    this.getData();
+    this.profile();
+    this.initializeApp();
+    this.sideMenu();
+
+    this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
+      type: 'doughnut',
+      data: {
+        labels: ['Male','Female'],
+        datasets: [
+          {
+            label: ['71%', '21%'],
+            data: [71, 29],
+            backgroundColor: [
+              
+              'rgb(5, 238, 64)',
+              'rgb(3, 18, 83)'
+              
+            ]
+            //  ,
+            //  title:['71%', '21%']
+            //  hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FF6384', '#36A2EB', '#FFCE56']
+          }
+        ]
+      }
+    });
+
+    this.issueChart = new Chart(this.doughnutCanvas1.nativeElement, {
+      type: 'doughnut',
+      data: {
+        labels: ['Resolved', 'In progress', 'Pending', 'Rejected'],
+        datasets: [
+          {
+            label: '# of Votes',
+            data: [0,0,100,0],
+            backgroundColor: [
+              'rgb(5, 238, 64)',
+              'rgb(3, 18, 83)',
+              'rgb(146, 61, 243)',
+              'rgb(69, 200, 240)'
+            ]
+          
+          }
+        ]
+      }
+    });
+
+    
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+    });
+  }
+
+  sideMenu()
+  {
+    this.navigate =
+    [
+      {
+        title : "Profile",
+        url   : "/landlord-dash",
+        icon :"person-outline"
+       
+       
+      },
+      {
+        title : "Overview",
+        url   : "/viewproperties",
+        icon :"eye-outline"
+       
+       
+      },
+      {
+        title : "My Proparties",
+        url   : "#",
+        icon  : "bed-outline"
+      },
+      {
+        title : "Accreditation",
+        url   : "#",
+        icon  : "add"
+      },
+
+
+      
+    ]
+  }
+
+
+
+
+
+
+
+
+
+
+
+  async profile() {
+
+    
+
+    const alert = await this.alertCtrl.create({  
+     header:'Profile Dialog',
+      message:'Please complete your profile' ,
+      buttons: [
+        {
+          text: 'Update',
+          role: 'update',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm update: blah');
+            this.router.navigate(['/landlord-dash']);
+          }
+        }, {
+          text: 'Later',
+          handler: () => {
+            console.log('Confirm later');
+          }
+        }
+      ]
+      
+    }
+   
+    
+
+
+    
+    );  
+
+    await alert.present();  
+    const result = await alert.onDidDismiss();  
+    console.log(result);
+
    }
- 
    getData(){
  
  
