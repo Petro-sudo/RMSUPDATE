@@ -7,7 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { Router } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Chart } from 'chart.js';
-import { type } from 'os';
+//import { type } from 'os';
 
 // import { async } from 'rxjs/internal/scheduler/async';
 // import { profile } from 'console';
