@@ -1,4 +1,3 @@
-
 import { Component, OnInit} from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
@@ -127,26 +126,7 @@ export class ResproofPage implements OnInit{
     const result = await alert.onDidDismiss();  
     console.log(result);
 
-
-
    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   getData(){
 
 
@@ -159,4 +139,4 @@ export class ResproofPage implements OnInit{
   
 
 
-}
+}g
