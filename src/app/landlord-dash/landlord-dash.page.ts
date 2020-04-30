@@ -114,34 +114,23 @@ export class LandlordDashPage implements OnInit {
         icon  : "person-circle-outline"
       },
       {
-        title : "REGISTER RESIDENCES",
-        url   : "/landloard-app",
-        icon  : "add"
+        title : "Overview",
+        url   : "/viewproperties",
+        icon :"eye-outline"
+       
+       
       },
       {
-        title : "MANAGE STUDENT",
-        url   : "/managestud",
-        icon  : "people"
-      },
-
-
-      {
-        title : "MANAGE PROPARTIES",
-        url   : "/manageprop",
+        title : "My Proparties",
+        url   : "#",
         icon  : "business"
       },
-      
+      {
+        title : "Accreditation",
+        url   : "#",
+        icon  : "add"
+      }
 
-      {
-        title : "EDIT PROFILE",
-        url   : "/editlordprof",
-        icon  : "person-add"
-      },
-      {
-        title : "LOG-OUT",
-        url   : "/folder/folder",
-        icon  : "log-out"
-      },
 
     ]
   }

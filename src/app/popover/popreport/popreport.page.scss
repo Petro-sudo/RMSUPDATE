@@ -3,11 +3,21 @@ ion-input{
     border-top: solid 1px;
     border-right: solid 1px;
     border-left: solid 1px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 ion-select{
-    border-bottom: solid 2px;
-    border-top: solid 2px;
-    border-right: solid 2px;
-    border-left: solid 2px;
+    border-bottom: grey solid ;
+    border-top: grey solid ;
+    border-right: grey solid ;
+    border-left: grey solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    
 }  
+
+ion-content{
+    margin-left: 10px;
+    margin-right: 10px;
+}
