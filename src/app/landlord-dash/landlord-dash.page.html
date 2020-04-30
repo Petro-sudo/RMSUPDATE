@@ -1,30 +1,19 @@
-<!-- <ion-header style="background-color: black;">
-  <ion-toolbar color="dark">
-    <ion-buttons slot="start" color = "success">
-       <ion-icon name="menu" (click)="presentMenu()"></ion-icon>
-    </ion-buttons> 
-  <ion-title color="dark" style="color: white; font-size: xx-large; " align="center" >WELCOME LANDLORD</ion-title>
-  
-  
-</ion-toolbar>
-</ion-header>
- 
- -->
-
-
-
-
-
- <ion-menu side="start" menuId="first" contentId="content1">
-  <ion-header>
-    <ion-toolbar >
+<ion-menu side="start" menuId="first" contentId="content1" color="dark">
+  <ion-header color="dark" >
+    <ion-toolbar color="dark">
       
     </ion-toolbar >
   </ion-header >
-  <ion-content>
-    <ion-list *ngFor="let pages of navigate">
-    <ion-menu-toggle auto-hide="true">
-      <ion-item [routerLink]="pages.url" routerDirection="forward">
+  <ion-card color="dark" style="  background: linear-gradient(60deg, #00FF7F 50%, lightseagreen 50%);border-radius: 50%; margin-left: 70px; text-align:center" > 
+    hello50
+  </ion-card>
+
+  <ion-content color="dark">
+  
+    <ion-list  color="dark" lines="none" *ngFor="let pages of navigate"  >
+     
+    <ion-menu-toggle auto-hide="true" color="dark">
+      <ion-item [routerLink]="pages.url" routerDirection="forward" lines="none" color="dark"  >
           <ion-icon [name]="pages.icon" slot="start"></ion-icon>
              {{pages.title}} 
       </ion-item>
@@ -32,28 +21,138 @@
     </ion-list>
   </ion-content>
 </ion-menu>
-<ion-router-outlet id="content1"></ion-router-outlet>
+<ion-router-outlet id="content1" color="dark" ></ion-router-outlet>
 
-<ion-header style=" background-color: #00003f ;">
-  <ion-toolbar >
-      <ion-buttons slot="start" style="color: white;">
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" style="color: rgb(6, 2, 73);">
       <ion-menu-button sytle="background-color:white"></ion-menu-button>
       </ion-buttons>
-     
+
+    
+      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+      ; color: white ;" >previous</ion-icon></a></li>
+      <li> <div class="border">
+        <ion-input type="text" placeholder="Search">
+        <ion-icon name="search-outline" slot="start"></ion-icon></ion-input>
+            </div>
+      </li>
+
+      <li><a routerLink="/help/helplord">HELP</a></li>
+    
   </ion-toolbar>
 </ion-header>
 
-
-
-
-
-
-
-
-
-
-
+<ion-content>
  
+ <ion-grid>
+
+
+  <ion-card style="margin-left:60px ;border-radius: 20px; height:50px ;background-color: white;color: rgb(6, 2, 73);">
+   
+    <ion-label style="color: rgb(6, 2, 73) ;margin-left: 60px;margin-top:-30px;font-size:14px; text-align: left;">
+     Dashboard
+    </ion-label>
+   </ion-card>
+ <ion-card style="background-color: rgb(6, 2, 73);
+ margin-left: 250px;margin-top: -60px;
+ border-radius: 20px; height:50px ;" >
+  
+  <ion-label style="color: black ;margin-left: 60px;margin-top:-30px;color:white;
+   font-size:14px;margin-left: 30px;">
+   Profle
+  </ion-label>
+ </ion-card>  
+   
+    
+  
+  <div class="card11">
+    <ion-row>
+      <ion-col size="12" size-sm style="text-align: center;"> 
+        <ion-card>
+          <ion-card color="dark" style="  background: linear-gradient(60deg, rgb(6, 101, 243) 50%, rgb(100, 162, 233) 50%);border-radius: 50%; margin-left: 70px; text-align:center;
+          margin-top: 40px; height:110px;width: 40%;" > 
+            <h1 style="text-align: center;margin-top: 50; font-size: 30;font-weight: bold;color: darkblue;">T</h1>
+           <a routerLink = "//edit-prof"><ion-button shape ="round" color="light"><ion-icon name="pencil-outline"></ion-icon></ion-button></a>
+          </ion-card>
+
+
+
+
+<br>
+
+
+                  <ion-title style="font-size: 18px; font-weight: bold;color: 
+                  rgb(6, 2, 73) ">TUTEH Properties</ion-title>
+                
+
+                
+       </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-sm style="text-align: center;"> 
+          <ion-card style="width: 400px;height: 200px;">
+            
+
+               <ion-item>
+                <ion-label>Account Details</ion-label>
+                <ion-select interface="popover">
+                  <!-- <ion-select-option value="nes">NES</ion-select-option>
+                  <ion-select-option value="n64">Nintendo64</ion-select-option>
+                  <ion-select-option value="ps">PlayStation</ion-select-option>
+                  <ion-select-option value="genesis">Sega Genesis</ion-select-option>
+                  <ion-select-option value="saturn">Sega Saturn</ion-select-option>
+                  <ion-select-option value="snes">SNES</ion-select-option> -->
+                </ion-select>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Contact Details</ion-label>
+                <ion-select interface="popover">
+                </ion-select>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Address Details</ion-label>
+                <ion-select interface="popover">
+                </ion-select>
+              </ion-item>
+              
+            
+           
+         </ion-card>
+        </ion-col>
+   </ion-row>
+  </div>
+  </ion-grid>
+
+
+
+
+  
+  
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
  
  <ion-content >
   
@@ -119,22 +218,12 @@
        
        </form>
     
-  </div>
- <!-- <ion-row>
-       <ion-col col=6>
-        
-        <a routerLink="/landloard-app">
-        <ion-card align="center" text-center padding color="light" 
-        style="border-radius: 20px; margin-left: 0px;">
-          <h2>Register Residence</h2>
-          <ion-icon name="add-circle-outline"></ion-icon>
-         </ion-card>
-        </a>
-       </ion-col>
+  </div> -->
+
      
  
 
-   
+<!--    
        <ion-col col=6>
         <a routerLink="/managestud">
           <ion-card align="center" text-center padding color="light" style="border-radius: 20px;">
@@ -171,37 +260,14 @@
          </ion-card>
          </a>
        </ion-col> 
-     </ion-row>  -->
+     </ion-row>  
 
   
-   </ion-grid>
+   </ion-grid> -->
 
   
     
 
  
 
-  
-   
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
- <ion-footer  class="ion-footer">
-   <ion-toolbar color="dark" >
-     <ion-title align="center" >2020 Off campus accomodation</ion-title>
-   </ion-toolbar>
- </ion-footer>
-    
-
-  
-
-
-</div>
-   
- </ion-content>
 

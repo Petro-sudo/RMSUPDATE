@@ -1,52 +1,71 @@
-// ion-content h1{
-//     padding-left: 35%;
-// }
+ion-card{
+  margin-top: 40px;
+ 
+  height:110px;
+  width: 40%;
 
-//  #first{
-//    padding-left: 40%;
-//    zoom: 5;
-// }
-// ion-icon{
-//     zoom: 2;
-// }
+  }
+  button{
+    padding-bottom: 130px;
+    padding-left: 10px;
+  }
+  .card11
+  {
+    ion-card{
+      
+      width: 300px; 
+      height: 250px;  
+      
+    }
+  
+  }
+  ion-card{
+    border-radius: 10% 10% 
+}
 
+li{
+    float: right;
+    list-style:none;
+    text-align: center;
+    width: 100px;
+    height: 15px;
+    line-height: 10px;
+    color: aliceblue;
+    text-decoration-line: none;
+    font-weight: bold;
+  }
+  ion-card{
+    border-radius: 5% 
+}
+option{
+  text-decoration-line: none;
+}
+.border
+{
+  //   border-bottom: solid ;
+  //   border-top: solid ;
+  //   border-left: solid ;
+  //   border-right: solid ;
+    color:black;
+    
 
-// ion-title{
-//     padding-left: 100px;
-// }
-// .smallLogo{
-//     background-color: transparent;
-// }
+}
+.mycard{
+    ion-card{
+        height: 200px;
+    }
+}
+  a {
 
-// ion-footer{
-//     margin-top:10%;
-// }
-// a{
-//     text-decoration: none;
-//     color:black;
-// }
-
-// ion-card:hover
-// {
-
-//     background-color:#ed576b;
-
-// }
-// ion-item{
-//     opacity: 0.8;
-//     margin-right: 100px;
-//     margin-left: 100px;
-   
-// }
-
-ion-toolbar{
-    --ion-background-color:rgb(3, 1, 32);
-   }
-   :root {
-    --ion-color-secondary: #006600;
-    --ion-color-secondary-rgb: 0,102,0;
-    --ion-color-secondary-contrast: #ffffff;
-    --ion-color-secondary-contrast-rgb: 255,255,255;
-    --ion-color-secondary-shade: #005a00;
-    --ion-color-secondary-tint: #1a751a;
+    text-decoration-line: none;
+    font-style: initial;
+    color:rgb(7, 3, 83);
+    
+    
+  }
+  ion-label{
+      margin-left: 20px;
+  }
+  h1{
+      margin-left: 20px;
   }
