@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { Router } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Chart } from 'chart.js';
+import * as moment from 'moment';
 //import { type } from 'os';
 
 // import { async } from 'rxjs/internal/scheduler/async';
@@ -18,7 +19,7 @@ import { Chart } from 'chart.js';
   styleUrls: ['./viewproperties.page.scss'],
 })
 export class ViewpropertiesPage implements OnInit {
-  
+  momentjs: any = moment;
   @ViewChild('barCanvas',  { static: true }) barCanvas: ElementRef;
   @ViewChild('doughnutCanvas',  { static: true }) doughnutCanvas: ElementRef;
   @ViewChild('doughnutCanvas1',  { static: true }) doughnutCanvas1: ElementRef;

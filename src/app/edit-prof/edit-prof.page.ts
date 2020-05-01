@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['./edit-prof.page.scss'],
 })
 export class EditProfPage implements OnInit {
+  
 
   navigate: { title: string; url: string; icon: string; }[];
   constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService,
@@ -26,6 +27,7 @@ export class EditProfPage implements OnInit {
     
     ) {}
 
+   
 
   ngOnInit() { 
    this.sideMenu();

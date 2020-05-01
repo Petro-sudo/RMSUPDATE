@@ -3,13 +3,22 @@ ion-card{
    
     height:110px;
     width: 40%;
-  
+    }
+    .right{
+      ion-radio{
+        color: red;
+      }
     }
     .card{
         ion-card{
             margin-left: 40px;
             margin-right: 40px;
+            width: 800px;
+            height: 700px;
         }
+    }
+    ion-content{
+      margin-right: 20px;
     }
     li{
         float: right;
@@ -40,3 +49,10 @@ ion-card{
         
         
       } 
+
+      ion-input{
+        border-top: grey solid;
+        border-bottom: grey solid;
+        border-right: grey solid;
+        border-left: grey solid;
+      }
