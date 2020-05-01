@@ -51,8 +51,9 @@ ion-card{
       } 
 
       ion-input{
-        border-top: grey solid;
-        border-bottom: grey solid;
-        border-right: grey solid;
-        border-left: grey solid;
+        border-top: grey solid 1px;
+        border-bottom: grey 1px solid;
+        border-right: grey solid 2px;
+        border-left: grey solid 1px;
+        margin-right: 10px;
       }
