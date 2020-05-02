@@ -18,6 +18,7 @@ import { PopemailPageModule } from './popover/popemail/popemail.module';
 import { PopstdPageModule } from './popover/popstd/popstd.module';
 import { PopratePageModule } from './popover/poprate/poprate.module';
 import { PopreportPageModule } from './popover/popreport/popreport.module';
+import {PopaccPageModule} from './popover/popacc/popacc.module';
 
 
 
@@ -32,11 +33,12 @@ import { PopreportPageModule } from './popover/popreport/popreport.module';
     IonicModule.forRoot(),
     ReactiveFormsModule,
     AppRoutingModule,
-    //
+    //popup
    PopemailPageModule,
    PopstdPageModule,
    PopratePageModule,
    PopreportPageModule,
+   PopaccPageModule,
          
    
     FormsModule, ReactiveFormsModule

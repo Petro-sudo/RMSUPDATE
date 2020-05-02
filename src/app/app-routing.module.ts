@@ -237,6 +237,12 @@ const routes: Routes = [
     path: 'editprop',
     loadChildren: () => import('./manageprop/editprop/editprop.module').then( m => m.EditpropPageModule)
   }
+  ,
+  {
+    path: 'popacc',
+    loadChildren: () => import('./popover/popacc/popacc.module').then( m => m.PopaccPageModule)
+  }
+
   // ,
   // {
   //   path: 'popreport',

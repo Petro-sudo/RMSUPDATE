@@ -89,37 +89,25 @@
 
                 
        </ion-card>
+       
       </ion-col>
 
       <ion-col size="12" size-sm style="text-align: center;"> 
-          <ion-card style="width: 400px;height: 200px;">
-            
-
-               <ion-item>
-                <ion-label>Account Details</ion-label>
-                <ion-select interface="popover">
-                  <!-- <ion-select-option value="nes">NES</ion-select-option>
-                  <ion-select-option value="n64">Nintendo64</ion-select-option>
-                  <ion-select-option value="ps">PlayStation</ion-select-option>
-                  <ion-select-option value="genesis">Sega Genesis</ion-select-option>
-                  <ion-select-option value="saturn">Sega Saturn</ion-select-option>
-                  <ion-select-option value="snes">SNES</ion-select-option> -->
-                </ion-select>
-              </ion-item>
-
-              <ion-item>
-                <ion-label>Contact Details</ion-label>
-                <ion-select interface="popover">
-                </ion-select>
-              </ion-item>
-
-              <ion-item>
-                <ion-label>Address Details</ion-label>
-                <ion-select interface="popover">
-                </ion-select>
-              </ion-item>
+          <ion-card style="width: 400px;height: 150px;">
+            <br>
+                <ion-button style="text-transform: none;" color="light"  expand="block" shape="round" (click)= "accOver($event)">
+                  <ion-icon slot="end" name="chevron-forward-outline" color="dark" style="margin-left: 200px;">
+                  </ion-icon>Account Details
+               </ion-button>
               
-            
+               <ion-button style="text-transform: none;" color="light"  expand="block" shape="round" (click)= "conOver($event)">
+                <ion-icon slot="end" name="chevron-forward-outline" color="dark" style="margin-left: 200px;">
+                </ion-icon>Contact Details
+               </ion-button>
+
+               <ion-button style="text-transform: none;" color="light"  expand="block" shape="round" (click)= "addOver($event)">
+                <ion-icon slot="end" name="chevron-forward-outline" color="dark" style="margin-left: 200px;">
+                </ion-icon>Address Details</ion-button>
            
          </ion-card>
         </ion-col>
