@@ -246,10 +246,10 @@ const routes: Routes = [
     loadChildren: () => import('./propertyinfo/propertyinfo.module').then( m => m.PropertyinfoPageModule)
   }
   ,
-  {
-    path: 'popacc',
-    loadChildren: () => import('./popover/popacc/popacc.module').then( m => m.PopaccPageModule)
-  }
+  // {
+  //   path: 'popacc',
+  //   loadChildren: () => import('./popover/popacc/popacc.module').then( m => m.PopaccPageModule)
+  // }
 
   // ,
   // {
