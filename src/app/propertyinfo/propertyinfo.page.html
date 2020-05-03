@@ -1,9 +1,99 @@
+
+
+
+
+<ion-menu side="start" menuId="first" contentId="content1" color="dark">
+  <ion-header color="dark" >
+    <ion-toolbar color="dark">
+      
+    </ion-toolbar >
+  </ion-header >
+  <ion-card color="dark" style="  background: linear-gradient(60deg, #00FF7F 50%, lightseagreen 50%);border-radius: 50%; margin-left: 70px; text-align:center" > 
+    hello50
+  </ion-card>
+
+  <ion-content color="dark">
+  
+    <ion-list  color="dark" lines="none" *ngFor="let pages of navigate"  >
+     
+    <ion-menu-toggle auto-hide="true" color="dark">
+      <ion-item [routerLink]="pages.url" routerDirection="forward" lines="none" color="dark"  >
+          <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+             {{pages.title}} 
+      </ion-item>
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content1" color="dark" ></ion-router-outlet>
+
 <ion-header>
-  <ion-toolbar>
-    <ion-title>propertyinfo</ion-title>
+  <ion-toolbar >
+  
+      <ion-buttons slot="start" color="dark">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-label routerLink="/help/helplord" slot="end">
+      
+      HELP
+      </ion-label>
   </ion-toolbar>
 </ion-header>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ion-content>
 
-</ion-content>
+
+
+  <ion-card style="margin-left:80px ; width:220px ;border-radius: 20px; height:50px ;background-color: white;color: rgb(6, 2, 73);">
+   
+    <ion-label style="color:black ; ;margin-left: 60px;margin-top:-30px;font-size:14px; text-align: left;">
+     Dashboard
+    </ion-label>
+   </ion-card>
+ <ion-card style="background-color: rgb(6, 2, 73);
+ margin-left: 280px;margin-top: -60px;
+ border-radius: 20px; height:50px ; width:220px ; " >
+  
+  <ion-label style="margin-left: 60px;margin-top:-30px;color:white;
+   font-size:14px;margin-left: 30px;width:50px ;">
+   Overview
+  </ion-label>
+ </ion-card> 
+
+
+  <ion-grid>
+<ion-row>
+<ion-col col=6>
+  
+  <h1 style="border-left:10px solid rgb(6, 2, 73);">Properties</h1>
+<ion-card routerLink="/properties" >
+  <img style="border-radius: 10px;" src="assets/pics/build1.jpg" alt="" >
+  <h1 style="margin-left: 250px; margin-top: -250px;color:black ;"> TUTEH Residence</h1>
+  <h3 style="margin-left: 220px; color:black">statistics</h3>
+ <ion-label style="margin-left: 220px; color:black">Occupied beds    7 of 7</ion-label>
+ <ion-label style="margin-left: 220px; color:black"> Vacant beds      0</ion-label>
+ <ion-label style="margin-left: 220px; color:black">Applications       0</ion-label>
+ </ion-card>
+</ion-col>
+
+
+
+</ion-row>
+
+  </ion-grid>
+  </ion-content>

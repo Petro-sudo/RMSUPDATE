@@ -315,7 +315,7 @@ this.sideMenu();
       },
       {
         title : "My Proparties",
-        url   : "#",
+        url   : "/propertyinfo",
         icon  : "business"
       },
       {
