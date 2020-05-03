@@ -30,10 +30,18 @@
       <ion-buttons slot="start" color="dark">
       <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-label routerLink="/help/helplord">
-      
-      HELP
-      </ion-label>
+      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+        ; color: white ;" >previous</ion-icon></a></li>
+        <li> <div class="border">
+          <ion-input type="text" placeholder="Search">
+          <ion-icon name="search-outline" slot="start"></ion-icon></ion-input>
+              </div>
+        </li>
+  
+        <li><a routerLink="/help/helplord">HELP</a></li>
+
+
+     
   </ion-toolbar>
 </ion-header>
 
@@ -72,12 +80,61 @@
   
   <div id="Dashboard" class="tabcontent">
     <h3>Dashboard</h3>
-    <p>Dashboard is still being implemented.</p>
+   
+<ion-grid>
+  <ion-row>
+  <ion-col col=6>
+  
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Occupied beds</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barChart></canvas>
+    </ion-card-content>
+  </ion-card>
+  </ion-col>
+  
+  <ion-col col=2>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Ratings( 7 total)</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #label></canvas>
+      <br><br><br><br>
+      <br>
+    </ion-card-content>
+   
+  </ion-card>
+  </ion-col>
+  
+  </ion-row>
+  </ion-grid>
+  
   </div>
   
   <div id="Issues" class="tabcontent">
     <h3>Issues</h3>
-    <p>Issues is still being implemented.</p> 
+    <div class="row header">
+      <div class="col">Utility Company Name</div>
+      <div class="col">Service Code</div>
+      <div class="col">Pay Limit</div>
+      <div class="col">Account Number to Use</div>
+      <div class="col"></div>
+    </div>
+    <div class="row" ng-repeat="data in ctrl.data">
+      <div class="col">cecil</div>
+      <div class="col">tebog</div>
+      <div class="col">LK </div>
+      <div class="col">issues</div>
+      <div class="col"><button class="button" ng-click="ctrl.add($index)">Add</button></div>
+    </div>
+
+
+
+
+
   </div>
   
   <div id="Tenants" class="tabcontent">
@@ -98,37 +155,6 @@
 
 
 
-
-<ion-grid>
-<ion-row>
-<ion-col col=6>
-
-<ion-card class="welcome-card">
-  <ion-card-header>
-    <ion-card-title>Occupied beds</ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <canvas #barChart></canvas>
-  </ion-card-content>
-</ion-card>
-</ion-col>
-
-<ion-col col=2>
-<ion-card class="welcome-card">
-  <ion-card-header>
-    <ion-card-title>Ratings( 7 total)</ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <canvas #label></canvas>
-    <br><br><br><br>
-    <br>
-  </ion-card-content>
- 
-</ion-card>
-</ion-col>
-
-</ion-row>
-</ion-grid>
 
 
 
