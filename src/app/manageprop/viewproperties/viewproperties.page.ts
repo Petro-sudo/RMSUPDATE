@@ -20,10 +20,10 @@ import * as moment from 'moment';
 })
 export class ViewpropertiesPage implements OnInit {
   momentjs: any = moment;
-  @ViewChild('barCanvas',  { static: true }) barCanvas: ElementRef;
+  
   @ViewChild('doughnutCanvas',  { static: true }) doughnutCanvas: ElementRef;
   @ViewChild('doughnutCanvas1',  { static: true }) doughnutCanvas1: ElementRef;
-  @ViewChild('lineCanvas',  { static: true }) lineCanvas: ElementRef;
+ 
 
   private barChart: Chart;
   private doughnutChart: Chart;
@@ -106,13 +106,13 @@ export class ViewpropertiesPage implements OnInit {
   {
     this.navigate =
     [
-      {
-        title : "Profile",
-        url   : "/landlord-dash",
-        icon :"person-outline"
+      // {
+      //   title : "Profile",
+      //   url   : "/landlord-dash",
+      //   icon :"person-outline"
        
        
-      },
+      // },
       {
         title : "Overview",
         url   : "/viewproperties",
@@ -127,8 +127,8 @@ export class ViewpropertiesPage implements OnInit {
       },
       {
         title : "Accreditation",
-        url   : "#",
-        icon  : "add"
+        url   : "/landloard-app",
+        icon  : "clipboard"
       }
 
 

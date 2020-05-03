@@ -64,8 +64,8 @@ export class EditProfPage implements OnInit {
      },
      {
        title : "Accreditation",
-       url   : "#",
-       icon  : "add"
+       url   : "/landloard-app",
+       icon  : "clipboard"
      }
 
 

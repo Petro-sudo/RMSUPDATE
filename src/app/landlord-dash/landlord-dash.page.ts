@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { async } from 'rxjs/internal/scheduler/async';
 import { PopaccPage } from '../popover/popacc/popacc.page';
+import { PopconPage } from '../popover/popcon/popcon.page';
+import { PopaddPage } from '../popover/popadd/popadd.page';
 
 @Component({
   selector: 'app-landlord-dash',
@@ -22,6 +24,8 @@ export class LandlordDashPage implements OnInit {
   navigate: { title: string; url: string; icon: string; }[];
 
   value=0;
+  value1=0;
+  value2=0;
 
  
    constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService,
@@ -130,8 +134,8 @@ export class LandlordDashPage implements OnInit {
       },
       {
         title : "Accreditation",
-        url   : "#",
-        icon  : "add"
+        url   : "/landloard-app",
+        icon  : "clipboard"
       }
 
 
@@ -168,6 +172,31 @@ export class LandlordDashPage implements OnInit {
       });
     popacc.present();
     }
+
+
+    async conOver(ev: Event)  {
+      const popcon = await this.popoverController.create({
+       component: PopconPage,
+       componentProps:{
+         custom_id: this.value1
+       },
+       
+      });
+    popcon.present();
+    }
+
+
+    async addOver(ev: Event)  {
+      const popadd = await this.popoverController.create({
+       component: PopaddPage,
+       componentProps:{
+         custom_id: this.value2
+       },
+       
+      });
+    popadd.present();
+    }
+    
      
    }
 
@@ -177,60 +206,3 @@ export class LandlordDashPage implements OnInit {
   //  toggleLeftMenu() {
   //   this.menuCtrl.toggle();
   // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-

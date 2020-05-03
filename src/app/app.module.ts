@@ -19,6 +19,8 @@ import { PopstdPageModule } from './popover/popstd/popstd.module';
 import { PopratePageModule } from './popover/poprate/poprate.module';
 import { PopreportPageModule } from './popover/popreport/popreport.module';
 import {PopaccPageModule} from './popover/popacc/popacc.module';
+import { PopconPageModule } from './popover/popcon/popcon.module';
+import { PopaddPageModule } from './popover/popadd/popadd.module';
 
 
 
@@ -39,7 +41,8 @@ import {PopaccPageModule} from './popover/popacc/popacc.module';
    PopratePageModule,
    PopreportPageModule,
    PopaccPageModule,
-         
+   PopconPageModule,
+   PopaddPageModule,      
    
     FormsModule, ReactiveFormsModule
     

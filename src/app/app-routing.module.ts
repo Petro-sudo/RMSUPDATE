@@ -245,7 +245,15 @@ const routes: Routes = [
     path: 'propertyinfo',
     loadChildren: () => import('./propertyinfo/propertyinfo.module').then( m => m.PropertyinfoPageModule)
   }
-  ,
+  ,  {
+    path: 'popcon',
+    loadChildren: () => import('./popover/popcon/popcon.module').then( m => m.PopconPageModule)
+  },
+  {
+    path: 'popadd',
+    loadChildren: () => import('./popover/popadd/popadd.module').then( m => m.PopaddPageModule)
+  },
+
   // {
   //   path: 'popacc',
   //   loadChildren: () => import('./popover/popacc/popacc.module').then( m => m.PopaccPageModule)
