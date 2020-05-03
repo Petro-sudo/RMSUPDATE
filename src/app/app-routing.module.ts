@@ -236,7 +236,8 @@ const routes: Routes = [
   {
     path: 'editprop',
     loadChildren: () => import('./manageprop/editprop/editprop.module').then( m => m.EditpropPageModule)
-  },  {
+  },
+  {
     path: 'properties',
     loadChildren: () => import('./properties/properties.module').then( m => m.PropertiesPageModule)
   },
@@ -244,6 +245,11 @@ const routes: Routes = [
     path: 'propertyinfo',
     loadChildren: () => import('./propertyinfo/propertyinfo.module').then( m => m.PropertyinfoPageModule)
   }
+  ,
+  // {
+  //   path: 'popacc',
+  //   loadChildren: () => import('./popover/popacc/popacc.module').then( m => m.PopaccPageModule)
+  // }
 
   // ,
   // {
@@ -264,11 +270,6 @@ const routes: Routes = [
   //   path: 'popstd',
   //   loadChildren: () => import('./popover/popstd/popstd.module').then( m => m.PopstdPageModule)
   // }
-
-
-
-
-
 
 ];
 

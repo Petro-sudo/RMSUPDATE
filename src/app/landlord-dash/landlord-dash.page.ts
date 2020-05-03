@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, MenuController, LoadingController, ActionSheetController, Platform } from '@ionic/angular';
+import { NavController, MenuController, LoadingController, ActionSheetController, Platform, PopoverController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ServiceService } from '../service.service';
 import { Router, RouterEvent } from '@angular/router';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { async } from 'rxjs/internal/scheduler/async';
+import { PopaccPage } from '../popover/popacc/popacc.page';
 
 @Component({
   selector: 'app-landlord-dash',
@@ -19,13 +21,14 @@ export class LandlordDashPage implements OnInit {
  
   navigate: { title: string; url: string; icon: string; }[];
 
-  
+  value=0;
 
  
    constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService,
     public menuCtrl: MenuController, private router: Router, public actionSheetCtrl: ActionSheetController,
     private loadingCtrl: LoadingController,
     
+    private popoverController: PopoverController,
     
     private platform  : Platform,
               private splashScreen: SplashScreen,
@@ -153,6 +156,18 @@ export class LandlordDashPage implements OnInit {
     this. _serviceService.lordprofile().subscribe(data=>{
      this.result = data;
      });
+    }
+
+     async accOver(ev: Event)  {
+      const popacc = await this.popoverController.create({
+       component: PopaccPage,
+       componentProps:{
+         custom_id: this.value
+       },
+       
+      });
+    popacc.present();
+    }
      
    }
 
@@ -218,4 +233,4 @@ export class LandlordDashPage implements OnInit {
 
 
    
-}
+
