@@ -122,7 +122,7 @@ export class ViewpropertiesPage implements OnInit {
       },
       {
         title : "My Proparties",
-        url   : "#",
+        url   : "/propertyinfo",
         icon  : "business"
       },
       {
