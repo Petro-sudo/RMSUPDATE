@@ -320,8 +320,8 @@ this.sideMenu();
       },
       {
         title : "Accreditation",
-        url   : "#",
-        icon  : "add"
+        url   : "/landlord",
+        icon  : "clipboard"
       }
 
 

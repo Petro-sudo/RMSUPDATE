@@ -59,7 +59,7 @@ export class EditProfPage implements OnInit {
      },
      {
        title : "My Proparties",
-       url   : "#",
+       url   : "/propertyinfo",
        icon  : "business"
      },
      {
