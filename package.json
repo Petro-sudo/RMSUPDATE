@@ -33,6 +33,7 @@
     "@ionic/storage": "^2.2.0",
     "chart.js": "^2.9.3",
     "com.telerik.plugins.nativepagetransitions": "^0.6.5",
+    "cordova-android": "8.1.0",
     "cordova-ios": "5.1.1",
     "cordova-plugin-streaming-media": "^2.2.0",
     "core-js": "^2.5.4",
@@ -85,7 +86,8 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
