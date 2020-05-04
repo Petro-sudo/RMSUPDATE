@@ -79,8 +79,12 @@
   </div>
   
   <div id="Dashboard" class="tabcontent">
-    <h3>Dashboard</h3>
-   
+    <h3>Dashboard</h3><br>
+    <br>
+    
+    <h2 style="color:black ;border-left:10px solid rgb(6, 2, 73);"> Overview +Stats:TUTEH Residence</h2>
+   <ion-button fill="outline" (click)="presentAlertPrompt()">Broadcast a notice</ion-button>
+   <ion-button fill="outline" (click)="presentAlertPrompt2()">Log an issue</ion-button>
 <ion-grid>
   <ion-row>
   <ion-col col=6>
@@ -88,6 +92,9 @@
   <ion-card class="welcome-card">
     <ion-card-header>
       <ion-card-title>Occupied beds</ion-card-title>
+      <ion-button color="dark" shape="round"><ion-icon name="bed-outline"></ion-icon>
+        7
+      </ion-button>
     </ion-card-header>
     <ion-card-content>
       <canvas #barChart></canvas>
@@ -115,22 +122,42 @@
   </div>
   
   <div id="Issues" class="tabcontent">
-    <h3>Issues</h3>
-    <div class="row header">
-      <div class="col">Utility Company Name</div>
-      <div class="col">Service Code</div>
-      <div class="col">Pay Limit</div>
-      <div class="col">Account Number to Use</div>
-      <div class="col"></div>
-    </div>
-    <div class="row" ng-repeat="data in ctrl.data">
-      <div class="col">cecil</div>
-      <div class="col">tebog</div>
-      <div class="col">LK </div>
-      <div class="col">issues</div>
-      <div class="col"><button class="button" ng-click="ctrl.add($index)">Add</button></div>
-    </div>
-
+    
+    <h1>Issues</h1>
+    <ion-searchbar></ion-searchbar>
+    <table class="rwd-table">
+      
+      <tr>
+        <th>Date</th>
+        <th>Full Name</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>View</th>
+      </tr>
+      <tr>
+        <td data-th="Date">2020/05/01</td>
+        <td data-th="Full Name">Kgopotso Lelake</td>
+        <td data-th="Description">Lights not working</td>
+        <td data-th="Status">In- progress</td>
+        <td data-th="View"><ion-button> view</ion-button></td>
+      </tr>
+      <tr>
+        <td data-th="Date">2020/05/02</td>
+        <td data-th="Full Name">Peter moluleka</td>
+        <td data-th="Description">stove not working</td>
+        <td data-th="Status">In- progress</td>
+        <td data-th="View"><ion-button> view</ion-button></td>
+      </tr>
+      <tr>
+        <td data-th="Date">2020/05/01</td>
+        <td data-th="Full Name">Noxolo Zuma</td>
+        <td data-th="Description">socket not working</td>
+        <td data-th="Status">In- progress</td>
+        <td data-th="View"><ion-button> view</ion-button></td>
+      </tr>
+    </table>
+    
+    <!-- <p>&larr; Drag window (in editor or full page view) to see the effect. &rarr;</p> -->
 
 
 
@@ -138,8 +165,48 @@
   </div>
   
   <div id="Tenants" class="tabcontent">
-    <h3>Tenants</h3>
-    <p>Tenants is still being implemented.</p>
+    <h3></h3>
+   
+    
+
+    <h1>Tenants</h1>
+    <ion-searchbar></ion-searchbar>
+    <table class="rwd-table">
+      
+      <tr>
+        <th>student Number</th>
+        <th>student Number</th>
+        <th>building</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        
+      </tr>
+      <tr>
+        <td data-th="StudentNumber">21826885</td>
+        <td data-th="Full Name">Kgopotso Lelake</td>
+        <td data-th="Building">1-g-77</td>
+        <td data-th="Start Date">2020/05/30</td>
+        <td data-th="End Date">2020/05/30</td>
+      </tr>
+      <tr>
+        <td data-th="StudentNumber">21826888</td>
+        <td data-th="Full Name">Petre maluleka</td>
+        <td data-th="Building">1-g-78</td>
+        <td data-th="Start Date">2020/05/30</td>
+        <td data-th="End Date">2020/05/30</td>
+      </tr>
+      <tr>
+        <td data-th="StudentNumber">21924885</td>
+        <td data-th="Full Name">Noxolo Zuma</td>
+        <td data-th="Building">1-g-79</td>
+        <td data-th="Start Date">2020/05/30</td>
+        <td data-th="End Date">2020/05/30</td>
+      </tr>
+    </table>
+
+
+
+
   </div>
   
 

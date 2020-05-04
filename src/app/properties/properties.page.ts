@@ -185,12 +185,14 @@ import { Chart } from 'chart.js';
   @ViewChild('label' ,{ static: true }) label;
   bars: any;
   colorArray: any;
+  //  alertController: any;
   constructor(
     private platform    : Platform,
         private splashScreen: SplashScreen,
         private statusBar   : StatusBar,
         public alertCtrl: AlertController,
-        private router: Router
+        private router: Router,
+        public alertController: AlertController
   ) { }
   navigate : any;
   ionViewDidEnter() {
@@ -208,7 +210,7 @@ this.sideMenu();
         labels: ['very_satisfied','satisfied','okay','disappointed','very_disappointed'],
         datasets: [{
          
-           data: [0, 0,0,0,0],
+           data: [0,100,0,0,0],
           backgroundColor: [
             
             'rgb(5, 238, 64)',
@@ -334,6 +336,95 @@ this.sideMenu();
 
 
 
+
+
+
+
+
+
+
+  async presentAlertPrompt() {
+    const alert = await this.alertController.create({
+      header: 'Notice Dialog',
+      inputs: [
+        {
+          name: 'name1',
+          type: 'text',
+          placeholder: 'Notice title'
+        },
+      
+        // multiline input.
+        {
+          name: 'paragraph',
+          id: 'paragraph',
+          type: 'textarea',
+          placeholder: 'Notice Discription'
+        },
+       
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Submit',
+          handler: () => {
+            console.log('Confirm Submit');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+
+
+
+  
+  async presentAlertPrompt2() {
+    const alert = await this.alertController.create({
+      header: 'Query Dialog',
+      message: 'Send quiries to TUTEH Properties.',
+      inputs: [
+        {
+          name: 'name1',
+          type: 'text',
+          placeholder: 'Isuue description'
+        },
+      
+        // multiline input.
+        {
+          name: 'paragraph',
+          id: 'paragraph',
+          type: 'textarea',
+          placeholder: 'Query type'
+        },
+       
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Submit',
+          handler: () => {
+            console.log('Confirm Submit');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
 
 
 
