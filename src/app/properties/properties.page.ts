@@ -322,7 +322,7 @@ this.sideMenu();
       },
       {
         title : "Accreditation",
-        url   : "/landlord",
+        url   : "/landloard-app",
         icon  : "clipboard"
       }
 

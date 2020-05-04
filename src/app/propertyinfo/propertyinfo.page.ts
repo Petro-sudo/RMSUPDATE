@@ -67,8 +67,8 @@ navigate : any;
       },
       {
         title : "Accreditation",
-        url   : "#",
-        icon  : "add"
+        url   : "/landloard-app",
+        icon  : "clipboard"
       }
 
 
