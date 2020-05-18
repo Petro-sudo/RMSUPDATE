@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, PopoverController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { AuthService } from '../service/auth.service';
+import {ServiceService} from './../service.service';
 import { PopstdPage } from '../popover/popstd/popstd.page';
 
 @Component({
@@ -11,10 +11,7 @@ import { PopstdPage } from '../popover/popstd/popstd.page';
 })
 export class Login1Page implements OnInit {
   value=0;
-  // credentials = { 
-  //   email: 'petro,malele@gmail.com',
-  //   pwd: '123'
-  // };
+ 
 
 
   
