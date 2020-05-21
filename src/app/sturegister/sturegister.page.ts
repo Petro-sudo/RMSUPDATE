@@ -8,7 +8,8 @@ import {
   FormGroup,
   FormControl,
   Validators,
-  FormBuilder
+  FormBuilder,
+  RequiredValidator
 }from '@angular/forms'
 
 import { BrowserModule } from "@angular/platform-browser";
@@ -39,7 +40,7 @@ export class SturegisterPage implements OnInit {
   // email: FormControl;
   // id_no=new FormControl;
   // cell_no= new FormControl;
-
+  reactiveForm: FormGroup
    password: FormControl;
   confirm= new FormControl;
   studno= new FormControl;
@@ -50,6 +51,7 @@ export class SturegisterPage implements OnInit {
     this.createFormControls();
     this.createForm();
     this.getstu();
+    
   }
 
 
@@ -60,7 +62,26 @@ export class SturegisterPage implements OnInit {
     });
   }
 
+  // passwordChecked(control){
+  //   if(control.value != null){
+  //     var conPass = control.value;
+  //     var pass = control.root.get('password');
+  //     if(pass){
+  //       var password = pass.value
+  //       if(conPass!==""&& password !==""){
+  //         if(conPass !== password){
+  //           return {
+  //             passwordValidity:true
+  //           }
+  //         }
+  //         else{
+  //           return null
+  //         }
+  //       }
+  //     }
+  //   }
 
+  // }
 
 
   async add() {
@@ -68,34 +89,19 @@ export class SturegisterPage implements OnInit {
      if(this.myform.invalid){
 
       const alert = await this.alertCtrl.create({  
-        header: 'Registration',  
+        header: 'Registration Failed',  
         message: ' please fill in all the fields ',  
         buttons: ['OK'] 
          
-      }
-     
-      
-  
-  
-      
-      );  
+      });  
   
       await alert.present();  
       const result = await alert.onDidDismiss();  
       console.log(result);
-  
-  
-  
      } 
-       
-
-
-
-
 else{
 
-
-    this._serviceService.poststu(this.stuData).subscribe(
+this._serviceService.poststu(this.stuData).subscribe(
 data =>
 console.log(data));
 
@@ -113,47 +119,15 @@ const alert = await this.alertCtrl.create({
   header: 'Registration',  
   message: 'successfully registered.          Please login ',  
   buttons: ['OK'] 
-}
-);  
+});  
 
 await alert.present();  
 const result = await alert.onDidDismiss();  
 console.log(result);
 
 
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   createFormControls() {

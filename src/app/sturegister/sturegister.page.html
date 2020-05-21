@@ -67,8 +67,8 @@
    <ion-item>
    <ion-label position="floating"><ion-icon name="lock-closed"></ion-icon> CREATE PASSWORD</ion-label>
    
-    <ion-input   
-    required  [(ngModel)] = "stuData.password"
+    <ion-input   name ="password"
+    required  [(ngModel)] = "stuData.password" 
     type="password"
            class="form-control"
            formControlName="password"
@@ -76,11 +76,16 @@
            required>
            </ion-input>
 
-    <div class="form-control-feedback"
+    <!-- <div class="form-control-feedback"
          *ngIf="password.errors && (password.dirty || password.touched)">
       <p style="color:red" *ngIf="password.errors.required">Password is required</p>
       <p  style="color:red" *ngIf="password.errors.minlength">Password must be 8 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
-    </div>
+    </div> -->
+
+    <span style="color: red;" *ngIf="confirm.touched && confirm.errors?.required">
+     password is required
+
+     </span>
   </ion-item>
 
 </div>
@@ -91,14 +96,27 @@
    <ion-label position="floating"> <ion-icon name="lock-closed"></ion-icon> CONFIRM PASSWORD</ion-label>
    
    
-    <ion-input required  [(ngModel)] = "stuData.confirm"
+    <ion-input name="confirm" appConfirmEqualValidator="password" required  [(ngModel)] = "stuData.confirm"
+  
     type="password"
     class="form-control"
            formControlName="confirm"
         
            required>   
-   
+
            </ion-input>
+
+           <div class="form-control-feedback">
+           <span style="color: red;" *ngIf="confirm.touched && confirm.errors?.required">
+         confirm password is required
+
+        </span>
+
+        <span style="color: red;" *ngIf="confirm.touched && confirm.errors?.notEqual && !confirm.errors?.required">
+          Password and confirm password does not match
+
+        </span>
+      </div>
    
   </ion-item>
 
