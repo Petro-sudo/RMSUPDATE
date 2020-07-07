@@ -253,6 +253,10 @@ const routes: Routes = [
     path: 'popadd',
     loadChildren: () => import('./popover/popadd/popadd.module').then( m => m.PopaddPageModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
 
   // {
   //   path: 'popacc',
