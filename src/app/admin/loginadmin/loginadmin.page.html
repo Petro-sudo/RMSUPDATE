@@ -1,19 +1,10 @@
-<!-- <ion-header style="background-color: black;">
-  <ion-toolbar color="dark">
-  
-    <ion-title color="dark" style="color: white;" align="center">{{ folder }} </ion-title>
-    <ion-icon style="font-size: 30px;" slot="end" name="arrow-undo" routerLink="/folder/hom">previous</ion-icon>
-  
-  </ion-toolbar>
-</ion-header> -->
-
 <ion-content login-header ion-padding>
   <ion-toolbar>
     <div slot="start" style="font-size: small; ">
       <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
      </div>
     <ul class="sidebar-nav" style=" font-size: small">
-      <li><a routerLink="/help/helplord">HELP</a></li>
+      <li><a routerLink="/help/hadmin">HELP</a></li>
       <li><a routerLink="#">FAQS</a></li>
       <li><a routerLink="/folder/home">HOME</a></li>
     </ul>
@@ -33,7 +24,7 @@
     <br>
 
 <ion-item transparent>
-  <ion-label position = "floating"><ion-icon name="mail"></ion-icon> EMAIL</ion-label>
+  <ion-label position = "floating"><ion-icon name="mail"></ion-icon> EMAIL<p>provided by HR</p></ion-label>
 <ion-input [(ngModel)] = "loginUserData.email" type="email" id = "email" name ="email" class="form-control"
 #email = "ngModel" autofocus required email ngModel></ion-input>    
 </ion-item>
@@ -42,7 +33,7 @@
 </div>
 
 <ion-item transparent> 
-<ion-label position = "floating"><ion-icon name="lock-closed"></ion-icon> PASSWORD</ion-label>
+<ion-label position = "floating"><ion-icon name="lock-closed"></ion-icon> PASSWORD<P>provided by HR</P></ion-label>
 <ion-input [(ngModel)]="loginUserData.password" type="password" name="password" id="password" class="form-control"
 placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel ></ion-input> 
 </ion-item>
@@ -51,13 +42,11 @@ placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
 </div>
 <br>
 <div class ="ahover">
-<a routerLink = "/viewproperties"><ion-button class = "ion-text-center" color="secondary"  expand="block"
+<a routerLink = "/admindash"><ion-button class = "ion-text-center" color="secondary"  expand="block"
 (click)="loginUser()">Sign In</ion-button></a>
 </div>
 <ion-toolbar>
-<div slot="start" >
-   <p style="text-align: left; color: white;">No account? sign up<a routerLink="/landlord-reg" style="color: rgb(27, 219, 245);">here</a></p>
-</div>
+
 
 
 <div slot="end" >

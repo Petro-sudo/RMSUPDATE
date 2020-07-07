@@ -22,6 +22,7 @@ import {PopaccPageModule} from './popover/popacc/popacc.module';
 import { PopconPageModule } from './popover/popcon/popcon.module';
 import { PopaddPageModule } from './popover/popadd/popadd.module';
 import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
+import { HelpadminPageModule } from './popover/helpadmin/helpadmin.module';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator
    PopreportPageModule,
    PopaccPageModule,
    PopconPageModule,
-   PopaddPageModule,  
+   PopaddPageModule, 
+   HelpadminPageModule, 
    
     
 

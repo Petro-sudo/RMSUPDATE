@@ -1,0 +1,20 @@
+<ion-list>
+  
+  <h1 style="font-size: 14px;font-weight: bold;margin-top:10px; margin-left: 40px;border-left: 10px 	rgb(27, 219, 245)solid">Forgot password</h1>
+
+   <p style="font-size: 12px;">please send your HR an email at the following human@resources.com</p>
+
+   <ion-label postion="floating" style="font-size: 12px;">Enter Email</ion-label>
+  <ion-input ></ion-input>
+
+  <ion-toolbar>
+
+     <div slot="start">
+       <ion-button  type = "button" (click)="sendEmail()">Submit</ion-button>
+     </div>
+
+     <div slot="end">
+      <ion-button color= "light" (click)="closePop()" >Cancel</ion-button>
+     </div>
+  </ion-toolbar>
+</ion-list>
