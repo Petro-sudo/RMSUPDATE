@@ -1,0 +1,63 @@
+<ion-content login-header ion-padding>
+  <ion-toolbar>
+    <div slot="start" style="font-size: small; ">
+      <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
+     </div>
+    <ul class="sidebar-nav" style=" font-size: small">
+      <li><a routerLink="/help/hadmin">HELP</a></li>
+      <li><a routerLink="#">FAQS</a></li>
+      <li><a routerLink="/folder/home">HOME</a></li>
+    </ul>
+  </ion-toolbar>
+  
+
+  
+  <br><br> <br> <br>
+
+  <p style="color: white;margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(27, 219, 245)solid;">Sign in to access your account</p>
+      
+   
+  <form>
+
+    <div linespace></div>
+
+    <br>
+
+<ion-item transparent>
+  <ion-label position = "floating"><ion-icon name="mail"></ion-icon> EMAIL<p>provided by HR</p></ion-label>
+<ion-input [(ngModel)] = "loginUserData.email" type="email" id = "email" name ="email" class="form-control"
+#email = "ngModel" autofocus required email ngModel></ion-input>    
+</ion-item>
+<div class="alert alert-danger" role="alert" *ngIf="email.invalid && (email.dirty || email.touched)">
+  Please enter a valid email.
+</div>
+
+<ion-item transparent> 
+<ion-label position = "floating"><ion-icon name="lock-closed"></ion-icon> PASSWORD<P>provided by HR</P></ion-label>
+<ion-input [(ngModel)]="loginUserData.password" type="password" name="password" id="password" class="form-control"
+placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel ></ion-input> 
+</ion-item>
+<div class="alert alert-danger" role="alert" *ngIf="Password.invalid && (Password.dirty || Password.touched)" style="color:red">
+  Please enter a valid password between 8 to 20 chars.
+</div>
+<br>
+<div class ="ahover">
+<a routerLink = "/admindash"><ion-button class = "ion-text-center" color="secondary"  expand="block"
+(click)="loginUser()">Sign In</ion-button></a>
+</div>
+<ion-toolbar>
+
+
+
+<div slot="end" >
+  <!-- <a routerLink="/popemail" ><p style="color: rgb(27, 219, 245);border-bottom: solid 2px;">Forget your password</p></a>
+   -->
+  <p><ion-button style="color: rgb(27, 219, 245);border-bottom: solid 2px; text-transform: none;" size="small"
+    color= "transparent" (click)= "popover($event)" >Forgot your password</ion-button></p>
+  
+</div>
+</ion-toolbar>
+
+</form>
+
+</ion-content>

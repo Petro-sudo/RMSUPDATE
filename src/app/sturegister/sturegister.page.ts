@@ -8,12 +8,13 @@ import {
   FormGroup,
   FormControl,
   Validators,
-  FormBuilder
+  FormBuilder,
+  RequiredValidator
 }from '@angular/forms'
 
 import { BrowserModule } from "@angular/platform-browser";
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 
 
 
@@ -26,21 +27,23 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./sturegister.page.scss'],
 })
 export class SturegisterPage implements OnInit {
-  @Input() stuData= {firstName:" ", lastName:" ",email:" ", password:" ",campus_loc:" ",studno:" " ,id_no:" ",cell_no:" ", confirm:" "}
+  @Input() stuData= { password:" ",studno:" " ,confirm:" "}
  // name = new FormControl('');
-  constructor(public alertCtrl: AlertController, private _serviceService : ServiceService ) { }
+  constructor(public alertCtrl: AlertController, private router:Router,
+    private _serviceService : ServiceService ) { }
   addstu: any = [];
 
-  myform: FormGroup;
-  firstName: FormControl;
-  lastName: FormControl;
-  gender: FormControl;
-  email: FormControl;
-  password: FormControl;
-  campus_loc= new FormControl;
+   myform: FormGroup;
+  // firstName: FormControl;
+  // lastName: FormControl;
+  // gender: FormControl;
+  // email: FormControl;
+  // id_no=new FormControl;
+  // cell_no= new FormControl;
+  reactiveForm: FormGroup
+   password: FormControl;
+  confirm= new FormControl;
   studno= new FormControl;
-  id_no=new FormControl;
-  cell_no= new FormControl;
 
 
   ngOnInit() {
@@ -48,6 +51,7 @@ export class SturegisterPage implements OnInit {
     this.createFormControls();
     this.createForm();
     this.getstu();
+    
   }
 
 
@@ -58,7 +62,26 @@ export class SturegisterPage implements OnInit {
     });
   }
 
+  // passwordChecked(control){
+  //   if(control.value != null){
+  //     var conPass = control.value;
+  //     var pass = control.root.get('password');
+  //     if(pass){
+  //       var password = pass.value
+  //       if(conPass!==""&& password !==""){
+  //         if(conPass !== password){
+  //           return {
+  //             passwordValidity:true
+  //           }
+  //         }
+  //         else{
+  //           return null
+  //         }
+  //       }
+  //     }
+  //   }
 
+  // }
 
 
   async add() {
@@ -66,124 +89,65 @@ export class SturegisterPage implements OnInit {
      if(this.myform.invalid){
 
       const alert = await this.alertCtrl.create({  
-        header: 'Registration',  
+        header: 'Registration Failed',  
         message: ' please fill in all the fields ',  
         buttons: ['OK'] 
          
-      }
-     
-      
-  
-  
-      
-      );  
+      });  
   
       await alert.present();  
       const result = await alert.onDidDismiss();  
       console.log(result);
-  
-  
-  
      } 
-       
-
-
-
-
-
-
-    
-
-     
-  
- 
-
-
 else{
 
-
-    this._serviceService.poststu(this.stuData).subscribe(
+this._serviceService.poststu(this.stuData).subscribe(
 data =>
 console.log(data));
 
-console.log(this.stuData.firstName);
-console.log(this.stuData.lastName);
-console.log(this.stuData.email);
-console.log(this.stuData.password);
-console.log(this.stuData.campus_loc);
 console.log(this.stuData.studno);
-console.log(this.stuData.id_no);
-console.log(this.stuData.cell_no);
+console.log(this.stuData.password);
 console.log(this.stuData.confirm);
+
+this.router.navigate(['/login1']);
+// RouterLink['/login'];
 
 
   
 
 const alert = await this.alertCtrl.create({  
   header: 'Registration',  
-  message: ' you have successfully registered ',  
+  message: 'successfully registered.          Please login ',  
   buttons: ['OK'] 
-   
-}
-
-
-
-
-
-);  
+});  
 
 await alert.present();  
 const result = await alert.onDidDismiss();  
 console.log(result);
 
 
-
-
-
-RouterLink['/login'];
-
-
-
-
 }
-
-
-
-
-
-
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   createFormControls() {
-    this.firstName = new FormControl('', Validators.required);
-    this.lastName = new FormControl('', Validators.required);
-    this.email = new FormControl('', [
-      Validators.required,
-      Validators.pattern("[^ @]*@[^ @]*")
-    ]);
+    // this.firstName = new FormControl('', Validators.required);
+    // this.lastName = new FormControl('', Validators.required);
+    // this.email = new FormControl('', [
+    //   Validators.required,
+    //   Validators.pattern("[^ @]*@[^ @]*")
+    // ]);
     this.password = new FormControl('', [
       Validators.required,
       Validators.minLength(8)
     ]);
+
+    this.confirm = new FormControl('',[
+     Validators.required,
+     Validators.minLength(8) 
+    ]);
+
+    
 
 //validate cell number
   /*  this.cell_no = new FormControl('', [
@@ -208,20 +172,21 @@ RouterLink['/login'];
   createForm() {
     this.myform = new FormGroup({
       name: new FormGroup({
-        firstName: this.firstName,
-        lastName: this.lastName,
+        // firstName: this.firstName,
+        // lastName: this.lastName,
        
 
 
     
       }),
     //code was here
-    email: this.email,
+    // email: this.email,
         password: this.password,
-        campus_loc:this.campus_loc,
+        // campus_loc:this.campus_loc,
         studno: this.studno,
-        id_no: this.id_no,
-        cell_no: this.cell_no
+        confirm: this.confirm
+        // id_no: this.id_no,
+        // cell_no: this.cell_no
      
    
     });

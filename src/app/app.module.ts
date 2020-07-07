@@ -21,11 +21,15 @@ import { PopreportPageModule } from './popover/popreport/popreport.module';
 import {PopaccPageModule} from './popover/popacc/popacc.module';
 import { PopconPageModule } from './popover/popcon/popcon.module';
 import { PopaddPageModule } from './popover/popadd/popadd.module';
-
+import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator.directive';
+import { HelpadminPageModule } from './popover/helpadmin/helpadmin.module';
 
 
 @NgModule({
-  declarations: [AppComponent, FilterPipe],
+  declarations: [AppComponent, 
+    FilterPipe, ConfirmEqualValidatorDirective
+    
+  ],
   entryComponents: [],
   imports: [
     HttpClientModule,
@@ -42,8 +46,11 @@ import { PopaddPageModule } from './popover/popadd/popadd.module';
    PopreportPageModule,
    PopaccPageModule,
    PopconPageModule,
-   PopaddPageModule,      
+   PopaddPageModule, 
+   HelpadminPageModule, 
    
+    
+
     FormsModule, ReactiveFormsModule
     
   ],

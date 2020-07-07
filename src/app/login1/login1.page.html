@@ -24,31 +24,19 @@
     
     </ion-card>
 
-  <form>
-
-    
-
     <br>
 
 <ion-item transparent>
   <ion-label position = "floating"><ion-icon name="person"></ion-icon> STUDENT NUMBER</ion-label>
-<ion-input ></ion-input>    
+<ion-input type = "number" [(ngModel)]="studno" ></ion-input>    
 </ion-item>
-<!-- [(ngModel)] = "loginUserData.email" type="email" id = "email" name ="email" class="form-control"
-#email = "ngModel" autofocus required email ngModel
-<div class="alert alert-danger" role="alert" *ngIf="email.invalid && (email.dirty || email.touched)">
-  Please enter a valid email.
-</div> -->
+
 
 <ion-item transparent> 
 <ion-label position = "floating"><ion-icon name="lock-closed"></ion-icon> PASSWORD</ion-label>
-<ion-input  ></ion-input> 
+<ion-input  type = "password" [(ngModel)]="pwd"></ion-input> 
 </ion-item>
-<!--[(ngModel)]="loginUserData.password" type="password" name="password" id="password" class="form-control"
-placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
-<div class="alert alert-danger" role="alert" *ngIf="Password.invalid && (Password.dirty || Password.touched)" style="color:red">
-  Please enter a valid password between 8 to 20 chars.
-</div> -->
+
 <br>
 <div class="hover">
 <a routerLink = "/resproof">
@@ -77,6 +65,6 @@ placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
 
 
 
-</form>
+
   
 </ion-content>

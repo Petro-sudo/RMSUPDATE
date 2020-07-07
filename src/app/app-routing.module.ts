@@ -245,19 +245,42 @@ const routes: Routes = [
     path: 'propertyinfo',
     loadChildren: () => import('./propertyinfo/propertyinfo.module').then( m => m.PropertyinfoPageModule)
   }
-  ,  {
+  ,
+  {
     path: 'popcon',
     loadChildren: () => import('./popover/popcon/popcon.module').then( m => m.PopconPageModule)
   },
   {
     path: 'popadd',
     loadChildren: () => import('./popover/popadd/popadd.module').then( m => m.PopaddPageModule)
+  },  {
+    path: 'loginadmin',
+    loadChildren: () => import('./admin/loginadmin/loginadmin.module').then( m => m.LoginadminPageModule)
   },
   {
+    path: 'managestudent',
+    loadChildren: () => import('./admin/managestudent/managestudent.module').then( m => m.ManagestudentPageModule)
+  },
+  {
+    path: 'admindash',
+    loadChildren: () => import('./admin/admindash/admindash.module').then( m => m.AdmindashPageModule)
+  },
+  {
+    path: 'helpadmin',
+    loadChildren: () => import('./popover/helpadmin/helpadmin.module').then( m => m.HelpadminPageModule)
+  },
+  {
+<<<<<<< HEAD
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
+=======
+    path: 'hadmin',
+    loadChildren: () => import('./help/hadmin/hadmin.module').then( m => m.HadminPageModule)
+  }
+>>>>>>> 82e849a94f0cf6d5a7df9d888be5efdb138434e3
 
+ 
   // {
   //   path: 'popacc',
   //   loadChildren: () => import('./popover/popacc/popacc.module').then( m => m.PopaccPageModule)

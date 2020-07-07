@@ -65,6 +65,8 @@ public postLogin(loglord:any)
     return this.http.post<any>(this.regstu_url, reg, {});
   }
 
+  
+
   public getApartment()
   {
     // return this.http.get<any>(this.apart_url);
