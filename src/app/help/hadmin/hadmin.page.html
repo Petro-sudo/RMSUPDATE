@@ -1,9 +1,126 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>hadmin</ion-title>
-  </ion-toolbar>
+  <ion-toolbar >
+    <div slot="start">
+      <img src="assets/pics/logo.png" width="80px" height="40px" alt="">
+      </div>
+      <div slot="end">
+      <ul class="sidebar-nav" style="font-size: small">
+        <li><a routerLink="/loginadmin">LOGIN AS AN ADMIN</a></li>
+        <li><a routerLink="/folder/home">HOME</a></li>
+        
+      </ul>
+      </div>
+     </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+<h1 style="font:bold; color: black;">What is TRES</h1>
+
+<p>Based on the estimates of the magnitude of the shortage of student accommodation ,we developed T_Res .T_Res is a digital platform started in January 2020 with the intention of enhancing the process of 
+  applying for student accommodation and Registration of the prospective residential Complexes by the owners. In keeping with the technological changes, we have opted to provide our services on the digital platforms to enable our clients to access our services at any time to their convenience.
+  Students can apply for their accommodation and receive frequent feedback 
+  on the status of their application without the need to visit a physical 
+  office. The same functionality is available for the residential companies 
+  to register their companies online.</p>
+
+<h1 style="color:black">How do I use TRES</h1>
+
+<p>Please follow the step by step guide in document below to
+   learn more about TRes</p>
+
+<ion-icon name="attach-outline"></ion-icon><a routerLink="https://tres-images-storage.s3-eu-west-1.amazonaws.com/2020+User+Guide.pdf"
+ style="text-decoration-line: none;color: rgb(18, 193, 252);"><h1 style="font-size: 16px;">TRES USER GUIDE</h1></a>
+   
+   <!-- AND ATTCHMENT user guide link 
+URL
+        https://tres-images-storage.s3-eu-west-1.amazonaws.com/2020+User+Guide.pdf
+      and video
+      
+      -->
+
+   <div>
+     <ion-button type="submit"  color="secondary" (click)="startVideo()" >start video</ion-button>
+   </div>
+   <h1 style="font: bold;color:black">FAQs</h1>
+
+<p style="font-weight:bold;color:black">Frequently Asked Questions : ADMIN</p>
+ 
+<ion-card>
+
+  <ion-card>
+    <ion-item>
+    <label  class="item-input">
+     <select >
+      <option style="font-size: 16px; color: black; ">Q1. What do I need to logon the system?</option>
+      <option>1.Username that will be provided by the HR</option>
+      <option>2. Password that will be provided by the HR</option>
+     </select>
+   </label> 
+  </ion-item>
+</ion-card>
+
+ <ion-card>
+  <ion-item>
+      <label class="item-input">
+    <select >
+      <option style="font-size: 16px; color: black;">Q2. How long will it take before I can logon with the details given by the HR?</option>
+      <option></option>
+      <option></option>
+      <option>Same time after receiving them</option> 
+       <option></option>
+      <option></option>
+    </select>
+  </label> 
+  </ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-item>
+<label class="item-input">
+    <select >
+      <option style="font-size: 16px; color: black;">Q3. How long will it take before the details given expirer?</option>
+      <option></option>
+    <option></option>
+      <option>Until the contract ends or until HR change them.  </option>
+      <option></option>
+      <option></option>
+    </select>
+  </label> 
+  </ion-item>
+  </ion-card>
+
+  <ion-card>
+  <ion-item>
+<label class="item-input">
+    <select >
+      <option style="font-size: 16px; color: black;">Q4. Can I communicate with student and landlord directly  ?</option>
+      <option></option>
+    <option></option>
+      <option>Yes you can, you will be able to view their contact details.
+      </option>
+      <option></option>
+      <option></option>
+    </select>
+  </label> 
+  </ion-item>
+  </ion-card>
+
+<ion-card>
+  <ion-item>
+<label class="item-input">
+    <select >
+      <option style="font-size: 16px; color: black;">Q5. How do I deal with the landlord who does not provide good services to the students?</option>
+      <option></option>
+      <option></option>
+      <option>You must give him a two warning, if they are not changing remove them from the system.
+      </option>
+    <option></option>
+    <option></option>
+    </select>
+  </label> 
+  </ion-item>
+</ion-card>
+ 
+</ion-card>
 </ion-content>

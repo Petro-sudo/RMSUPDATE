@@ -1,0 +1,69 @@
+li{
+    float: right;
+    list-style:none;
+    text-align: center;
+    width: 10s0px;
+    height: 8px;
+    line-height: 8px;
+    color: aliceblue;
+   }
+   ion-content{
+      //  --background-color: #ebebeb;
+       --ion-background-color:#ebebeb;
+   }
+   img{
+    text-align:left;
+    font-size: small; 
+   }
+a {
+
+    display: inline-block;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    font-style: initial;
+    text-decoration-line: none;
+  }
+  
+  a:hover {
+    background-color: transparent;
+    color: white;
+    text-decoration-line: solid 2px;
+    border-bottom: solid 2px;
+  }
+  ion-toolbar{
+    --ion-background-color:rgb(3, 1, 32);
+  }
+  option:hover
+  {
+    background-color: transparent;
+  }
+  select:hover{
+    background-color: transparent;
+  }
+  option{
+    list-style: none;
+    border-style: none;
+    background-color: transparent;
+  }
+  select{
+    list-style: none;
+    border-style: none;
+    background-color: transparent;
+  }
+  ion-toolbar{
+    --ion-background-color:rgb(3, 1, 32);
+   }
+  h1{
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .item-input{
+    font-weight: bold;
+  }
+  .item-input:hover{
+    background-color: transparent;
+  }
+  option:hover{
+    background-color: transparent;
+  }

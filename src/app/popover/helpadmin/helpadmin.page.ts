@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'app-helpadmin',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpadminPage implements OnInit {
 
-  constructor() { }
+  constructor( private popoverController: PopoverController) { }
 
   ngOnInit() {
   }
+
+
+closePop(){
+  this.popoverController.dismiss();
+}
+
 
 }

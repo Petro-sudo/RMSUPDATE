@@ -253,7 +253,8 @@ const routes: Routes = [
   {
     path: 'popadd',
     loadChildren: () => import('./popover/popadd/popadd.module').then( m => m.PopaddPageModule)
-  },  {
+  },
+  {
     path: 'loginadmin',
     loadChildren: () => import('./admin/loginadmin/loginadmin.module').then( m => m.LoginadminPageModule)
   },
@@ -265,12 +266,9 @@ const routes: Routes = [
     path: 'admindash',
     loadChildren: () => import('./admin/admindash/admindash.module').then( m => m.AdmindashPageModule)
   },
+ 
   {
-    path: 'helpadmin',
-    loadChildren: () => import('./popover/helpadmin/helpadmin.module').then( m => m.HelpadminPageModule)
-  },
-  {
-    path: 'hadmin',
+    path: 'help/hadmin',
     loadChildren: () => import('./help/hadmin/hadmin.module').then( m => m.HadminPageModule)
   }
 
