@@ -5,7 +5,7 @@
       
     </ion-toolbar >
   </ion-header >
-  <ion-card  > 
+  <ion-card  style="font-size: 30px;"> 
     Welcome Admin
   </ion-card>
 
@@ -47,7 +47,15 @@
 <ion-content>
 
 
+  <ion-card>
+    <ion-card-title style="text-align:center ; font-weight: bolder; font-style: italic;">
+      General Informational
+    </ion-card-title>
+  </ion-card>
+
+
   <ion-grid>
+    
     <ion-row>
     <ion-col col=6>
     
@@ -65,7 +73,77 @@
     </ion-col>
 
     </ion-row>
-  </ion-grid>
+
+    <ion-row>
       
+      <ion-col col=6>
+      
+      <ion-card class="welcome-card">
+        <ion-card-header>
+          <!-- <ion-card-title>Occupied beds</ion-card-title>
+          <ion-button color="dark" shape="round"><ion-icon name="bed-outline"></ion-icon>
+            7
+          </ion-button> -->
+          <ion-label>
+            Male VS Female 
+            </ion-label>
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #barChart1></canvas>
+        </ion-card-content>
+      </ion-card>
+      </ion-col>
+  
+      </ion-row>
+
+
+
+
+
+      <ion-row>
+      
+        <ion-col col=6>
+        
+        <ion-card class="welcome-card">
+          <ion-card-header>
+            <!-- <ion-card-title>Occupied beds</ion-card-title>
+            <ion-button color="dark" shape="round"><ion-icon name="bed-outline"></ion-icon>
+              7
+            </ion-button> -->
+            <ion-label>
+              Normal VS Disable 
+              </ion-label>
+          </ion-card-header>
+          <ion-card-content>
+            <canvas #barChart2></canvas>
+          </ion-card-content>
+        </ion-card>
+        </ion-col>
+    
+        </ion-row>
+
+
+
+
+
+  </ion-grid>
+     
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </ion-content>
