@@ -19,8 +19,12 @@ import { Chart } from 'chart.js';
 export class AdmindashPage implements OnInit {
   navigate : any;
   bars: any;
+  bars1: any;
+  bars2: any;
   @ViewChild('barChart' ,{ static: true }) barChart;
   @ViewChild('label' ,{ static: true }) label;
+  @ViewChild('barChart1' ,{ static: true }) barChart1;
+  @ViewChild('barChart2' ,{ static: true })barChart2;
 
   constructor(
     public navCtrl: NavController, public http: HttpClient, 
@@ -35,6 +39,8 @@ export class AdmindashPage implements OnInit {
     this.initializeApp();
     this.sideMenu();
     this.createBarChart();
+    this. createBarChart1();
+    this. createBarChart2();
     // this.createlabelChart();
   }
 
@@ -71,18 +77,18 @@ export class AdmindashPage implements OnInit {
       {
         title : "Manage Students",
         url   : "/managestud",
-        icon  : "bed-outline"
+        icon  : "book"
       },
       {
-        title : " check Stats",
-        url   : "/",
-        icon  : "add"
+        title : " Landlord Application",
+        url   : "/landlordapps",
+        icon  : "key"
       },
 
       {
-        title : " Approved Properties",
-        url   : "/manageprop",
-        icon  : "add"
+        title : " Manage approved properties",
+        url   : "/propinfo",
+        icon  : "home"
       },
       
     ]
@@ -124,27 +130,64 @@ navi()
   }
 
 
-  // createBarChart() {
-  //   this.bars = new Chart(this.barChart.nativeElement, {
-  //     type: 'doughnut',
-  //     data: {
-  //       labels: ['Male','Female'],
-  //       datasets: [{
+  createBarChart1() {
+    this.bars1 = new Chart(this.barChart1.nativeElement, {
+      type: 'doughnut',
+      data: {
+        labels: ['Male','Female'],
+        datasets: [{
          
-  //         data: [71, 29],
-  //         backgroundColor: [
+          data: [71, 29],
+          backgroundColor: [
             
-  //           'rgb(5, 238, 64)',
-  //           'rgb(3, 18, 83)'
+            'rgb(22, 138, 8)',
+            'rgb(22, 80, 83)'
             
-  //         ], // array should have same number of elements as number of dataset
-  //         borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-  //         borderWidth: 1
-  //       }]
-  //     },
+          ], // array should have same number of elements as number of dataset
+          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
+      },
      
-  //   });
-  // }
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  createBarChart2() {
+    this.bars2 = new Chart(this.barChart2.nativeElement, {
+      type: 'doughnut',
+      data: {
+        labels: ['Normal','Disable'],
+        datasets: [{
+         
+          data: [85, 15],
+          backgroundColor: [
+            
+            'rgb(220, 138,18)',
+            'rgb(202, 180, 183)'
+            
+          ], // array should have same number of elements as number of dataset
+          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
+          borderWidth: 1
+        }]
+      },
+     
+    });
+  }
+
+
 
 
 

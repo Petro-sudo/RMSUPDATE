@@ -1,0 +1,105 @@
+
+<ion-menu side="start" menuId="first" contentId="content1" color="dark">
+  <ion-header color="dark" >
+    <ion-toolbar color="dark">
+      
+    </ion-toolbar >
+  </ion-header >
+  <ion-card  style="font-size: 30px;"> 
+    Welcome Admin
+  </ion-card>
+
+  <ion-content color="dark">
+  
+    <ion-list  color="dark" lines="none" *ngFor="let pages of navigate"  >
+     
+    <ion-menu-toggle auto-hide="true" color="dark">
+      <ion-item [routerLink]="pages.url" routerDirection="forward" lines="none" color="dark"  >
+          <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+             {{pages.title}} 
+      </ion-item>
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content1" color="dark" ></ion-router-outlet>
+
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" style="color: rgb(6, 2, 73);">
+      <ion-menu-button sytle="background-color:white"></ion-menu-button>
+      </ion-buttons>
+
+   
+    
+      <ion-icon    slot="end" name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+      ; color: white ;"(click)="navi()"  >previous</ion-icon>
+
+   
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content   >
+
+<ion-card>
+  <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic;" >
+    Aproved Properties</ion-title>
+</ion-card>
+  
+    
+    <ion-card   style="background-color:grey; border-radius:10px;"  *ngFor= "let item of addProp " >
+     
+     
+      <h1 style="color: black;margin-right: 120px;" >{{item.name}}  </h1>
+     
+  
+     <ion-label   style="color: black;" id="properties" >
+      PROPERTY OWNER:{{item.username
+      }}
+     </ion-label>
+     <br>
+     <ion-label  style="color: black;" >
+     CITY: {{item.address.city}} 
+     </ion-label>
+     <br>
+     <ion-label  style="color: black;" >
+       STREET ADDRESS: {{item.address.street}}
+     </ion-label>
+     <br>
+     <ion-label  style="color: black;" >
+       POSTAL CODE: {{item.address.zipcode}} 
+       
+     </ion-label>
+     <br>
+
+
+     <ion-button color="danger" (click)="AlertPrompt()" >
+     
+      <ion-icon name="trash"></ion-icon>
+      Delete
+     </ion-button>
+
+     <ion-button color="warning"  (click)="presentAlertPrompt()">
+      view Issues
+    </ion-button>
+   
+
+    <ion-button color="success" (click)="edit()" >
+
+      <ion-icon name="add"></ion-icon>
+    Edit info
+    </ion-button>
+    
+
+   </ion-card>
+
+
+
+
+
+
+
+  
+</ion-content>

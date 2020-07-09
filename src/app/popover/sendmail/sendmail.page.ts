@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { NavParams, PopoverController } from '@ionic/angular';
+import { PopoverController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-popemail',
-  templateUrl: './popemail.page.html',
-  styleUrls: ['./popemail.page.scss'],
+  selector: 'app-sendmail',
+  templateUrl: './sendmail.page.html',
+  styleUrls: ['./sendmail.page.scss'],
 })
-export class PopemailPage implements OnInit {
+export class SendmailPage implements OnInit {
 
   constructor( private popoverController: PopoverController) { }
 

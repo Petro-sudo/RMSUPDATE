@@ -9,8 +9,9 @@ import {
 }from '@angular/forms'
 import {ServiceService} from './../service.service';
 
-import { AlertController, ActionSheetController, LoadingController } from '@ionic/angular'; 
+import { AlertController, ActionSheetController, LoadingController, PopoverController } from '@ionic/angular'; 
 import { Router } from '@angular/router';
+import { SendmailPage } from '../popover/sendmail/sendmail.page';
 
 @Component({
   selector: 'app-managestud',
@@ -20,7 +21,7 @@ import { Router } from '@angular/router';
 export class ManagestudPage implements OnInit {
   constructor(public alertCtrl: AlertController, private _serviceService : ServiceService, 
     private router: Router, public actionSheetCtrl: ActionSheetController,
-    private loadingCtrl: LoadingController) { }
+    private loadingCtrl: LoadingController,  private popoverController: PopoverController) { }
   addProp: any=[];
   addimg: any=[];
   
@@ -43,6 +44,19 @@ export class ManagestudPage implements OnInit {
     evt.currentTarget.className += " active";
   }
 
+  value =0;
+
+  async send(ev: Event)  {
+    const popo = await this.popoverController.create({
+     component: SendmailPage,
+     componentProps:{
+       custom_id: this.value
+     },
+     
+    });
+  popo.present();
+  }
+  
 
 
 

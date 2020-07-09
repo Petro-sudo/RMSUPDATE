@@ -71,17 +71,20 @@
 
   </ion-card>
   
-<div id = "card" class="tabcontent">
+<div id = "card" class="tabcontent" style="text-align: center">
+  <ion-title style="text-align: center">Name of Properties</ion-title>
   <ion-row>
     <ion-col>
   <ion-card class="tablinks" (click)="openCity(event, 'i1')">
-    <h1>KHOZA</h1>
+    <h4>KHOZA</h4>
+    <ion-title>include prop details myb</ion-title>
+
   </ion-card>
 </ion-col>
 
 <ion-col>
-  <ion-card>
-   <h1>LEGAE</h1>
+  <ion-card class="tablinks" (click)="openCity(event, 'i1')">
+   <h4>LEGAE</h4>
   </ion-card>
  </ion-col>
 </ion-row>
@@ -89,14 +92,14 @@
 <ion-row>
   
 <ion-col>
-  <ion-card>
-   <h1>TWALA</h1>
+  <ion-card class="tablinks" (click)="openCity(event, 'i1')">
+   <h4>TWALA</h4>
   </ion-card>
 </ion-col>
 
 <ion-col>
-  <ion-card>
-    <h1>DLAMINI</h1>
+  <ion-card class="tablinks" (click)="openCity(event, 'i1')">
+    <h4>DLAMINI</h4>
   </ion-card>
  </ion-col>
 </ion-row>
@@ -121,21 +124,21 @@
         <td data-th="Full Name">Kgopotso Lelake</td>
         <td data-th="Description">Lights not working</td>
         <td data-th="Status">In- progress</td>
-        <td data-th="Send an email"><ion-button>contact</ion-button></td>
+        <td data-th="Send an email"><ion-button (click)= "send($event)">contact</ion-button></td>
       </tr>
       <tr>
         <td data-th="Date">2020/05/02</td>
         <td data-th="Full Name">Peter moluleka</td>
         <td data-th="Description">stove not working</td>
         <td data-th="Status">In- progress</td>
-        <td data-th="Send an email"><ion-button>contact</ion-button></td>
+        <td data-th="Send an email"><ion-button  (click)= "send($event)">contact</ion-button></td>
       </tr>
       <tr>
         <td data-th="Date">2020/05/01</td>
         <td data-th="Full Name">Noxolo Zuma</td>
         <td data-th="Description">socket not working</td>
         <td data-th="Status">In- progress</td>
-        <td data-th="Send an email"><ion-button>contact</ion-button></td>
+        <td data-th="Send an email"><ion-button  (click)= "send($event)" >contact</ion-button></td>
       </tr>
     </table>
   </div>
