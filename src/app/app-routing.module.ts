@@ -278,6 +278,18 @@ const routes: Routes = [
     path: 'stats',
     loadChildren: () => import('./stats/stats.module').then( m => m.StatsPageModule)
   },
+  {
+    path: 'propinfo',
+    loadChildren: () => import('./propinfo/propinfo.module').then( m => m.PropinfoPageModule)
+  },
+  {
+    path: 'landlordapps',
+    loadChildren: () => import('./landlordapps/landlordapps.module').then( m => m.LandlordappsPageModule)
+  },
+  {
+    path: 'propadmin',
+    loadChildren: () => import('./propadmin/propadmin.module').then( m => m.PropadminPageModule)
+  },
 
 
  
