@@ -29,7 +29,7 @@
 #email = "ngModel" autofocus required email ngModel></ion-input>    
 </ion-item>
 <div class="alert alert-danger" role="alert" *ngIf="email.invalid && (email.dirty || email.touched)">
-  Please enter a valid email.
+ <p style="color:red"> Please enter a valid email.</p> 
 </div>
 
 <ion-item transparent> 
@@ -42,8 +42,10 @@ placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
 </div>
 <br>
 <div class ="ahover">
-<a routerLink = "/admindash"><ion-button class = "ion-text-center" color="secondary"  expand="block"
-(click)="loginUser()">Sign In</ion-button></a>
+  <ion-button   (click)=" loginNow()"color="secondary"  expand="block" position="floating">Sign In </ion-button>
+<!-- <ion-button color="secondary"  expand="block"
+(click)="loginUser()"(click)= "loginNow()" >Sign In</ion-button> -->
+
 </div>
 <ion-toolbar>
 
@@ -52,8 +54,8 @@ placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
 <div slot="end" >
   <!-- <a routerLink="/popemail" ><p style="color: rgb(27, 219, 245);border-bottom: solid 2px;">Forget your password</p></a>
    -->
-  <p><ion-button style="color: rgb(27, 219, 245);border-bottom: solid 2px; text-transform: none;" size="small"
-    color= "transparent" (click)= "popover($event)" >Forgot your password</ion-button></p>
+  <!-- <p><ion-button style="color: rgb(27, 219, 245);border-bottom: solid 2px; text-transform: none;" size="small"
+    color= "transparent" (click)= "popover($event)" >Forgot your password</ion-button></p> -->
   
 </div>
 </ion-toolbar>
