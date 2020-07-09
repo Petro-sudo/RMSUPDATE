@@ -266,11 +266,19 @@ const routes: Routes = [
     path: 'admindash',
     loadChildren: () => import('./admin/admindash/admindash.module').then( m => m.AdmindashPageModule)
   },
- 
   {
-    path: 'help/hadmin',
-    loadChildren: () => import('./help/hadmin/hadmin.module').then( m => m.HadminPageModule)
-  }
+    path: 'helpadmin',
+    loadChildren: () => import('./popover/helpadmin/helpadmin.module').then( m => m.HelpadminPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'stats',
+    loadChildren: () => import('./stats/stats.module').then( m => m.StatsPageModule)
+  },
+
 
  
   // {
@@ -308,3 +316,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
+ 

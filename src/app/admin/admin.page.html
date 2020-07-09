@@ -5,8 +5,8 @@
       
     </ion-toolbar >
   </ion-header >
-  <ion-card  > 
-    Welcome Admin
+  <ion-card color="dark" style="  background: linear-gradient(60deg, #00FF7F 50%, lightseagreen 50%);border-radius: 50%; margin-left: 70px; text-align:center" > 
+    hello50
   </ion-card>
 
   <ion-content color="dark">
@@ -31,41 +31,15 @@
       <ion-menu-button sytle="background-color:white"></ion-menu-button>
       </ion-buttons>
 
-   
-    
-      <ion-icon    slot="end" name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
-      ; color: white ;"(click)="navi()"  >previous</ion-icon>
-
-   
+    <ul class="sidebar-nav" style=" font-size: small">
+      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+      ; color: white ;" >previous</ion-icon></a></li>
+      <li><a routerLink="/help/helpstud">HELP</a></li>
+    </ul>
   </ion-toolbar>
 </ion-header>
 
 
-
-
-
 <ion-content>
-
-
-  <ion-grid>
-    <ion-row>
-    <ion-col col=6>
-    
-    <ion-card class="welcome-card">
-      <ion-card-header>
-        <!-- <ion-card-title>Occupied beds</ion-card-title>
-        <ion-button color="dark" shape="round"><ion-icon name="bed-outline"></ion-icon>
-          7
-        </ion-button> -->
-      </ion-card-header>
-      <ion-card-content>
-        <canvas #barChart></canvas>
-      </ion-card-content>
-    </ion-card>
-    </ion-col>
-
-    </ion-row>
-  </ion-grid>
-      
 
 </ion-content>

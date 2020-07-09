@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {ReactiveFormsModule, FormGroup, FormControl, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AlertController, PopoverController } from '@ionic/angular';
 import { ServiceService } from 'src/app/service.service';
 import { UserserviceService } from 'src/app/userservice.service';
@@ -21,20 +21,21 @@ export class LoginadminPage implements OnInit {
   @Output('change') change = new EventEmitter();
 
   //@Input() postData= {email:" ", password:" "}
- loginUserData = {};
+
  userID: any;
  error: boolean = false;
  errorMessage: String = " ";
  dataLoading: boolean = false;
  private querySubscription;
- loginuser: any;
- email: any;
 
- CheckArrary = "this.loginuser"
+ 
+
+ 
 
 
   value = 0;
   _ServiceService: any;
+  @Input()  loginUserData= { password:" ",email:" " }
   constructor(public alertCtrl: AlertController,private router: Router,
     private _serviceService : ServiceService, private userserviceService: UserserviceService,
     private _loaderservice: LoaderService, private popoverController: PopoverController) { }
@@ -47,7 +48,48 @@ password: any;
   
   //this.getstu();
   this._loaderservice.display(true);
+  
  }
+ loginNow(){
+
+
+  if(this.loginUserData.email=="admin101@tres.com"&& this.loginUserData.password=="admin101"){
+    
+    this.router.navigate(['/admindash']);
+  }
+  else{
+   this.add();
+   this.router.navigate(['/loginadmin']);
+
+  }
+ }
+
+
+
+
+
+
+
+ 
+ async add() {
+
+  if(this.loginUserData.email!="admin101@tres.com"&& this.loginUserData.password!="admin101"){
+
+   const alert = await this.alertCtrl.create({  
+     header: 'Incorrect Email or Password',  
+     message: ' please try again ',  
+     buttons: ['OK'] 
+      
+   });  
+
+   await alert.present();  
+   const result = await alert.onDidDismiss();  
+  // console.log(result);
+  } 
+
+}
+
+
 //  loginUser()
 //  {
 // this._loaderservice.display(false);

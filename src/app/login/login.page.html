@@ -38,7 +38,7 @@
 #email = "ngModel" autofocus required email ngModel></ion-input>    
 </ion-item>
 <div class="alert alert-danger" role="alert" *ngIf="email.invalid && (email.dirty || email.touched)">
-  Please enter a valid email.
+ <p style="color:red;"> Please enter a valid email</p> 
 </div>
 
 <ion-item transparent> 
@@ -47,7 +47,7 @@
 placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel ></ion-input> 
 </ion-item>
 <div class="alert alert-danger" role="alert" *ngIf="Password.invalid && (Password.dirty || Password.touched)" style="color:red">
-  Please enter a valid password between 8 to 20 chars.
+ <p style="color:red;"> Please enter a valid password between 8 to 20 chars.</p>
 </div>
 <br>
 <div class ="ahover">
