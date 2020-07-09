@@ -273,7 +273,8 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
-  },  {
+  },
+  {
     path: 'stats',
     loadChildren: () => import('./stats/stats.module').then( m => m.StatsPageModule)
   },
@@ -315,3 +316,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
+ 

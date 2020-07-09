@@ -1,0 +1,70 @@
+<ion-menu side="start" menuId="first" contentId="content1" color="dark">
+  <ion-header color="dark" >
+    <ion-toolbar color="dark">
+      
+    </ion-toolbar >
+  </ion-header >
+  <ion-card color="dark" style="  background: linear-gradient(60deg, #00FF7F 50%, lightseagreen 50%);border-radius: 50%; margin-left: 70px; text-align:center" > 
+    hello50
+  </ion-card>
+
+  <ion-content color="dark">
+  
+    <ion-list  color="dark" lines="none" *ngFor="let pages of navigate"  >
+     
+    <ion-menu-toggle auto-hide="true" color="dark">
+      <ion-item [routerLink]="pages.url" routerDirection="forward" lines="none" color="dark"  >
+          <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+             {{pages.title}} 
+      </ion-item>
+    </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content1" color="dark" ></ion-router-outlet>
+
+
+<ion-content style="width: 500px;">
+ 
+  <div class="card">
+
+    <ion-card style=" width: 600px;height: 450px;">
+      <ion-item>
+        <ion-label>Property Details</ion-label>
+      </ion-item>
+      <ion-title style="font-size: 18px; font-weight: bold;color: rgb(6, 2, 73) ;margin-top:10px; 
+        margin-left: 40px;border-left: 10px 	rgb(6, 2, 73)solid">Property Details</ion-title>
+        <br>
+         <ion-label position="floating">Property Name: legae</ion-label>
+         <br><br>
+    
+         <ion-label position="floating">Closest campus: South Campus</ion-label>
+         <br><br>
+    
+         <ion-label position="floating">Number of Rooms: 500 </ion-label>
+         <br><br>
+    
+         <ion-label position="floating">Number of Floors: 3</ion-label>
+         <br><br>
+    
+         <ion-label position="floating">Number of Single Room: 100</ion-label>
+         <br><br>
+         
+         <ion-label position="floating">Number of Single Room: 400</ion-label>
+         <br><br>
+    
+         <ion-label position="floating">Girls Room: 300</ion-label>
+         <br><br>
+
+         <ion-label position="floating">Boys Rooms: 200</ion-label>
+         <br><br>
+         <ion-button (click)="closePop()" color="light" > OK <ion-icon name="happy-outline" color="dark"></ion-icon></ion-button>
+    
+    </ion-card> 
+
+
+</div>
+
+ </ion-content>
+
+
