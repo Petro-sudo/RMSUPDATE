@@ -258,10 +258,7 @@ const routes: Routes = [
     path: 'loginadmin',
     loadChildren: () => import('./admin/loginadmin/loginadmin.module').then( m => m.LoginadminPageModule)
   },
-  {
-    path: 'managestudent',
-    loadChildren: () => import('./admin/managestudent/managestudent.module').then( m => m.ManagestudentPageModule)
-  },
+  
   {
     path: 'admindash',
     loadChildren: () => import('./admin/admindash/admindash.module').then( m => m.AdmindashPageModule)

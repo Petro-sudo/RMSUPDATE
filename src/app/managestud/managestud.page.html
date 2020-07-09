@@ -1,7 +1,300 @@
+
+
+<ion-router-outlet id="content1" color="dark" ></ion-router-outlet>
+
 <ion-header>
+  <ion-toolbar >
+  
+    <ion-buttons slot="start">
+      <a routerLink= "/admindash"><ion-icon name="return-down-back-outline" style="font-weight: bold;font-size: 20px;">
+      </ion-icon></a>
+    </ion-buttons>
+
+      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+        ; color: white ;" >previous</ion-icon></a></li>
+        <li> <div class="border">
+          <ion-input type="text" placeholder="Search">
+          <ion-icon name="search-outline" slot="start"></ion-icon></ion-input>
+              </div>
+        </li>
+  
+        <!-- <li><a routerLink="/help/helplord">HELP</a></li> -->
+
+
+     
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+
+
+
+  <ion-card style="margin-left:80px ; width:220px ;border-radius: 20px; height:50px ;background-color: white;color: rgb(6, 2, 73);">
+   
+    <ion-label style="color:black ; ;margin-left: 60px;margin-top:-30px;font-size:14px; text-align: left;">
+     Manage
+    </ion-label>
+   </ion-card>
+ <ion-card style="background-color: rgb(6, 2, 73);
+ margin-left: 280px;margin-top: -60px;
+ border-radius: 20px; height:50px ; width:220px ; " >
+  
+  <ion-label style="margin-left: 60px;margin-top:-30px;color:white;
+   font-size:14px;margin-left: 30px;width:50px ;">
+   Students
+  </ion-label>
+ </ion-card> 
+
+
+
+
+
+  <div class="tab">
+    <button class="tablinks" (click)="openCity(event, 'card')">ISSUES</button>
+    <button class="tablinks" (click)="openCity(event, 'Rate')">RATES</button>
+    <button class="tablinks" (click)="openCity(event, 'Students')">VIEW ALL STUDENTS</button>
+    
+  </div>
+     
+  <ion-card class="mySlides" style="background-image:url(assets/pics/s1.jpg) ;height: 150px;" > 
+
+    
+      
+    <h1 style="font-size: 30px;font-weight: bolder;color: white; text-align: center;">Welcome To The Tres</h1>
+   
+    <h3 style="font-size: 20px;font-weight: bolder;color:rgb(36, 207, 36); text-align: center;">Here is where you see the students details, issues and the rate about the rooms</h3>
+        
+        
+
+  </ion-card>
+  
+<div id = "card" class="tabcontent">
+  <ion-row>
+    <ion-col>
+  <ion-card class="tablinks" (click)="openCity(event, 'i1')">
+    <h1>KHOZA</h1>
+  </ion-card>
+</ion-col>
+
+<ion-col>
+  <ion-card>
+   <h1>LEGAE</h1>
+  </ion-card>
+ </ion-col>
+</ion-row>
+
+<ion-row>
+  
+<ion-col>
+  <ion-card>
+   <h1>TWALA</h1>
+  </ion-card>
+</ion-col>
+
+<ion-col>
+  <ion-card>
+    <h1>DLAMINI</h1>
+  </ion-card>
+ </ion-col>
+</ion-row>
+
+</div>
+
+  <div id="i1" class="tabcontent">
+    
+    <h1>Issues</h1>
+    <ion-searchbar></ion-searchbar>
+    <table class="rwd-table">
+      
+      <tr>
+        <th>Date</th>
+        <th>Full Name</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Send an email</th>
+      </tr>
+      <tr>
+        <td data-th="Date">2020/05/01</td>
+        <td data-th="Full Name">Kgopotso Lelake</td>
+        <td data-th="Description">Lights not working</td>
+        <td data-th="Status">In- progress</td>
+        <td data-th="Send an email"><ion-button>contact</ion-button></td>
+      </tr>
+      <tr>
+        <td data-th="Date">2020/05/02</td>
+        <td data-th="Full Name">Peter moluleka</td>
+        <td data-th="Description">stove not working</td>
+        <td data-th="Status">In- progress</td>
+        <td data-th="Send an email"><ion-button>contact</ion-button></td>
+      </tr>
+      <tr>
+        <td data-th="Date">2020/05/01</td>
+        <td data-th="Full Name">Noxolo Zuma</td>
+        <td data-th="Description">socket not working</td>
+        <td data-th="Status">In- progress</td>
+        <td data-th="Send an email"><ion-button>contact</ion-button></td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+
+
+
+  
+  <div id="Rate" class="tabcontent">
+    
+    <h1>Ratings</h1>
+    <ion-searchbar></ion-searchbar>
+    <table class="rwd-table">
+      
+      <tr>
+        <th>Property Name</th>
+        <th>% of Happiness</th>
+        <th>% of sadness</th>
+        
+      </tr>
+      <tr>
+        <td data-th="Property Name">Khoza</td>
+        <td data-th="% of Happy">10%</td>
+        <td data-th="% of sadness">20%</td>
+      
+      </tr>
+      <tr>
+        <td data-th="Property Name">LEGAE</td>
+        <td data-th="% of Happy">90%</td>
+        <td data-th="% of sadness">10%</td>
+      </tr>
+      <tr>
+        <td data-th="Property Name">Twala</td>
+        <td data-th="% of Happy">20%</td>
+        <td data-th="% of sadness">60%</td>
+      </tr>
+    </table>
+  </div>
+  
+
+  <div id="Students" class="tabcontent">
+
+    <h1>All Student</h1>
+    <ion-searchbar></ion-searchbar>
+    <table class="rwd-table">
+      
+      <tr>
+        <th>Student Number</th>
+        <th> Surname</th>
+        <th>Initials</th>
+        <th>ID</th>
+        <th>Gender</th>
+        <th>Email Address</th>
+        <th>Contant No</th>
+        <th>Apartment</th>
+        <th>Building</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        
+      </tr>
+      <tr>
+        <td data-th="Student Number">21826885</td>
+        <td data-th=" Name">Lelake</td>
+        <td data-th="Initials">K B</td>
+        <td data-th="ID">9452145354789</td>
+        <td data-th="Gender">Male</td>
+        <td data-th="Email Address">kabelo@lelake@gmail.com</td>
+        <td data-th="Contant No">0825678419</td>
+        <td data-th="Apartment">Khoza</td>
+        <td data-th="Building">1-g-77</td>
+        <td data-th="Start Date">2020/05/30</td>
+        <td data-th="End Date">2020/05/30</td>
+      </tr>
+      <tr>
+        <td data-th="Student Number">241578621</td>
+        <td data-th=" Name">Zulu</td>
+        <td data-th="Initials">K G</td>
+        <td data-th="ID">9452145354789</td>
+        <td data-th="Gender">Male</td>
+        <td data-th="Email Address">kabelo@lelake@gmail.com</td>
+        <td data-th="Contant No">0825678419</td>
+        <td data-th="Apartment">Khoza</td>
+        <td data-th="Building">1-g-77</td>
+        <td data-th="Start Date">2020/05/30</td>
+        <td data-th="End Date">2020/05/30</td>
+      </tr>
+      <tr>
+        <td data-th="Student Number">21822155</td>
+        <td data-th=" Name">Leyo</td>
+        <td data-th="Initials">V W</td>
+        <td data-th="ID">9452145354789</td>
+        <td data-th="Gender">Female</td>
+        <td data-th="Email Address">kabelo@lelake@gmail.com</td>
+        <td data-th="Contant No">0825678419</td>
+        <td data-th="Apartment">Khoza</td>
+        <td data-th="Building">1-g-77</td>
+        <td data-th="Start Date">2020/05/30</td>
+        <td data-th="End Date">2020/05/30</td>
+      </tr>
+      <tr>
+        <td data-th="Student Number">21826885</td>
+        <td data-th=" Name">Lelake</td>
+        <td data-th="Initials">K B</td>
+        <td data-th="ID">9452145354789</td>
+        <td data-th="Gender">Male</td>
+        <td data-th="Email Address">kabelo@lelake@gmail.com</td>
+        <td data-th="Contant No">0825678419</td>
+        <td data-th="Apartment">Khoza</td>
+        <td data-th="Building">1-g-77</td>
+        <td data-th="Start Date">2020/05/30</td>
+        <td data-th="End Date">2020/05/30</td>
+      </tr>
+    </table>
+
+
+
+
+  </div>
+  
+
+
+   </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-header>
   <ion-toolbar color="dark">
     <ion-buttons slot="start">
-        <ion-icon name="menu" (click)="presentMenu()"></ion-icon>
+       
+
+         <a routerLink= "/admindash"><ion-icon name="return-down-back-outline">
+         </ion-icon></a>
     </ion-buttons> 
     <ion-title align="center"> Manage Student
       <ion-button   size="small" shape="round" color="danger" style="height: 30px; ">{{addimg}}</ion-button>
@@ -71,4 +364,4 @@
   <ion-toolbar color="dark" >
     <ion-title align="center" >2020 Off campus accomodation</ion-title>
   </ion-toolbar>
-</ion-footer>
+</ion-footer> -->

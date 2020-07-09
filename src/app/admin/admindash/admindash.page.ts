@@ -56,32 +56,32 @@ export class AdmindashPage implements OnInit {
     [
       {
         title : "Profile",
-        url   : "/stud-profile",
+        url   : "/admin-profile",
         icon :"person-outline"
        
        
       },
       {
         title : "Approve Properties",
-        url   : "/resproof",
+        url   : "/manageprop",
         icon :"eye-outline"
        
        
       },
       {
         title : "Manage Students",
-        url   : "/studstatus",
+        url   : "/managestud",
         icon  : "bed-outline"
       },
       {
         title : " check Stats",
-        url   : "/stud-app",
+        url   : "/",
         icon  : "add"
       },
 
       {
         title : " Approved Properties",
-        url   : "/stud-app",
+        url   : "/manageprop",
         icon  : "add"
       },
       
