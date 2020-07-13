@@ -43,13 +43,17 @@
 
 <ion-content   >
 
+
+<ion-grid style="background-color: 	#FDF5E6;">
+
+
 <ion-card>
-  <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic;" >
+  <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black ;" >
     Aproved Properties</ion-title>
 </ion-card>
   
     
-    <ion-card   style="background-color:grey; border-radius:10px;"  *ngFor= "let item of addProp " >
+    <ion-card   style="background-color:	#7EB6FF; border-radius:10px; width:500px ;"  *ngFor= "let item of addProp " >
      
      
       <h1 style="color: black;margin-right: 120px;" >{{item.name}}  </h1>
@@ -58,7 +62,7 @@
      <ion-label   style="color: black;" id="properties" >
       PROPERTY OWNER:{{item.username
       }}
-     </ion-label>
+    </ion-label>
      <br>
      <ion-label  style="color: black;" >
      CITY: {{item.address.city}} 
@@ -101,5 +105,5 @@
 
 
 
-  
+  </ion-grid>
 </ion-content>

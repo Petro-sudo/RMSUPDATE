@@ -40,6 +40,7 @@ export class LandlordappsPage implements OnInit {
     this.getProperty();
     this.initializeApp();
     this.sideMenu();
+    this.calc();
   }
 
 
@@ -286,7 +287,6 @@ async edit() {
 
 
 
-
   getProperty(){
     var searchTerm= "";
      return  this._serviceService.getApartment().
@@ -295,8 +295,16 @@ async edit() {
         console.log(this.addProp
           );
         //  this.filterItems(searchTerm); 
+        var num =this.addProp.length;
+        
       });
     }
+
+calc()
+{
+
+  console.log(this.addProp.length);
+}
 
 
 
