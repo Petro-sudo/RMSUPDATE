@@ -61,19 +61,18 @@ export class AdmindashPage implements OnInit {
     this.navigate =
     [
       {
+<<<<<<< HEAD
         title : "Profile",
         url   : "/adminprofile",
+=======
+        title : "Dashboard",
+        url   : "/admindash",
+>>>>>>> 7e574f59202062073a6aa2ec23fdfc30fe9f9d24
         icon :"person-outline"
        
        
       },
-      {
-        title : "Approve Properties",
-        url   : "/manageprop",
-        icon :"eye-outline"
-       
-       
-      },
+    
       {
         title : "Manage Students",
         url   : "/managestud",

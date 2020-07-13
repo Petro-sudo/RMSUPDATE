@@ -35,7 +35,7 @@ export class PropinfoPage implements OnInit {
 
   ngOnInit() {
     this.getProperty();
-    this.initializeApp();
+     this.initializeApp();
     this.sideMenu();
   }
 
@@ -189,7 +189,7 @@ async edit() {
           console.log('Confirm Cancel');
         }
       }, {
-        text: 'Send',
+        text: 'confirm',
         handler: () => {
           console.log('Confirm Submit');
         }
@@ -219,16 +219,10 @@ async edit() {
        
        
       },
-      {
-        title : "Approve Properties",
-        url   : "/resproof",
-        icon :"eye-outline"
-       
-       
-      },
+    
       {
         title : "Manage Students",
-        url   : "/studstatus",
+        url   : "/managestud",
         icon  : "book"
       },
       {
