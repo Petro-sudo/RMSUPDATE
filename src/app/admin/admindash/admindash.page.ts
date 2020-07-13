@@ -62,7 +62,7 @@ export class AdmindashPage implements OnInit {
     [
       {
         title : "Profile",
-        url   : "/admin-profile",
+        url   : "/adminprofile",
         icon :"person-outline"
        
        
