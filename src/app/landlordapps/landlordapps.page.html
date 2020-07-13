@@ -43,13 +43,16 @@
 
 <ion-content   >
 
+
+  <ion-grid style="background-color: 	#FDF5E6;">
+
 <ion-card>
   <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
-    Pending Applications</ion-title>
+   {{ addProp.length}} Pending Applications</ion-title>
 </ion-card>
   
     
-    <ion-card   style="background-color:grey; border-radius:10px;"  *ngFor= "let item of addProp " >
+    <ion-card   style="background-color:rgb(160, 160, 160); border-radius:10px; width:500px ;"  *ngFor= "let item of addProp " >
      
      
       <h1 style="color: black;margin-right: 120px;" >{{item.name}}  </h1>
@@ -140,7 +143,7 @@
    </ion-card>
 
 
-
+  </ion-grid>
 
 
 
