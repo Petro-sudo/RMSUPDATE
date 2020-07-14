@@ -10,7 +10,7 @@
       </ion-icon></a>
     </ion-buttons>
 
-      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(6, 2, 73)
+      <li><a routerLink="/folder/Home"><ion-icon name="log-out-outline" style="font-size: 20px; background-color:rgb(36, 207, 36)
         ; color: white ;" >previous</ion-icon></a></li>
         <li> <div class="border">
               </div>
@@ -36,7 +36,7 @@
      Manage
     </ion-label>
    </ion-card>
- <ion-card style="background-color: rgb(6, 2, 73);
+ <ion-card style="background-color: rgb(36, 207, 36);
  margin-left: 280px;margin-top: -60px;
  border-radius: 20px; height:50px ; width:220px ; " >
   
@@ -61,9 +61,9 @@
 
     
       
-    <h1 style="font-size: 30px;font-weight: bolder;color: white; text-align: center;">Welcome To The Tres</h1>
+    <h1 style="font-size: 30px;font-weight: bolder;color: white; text-align: center;">Tres Students</h1>
    
-    <h3 style="font-size: 20px;font-weight: bolder;color:rgb(36, 207, 36); text-align: center;">Here is where you see the students details, issues and the ratings about their rooms</h3>
+    <h3 style="font-size: 20px;font-weight: bolder;color:rgb(36, 207, 36); text-align: center;">Here is where you see all the students details, issues and the ratings about their rooms</h3>
         
         
 
@@ -178,21 +178,26 @@
         <td data-th="Student Number">214587452</td>
         <td data-th="Description">Lights not working</td>
         <td data-th="Status">In- progress</td>
-        <td data-th="Send an email"><ion-button (click)= "send($event)">contact</ion-button></td>
+        <td data-th="Send an email"><ion-button color="warning" (click)= "send($event)">send a warning to landlord</ion-button>
+        
+          <!-- <ion-button color="danger" (click)="AlertPrompt()" >
+            <ion-icon name="trash"></ion-icon>
+           </ion-button> -->
+      </td>
       </tr>
       <tr>
         <td data-th="Period">1 week ago</td>
         <td data-th="Student Number">201457852</td>
         <td data-th="Description">stove not working</td>
         <td data-th="Status">Pending</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)">contact</ion-button></td>
+        <td data-th="Send an email"><ion-button   color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
       <tr>
         <td data-th="Period">3 weeks ago</td>
         <td data-th="Student Number">211278512</td>
         <td data-th="Description">socket not working</td>
         <td data-th="Status">Rejected</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)" >contact</ion-button></td>
+        <td data-th="Send an email"><ion-button   color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
     </table>
   </div>
@@ -215,21 +220,21 @@
         <td data-th="Student Number">201452684</td>
         <td data-th="Description">Lights not working</td>
         <td data-th="Status">In- progress</td>
-        <td data-th="Send an email"><ion-button (click)= "send($event)">contact</ion-button></td>
+        <td data-th="Send an email"><ion-button  color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
       <tr>
         <td data-th="Period">1 week ago</td>
         <td data-th="Student Number">201457896</td>
         <td data-th="Description">stove not working</td>
         <td data-th="Status">Pending</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)">contact</ion-button></td>
+        <td data-th="Send an email"><ion-button   color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
       <tr>
         <td data-th="Period">3 weeks ago</td>
         <td data-th="Student Number">201478965</td>
         <td data-th="Description">socket not working</td>
         <td data-th="Status">Rejected</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)" >contact</ion-button></td>
+        <td data-th="Send an email"><ion-button   color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
     </table>
   </div>
@@ -252,20 +257,20 @@
         <td data-th="Student Number">213541327</td>
         <td data-th="Description">Lights not working</td>
         <td data-th="Status">In- progress</td>
-        <td data-th="Send an email"><ion-button (click)= "send($event)">contact</ion-button></td>
+        <td data-th="Send an email"><ion-button  color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
       <tr>
         <td data-th="Period">1 week ago</td>
         <td data-th="Student Number">211545874</td>
         <td data-th="Description">stove not working</td>
         <td data-th="Status">Pending</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)">contact</ion-button></td>
+        <td data-th="Send an email"><ion-button   color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
     
     </table>
   </div>
 
-  <div id="i5" class="tabcontent">
+  <div id="i4" class="tabcontent">
     
     <h1>Issues</h1>
     <ion-searchbar></ion-searchbar>
@@ -283,42 +288,42 @@
         <td data-th="Student Number">211562486</td>
         <td data-th="Description">Lights not working</td>
         <td data-th="Status">In- progress</td>
-        <td data-th="Send an email"><ion-button (click)= "send($event)">contact</ion-button></td>
+        <td data-th="Send an email"><ion-button  color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
       <tr>
         <td data-th="Period">1 week ago</td>
         <td data-th="Student Number">211547896</td>
         <td data-th="Description">stove not working</td>
         <td data-th="Status">Pending</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)">contact</ion-button></td>
+        <td data-th="Send an email"><ion-button   color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
       <tr>
         <td data-th="Period">3 weeks ago</td>
         <td data-th="Student Number">126548624</td>
         <td data-th="Description">socket not working</td>
         <td data-th="Status">Rejected</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)" >contact</ion-button></td>
+        <td data-th="Send an email"><ion-button  color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
       <tr>
         <td data-th="Period">5 weeks ago</td>
         <td data-th="Student Number">214598745</td>
         <td data-th="Description">socket not working</td>
         <td data-th="Status">Pending</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)" >contact</ion-button></td>
+        <td data-th="Send an email"><ion-button   color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
       <tr>
         <td data-th="Period">5 weeks ago</td>
         <td data-th="Student Number">214598745</td>
         <td data-th="Description">socket not working</td>
         <td data-th="Status">Pending</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)" >contact</ion-button></td>
+        <td data-th="Send an email"><ion-button   color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
       <tr>
         <td data-th="Period">6 weeks ago</td>
         <td data-th="Student Number">214598745</td>
         <td data-th="Description">socket not working</td>
         <td data-th="Status">Pending</td>
-        <td data-th="Send an email"><ion-button  (click)= "send($event)" >contact</ion-button></td>
+        <td data-th="Send an email"><ion-button   color="warning" (click)= "send($event)">send a warning to landlord</ion-button></td>
       </tr>
     </table>
   </div>
@@ -333,31 +338,43 @@
   
   <div id="Rate" class="tabcontent">
     
-    <h1>Ratings</h1>
+    <h1>Ratings in %</h1>
     <ion-searchbar></ion-searchbar>
     <table class="rwd-table">
       
       <tr>
         <th>Property Name</th>
-        <th>% of Happiness</th>
-        <th>% of sadness</th>
+        <th>very_satisfied</th>
+        <th>satisfied</th>
+        <th>okey</th>
+        <th>disappointed</th>
+        <th>very_disappointed</th>
         
       </tr>
       <tr>
         <td data-th="Property Name">Khoza</td>
-        <td data-th="% of Happy">10%</td>
-        <td data-th="% of sadness">20%</td>
+        <td data-th="very_satisfied">60%</td>
+        <td data-th="satisfied">20%</td>
+        <td data-th="okey">10%</td>
+        <td data-th="disappointed">10%</td>
+        <td data-th="very_disappointed">10%</td>
       
       </tr>
       <tr>
-        <td data-th="Property Name">LEGAE</td>
-        <td data-th="% of Happy">90%</td>
-        <td data-th="% of sadness">10%</td>
+        <td data-th="Property Name">Legae</td>
+        <td data-th="very_satisfied">70%</td>
+        <td data-th="satisfied">20%</td>
+        <td data-th="okey">5%</td>
+        <td data-th="disappointed">5%</td>
+        <td data-th="very_disappointed">0%</td>
       </tr>
       <tr>
         <td data-th="Property Name">Twala</td>
-        <td data-th="% of Happy">20%</td>
-        <td data-th="% of sadness">60%</td>
+        <td data-th="very_satisfied">20%</td>
+        <td data-th="satisfied">40%</td>
+        <td data-th="okey">20%</td>
+        <td data-th="disappointed">10%</td>
+        <td data-th="very_disappointed">10%</td>
       </tr>
     </table>
   </div>
