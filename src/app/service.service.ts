@@ -32,8 +32,9 @@ export class ServiceService {
   stud_url='http://192.168.1.103:9000/stud';
 
 //for landlord app
-application_url ='http://192.168.1.103:9000/stud';
-approvedapp_url ='http://192.168.1.103:9000/stud';
+application_url ='http://192.168.1.103:9000/pendingprop';
+
+approvedapp_url ='http://192.168.1.103:9000/acceptedprop';
 //manage approve
 
 public status()
@@ -88,7 +89,7 @@ public postLogin(loglord:any)
   public getApprovedApp()
   {return this.http.get<any>(this.approvedapp_url);
   }
-  
+
   public getAppliedstu()
   {
     return this.http.get<any>(this.Aplystutest);
