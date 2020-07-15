@@ -59,43 +59,43 @@
  
 
  <ion-label   style="color: black;" id="properties" >
-  PROPERTY OWNER: I cannt find landlord name/ should i use prop name
+  PROPERTY OWNER: {{item.full_name}} 
  </ion-label>
  <br>
  <ion-label  style="color: black;" >
- EMAIL ADDRESS: {{item.landlord.landlord_email}} 
+ EMAIL ADDRESS: {{item.landlord_email}} 
  </ion-label>
  <br>
  <ion-label  style="color: black;" >
-  CONTACT NUMBER: {{item.landlord.telephone}}
+  CONTACT NUMBER: {{item.telephone}}
   </ion-label>
   <br>
  <ion-label  style="color: black;" >
-  HOUSE NUMBER: {{item.landlord.house_number}}
+  HOUSE NUMBER: {{item.house_number}}
 </ion-label>
 <br>
  <ion-label  style="color: black;" >
-   STREET NAME: {{item.landlord.street_name}}
+   STREET NAME: {{item.street_name}}
  </ion-label>
  <br>
  <ion-label  style="color: black;" >
-  SUBURB:  {{item.landlord.suburb}}
+  SUBURB:  {{item.suburb}}
 </ion-label>
 <br>
  <ion-label  style="color: black;" >
-  CITY/TOWN: {{item.landlord.city/town}}
+  CITY/TOWN: {{item.city/town}}
 </ion-label>
 <br>
  <ion-label  style="color: black;" >
-   POSTAL CODE: {{item.landlord.Zip_code}}
+   POSTAL CODE: {{item.Zip_code}}
  </ion-label>
  <br>
  <ion-label  style="color: black;" >
-  PROVINCE NAME: {{item.landlord.province}}
+  PROVINCE NAME: {{item.province}}
 </ion-label>
 <br>
 <ion-label  style="color: black;" >
-  COUNTRY NAME: {{item.landlord.country}}
+  COUNTRY NAME: {{item.country}}
 </ion-label>
 <br>
  <ion-label  style="color: black;" >
@@ -107,11 +107,11 @@
 </ion-label>
 <br>
 <ion-label  style="color: black;" >
- ROOMS FOR FEMALES: {{item.numFemale_beds}}
+ NUMBER OF BEDS FOR FEMALES: {{item.numFemale_beds}}
 </ion-label>
 <br>
 <ion-label  style="color: black;" >
-  ROOMS FOR MALES: {{item.numMale_beds}}
+  NUMBER OF BEDS  FOR MALES: {{item.numMale_beds}}
 </ion-label>
 <br>
 <ion-label  style="color: black;" >

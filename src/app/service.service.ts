@@ -43,9 +43,11 @@ public status()
 {
   return this.http.get<any>(this.status_url)
 }
+
 public getstats(){
   return this.http.get<any>(this.stat_urlmale)
 }
+
 public getstatsf(){
   return this.http.get<any>(this.stat_urlfemale)
 }
