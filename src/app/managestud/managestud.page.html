@@ -381,8 +381,6 @@
   
 
   <div id="Students" class="tabcontent">
-
-    <h1>All Student</h1>
     <ion-searchbar></ion-searchbar>
     <!-- <table class="rwd-table">
       
@@ -460,16 +458,19 @@
 
       <ion-card>
         <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
-         {{ viewStud.length}} Students Applications</ion-title>
+         {{ viewStud.length}} All Students</ion-title>
       </ion-card>
         
           
           <ion-card   style="background-color:rgb(160, 160, 160); border-radius:10px; width:500px ;"  *ngFor= "let item of viewStud " >
-           
             <ion-label   style="color: black;" id="properties" >
-              Propetry Name
+              Property Name:{{item.student_no}}
              </ion-label>
              <br>
+        <ion-label   style="color: black;" id="properties" >
+            Student Number:{{item.student_no}}
+           </ion-label>
+           <br>
            <ion-label   style="color: black;" id="properties" >
             Student Number:{{item.student_no}}
            </ion-label>
