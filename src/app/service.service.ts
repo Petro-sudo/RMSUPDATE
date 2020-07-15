@@ -30,12 +30,26 @@ export class ServiceService {
 
 //for getting all the students
   stud_url='http://192.168.1.103:9000/stud';
-
+  stat_urlmale = 'http://192.168.1.103:9000/male';
+  stat_urlfemale = 'http://192.168.1.103:9000/female';
 
 
 public status()
 {
   return this.http.get<any>(this.status_url)
+}
+public getstats(){
+  return this.http.get<any>(this.stat_urlmale)
+}
+public getstatsf(){
+  return this.http.get<any>(this.stat_urlfemale)
+}
+
+
+public getAllStud()
+{
+  // get all students
+  return this.http.get<any>(this.stud_url);
 }
 
 public proof()
@@ -76,11 +90,7 @@ public postLogin(loglord:any)
     return this.http.get<any>(this.apart_url);
   }
 
-  public getAllStud()
-  {
-    // get all students
-    return this.http.get<any>(this.stud_url);
-  }
+ 
 
 
   public getAppliedstu()
