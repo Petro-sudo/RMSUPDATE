@@ -9,6 +9,8 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { ViewChild } from '@angular/core';
 import { Chart } from 'chart.js';
+import {ServiceService} from '../../service.service';
+
 
 
 @Component({
@@ -25,6 +27,7 @@ export class AdmindashPage implements OnInit {
   @ViewChild('label' ,{ static: true }) label;
   @ViewChild('barChart1' ,{ static: true }) barChart1;
   @ViewChild('barChart2' ,{ static: true })barChart2;
+  viewStud: any;
 
   constructor(
     public navCtrl: NavController, public http: HttpClient, 
@@ -32,20 +35,66 @@ export class AdmindashPage implements OnInit {
     private splashScreen: SplashScreen,
     private statusBar   : StatusBar,
     public alertCtrl: AlertController,
-    private router: Router 
+    private router: Router ,
+    private _serviceService : ServiceService
   ) { }
 
   ngOnInit() {
     this.initializeApp();
     this.sideMenu();
     this.createBarChart();
-    this. createBarChart1();
+    
     this. createBarChart2();
-    // this.createlabelChart();
+    this.getStats();
+   
   }
 
 
 
+ 
+
+
+  getStats(){
+   
+     return  this._serviceService.getstats().subscribe((apart:any)=>
+      {this.viewStud = apart;
+        console.log(this.viewStud
+          );
+       
+
+
+
+
+
+        
+          this.bars1 = new Chart(this.barChart1.nativeElement, {
+            type: 'doughnut',
+            data: {
+              labels: ['Male','Female'],
+              datasets: [{
+               
+                data: [this.viewStud.length, 29],
+                backgroundColor: [
+                  
+                  'rgb(22, 138, 8)',
+                  'rgb(22, 80, 83)'
+                  
+                ], // array should have same number of elements as number of dataset
+                borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
+                borderWidth: 1
+              }]
+            },
+           
+          });
+        
+
+
+
+
+
+        
+      });
+    }
 
 
   
@@ -122,27 +171,6 @@ navi()
   }
 
 
-  createBarChart1() {
-    this.bars1 = new Chart(this.barChart1.nativeElement, {
-      type: 'doughnut',
-      data: {
-        labels: ['Male','Female'],
-        datasets: [{
-         
-          data: [71, 29],
-          backgroundColor: [
-            
-            'rgb(22, 138, 8)',
-            'rgb(22, 80, 83)'
-            
-          ], // array should have same number of elements as number of dataset
-          borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
-          borderWidth: 1
-        }]
-      },
-     
-    });
-  }
 
 
 
