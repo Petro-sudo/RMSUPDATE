@@ -13,7 +13,7 @@
   <!-- <div style="text-align:center;font-size: small; ">
     <img src="assets/pics/logo.png" width="100px" height="50px" alt="">
    </div> -->
-  <ion-content >
+   <ion-content >
 
     <ion-toolbar>
       <div slot="start" style="text-align:left;font-size: small; ">
@@ -30,7 +30,7 @@
     <p style="color: white;margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(27, 219, 245)solid">Register to create an account</p>
         
   <br>
-  <form #form="ngForm" (ngSubmit)="register(form)">
+  <form >
   <ion-list>
   
     <!-- <ion-item>
@@ -56,7 +56,7 @@
 
     <ion-item>
       <ion-label position = "floating"><ion-icon name="mail"></ion-icon> EMAIL</ion-label>
-      <ion-input [(ngModel)] = "lordData.email" name ="email"type= "email" 
+      <ion-input [(ngModel)] = "lordData.email_address" name ="email_address"type= "email" 
       pattern ="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="land.lord@gmail.com" required ></ion-input>
     </ion-item>
 
@@ -67,16 +67,14 @@
 
     
 
-   
-
     <ion-item>
       <ion-label position= "floating"><ion-icon name="lock-closed"></ion-icon> PASSWORD</ion-label>
-      <ion-input [(ngModel)] ='lordData.pwd' name ="pwd"type="password" required></ion-input>
+      <ion-input [(ngModel)] ='lordData.password' name ="password"type="password" required></ion-input>
     </ion-item>
 
      <ion-item>
       <ion-label position= "floating"><ion-icon name="lock-closed"></ion-icon> CONFIRM PASSWORD</ion-label>
-      <ion-input  type="password" [(ngModel)]='lordData.confirmPwd' name ="confirmPwd"  required></ion-input>  
+      <ion-input  type="password" [(ngModel)]='lordData.password_confirm' name ="password_confirm"  required></ion-input>  
     </ion-item>
     <br>
     <p style="color: white;">By signing up, you confirm that you've read
@@ -89,7 +87,7 @@
       SIGN UP
     </ion-button> -->
   
-      <ion-button type="submit"  expand="block" color="secondary">SIGN UP</ion-button>
+      <ion-button type="submit" (click)="checKPwd()" expand="block" color="secondary">SIGN UP</ion-button>
     
   <p style="color: white; text-align: right;">Have an account? sign in <a routerLink="/login" style="color: rgb(27, 219, 245);">here</a></p>
  
