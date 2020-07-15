@@ -29,7 +29,7 @@ export class LandlordappsPage implements OnInit {
   ) { }
 
 
-  public addProp: any=[];
+  public lookApp: any=[];
   public addProps: any=[];
   addimg: any=[];
   public searchTerm: string = "";
@@ -37,7 +37,7 @@ export class LandlordappsPage implements OnInit {
   navigate : any;
   ngOnInit() {
 
-    this.getProperty();
+    this.getLordApplication();
     this.initializeApp();
     this.sideMenu();
     this.calc();
@@ -287,15 +287,15 @@ async edit() {
 
 
 
-  getProperty(){
+  getLordApplication(){
     var searchTerm= "";
-     return  this._serviceService.getApartment().
+     return  this._serviceService.getLandlordApp().
      subscribe((apart:any)=>
-      {this.addProp = apart;
-        console.log(this.addProp
+      {this.lookApp = apart;
+        console.log(this.lookApp
           );
         //  this.filterItems(searchTerm); 
-        var num =this.addProp.length;
+        var num =this.lookApp.length;
         
       });
     }
@@ -303,7 +303,7 @@ async edit() {
 calc()
 {
 
-  console.log(this.addProp.length);
+  console.log(this.lookApp.length);
 }
 
 

@@ -48,84 +48,96 @@
 
 <ion-card>
   <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
-   {{ addProp.length}} Pending Applications</ion-title>
+   {{ lookApp.length}} Pending Applications</ion-title>
 </ion-card>
   
     
     <ion-card   style="background-color:rgb(160, 160, 160); border-radius:10px; width:500px ;"  *ngFor= "let item of addProp " >
      
      
-      <h1 style="color: black;margin-right: 120px;" >{{item.name}}  </h1>
+      <h1 style="color: black;margin-right: 120px;" >{{item.property_name}}  </h1>
      
   
      <ion-label   style="color: black;" id="properties" >
-      PROPERTY OWNER:{{item.username
-      }}
+      PROPERTY OWNER:
      </ion-label>
      <br>
      <ion-label  style="color: black;" >
-     CITY: {{item.address.city}} 
+     EMAIL ADDRESS: {{item.landlord_email}} 
      </ion-label>
      <br>
      <ion-label  style="color: black;" >
-       STREET ADDRESS: {{item.address.street}}
+      CONTACT NUMBER: 
+      </ion-label>
+      <br>
+     <ion-label  style="color: black;" >
+      HOUSE NUMBER: 
+    </ion-label>
+    <br>
+     <ion-label  style="color: black;" >
+       STREET NAME: 
      </ion-label>
      <br>
      <ion-label  style="color: black;" >
-       POSTAL CODE: {{item.address.zipcode}} 
-       
+      SUBURB: 
+    </ion-label>
+    <br>
+     <ion-label  style="color: black;" >
+      CITY/TOWN: 
+    </ion-label>
+    <br>
+     <ion-label  style="color: black;" >
+       POSTAL CODE: 
      </ion-label>
      <br>
-
-
      <ion-label  style="color: black;" >
-     
-     Number of rooms with the single beds
-    </ion-label>
-    <br>
-
-    <ion-label  style="color: black;" >
-     
-      Home Numbers
+      PROVINCE NAME: 
     </ion-label>
     <br>
     <ion-label  style="color: black;" >
-     
-     Number of rooms  made for sharing
+      COUNTRY NAME: 
+    </ion-label>
+    <br>
+     <ion-label  style="color: black;" >
+     NUMBER OF ROOMS: {{item.num_rooms}}
     </ion-label>
     <br>
     <ion-label  style="color: black;" >
-     
-    Total  number of rooms of within the property
+     TOTAL FLOORS: {{item.num_floor}}
     </ion-label>
     <br>
     <ion-label  style="color: black;" >
-     
-      Name the closest campus you at
-    </ion-label>
-    <br>
-
-    <ion-label  style="color: black;" >
-     
-      Number of rooms  allocated for girls only
+     ROOMS FOR FEMALES: {{item.numFemale_beds}}
     </ion-label>
     <br>
     <ion-label  style="color: black;" >
-     
-      Number of rooms  allocated for boys only
+      ROOMS FOR MALES: {{item.numMale_beds}}
     </ion-label>
     <br>
-
-   
-
-    
-
-
-
-
-
-
-
+    <ion-label  style="color: black;" >
+      BEDS PER ROOM: {{item.bedsPerRoom}}
+    </ion-label>
+    <br>
+    <ion-label  style="color: black;" >
+    THE CLOSEST CAMPUS: {{item.campus}}
+    </ion-label>
+    <br>
+    <ion-label  style="color: black;" >
+     BLOCK: {{item.blocks}}
+    </ion-label>
+    <br>
+    <ion-label  style="color: black;" >
+     DATE APPLIED: {{item.date_apply}}
+    </ion-label>
+    <br>
+    <ion-label  style="color: black;" >
+     STATUS: {{item.status}}
+     </ion-label>
+     <br>
+     <ion-label  style="color: black;" >
+      ROOMS AVAILABLE: {{item.occupied_rooms}}
+     </ion-label>
+     <br>
 
      <ion-button color="danger" (click)="AlertPrompt()" >
      

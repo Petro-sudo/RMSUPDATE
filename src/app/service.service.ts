@@ -28,10 +28,13 @@ export class ServiceService {
   proof_url = 'https://jsonplaceholder.typicode.com/users/1';
   lordapp_url = 'https://168.172.185.106:5000/lord';
 
-//for getting all the students
+
   stud_url='http://192.168.1.103:9000/stud';
 
-
+//for landlord app
+application_url ='http://192.168.1.103:9000/stud';
+approvedapp_url ='http://192.168.1.103:9000/stud';
+//manage approve
 
 public status()
 {
@@ -82,10 +85,18 @@ public postLogin(loglord:any)
     return this.http.get<any>(this.stud_url);
   }
 
-
+  public getApprovedApp()
+  {return this.http.get<any>(this.approvedapp_url);
+  }
+  
   public getAppliedstu()
   {
     return this.http.get<any>(this.Aplystutest);
+  }
+
+  public getLandlordApp()
+  {
+    return this.http.get<any>(this.application_url);
   }
 
   public getimages()
