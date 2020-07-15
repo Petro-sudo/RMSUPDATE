@@ -26,7 +26,7 @@ import { Http } from '@angular/http';
 })
 export class LandlordRegPage implements OnInit {
 
-  @Input() lordData= {email:" " ,pwd:" ", confirmPwd:" " }
+  @Input() lordData= {email_address:" " ,password:" ",password_confirm:" "}
   navCtrl: any;
 
   
@@ -42,27 +42,48 @@ export class LandlordRegPage implements OnInit {
     // })
 
   ngOnInit() {
-    this.getlandLords();
+    // this.getlandLords();
     
   }
-  getlandLords(){
-    this._serviceService.postLandlord(this.addLords).subscribe((data: any)=>
-    {this.addLords=data;
-    console.log(this.addLords);
-    });
-  }
+//   getlandLords(){
+//     this._serviceService.postLandlord(this.addLords).subscribe((data: any)=>
+//     {this.addLords=data;
+//     console.log(this.addLords);
+//     });
+//   }
   
-register(form){
-  this._serviceService.postLandlord(form.value).subscribe((res) =>{
-    this.router.navigateByUrl('folder/home');
-  }
-  );
-  this._serviceService.postLandlord(this.lordData).subscribe(data =>
+// register(form){
+//   this._serviceService.postLandlord(form.value).subscribe((res) =>{
+//     this.router.navigateByUrl('folder/home');
+//   }
+//   );
+//   this._serviceService.postLandlord(this.lordData).subscribe(data =>
+//     console.log(data));
+//     console.log(this.lordData.email_address);
+//     console.log(this.lordData.password);
+//     console.log(this.lordData.confirmPwd)
+// }
+
+
+landlordreg(){
+  this._serviceService.postLandlord(this.lordData).subscribe(
+    data =>
     console.log(data));
-    console.log(this.lordData.email);
-    console.log(this.lordData.pwd);
-    console.log(this.lordData.confirmPwd)
+   
+   
 }
+ checKPwd(){
+
+if(this.lordData.password==this.lordData.password_confirm){
+  this.landlordreg();
+  
+}
+
+else{
+  console.log("password does not match!")
+}
+
+ }
 
 //   addreg() {
 //     this._serviceService.postLandlord(this.lordData).subscribe(

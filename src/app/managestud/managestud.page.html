@@ -368,77 +368,108 @@
   <div id="Students" class="tabcontent">
 
     <h1>All Student</h1>
-    <ion-searchbar></ion-searchbar>
-    <table class="rwd-table">
-      
-      <tr>
-        <th>Student Number</th>
-        <th> Surname</th>
-        <th>Initials</th>
-        <th>ID</th>
-        <th>Gender</th>
-        <th>Email Address</th>
-        <th>Contant No</th>
-        <th>Apartment</th>
-        <th>Building</th>
-        <th>Start Date</th>
-        <th>End Date</th>
-        
-      </tr>
-      <tr>
-        <td data-th="Student Number">21826885</td>
-        <td data-th=" Name">Lelake</td>
-        <td data-th="Initials">K B</td>
-        <td data-th="ID">9452145354789</td>
-        <td data-th="Gender">Male</td>
-        <td data-th="Email Address">kabelo@lelake@gmail.com</td>
-        <td data-th="Contant No">0825678419</td>
-        <td data-th="Apartment">Khoza</td>
-        <td data-th="Building">1-g-77</td>
-        <td data-th="Start Date">2020/05/30</td>
-        <td data-th="End Date">2020/05/30</td>
-      </tr>
-      <tr>
-        <td data-th="Student Number">241578621</td>
-        <td data-th=" Name">Zulu</td>
-        <td data-th="Initials">K G</td>
-        <td data-th="ID">9452145354789</td>
-        <td data-th="Gender">Male</td>
-        <td data-th="Email Address">kabelo@lelake@gmail.com</td>
-        <td data-th="Contant No">0825678419</td>
-        <td data-th="Apartment">Khoza</td>
-        <td data-th="Building">1-g-77</td>
-        <td data-th="Start Date">2020/05/30</td>
-        <td data-th="End Date">2020/05/30</td>
-      </tr>
-      <tr>
-        <td data-th="Student Number">21822155</td>
-        <td data-th=" Name">Leyo</td>
-        <td data-th="Initials">V W</td>
-        <td data-th="ID">9452145354789</td>
-        <td data-th="Gender">Female</td>
-        <td data-th="Email Address">kabelo@lelake@gmail.com</td>
-        <td data-th="Contant No">0825678419</td>
-        <td data-th="Apartment">Khoza</td>
-        <td data-th="Building">1-g-77</td>
-        <td data-th="Start Date">2020/05/30</td>
-        <td data-th="End Date">2020/05/30</td>
-      </tr>
-      <tr>
-        <td data-th="Student Number">21826885</td>
-        <td data-th=" Name">Lelake</td>
-        <td data-th="Initials">K B</td>
-        <td data-th="ID">9452145354789</td>
-        <td data-th="Gender">Male</td>
-        <td data-th="Email Address">kabelo@lelake@gmail.com</td>
-        <td data-th="Contant No">0825678419</td>
-        <td data-th="Apartment">Khoza</td>
-        <td data-th="Building">1-g-77</td>
-        <td data-th="Start Date">2020/05/30</td>
-        <td data-th="End Date">2020/05/30</td>
-      </tr>
-    </table>
+    
+  <ion-grid style="background-color: 	#FDF5E6;">
 
+    <ion-card>
+      <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
+       {{ addProp.length}} Pending Applications</ion-title>
+    </ion-card>
+      
+        
+        <ion-card   style="background-color:rgb(160, 160, 160); border-radius:10px; width:500px ;"  *ngFor= "let item of addProp " >
+         
+         
+          <h1 style="color: black;margin-right: 120px;" >{{item.name}}  </h1>
+         
+      
+         <ion-label   style="color: black;" id="properties" >
+          PROPERTY OWNER:{{item.username
+          }}
+         </ion-label>
+         <br>
+         <ion-label  style="color: black;" >
+         CITY: {{item.address.city}} 
+         </ion-label>
+         <br>
+         <ion-label  style="color: black;" >
+           STREET ADDRESS: {{item.address.street}}
+         </ion-label>
+         <br>
+         <ion-label  style="color: black;" >
+           POSTAL CODE: {{item.address.zipcode}} 
+           
+         </ion-label>
+         <br>
+    
+    
+         <ion-label  style="color: black;" >
+         
+         Number of rooms with the single beds
+        </ion-label>
+        <br>
+    
+        <ion-label  style="color: black;" >
+         
+          Home Numbers
+        </ion-label>
+        <br>
+        <ion-label  style="color: black;" >
+         
+         Number of rooms  made for sharing
+        </ion-label>
+        <br>
+        <ion-label  style="color: black;" >
+         
+        Total  number of rooms of within the property
+        </ion-label>
+        <br>
+        <ion-label  style="color: black;" >
+         
+          Name the closest campus you at
+        </ion-label>
+        <br>
+    
+        <ion-label  style="color: black;" >
+         
+          Number of rooms  allocated for girls only
+        </ion-label>
+        <br>
+        <ion-label  style="color: black;" >
+         
+          Number of rooms  allocated for boys only
+        </ion-label>
+        <br>
+    
+       
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+         <ion-button color="danger" (click)="AlertPrompt()" >
+         
+          <ion-icon name="trash"></ion-icon>
+          Decline Application
+         </ion-button>
+    
+         <ion-button color="success"  (click)="presentAlertPrompt()">
+          Accept Application
+        </ion-button>
+       
+    
+        
+    
+       </ion-card>
+    
+    
+      </ion-grid>
+    
 
 
 
