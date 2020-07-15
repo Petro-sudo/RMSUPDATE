@@ -22,11 +22,12 @@ export class ManagestudPage implements OnInit {
   constructor(public alertCtrl: AlertController, private _serviceService : ServiceService, 
     private router: Router, public actionSheetCtrl: ActionSheetController,
     private loadingCtrl: LoadingController,  private popoverController: PopoverController) { }
-  addProp: any=[];
+    viewStud: any=[];
   addimg: any=[];
+  public items: any;
   
   ngOnInit() {
-
+    this.getStudents();
     //this.applidstu();
   }
 
@@ -56,8 +57,19 @@ export class ManagestudPage implements OnInit {
     });
   popo.present();
   }
-  
 
+  
+  getStudents(){
+    var searchTerm= "";
+     return  this._serviceService.getAllStud().subscribe((apart:any)=>
+      {this.viewStud = apart;
+        console.log(this.viewStud
+          );
+        //  this.filterItems(searchTerm); 
+        var num =this.viewStud.length;
+        
+      });
+    }
 
 
 
@@ -72,11 +84,7 @@ export class ManagestudPage implements OnInit {
   //    });
   //  }
  
-
- 
   //  async delete() {
-
-    
 
   //    const alert = await this.alertCtrl.create({  
       

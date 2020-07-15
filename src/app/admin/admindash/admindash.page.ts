@@ -64,8 +64,6 @@ export class AdmindashPage implements OnInit {
         title : "Dashboard",
         url   : "/admindash",
         icon :"person-outline"
-       
-       
       },
     
       {

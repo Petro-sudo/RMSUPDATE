@@ -1,19 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $breakpoint-alpha: 480px; // adjust to your needs
 
 .rwd-table {
@@ -44,7 +30,7 @@ $breakpoint-alpha: 480px; // adjust to your needs
       font-weight: bold;
 
       // optional stuff to make it look nicer
-      width: 6.5em; // magic number :( adjust according to your own content
+      width: 7.5em; // magic number :( adjust according to your own content
       display: inline-block;
       // end options
       
@@ -59,7 +45,7 @@ $breakpoint-alpha: 480px; // adjust to your needs
     
     @media (min-width: $breakpoint-alpha) {
       display: table-cell;
-      padding: .25em .5em;
+      padding: .26em .2em;
       
       &:first-child {
         padding-left: 0;
@@ -104,13 +90,13 @@ h1 {
     border-color: lighten(#34495E, 10%);
   }
   th, td {
-    margin: .5em 1em;
+    margin: .6em 2em;
     @media (min-width: $breakpoint-alpha) { 
       padding: 1em !important; 
     }
   }
   th, td:before {
-    color: #dd5;
+    color:rgb(36, 207, 36);
   }
 }
 
@@ -141,7 +127,12 @@ h1 {
 
 
 
+ion-button{
+  font-size: 14px;
+  text-align: center;  
+  text-transform: none;
 
+}
 
 
 
@@ -198,6 +189,7 @@ h1 {
     
     
   }
+ 
   /* Change background color of buttons on hover */
   .tab button:hover {
     background-color: #ddd;
