@@ -69,6 +69,8 @@ export class ManagestudPage implements OnInit {
         var num =this.viewStud.length;
         
       });
+
+      
     }
 
 
