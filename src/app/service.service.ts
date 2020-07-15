@@ -28,6 +28,9 @@ export class ServiceService {
   proof_url = 'https://jsonplaceholder.typicode.com/users/1';
   lordapp_url = 'https://168.172.185.106:5000/lord';
 
+//for getting all the students
+  stud_url='http://192.168.1.103:9000/gettenant';
+
 
 
 public status()
@@ -71,6 +74,12 @@ public postLogin(loglord:any)
   {
     // return this.http.get<any>(this.apart_url);
     return this.http.get<any>(this.apart_url);
+  }
+
+  public getAllStud()
+  {
+    // get all students
+    return this.http.get<any>(this.stud_url);
   }
 
 

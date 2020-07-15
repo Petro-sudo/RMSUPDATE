@@ -370,11 +370,11 @@
       </tr>
       <tr>
         <td data-th="Property Name">Twala</td>
-        <td data-th="very_satisfied">20%</td>
+        <td data-th="very_satisfied">30%</td>
         <td data-th="satisfied">40%</td>
         <td data-th="okey">20%</td>
-        <td data-th="disappointed">10%</td>
-        <td data-th="very_disappointed">10%</td>
+        <td data-th="disappointed">5%</td>
+        <td data-th="very_disappointed">5%</td>
       </tr>
     </table>
   </div>
@@ -384,7 +384,7 @@
 
     <h1>All Student</h1>
     <ion-searchbar></ion-searchbar>
-    <table class="rwd-table">
+    <!-- <table class="rwd-table">
       
       <tr>
         <th>Student Number</th>
@@ -452,8 +452,85 @@
         <td data-th="Start Date">2020/05/30</td>
         <td data-th="End Date">2020/05/30</td>
       </tr>
-    </table>
+    </table> -->
 
+  
+
+    <ion-grid style="background-color: 	#FDF5E6;">
+
+      <ion-card>
+        <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
+         {{ viewStud.length}} Students Applications</ion-title>
+      </ion-card>
+        
+          
+          <ion-card   style="background-color:rgb(160, 160, 160); border-radius:10px; width:500px ;"  *ngFor= "let item of viewStud " >
+           
+            <ion-label   style="color: black;" id="properties" >
+              Propetry Name
+             </ion-label>
+             <br>
+           <ion-label   style="color: black;" id="properties" >
+            Student Number:{{item.student_no}}
+           </ion-label>
+           <br>
+           <ion-label  style="color: black;" >
+            Surname:  
+           </ion-label>
+           <br>
+           <ion-label  style="color: black;" >
+            Initials: 
+           </ion-label>
+           <br>
+           <ion-label  style="color: black;" >
+            ID: 
+           </ion-label>
+           <br>
+           <ion-label  style="color: black;" >
+            Gender:
+          </ion-label>
+          <br>
+          <ion-label  style="color: black;" >
+            Status: {{item.status}}
+           </ion-label>
+           <br>
+          <ion-label  style="color: black;" >
+          Email Address
+          </ion-label>
+          <br>
+          <ion-label  style="color: black;" >
+            Contant No
+          </ion-label>
+          <br>
+          <ion-label  style="color: black;" >
+            Floor: {{item.Floor}}
+          </ion-label>
+          <br>
+          <ion-label  style="color: black;" >
+           Date Applied {{item.apply_date}}
+          </ion-label>
+          <br>
+          <ion-label  style="color: black;" >
+            Start Date  {{item.date_located}}
+           </ion-label>
+           <br>
+           <ion-label  style="color: black;" >
+            Room number {{item.room_no}}
+           </ion-label>
+           <br>
+           <ion-label  style="color: black;" >
+            Bed number {{item.bed_no}}
+           </ion-label>
+           <br>
+          <ion-label  style="color: black;" >
+            End Date
+          </ion-label>
+          <br>
+   
+         </ion-card>
+      
+      
+        </ion-grid>
 
 
 
