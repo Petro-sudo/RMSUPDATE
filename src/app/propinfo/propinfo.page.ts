@@ -26,7 +26,7 @@ export class PropinfoPage implements OnInit {
         private router: Router,
         public alertController: AlertController
   ) { }
-  public addProp: any=[];
+  public approved: any=[];
   public addProps: any=[];
   addimg: any=[];
   public searchTerm: string = "";
@@ -34,7 +34,7 @@ export class PropinfoPage implements OnInit {
   navigate : any;
 
   ngOnInit() {
-    this.getProperty();
+    this.getApproved();
      this.initializeApp();
     this.sideMenu();
   }
@@ -266,12 +266,12 @@ async edit() {
 
 
 
-  getProperty(){
+  getApproved(){
     var searchTerm= "";
-     return  this._serviceService.getApartment().
+     return  this._serviceService.getApprovedApp().
      subscribe((apart:any)=>
-      {this.addProp = apart;
-        console.log(this.addProp
+      {this.approved = apart;
+        console.log(this.approved
           );
         //  this.filterItems(searchTerm); 
       });
