@@ -37,7 +37,18 @@ export class ServiceService {
 application_url ='http://192.168.1.103:9000/pendingprop';
 
 approvedapp_url ='http://192.168.1.103:9000/acceptedprop';
-//manage approve
+
+
+//delete api
+delete_url ='http://192.168.1.103:9000/dlt';
+
+//delete function
+public deleteLord(landlord_email)
+{
+  return this.http.delete<any>(this.delete_url + landlord_email)
+}
+
+
 
 public status()
 {
