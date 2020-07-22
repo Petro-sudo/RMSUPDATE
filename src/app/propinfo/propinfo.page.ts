@@ -59,7 +59,7 @@ propinfo(){
 
 
 
-async AlertPrompt() {
+async AlertPrompt(i) {
   const alert = await this.alertController.create({
     header: 'Are you sure You want to remove this user from a database?',
     // message: 'I cannot login',
@@ -82,6 +82,12 @@ async AlertPrompt() {
   });
 
   await alert.present();
+  //i dont know whether to put it here or under text: 'Confirm' on handler
+  //but on handler it doesnt wanna work 
+  //mybe will be able to figure it out
+  this._serviceService.deleteLord(i).subscribe(data =>
+    {this.getApproved()
+    })
 }
 
 
