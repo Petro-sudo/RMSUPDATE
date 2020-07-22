@@ -252,7 +252,10 @@ async edit() {
 
 
 
-
+  navi()
+  {
+    this.router.navigate(['/folder/Home']);
+  }
 
 
 
