@@ -35,6 +35,8 @@ export class LandlordappsPage implements OnInit {
   public searchTerm: string = "";
   public items: any;
   navigate : any;
+  accept: any;
+  decline: any;
   ngOnInit() {
 
     this.getLordApplication();
@@ -80,7 +82,7 @@ async AlertPrompt(i) {
         text: 'Confirm',
         handler: () => {
           console.log('Confirm Submit');
-          this.decline(i);
+          this.declineProvider(i);
         }
       }
     ]
@@ -90,13 +92,11 @@ async AlertPrompt(i) {
 }
 
 
- decline(i){
-   this._serviceService.declineLord(i).subscribe(data =>
-    {
-      this.getLordApplication()
-    })
+ declineProvider(i){
+   this._serviceService.declineLord(this.decline).subscribe((data: any)=>
+   {this.decline=data;
+  console.log(this.decline)})
  }
-
 
 
 
@@ -118,7 +118,7 @@ async presentAlertPrompt(j) {
         text: 'Confirm',
         handler: () => {
           console.log('Confirm Submit');
-          this.accept(j)
+          this.acceptProvider(j)
         }
       }
     ]
@@ -127,9 +127,11 @@ async presentAlertPrompt(j) {
   await alert.present();
 }
 
-accept(){
+acceptProvider(j){
   this._serviceService.acceptLord(this.accept).subscribe((data: any)=>
-  this.accept=data)
+  {this.accept=data;
+    console.log(this.accept);
+  })
 }
 
 
