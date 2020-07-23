@@ -54,16 +54,16 @@ decline_url ='http://192.168.1.101:9000/sts';
 
 public declineLord(status)
 {
-  return this.http.options<any>(this.decline_url +"/"+ status)
+  return this.http.post<any>(this.decline_url, status, {})
 }
 
 
 //accept
-accept_url ='http://192.168.1.101:9000/accpt';
+accept_url ='http://192.168.1.101:9000/accept';
 
-public acceptLord(status)
+public acceptLord(accept)
 {
-  return this.http.options<any>(this.accept_url +"/"+ status)
+  return this.http.post<any>(this.accept_url, accept, {})
 }
 
 
@@ -74,6 +74,13 @@ public issuesLord(){
   return this.http.get<any>(this.issues_url)
 }
 
+//editproperty
+editP_url = 'http://192.168.1.101:9000/edit';
+
+public editProp(edit:any)
+{
+  return this.http.post<any>(this.editP_url, edit, {})
+}
 
 public status()
 {
@@ -113,10 +120,11 @@ public postLogin(loglord:any)
 {
     return this.http.post<any>(this.login_url, loglord, {})
 }
-  public postLandlord(addlord:any)
-  {
-    return this.http.post<any>(this.reg_url, addlord, {});
-  }
+
+public postLandlord(addlord:any)
+{
+  return this.http.post<any>(this.reg_url, addlord, {});
+}
 
 
 

@@ -101,17 +101,6 @@ async AlertPrompt(i) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 async presentAlertPrompt(j) {
   const alert = await this.alertController.create({
     header: 'Are you sure You want to Accept this Application?',
@@ -138,19 +127,10 @@ async presentAlertPrompt(j) {
   await alert.present();
 }
 
-accept(j){
-  this._serviceService.acceptLord(j).subscribe(data =>
-    {
-      this.getLordApplication()
-    })
+accept(){
+  this._serviceService.acceptLord(this.accept).subscribe((data: any)=>
+  this.accept=data)
 }
-
-
-
-
-
-
-
 
 
 
@@ -250,27 +230,6 @@ async edit() {
       
     ]
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

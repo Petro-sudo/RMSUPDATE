@@ -198,6 +198,7 @@ async edit() {
         text: 'confirm',
         handler: () => {
           console.log('Confirm Submit');
+          this.getProperty();
         }
       }
     ]
@@ -207,6 +208,10 @@ async edit() {
 }
 
 
+getProperty(){
+  this._serviceService.editProp(this.edit).subscribe((data: any)=>
+  this.edit=data)
+}
 
 
 
