@@ -58,18 +58,18 @@ public deleteLord(landlord_email)
 //decline
 decline_url ='http://192.168.1.101:9000/decline';
 
-public declineLord(decline:any )
+public declineLord(landlord_email:any )
 {
-  return this.http.post<any>(this.decline_url, decline, {})
+  return this.http.post<any>(this.decline_url,landlord_email, {})
 }
 
 
 //accept
 accept_url ='http://192.168.1.101:9000/accept';
 
-public acceptLord(accept:any)
+public acceptLord(landlord_email:any)
 {
-  return this.http.post<any>(this.accept_url, accept, {})
+  return this.http.post<any>(this.accept_url, landlord_email, {})
 }
 
 
