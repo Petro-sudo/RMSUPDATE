@@ -40,14 +40,40 @@ approvedapp_url ='http://192.168.1.101:9000/acceptedprop';
 //manage approve
 
 //delete 
-
 delete_url ='http://192.168.1.101:9000/dlt';
-
 //delete function
 public deleteLord(landlord_email)
 {
   return this.http.delete<any>(this.delete_url +"/"+ landlord_email)
 }
+
+
+
+//decline
+decline_url ='http://192.168.1.101:9000/sts';
+
+public declineLord(status)
+{
+  return this.http.options<any>(this.decline_url +"/"+ status)
+}
+
+
+//accept
+accept_url ='http://192.168.1.101:9000/accpt';
+
+public acceptLord(status)
+{
+  return this.http.options<any>(this.accept_url +"/"+ status)
+}
+
+
+//issues
+issues_url ='http://192.168.1.101:9000/issues';
+
+public issuesLord(){
+  return this.http.get<any>(this.issues_url)
+}
+
 
 public status()
 {

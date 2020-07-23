@@ -83,23 +83,16 @@ async AlertPrompt(i) {
   });
 
   await alert.present();
-  //i dont know whether to put it here or under text: 'Confirm' on handler
-  //but on handler it doesnt wanna work 
-  //mybe will be able to figure it out
+ 
   
 }
+
 
 delete1(i){
   this._serviceService.deleteLord(i).subscribe(data =>
     {this.getApproved()
     })
 }
-
-
-
-
-
-
 
 
 
@@ -136,6 +129,7 @@ async presentAlertPrompt() {
         text: 'Send',
         handler: () => {
           console.log('Confirm Submit');
+          this.issues0();
         }
       }
     ]
@@ -145,7 +139,10 @@ async presentAlertPrompt() {
 }
 
 
-
+issues0(){
+  this._serviceService.issuesLord().subscribe(data =>
+   this.items=data)
+ }
 
 
 

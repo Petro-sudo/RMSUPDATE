@@ -139,13 +139,13 @@ THE CLOSEST CAMPUS: {{item.campus}}
  </ion-label>
  <br>
 
-     <ion-button color="danger" (click)="AlertPrompt()" >
+     <ion-button color="danger" (click)="AlertPrompt(item.status)" >
      
       <ion-icon name="trash"></ion-icon>
       Decline Application
      </ion-button>
 
-     <ion-button color="success"  (click)="presentAlertPrompt()">
+     <ion-button color="success"  (click)="presentAlertPrompt(item.status)">
       Accept Application
     </ion-button>
    
