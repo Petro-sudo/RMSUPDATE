@@ -56,20 +56,20 @@ public deleteLord(landlord_email)
 
 
 //decline
-decline_url ='http://192.168.43.92:9000/rejectapp';
+decline_url ='http://192.168.1.101:9000/rejectapp';
 
-public declineLord(status)
+public declineLord(landlord_email:any )
 {
-  return this.http.post<any>(this.decline_url, status, {})
+  return this.http.post<any>(this.decline_url,landlord_email, {})
 }
 
 
 //accept
 accept_url ='http://192.168.43.92:9000/acceptapp';
 
-public acceptLord(accept)
+public acceptLord(landlord_email:any)
 {
-  return this.http.post<any>(this.accept_url, accept, {})
+  return this.http.post<any>(this.accept_url, landlord_email, {})
 }
 
 
