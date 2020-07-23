@@ -168,7 +168,7 @@ export class FolderPage implements OnInit {
 
   getProperty(){
    var searchTerm= "";
-    return  this._serviceService.getApartment().
+    return  this._serviceService.getApprovedApp().
     subscribe((apart:any)=>
      {this.addProp = apart;
        console.log(this.addProp

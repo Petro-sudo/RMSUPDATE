@@ -471,24 +471,24 @@ style=" position: relative;z-index: 1;" >
     <ion-card  *ngFor= "let item of addProp   " style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
      
      
-      <h1 style="color: black;margin-right: 120px;" >{{item.name}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
+      <h1 style="color: black;margin-right: 120px;" >{{item.property_name}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
      
   
      <ion-label id="properties" >
-      PROPERTY OWNER:{{item.username
+      PROPERTY OWNER:{{item.full_name
       }}
      </ion-label>
      <br>
      <ion-label >
-     CITY: {{item.address.city}} 
+     CITY: {{item.city}} 
      </ion-label>
      <br>
      <ion-label >
-       STREET ADDRESS: {{item.address.street}}
+       STREET ADDRESS: {{item.street_name}}
      </ion-label>
      <br>
      <ion-label >
-       POSTAL CODE: {{item.address.zipcode}} <ion-icon style="color:#00003f; font-size:20px ; margin-right:10px;" name="call"></ion-icon>
+       POSTAL CODE: {{item.zip_code}} <ion-icon style="color:#00003f; font-size:20px ; margin-right:10px;" name="call"></ion-icon>
        <ion-icon  style="color:#00003f; font-size:20px ; margin-right:20px;" name="mail"></ion-icon>
      </ion-label>
      <br>

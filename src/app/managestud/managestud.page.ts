@@ -143,7 +143,10 @@ export class ManagestudPage implements OnInit {
   //    }
 
 
-
+  navi()
+  {
+    this.router.navigate(['/folder/Home']);
+  }
 
  
 

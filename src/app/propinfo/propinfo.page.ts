@@ -76,6 +76,7 @@ async AlertPrompt(i) {
         text: 'Confirm',
         handler: () => {
           console.log('Confirm Submit');
+          this.delete1(i);
         }
       }
     ]
@@ -85,12 +86,14 @@ async AlertPrompt(i) {
   //i dont know whether to put it here or under text: 'Confirm' on handler
   //but on handler it doesnt wanna work 
   //mybe will be able to figure it out
+  
+}
+
+delete1(i){
   this._serviceService.deleteLord(i).subscribe(data =>
     {this.getApproved()
     })
 }
-
-
 
 
 
@@ -258,7 +261,10 @@ async edit() {
 
 
 
-
+  navi()
+  {
+    this.router.navigate(['/folder/Home']);
+  }
 
 
 
