@@ -92,10 +92,17 @@ async AlertPrompt(i) {
 }
 
 
+
+
+
+
+
+
  declineProvider(i){
-   this._serviceService.declineLord(this.decline).subscribe((data: any)=>
-   {this.decline=data;
-  console.log(this.decline)})
+   this._serviceService.declineLord(i).subscribe(data=>
+   {this.getLordApplication()
+   })
+   this.getLordApplication();
  }
 
 
@@ -118,7 +125,7 @@ async presentAlertPrompt(j) {
         text: 'Confirm',
         handler: () => {
           console.log('Confirm Submit');
-          this.acceptProvider(j)
+          this.acceptProvider(j);
         }
       }
     ]
@@ -127,12 +134,21 @@ async presentAlertPrompt(j) {
   await alert.present();
 }
 
+// acceptProvider(j){
+//   this._serviceService.acceptLord(j).subscribe((data: any)=>
+//   {this.accept=data;
+//     // console.log();
+//   })
+// }
+
+
 acceptProvider(j){
-  this._serviceService.acceptLord(this.accept).subscribe((data: any)=>
-  {this.accept=data;
-    console.log(this.accept);
-  })
+  this._serviceService.acceptLord(j).subscribe(data =>
+    {this.getLordApplication()
+    })
+    this.getLordApplication();
 }
+
 
 
 
