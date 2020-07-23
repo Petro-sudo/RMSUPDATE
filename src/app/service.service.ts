@@ -34,18 +34,19 @@ export class ServiceService {
   stat_urlfemale = 'http://192.168.43.92:9000/female';
 
 //for landlord app
-application_url ='http://192.168.43.92:9000/pendingprop';
+application_url ='http://192.168.1.101:9000/pendingprop';
 
-approvedapp_url ='http://192.168.43.92:9000/acceptedprop';
+approvedapp_url ='http://192.168.1.101:9000/acceptedprop';
 //manage approve
 
-//delete api
-delete_url ='http://192.168.1.103:9000/dlt';
+//delete 
+
+delete_url ='http://192.168.1.101:9000/dlt';
 
 //delete function
 public deleteLord(landlord_email)
 {
-  return this.http.delete<any>(this.delete_url + landlord_email)
+  return this.http.delete<any>(this.delete_url +"/"+ landlord_email)
 }
 
 public status()
