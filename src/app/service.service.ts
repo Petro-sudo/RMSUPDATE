@@ -56,7 +56,7 @@ public deleteLord(landlord_email)
 
 
 //decline
-decline_url ='http://192.168.1.101:9000/sts';
+decline_url ='http://192.168.43.92:9000/rejectapp';
 
 public declineLord(status)
 {
@@ -65,7 +65,7 @@ public declineLord(status)
 
 
 //accept
-accept_url ='http://192.168.1.101:9000/accept';
+accept_url ='http://192.168.43.92:9000/acceptapp';
 
 public acceptLord(accept)
 {

@@ -81,6 +81,7 @@ async AlertPrompt(i) {
         handler: () => {
           console.log('Confirm Submit');
           this.decline(i);
+          this.getLordApplication();
         }
       }
     ]
@@ -118,7 +119,8 @@ async presentAlertPrompt(j) {
         text: 'Confirm',
         handler: () => {
           console.log('Confirm Submit');
-          this.accept(j)
+          this.accept(j);
+          
         }
       }
     ]
@@ -127,7 +129,7 @@ async presentAlertPrompt(j) {
   await alert.present();
 }
 
-accept(){
+accept(j){
   this._serviceService.acceptLord(this.accept).subscribe((data: any)=>
   this.accept=data)
 }
