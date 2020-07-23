@@ -92,6 +92,7 @@ delete1(i){
   this._serviceService.deleteLord(i).subscribe(data =>
     {this.getApproved()
     })
+    this.getApproved();
 }
 
 
