@@ -47,32 +47,6 @@ export class LandlordappsPage implements OnInit {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
@@ -89,7 +63,7 @@ propinfo(){
 
 
 
-async AlertPrompt() {
+async AlertPrompt(i) {
   const alert = await this.alertController.create({
     header: 'Are you sure You want to Decline this Application?',
     // message: 'I cannot login',
@@ -106,6 +80,7 @@ async AlertPrompt() {
         text: 'Confirm',
         handler: () => {
           console.log('Confirm Submit');
+          this.decline(i);
         }
       }
     ]
@@ -115,22 +90,18 @@ async AlertPrompt() {
 }
 
 
+ decline(i){
+   this._serviceService.declineLord(i).subscribe(data =>
+    {
+      this.getLordApplication()
+    })
+ }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-async presentAlertPrompt() {
+async presentAlertPrompt(j) {
   const alert = await this.alertController.create({
     header: 'Are you sure You want to Accept this Application?',
     // message: 'I cannot login',
@@ -147,6 +118,7 @@ async presentAlertPrompt() {
         text: 'Confirm',
         handler: () => {
           console.log('Confirm Submit');
+          this.accept(j)
         }
       }
     ]
@@ -155,13 +127,10 @@ async presentAlertPrompt() {
   await alert.present();
 }
 
-
-
-
-
-
-
-
+accept(){
+  this._serviceService.acceptLord(this.accept).subscribe((data: any)=>
+  this.accept=data)
+}
 
 
 
@@ -261,27 +230,6 @@ async edit() {
       
     ]
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
