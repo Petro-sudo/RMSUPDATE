@@ -55,15 +55,19 @@
   
   <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78); font-weight: bold;"> Update Profile</ion-label>
   
+
+  <form action="">
   <br>
   <br>
   <ion-card style="width: 500px;height: 400px;">
-  <form action="">
+  
     <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;"> Personal Details</ion-label>
-  <br>
+  <br><br>
     <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Student Number"></ion-input>
   <br>
   <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Last Name"></ion-input>
+  <br>
+  <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Initials"></ion-input>
   <br>
   <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Select gender">
     <ion-select-option value="FEMALE">FEMALE</ion-select-option>
@@ -80,70 +84,41 @@
   </ion-toggle>
   <ion-label> Do you have disability?</ion-label>
   <br>
-  
-  
-  </form>
-  
   </ion-card>
   <br>
-  <ion-card  style="width: 500px;height: 200px;">
-   
-    <ion-item >
-     
-     <ion-label>
-      Contact Details
-     </ion-label>
-    </ion-item>
+
+  <ion-card style="width: 500px;height: 200px;">
+      <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;"> Contact Details</ion-label>
+    <br><br>
+      <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Cell Number"></ion-input>
+      <br>
+      <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Aternative Number"></ion-input>
+      <br>
+    <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Email Address"></ion-input>
+    <br>
+    </ion-card>
+
+    <br>
     
-    <ion-item>
-      <ion-label>
-        Medical Details
-       </ion-label>
-    </ion-item>
+  <ion-card style="width: 500px;height: 200px;">
+      <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;">Medical Details</ion-label>
+    <br><br>
+      <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Doctor's Last Name"></ion-input>
+      <br>
+      <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Doctor's Initials"></ion-input>
+      <br>
+      <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Doctor's Telephone Number"></ion-input>
+      <br>
+    <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Doctor's Fax Number" ></ion-input>
   
-    <ion-item>
-      <ion-label>
-        Course Details
-       </ion-label>
-    </ion-item>
-  
-  </ion-card>
-  
+    <br>
+    </ion-card>
+ 
   <br>
-  
-  <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;"> Update Profile</ion-label>
-  <br>
-  
-  
-  
-  
-  <ion-card  style="width: 500px;height: 200px;">
-   
-    <ion-item >
-     
-     <ion-label>
-      Personal Details
-     </ion-label>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label>
-        Contact Details
-       </ion-label>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>
-        Medical Details
-       </ion-label>
-    </ion-item>
-  
-  </ion-card>
-  <br>
+
+  <ion-card  style="width: 500px;height: 350px;">
   <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;"> Course Details</ion-label>
-  <br>
-  <ion-card  style="width: 500px;height: 400px;">
-  
+  <br><br>
     <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Campus of study">
       <ion-select-option value="FEMALE">Soshanguve south</ion-select-option>
       <ion-select-option value="MALE">Arcadia</ion-select-option>
@@ -157,12 +132,10 @@
     </ion-select>
     <br>
     <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Select your sponsor">
+      <ion-select-option value="FEMALE">Cash</ion-select-option>
       <ion-select-option value="FEMALE">NSFAS</ion-select-option>
       <ion-select-option value="MALE">Other bursaries</ion-select-option>
-     
     </ion-select>
-  
-  
   
     <br>
     <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Select your faculty">
@@ -174,11 +147,36 @@
     <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Year of adimission"></ion-input>
   
     <br>
-  
-    <ion-button outline color="danger">Previous</ion-button>
-    <ion-button outline color="primary">Finish</ion-button>
-  </ion-card>
-  </ion-content>
+    </ion-card>
+
+    <br>
+    
+  <ion-card  style="width: 500px;height: 200px;">
+    <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;">Resident Applicantion</ion-label>
+    <br><br>
+      <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Select Campus">
+        <ion-select-option value="Arcadia">Arcadia</ion-select-option>
+        <ion-select-option value="Main">Main Camp</ion-select-option>
+        <ion-select-option value="rankuwa">Ga-rankuwa</ion-select-option>
+        <ion-select-option value="south">Soshanguve south</ion-select-option>
+        <ion-select-option value="north">Soshanguve north</ion-select-option>
+      </ion-select>
+      <br>
+      <ion-select style="border:2px grey solid ;" position="floating"type="text" placeholder="Select Residence">
+        </ion-select>
+     
+    
+      <br>
+      <ion-input style="border:2px grey solid ;" position="floating"type="text" placeholder="Year of adimission"></ion-input>
+    
+      <br>
+      </ion-card>
+    <div style="text-align: center;">
+      <ion-button outline color="danger">Previous</ion-button>
+      <ion-button outline color="primary">Finish</ion-button>  
+    </div>
+  </form>
+</ion-content>
  
 
 
