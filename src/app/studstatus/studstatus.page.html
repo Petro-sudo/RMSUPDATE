@@ -131,22 +131,24 @@
                  
                 </ion-toolbar>
 <br>
-                <ion-button color="dark" expand="block" shape="round">
+                <ion-button color="dark" expand="block" shape="round" (click)="moveDiffResi()">
                     <ion-icon name="chevron-forward-outline"color="success" style="margin-right: 40px;"></ion-icon>
                     I would like to move to a different residence
                 </ion-button>
 
-               <ion-button color="dark" expand="block" shape="round" >
+               <ion-button color="dark" expand="block" shape="round" (click)="transDiffRoom()">
                  <ion-icon slot="start" name="chevron-forward-outline" color="success" style="margin-right: 50px;"></ion-icon>
                 
                    I would like to transfer to a different room
                 </ion-button>
 
-              <ion-button color="dark" expand="block" shape="round">
+              <ion-button color="dark" expand="block" shape="round" (click)="reserveRoom()">
                 
                   <ion-icon name="chevron-forward-outline" color="success" style="margin-right: 60px;"></ion-icon>
                 
                   I would like to reserve my current room</ion-button>
+                
+                    
 
                   <br>
                   

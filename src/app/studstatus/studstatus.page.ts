@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { NavController, PopoverController, Platform } from '@ionic/angular';
+import { NavController, PopoverController, Platform, AlertController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -23,7 +23,7 @@ export class StudstatusPage implements OnInit{
      private _serviceService : ServiceService,
     private platform    : Platform,
     private splashScreen: SplashScreen,
-    private statusBar   : StatusBar) { }
+    private statusBar   : StatusBar,public alertController: AlertController) { }
     navigate : any;
 
   ngOnInit() {
@@ -75,20 +75,6 @@ export class StudstatusPage implements OnInit{
           
         ]
       }
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -114,4 +100,183 @@ async popOver(ev: Event)  {
 poprate.present();
 }
 
+
+async moveDiffResi() {
+  const alert = await this.alertController.create({
+    header: 'Change Residence',
+    message: 'I wanna move to different resident',
+    inputs: [
+      {
+        name: 'name1',
+        type: 'text',
+        placeholder: 'reason for moving'
+      },
+    
+      // multiline input.
+     
+    ],
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        cssClass: 'secondary',
+        handler: () => {
+          console.log('Confirm Cancel');
+        }
+      }, {
+        text: 'Send',
+        handler: () => {
+          console.log('Confirm Submit');
+          
+        }
+      }
+    ]
+  });
+
+  await alert.present();
 }
+
+async transDiffRoom() {
+  const alert = await this.alertController.create({
+    header: 'Change Room',
+    message: 'I wanna be transferred to a different room',
+    inputs: [
+      {
+        name: 'name1',
+        type: 'text',
+        placeholder: 'reason '
+      },
+    
+      // multiline input.
+     
+    ],
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        cssClass: 'secondary',
+        handler: () => {
+          console.log('Confirm Cancel');
+        }
+      }, {
+        text: 'Send',
+        handler: () => {
+          console.log('Confirm Submit');
+          
+        }
+      }
+    ]
+  });
+
+  await alert.present();
+}
+
+async reserveRoom() {
+  const alert = await this.alertController.create({
+    header: 'Reserve The Room',
+    message: 'Are you sure you want to reserve this room for next year',
+    inputs: [
+      {
+        type: 'radio',
+        label: 'Yes',
+        value: 'Yes',
+        checked: true
+      },
+      {
+        type: 'radio',
+        label: 'No',
+        value: 'No',
+        checked: false
+      },
+    
+      // multiline input.
+     
+    ],
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        cssClass: 'secondary',
+        handler: () => {
+          console.log('Confirm Cancel');
+        }
+      }, {
+        text: 'Send',
+        handler: () => {
+          console.log('Confirm Submit');
+          
+        }
+      }
+    ]
+  });
+
+  await alert.present();
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// async reserveRoom() {
+//   const alert = await this.alertController.create({
+//     header: 'Reserve Room',
+//     message: 'Are sure you wanna reserve this room for next year',
+// alert.addInput({
+//   type: 'radio',
+//   label: 'Male',
+//   value: 'Male',
+//   checked: true
+// });
+
+// alert.addInput({
+//   type: 'radio',
+//   label: 'Female',
+//   value: 'Female',
+//   checked: false
+// });
+
+// alert.addButton('Cancel');
+// alert.addButton({
+//   text: 'OK',
+//   handler: data => {
+//     this.radioResult = data;
+//     console.log("data", this.radioResult);
+//     this.gender = this.radioResult;
+   
+//   }
+// });
+// alert.present();
+// }
+
+

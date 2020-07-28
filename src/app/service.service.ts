@@ -36,13 +36,13 @@ export class ServiceService {
 //for landlord app
 application_url ='http://192.168.43.92:9000/pendingprop';
 
-approvedapp_url ='http://192.168.43.92:9000/acceptedprop';
+approvedapp_url ='http://192.168.43.142:9000/acceptedprop';
 //manage approve
 
 //delete 
 
 
-delete_url ='http://192.168.43.92:9000/dlt';
+delete_url ='http://192.168.43.142:9000/dlt';
 
 
 //delete_url ='http://192.168.1.101:9000/dlt';
