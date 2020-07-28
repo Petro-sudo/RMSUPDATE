@@ -104,7 +104,7 @@ poprate.present();
 async moveDiffResi() {
   const alert = await this.alertController.create({
     header: 'Change Residence',
-    message: 'I wanna move to different resident',
+    message: 'I wanna move to a different resident',
     inputs: [
       {
         name: 'name1',
