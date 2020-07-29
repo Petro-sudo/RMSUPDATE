@@ -97,7 +97,16 @@ public getStudentsApp()
     return this.http.get<any>(this.appl_url);
   }
 
-  //
+  //student application
+
+studApp_url = 'http://192.168.43.142:9000/studapp';
+
+public studApplicationForm(studapp:any)
+{
+  return this.http.post<any>(this.studApp_url, studapp ,{});
+}
+
+  //-------------
 public status()
 {
   return this.http.get<any>(this.status_url)

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import{HttpClient} from '@angular/common/http';
 /*import {NavController} from '@ionic/angular';*/
 import {Observable} from 'rxjs';
@@ -14,6 +14,9 @@ import { Router } from '@angular/router';
 })
 export class StudProfilePage implements OnInit {
 
+  @Input() studData ={student_no: " ", Full_names: " ",Last_name:" ",Id_no:" ",gender:" ",disability:" ",
+  contact_student:" ", contact_guardian:" ", campus_study: " ",faculty:" ", course: " ", year_of_admission:" ",
+  sponsor:" " }
   result: any=[];
   data: Observable<any>;
   
@@ -22,7 +25,8 @@ export class StudProfilePage implements OnInit {
     private splashScreen: SplashScreen,
     private statusBar   : StatusBar,
     public alertCtrl: AlertController,
-    private router: Router
+    private router: Router,
+    private _serviceService : ServiceService
     ) { }
     navigate : any;
   ngOnInit() {
@@ -31,6 +35,14 @@ export class StudProfilePage implements OnInit {
 this.initializeApp();
 this.sideMenu();
 // this.profile();
+  }
+
+  //application
+  addStud(){
+    this._serviceService.studApplicationForm(this.studData).subscribe(
+      data=>console.log(data)
+    );
+    console.log(this.studData.disability)
   }
 
 
