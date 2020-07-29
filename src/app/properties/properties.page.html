@@ -76,8 +76,10 @@
 
   <div class="tab">
     <button class="tablinks" (click)="openCity(event, 'Dashboard')">DASHBOARD</button>
-    <button class="tablinks" (click)="openCity(event, 'Issues')">ISSUES</button>
+    <button class="tablinks" (click)="openCity(event, 'applications')">APPLICATIONS</button>
     <button class="tablinks" (click)="openCity(event, 'Tenants')">TENANTS</button>
+    <button class="tablinks" (click)="openCity(event, 'Issues')">ISSUES</button>
+   
   </div>
   
   <div id="Dashboard" class="tabcontent">
@@ -168,9 +170,6 @@
   </div>
   
   <div id="Tenants" class="tabcontent">
-    <h3></h3>
-   
-    
 
     <h1>Tenants</h1>
     <ion-searchbar></ion-searchbar>
@@ -207,12 +206,96 @@
       </tr>
     </table>
 
-
-
-
   </div>
   
+<div id="applications" class="tabcontent">
+  <ion-grid style="background-color: 	#FDF5E6;">
 
+    <ion-card>
+      <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
+        {{studApp.length}} New Applications</ion-title>
+    </ion-card>
+      
+    <!--      -->
+    <ion-card   style="background-color: rgb(5, 2, 61); border-radius:10px; width:500px ;" *ngFor= "let item of studApp" >
+         <br>
+      <ion-label   style="color: white;" id="properties" >
+     
+       Student Number: {{item.student_no}}
+      </ion-label>
+     
+      <br>
+      <ion-label  style="color: white;" >
+      First Name: {{item.Full_names}}
+      </ion-label>
+      <br>
+      <ion-label  style="color: white;" >
+      Last Name: {{item.Last_name}}
+       </ion-label>
+       <br>
+      <ion-label  style="color: white;" >
+       Gender: {{item.gender}}
+     </ion-label>
+     <br>
+     <ion-label  style="color: white;" >
+      Identity Number: {{item.Id_no}}
+    </ion-label>
+    <br>
+      <ion-label  style="color: white;" >
+        Disability: {{item.disability}}
+      </ion-label>
+      <br>
+      <ion-label  style="color: white;" >
+       Student Contact: {{item.contact_student}} 
+     </ion-label>
+     <br>
+      <ion-label  style="color: white;" >
+        Student Guardian: {{item.contact_guardian}} 
+     </ion-label>
+     <br>
+      <ion-label  style="color: white;" >
+        Course: {{item.course}}
+      </ion-label>
+      <br>
+      <ion-label  style="color: white;" >
+        Faculty: {{item.faculty}}
+      </ion-label>
+      <br>
+      <ion-label  style="color: white;" >
+        Campus: {{item.campus_study}}
+      </ion-label>
+      <br>
+      <ion-label  style="color: white;" >
+        Year of admission: {{item.year_of_admission}}
+      </ion-label>
+      <br>
+      <ion-label  style="color: white;" >
+        Sponsor: {{item.sponsor}}
+      </ion-label>
+      <br>
+         
+         <ion-button color="danger" (click)="declinePrompt(item.landlord_email)" >
+         
+          <ion-icon name="trash"></ion-icon>
+          Decline 
+         </ion-button>
+    
+         <ion-button color="success"  (click)="acceptAlertPrompt(item.landlord_email)">
+          <ion-icon name="shield-checkmark-outline"></ion-icon>
+          Accept 
+        </ion-button>
+        
+    
+        
+    
+       </ion-card>
+    
+    
+      </ion-grid>
+    
+    
+
+</div>
 
 
 

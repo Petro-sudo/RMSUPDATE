@@ -209,16 +209,6 @@ async edit() {
 }
 
 
-getProperty(){
-  this._serviceService.editProp(this.edit).subscribe((data: any)=>
-  this.edit=data)
-}
-
-
-
-
-
-
 
   sideMenu()
   {
@@ -254,16 +244,6 @@ getProperty(){
 
 
 
-
-
-
-
-
-
-
-
-
-
   navi()
   {
     this.router.navigate(['/folder/Home']);
@@ -271,7 +251,10 @@ getProperty(){
 
 
 
-
+  getProperty(){
+    this._serviceService.editProp(this.edit).subscribe((data: any)=>
+    this.edit=data)
+  }
 
 
 

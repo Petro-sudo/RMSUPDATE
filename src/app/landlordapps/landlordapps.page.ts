@@ -30,13 +30,13 @@ export class LandlordappsPage implements OnInit {
 
 
   public lookApp: any=[];
+  public items: any;
   public addProps: any=[];
   addimg: any=[];
   public searchTerm: string = "";
-  public items: any;
+ 
   navigate : any;
-  accept: any;
-  decline: any;
+  
   ngOnInit() {
 
     this.getLordApplication();
@@ -217,7 +217,30 @@ async edit() {
 
 
 
-  sideMenu()
+
+
+  getLordApplication(){
+    var searchTerm= "";
+     return  this._serviceService.getLandlordApp().
+     subscribe((apart:any)=>
+      {this.lookApp = apart;
+        console.log(this.lookApp
+          );
+        //  this.filterItems(searchTerm); 
+        var num =this.lookApp.length;
+        
+      });
+    }
+
+calc()
+{
+
+  console.log(this.lookApp.length);
+}
+
+
+
+sideMenu()
   {
     this.navigate =
     [
@@ -248,31 +271,6 @@ async edit() {
       
     ]
   }
-
-
-
-
-
-  getLordApplication(){
-    var searchTerm= "";
-     return  this._serviceService.getLandlordApp().
-     subscribe((apart:any)=>
-      {this.lookApp = apart;
-        console.log(this.lookApp
-          );
-        //  this.filterItems(searchTerm); 
-        var num =this.lookApp.length;
-        
-      });
-    }
-
-calc()
-{
-
-  console.log(this.lookApp.length);
-}
-
-
 
 
 

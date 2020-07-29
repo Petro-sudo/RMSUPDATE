@@ -165,7 +165,6 @@
     
 //   }
 import{HttpClient} from '@angular/common/http';
-/*import {NavController} from '@ionic/angular';*/
 import {Observable} from 'rxjs';
 import {ServiceService} from './../service.service';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -190,10 +189,16 @@ import { Chart } from 'chart.js';
     private platform    : Platform,
         private splashScreen: SplashScreen,
         private statusBar   : StatusBar,
+        private _serviceService: ServiceService,
         public alertCtrl: AlertController,
         private router: Router,
         public alertController: AlertController
   ) { }
+
+//nnnnnn
+  public studApp: any=[];
+  public items: any;
+
   navigate : any;
   ionViewDidEnter() {
     this.createBarChart();
@@ -201,6 +206,18 @@ import { Chart } from 'chart.js';
     this.initializeApp();
 this.sideMenu();
   }
+////nnn
+  ngOnInit() {
+
+    this.getStudApplication();
+    this.initializeApp();
+    this.sideMenu();
+    this.calc();
+  }
+
+  
+
+
 
   createlabelChart(){
 
@@ -228,11 +245,6 @@ this.sideMenu();
     });
 
   }
-
-
-
-
-
 
   createBarChart() {
     this.bars = new Chart(this.barChart.nativeElement, {
@@ -272,22 +284,6 @@ this.sideMenu();
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -330,18 +326,6 @@ this.sideMenu();
       
     ]
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
   async presentAlertPrompt() {
     const alert = await this.alertController.create({
@@ -425,12 +409,97 @@ this.sideMenu();
 
     await alert.present();
   }
+//neeeeew
+
+getStudApplication(){
+  var searchTerm= "";
+   return  this._serviceService.getStudentsApp().
+   subscribe((apart:any)=>
+    {this.studApp = apart;
+      console.log(this.studApp
+        );
+       
+      var num =this.studApp.length;
+      
+    });
+  }
+
+calc()
+{
+
+console.log(this.studApp.length);
+}
 
 
+async declinePrompt(i) {
+  const alert = await this.alertController.create({
+    header: 'Are you sure You want to Decline this Application?',
+    inputs: [
+      {
+        type: 'text',
+        placeholder: 'reason for declining'
+      },
+    ],
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        cssClass: 'secondary',
+        handler: () => {
+          console.log('Confirm Cancel');
+        }
+      }, {
+        text: 'Confirm',
+        handler: () => {
+          console.log('Confirm Submit');
+          // this.declineProvider(i);
+        }
+      }
+    ]
+  });
 
+  await alert.present();
+}
 
+// declineStudent(i){
+//   this._serviceService.declineLord(i).subscribe(data=>
+//   {this.getLordApplication()
+//   })
+//   this.getLordApplication();
+// }
 
+async acceptAlertPrompt(j) {
+  const alert = await this.alertController.create({
+    header: 'Are you sure You want to Accept this Application?',
+    
 
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        cssClass: 'secondary',
+        handler: () => {
+          console.log('Confirm Cancel');
+        }
+      }, {
+        text: 'Confirm',
+        handler: () => {
+          console.log('Confirm Submit');
+          // this.acceptProvider(j);
+        }
+      }
+    ]
+  });
+
+  await alert.present();
+}
+
+// acceptProvider(j){
+//   this._serviceService.acceptLord(j).subscribe(data =>
+//     {this.getLordApplication()
+//     })
+//     this.getLordApplication();
+// }
 
 
 

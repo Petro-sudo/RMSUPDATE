@@ -34,28 +34,30 @@ export class ServiceService {
   stat_urlfemale = 'http://192.168.43.92:9000/female';
 
 //for landlord app
-application_url ='http://192.168.43.92:9000/pendingprop';
+application_url ='http://192.168.43.142:9000/pendingprop';
 
+public getLandlordApp()
+  {
+    return this.http.get<any>(this.application_url);
+  }
+
+//manage approved prop
 approvedapp_url ='http://192.168.43.142:9000/acceptedprop';
-//manage approve
+
+public getApprovedApp()
+{return this.http.get<any>(this.approvedapp_url);
+}
 
 //delete 
-
-
-delete_url ='http://192.168.43.142:9000/dlt';
-
+delete_url ='http://192.168.43.92:9000/dlt';
 
 //delete_url ='http://192.168.1.101:9000/dlt';
-
-//delete function
 public deleteLord(landlord_email)
 {
   return this.http.delete<any>(this.delete_url +"/"+ landlord_email)
 }
 
-
-
-//decline
+//decline landlord
 decline_url ='http://192.168.43.92:9000/rejectapp';
 
 public declineLord(landlord_email )
@@ -63,8 +65,7 @@ public declineLord(landlord_email )
   return this.http.post<any>(this.decline_url +"/"+ landlord_email,landlord_email,landlord_email)
 }
 
-
-//accept
+//accept landlord
 accept_url ='http://192.168.43.92:9000/acceptapp';
 
 public acceptLord(landlord_email)
@@ -88,6 +89,15 @@ public editProp(edit:any)
   return this.http.post<any>(this.editP_url, edit, {})
 }
 
+//get students application
+appl_url ='http://192.168.43.142:9000/getstud/';
+
+public getStudentsApp()
+  {
+    return this.http.get<any>(this.appl_url);
+  }
+
+  //
 public status()
 {
   return this.http.get<any>(this.status_url)
@@ -132,14 +142,10 @@ public postLandlord(addlord:any)
   return this.http.post<any>(this.reg_url, addlord, {});
 }
 
-
-
   public poststu(reg:any)
   {
     return this.http.post<any>(this.regstu_url, reg, {});
   }
-
-  
 
   public getApartment()
   {
@@ -147,20 +153,9 @@ public postLandlord(addlord:any)
     return this.http.get<any>(this.apart_url);
   }
 
- 
-
-  public getApprovedApp()
-  {return this.http.get<any>(this.approvedapp_url);
-  }
-
   public getAppliedstu()
   {
     return this.http.get<any>(this.Aplystutest);
-  }
-
-  public getLandlordApp()
-  {
-    return this.http.get<any>(this.application_url);
   }
 
   public getimages()
