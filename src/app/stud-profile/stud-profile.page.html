@@ -90,11 +90,11 @@
   <ion-card style="width: 500px;height: 200px;">
       <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;"> Contact Details</ion-label>
     <br><br>
-      <ion-input [(ngModel)] = "studData.contact_student" name="contactS" style="border:2px grey solid ;" position="floating"type="text" placeholder="Cell Number"></ion-input>
+      <ion-input [(ngModel)] = "studData.contact_student" name="contact_student" style="border:2px grey solid ;" position="floating"type="text" placeholder="Cell Number"></ion-input>
       <br>
-      <ion-input [(ngModel)] = "studData.contact_guardian" name="contactG" style="border:2px grey solid ;" position="floating"type="text" placeholder="Aternative Number"></ion-input>
+      <ion-input [(ngModel)] = "studData.contact_guardian" name="contact_guardian" style="border:2px grey solid ;" position="floating"type="text" placeholder="Aternative Number"></ion-input>
       <br>
-    <ion-input [(ngModel)] = "studData.stud_email" name="Email" style="border:2px grey solid ;" position="floating"type="text" placeholder="Email Address"></ion-input>
+    <ion-input [(ngModel)] = "studData.stud_email" name="stud_email" style="border:2px grey solid ;" position="floating"type="text" placeholder="Email Address"></ion-input>
     <br>
     </ion-card>
 
@@ -121,15 +121,15 @@
   <br>
     <br>
     <ion-select [(ngModel)] = "studData.course" name="course" style="border:2px grey solid ;" position="floating"type="text" placeholder="Select your course">
-      <ion-select-option value="FEMALE">Information Technology</ion-select-option>
-      <ion-select-option value="MALE">Electrical engineering</ion-select-option>
-      <ion-select-option value="MALE">Bio-Tech</ion-select-option>
+      <ion-select-option value="Information Technology">Information Technology</ion-select-option>
+      <ion-select-option value="Electrical engineering">Electrical engineering</ion-select-option>
+      <ion-select-option value="Bio-Tech">Bio-Tech</ion-select-option>
     </ion-select>
     <br>
-    <ion-select [(ngModel)] = "studData.sponsor" name="payment" style="border:2px grey solid ;" position="floating"type="text" placeholder="Select your sponsor">
-      <ion-select-option value="FEMALE">Cash</ion-select-option>
-      <ion-select-option value="FEMALE">NSFAS</ion-select-option>
-      <ion-select-option value="MALE">Other bursaries</ion-select-option>
+    <ion-select [(ngModel)] = "studData.sponsor" name="sponsor" style="border:2px grey solid ;" position="floating"type="text" placeholder="Select your sponsor">
+      <ion-select-option value="Cash">Cash</ion-select-option>
+      <ion-select-option value="NSFAS">NSFAS</ion-select-option>
+      <ion-select-option value="Other bursaries">Other bursaries</ion-select-option>
     </ion-select>
   
     <br>
@@ -139,7 +139,7 @@
      
     </ion-select>
     <br>
-    <ion-input [(ngModel)] = "studData.year_of_admission" name="yearAdm" style="border:2px grey solid ;" position="floating"type="text" placeholder="Year of adimission"></ion-input>
+    <ion-input [(ngModel)] = "studData.year_of_admission" name="year_of_admission" style="border:2px grey solid ;" position="floating"type="year" placeholder="Year of adimission"></ion-input>
   
     <br>
     </ion-card>
@@ -149,11 +149,11 @@
   <ion-card  style="width: 500px;height: 200px;">
     <ion-label style="margin-top:-10px; margin-left: 40px;border-left: 10px 	rgb(83, 218, 83) solid;font-size: 30px;color: rgb(4, 4, 78);font-weight: bold;">Resident Applicantion</ion-label>
     <br><br>
-      <ion-select [(ngModel)] = "studData.campus_study" name="campus" style="border:2px grey solid ;" position="floating"type="text" placeholder="Select Campus">
+      <ion-select [(ngModel)] = "studData.campus_study" name="campus_study" style="border:2px grey solid ;" position="floating"type="text" placeholder="Select Campus">
         <ion-select-option value="Arcadia">Arcadia</ion-select-option>
         <ion-select-option value="Main">Main Camp</ion-select-option>
         <ion-select-option value="rankuwa">Ga-rankuwa</ion-select-option>
-        <ion-select-option value="south">Soshanguve south</ion-select-option>
+        <ion-select-option value="Soshanguve">Soshanguve </ion-select-option>
         <ion-select-option value="north">Soshanguve north</ion-select-option>
       </ion-select>
       <br>
