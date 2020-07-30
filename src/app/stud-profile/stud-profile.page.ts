@@ -14,11 +14,11 @@ import { Router } from '@angular/router';
 })
 export class StudProfilePage implements OnInit {
 
-  @Input() studData ={student_no: " ", Full_names: " ",Last_name:" ",Id_no:" ",gender:" ",disability:" ",
-  contact_student:" ", contact_guardian:" ", campus_study: " ",faculty:" ", course: " ", year_of_admission:" ",
+  @Input() studData= {student_no:" ", Full_names:" ", Last_name:" ",Id_no:" ",gender:" ",disability:" ",
+  contact_student:" ", contact_guardian:" ", campus_study:" ",faculty:" ", course:" ", year_of_admission:" ",
   sponsor:" " }
-  result: any=[];
-  data: Observable<any>;
+  //result: any=[];
+ // data: Observable<any>;
   
   constructor(/*public navCtrl: NavController,*/ public http: HttpClient,
     private platform    : Platform,
@@ -31,7 +31,7 @@ export class StudProfilePage implements OnInit {
     navigate : any;
   ngOnInit() {
 
-    this.getData();
+    // this.getData();
 this.initializeApp();
 this.sideMenu();
 // this.profile();
@@ -42,7 +42,7 @@ this.sideMenu();
     this._serviceService.studApplicationForm(this.studData).subscribe(
       data=>console.log(data)
     );
-    console.log(this.studData.disability)
+    // console.log(this.studData.disability)
   }
 
 
@@ -147,16 +147,15 @@ this.sideMenu();
 
 
 
-  getData(){
-    var url='http://168.172.185.106:5000/getstud/40';
-    this.data= this.http.get(url);
-    //this.data.subscribe(data =>{
-        //this.result=data;
-        console.log("clicked");
+  // getData(){
+  //   var url='http://168.172.185.106:5000/getstud/40';
+  //   this.data= this.http.get(url);
+    
+  //       console.log("clicked");
 
       
-    //});
     
-  }
+    
+  // }
 
 }

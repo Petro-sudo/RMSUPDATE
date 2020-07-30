@@ -197,6 +197,7 @@ import { Chart } from 'chart.js';
 
 //nnnnnn
   public studApp: any=[];
+  public studAcpt: any= [];
   public items: any;
 
   navigate : any;
@@ -213,6 +214,7 @@ this.sideMenu();
     this.initializeApp();
     this.sideMenu();
     this.calc();
+    this.calc1();
   }
 
   
@@ -410,7 +412,7 @@ this.sideMenu();
     await alert.present();
   }
 //neeeeew
-
+//get pending student
 getStudApplication(){
   var searchTerm= "";
    return  this._serviceService.getStudentsApp().
@@ -430,7 +432,28 @@ calc()
 console.log(this.studApp.length);
 }
 
+//get accepted student
+getAcceptStud(){
+  var searchTerm= "";
+   return  this._serviceService.getStudentsAcptd().
+   subscribe((apart:any)=>
+    {this.studAcpt = apart;
+      console.log(this.studAcpt
+        );
+       
+      var num =this.studAcpt.length;
+      
+    });
+  }
 
+calc1()
+{
+
+console.log(this.studAcpt.length);
+}
+
+
+//decline stud btn
 async declinePrompt(i) {
   const alert = await this.alertController.create({
     header: 'Are you sure You want to Decline this Application?',
@@ -452,7 +475,7 @@ async declinePrompt(i) {
         text: 'Confirm',
         handler: () => {
           console.log('Confirm Submit');
-          // this.declineProvider(i);
+          this.declinestudent(i);
         }
       }
     ]
@@ -461,13 +484,16 @@ async declinePrompt(i) {
   await alert.present();
 }
 
-// declineStudent(i){
-//   this._serviceService.declineLord(i).subscribe(data=>
-//   {this.getLordApplication()
-//   })
-//   this.getLordApplication();
-// }
+//decline student
+declinestudent(i){
+  this._serviceService.declineStudent(i).subscribe(data=>
+  {this.getStudApplication()
+  })
+  this.getStudApplication();
+}
 
+
+//accept stud
 async acceptAlertPrompt(j) {
   const alert = await this.alertController.create({
     header: 'Are you sure You want to Accept this Application?',
@@ -485,7 +511,7 @@ async acceptAlertPrompt(j) {
         text: 'Confirm',
         handler: () => {
           console.log('Confirm Submit');
-          // this.acceptProvider(j);
+           this.acceptstudent(j);
         }
       }
     ]
@@ -493,13 +519,13 @@ async acceptAlertPrompt(j) {
 
   await alert.present();
 }
-
-// acceptProvider(j){
-//   this._serviceService.acceptLord(j).subscribe(data =>
-//     {this.getLordApplication()
-//     })
-//     this.getLordApplication();
-// }
+//accept student
+acceptstudent(j){
+  this._serviceService.acceptStudent(j).subscribe(data =>
+    {this.getStudApplication()
+    })
+    this.getStudApplication();
+}
 
 
 

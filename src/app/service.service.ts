@@ -89,22 +89,50 @@ public editProp(edit:any)
   return this.http.post<any>(this.editP_url, edit, {})
 }
 
-//get students application
-appl_url ='http://192.168.43.142:9000/getstud/';
+//get students pending
+appl_url ='http://192.168.43.142:9000/pendingstud/';
 
 public getStudentsApp()
   {
     return this.http.get<any>(this.appl_url);
   }
 
+  //get student accepted
+  Actappl_url ='http://192.168.43.142:9000/acceptedstud/';
+
+public getStudentsAcptd()
+  {
+    return this.http.get<any>(this.Actappl_url);
+  }
+
   //student application
 
-studApp_url = 'http://192.168.43.142:9000/studapp';
+studApp_url = 'http:/192.168.43.142:9000/updateStu';
 
-public studApplicationForm(studapp:any)
+public studApplicationForm(updateStu:any)
 {
-  return this.http.post<any>(this.studApp_url, studapp ,{});
+  return this.http.post<any>(this.studApp_url, updateStu, {});
 }
+
+
+//decline student
+declineStd_url ='http://192.168.43.92:9000/rejectStud';
+
+public declineStudent(landlord_email )
+{
+  return this.http.post<any>(this.decline_url +"/"+ landlord_email,landlord_email)
+}
+
+//accept student
+acceptStd_url ='http://192.168.43.92:9000/acceptStud';
+
+public acceptStudent(landlord_email)
+{
+  return this.http.post<any>(this.accept_url +"/"+ landlord_email,landlord_email)
+}
+
+
+
 
   //-------------
 public status()

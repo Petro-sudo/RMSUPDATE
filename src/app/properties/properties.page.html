@@ -172,39 +172,74 @@
   <div id="Tenants" class="tabcontent">
 
     <h1>Tenants</h1>
-    <ion-searchbar></ion-searchbar>
-    <table class="rwd-table">
+    
+    <ion-card>
+      <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
+        {{studAcpt.length}} New Applications</ion-title>
+    </ion-card>
       
-      <tr>
-        <th>student Number</th>
-        <th>student Number</th>
-        <th>building</th>
-        <th>Start Date</th>
-        <th>End Date</th>
+    <!--      -->
+    <ion-card   style="background-color: rgb(21, 187, 6); border-radius:10px; width:500px ;" *ngFor= "let item of studAcpt" >
+         <br>
+      
+        <ion-label   style="color: white;" id="properties" >
+     
+          Student Number: {{item.student_no}}
+         </ion-label>
         
-      </tr>
-      <tr>
-        <td data-th="StudentNumber">21826885</td>
-        <td data-th="Full Name">Kgopotso Lelake</td>
-        <td data-th="Building">1-g-77</td>
-        <td data-th="Start Date">2020/05/30</td>
-        <td data-th="End Date">2020/05/30</td>
-      </tr>
-      <tr>
-        <td data-th="StudentNumber">21826888</td>
-        <td data-th="Full Name">Petre maluleka</td>
-        <td data-th="Building">1-g-78</td>
-        <td data-th="Start Date">2020/05/30</td>
-        <td data-th="End Date">2020/05/30</td>
-      </tr>
-      <tr>
-        <td data-th="StudentNumber">21924885</td>
-        <td data-th="Full Name">Noxolo Zuma</td>
-        <td data-th="Building">1-g-79</td>
-        <td data-th="Start Date">2020/05/30</td>
-        <td data-th="End Date">2020/05/30</td>
-      </tr>
-    </table>
+         <br>
+         <ion-label  style="color: white;" >
+         First Name: {{item.Full_names}}
+         </ion-label>
+         <br>
+         <ion-label  style="color: white;" >
+         Last Name: {{item.Last_name}}
+          </ion-label>
+          <br>
+         <ion-label  style="color: white;" >
+          Gender: {{item.gender}}
+        </ion-label>
+        <br>
+        <ion-label  style="color: white;" >
+         Identity Number: {{item.Id_no}}
+       </ion-label>
+       <br>
+         <ion-label  style="color: white;" >
+           Disability: {{item.disability}}
+         </ion-label>
+         <br>
+         <ion-label  style="color: white;" >
+          Student Contact: {{item.contact_student}} 
+        </ion-label>
+        <br>
+         <ion-label  style="color: white;" >
+           Student Guardian: {{item.contact_guardian}} 
+        </ion-label>
+        <br>
+         <ion-label  style="color: white;" >
+           Course: {{item.course}}
+         </ion-label>
+         <br>
+         <ion-label  style="color: white;" >
+           Faculty: {{item.faculty}}
+         </ion-label>
+         <br>
+         <ion-label  style="color: white;" >
+           Campus: {{item.campus_study}}
+         </ion-label>
+         <br>
+         <ion-label  style="color: white;" >
+           Year of admission: {{item.year_of_admission}}
+         </ion-label>
+         <br>
+         <ion-label  style="color: white;" >
+           Sponsor: {{item.sponsor}}
+         </ion-label>
+         <br>
+
+        
+    
+       </ion-card>
 
   </div>
   
