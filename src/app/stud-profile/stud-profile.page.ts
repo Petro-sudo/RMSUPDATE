@@ -16,7 +16,8 @@ export class StudProfilePage implements OnInit {
 
   @Input() studData ={student_no: " ", Full_names: " ",Last_name:" ",Id_no:" ",gender:" ",disability:" ",
   contact_student:" ", contact_guardian:" ", campus_study: " ",faculty:" ", course: " ", year_of_admission:" ",
-  sponsor:" " }
+  sponsor:" " };
+
   result: any=[];
   data: Observable<any>;
   
@@ -34,6 +35,7 @@ export class StudProfilePage implements OnInit {
     this.getData();
 this.initializeApp();
 this.sideMenu();
+this.studData.campus_study;
 // this.profile();
   }
 
@@ -42,7 +44,7 @@ this.sideMenu();
     this._serviceService.studApplicationForm(this.studData).subscribe(
       data=>console.log(data)
     );
-    console.log(this.studData.disability)
+    console.log(this.studData);
   }
 
 

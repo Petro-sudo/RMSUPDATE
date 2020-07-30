@@ -99,11 +99,11 @@ public getStudentsApp()
 
   //student application
 
-studApp_url = 'http://192.168.43.142:9000/studapp';
+studApp_url = 'http://192.168.43.92:9000/updateStu/';
 
-public studApplicationForm(studapp:any)
+public studApplicationForm(studData)
 {
-  return this.http.post<any>(this.studApp_url, studapp ,{});
+  return this.http.post<any>(this.studApp_url,studData ,{});
 }
 
   //-------------
