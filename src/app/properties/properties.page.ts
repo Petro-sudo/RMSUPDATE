@@ -208,8 +208,9 @@ import { Chart } from 'chart.js';
 this.sideMenu();
   }
 ////nnn
+public approved: any=[];
   ngOnInit() {
-
+this.getApproved();
     this.getStudApplication();
     this.initializeApp();
     this.sideMenu();
@@ -412,6 +413,7 @@ this.sideMenu();
     await alert.present();
   }
 //neeeeew
+
 //get pending student
 getStudApplication(){
   var searchTerm= "";
@@ -433,23 +435,22 @@ console.log(this.studApp.length);
 }
 
 //get accepted student
-getAcceptStud(){
+
+getApproved(){
   var searchTerm= "";
    return  this._serviceService.getStudentsAcptd().
    subscribe((apart:any)=>
-    {this.studAcpt = apart;
-      console.log(this.studAcpt
+    {this.approved = apart;
+      console.log(this.approved
         );
-       
-      var num =this.studAcpt.length;
-      
+      //  this.filterItems(searchTerm); 
     });
   }
-
 calc1()
 {
 
 console.log(this.studAcpt.length);
+
 }
 
 
@@ -525,7 +526,7 @@ acceptstudent(j){
   this._serviceService.acceptStudent(j).subscribe(data =>
     {this.getStudApplication()
     })
-    this.getStudApplication();
+   this.getStudApplication();
 }
 
 

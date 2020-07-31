@@ -90,7 +90,7 @@ public editProp(edit:any)
 }
 
 //get students pending
-appl_url ='http://192.168.43.142:9000/pendingstud/';
+appl_url ='http://192.168.43.92:9000/pendingstud/';
 
 public getStudentsApp()
   {
@@ -98,7 +98,7 @@ public getStudentsApp()
   }
 
   //get student accepted
-  Actappl_url ='http://192.168.43.142:9000/acceptedstud/';
+  Actappl_url ='http://192.168.43.92:9000/acceptedstud/';
 
 public getStudentsAcptd()
   {
@@ -117,18 +117,18 @@ public studApplicationForm(studData)
 //accept student
 acceptStd_url ='http://192.168.43.92:9000/acceptStud';
 
-public acceptStudent(landlord_email)
+public acceptStudent(student_no)
 {
-  return this.http.post<any>(this.accept_url +"/"+ landlord_email,landlord_email)
+  return this.http.post<any>(this.acceptStd_url +"/"+ student_no,{})
 }
 
 
 //decline student
 declineStd_url ='http://192.168.43.92:9000/rejectStud';
 
-public declineStudent(landlord_email )
+public declineStudent(student_no)
 {
-  return this.http.post<any>(this.declineStd_url +"/"+landlord_email,landlord_email)
+  return this.http.post<any>(this.declineStd_url +"/"+student_no,{})
 }
 
 

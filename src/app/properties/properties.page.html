@@ -175,11 +175,11 @@
     
     <ion-card>
       <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
-        {{studAcpt.length}} New Applications</ion-title>
+        {{approved.length}} New Applications</ion-title>
     </ion-card>
       
     <!--      -->
-    <ion-card   style="background-color: rgb(21, 187, 6); border-radius:10px; width:500px ;" *ngFor= "let item of studAcpt" >
+    <ion-card   style="background-color: rgb(21, 187, 6); border-radius:10px; width:500px ;" *ngFor= "let item of approved" >
          <br>
       
         <ion-label   style="color: white;" id="properties" >
@@ -234,6 +234,11 @@
          <br>
          <ion-label  style="color: white;" >
            Sponsor: {{item.sponsor}}
+         </ion-label>
+         <br>
+         
+         <ion-label  style="color: white;" >
+           Status: {{item.status}}
          </ion-label>
          <br>
 
@@ -308,14 +313,18 @@
         Sponsor: {{item.sponsor}}
       </ion-label>
       <br>
+      <ion-label  style="color: white;" >
+        Status: {{item.status}}
+      </ion-label>
+      <br>
          
-         <ion-button color="danger" (click)="declinePrompt(item.landlord_email)" >
+         <ion-button color="danger" (click)="declinePrompt(item.student_no)" >
          
           <ion-icon name="trash"></ion-icon>
           Decline 
          </ion-button>
     
-         <ion-button color="success"  (click)="acceptAlertPrompt(item.landlord_email)">
+         <ion-button color="success"  (click)="acceptAlertPrompt(item.student_no)">
           <ion-icon name="shield-checkmark-outline"></ion-icon>
           Accept 
         </ion-button>
