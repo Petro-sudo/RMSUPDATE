@@ -107,20 +107,11 @@ public getStudentsAcptd()
 
   //student application
 
-studApp_url = 'http:/192.168.43.142:9000/updateStu';
+studApp_url = 'http://192.168.43.92:9000/updateStu/';
 
-public studApplicationForm(updateStu:any)
+public studApplicationForm(studData)
 {
-  return this.http.post<any>(this.studApp_url, updateStu, {});
-}
-
-
-//decline student
-declineStd_url ='http://192.168.43.92:9000/rejectStud';
-
-public declineStudent(landlord_email )
-{
-  return this.http.post<any>(this.decline_url +"/"+ landlord_email,landlord_email)
+  return this.http.post<any>(this.studApp_url,studData ,{});
 }
 
 //accept student
