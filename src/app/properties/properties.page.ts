@@ -519,6 +519,7 @@ async acceptAlertPrompt(j) {
 
   await alert.present();
 }
+ 
 //accept student
 acceptstudent(j){
   this._serviceService.acceptStudent(j).subscribe(data =>
