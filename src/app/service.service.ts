@@ -123,6 +123,14 @@ public acceptStudent(landlord_email)
 }
 
 
+//decline student
+declineStd_url ='http://192.168.43.92:9000/rejectStud';
+
+public declineStudent(landlord_email )
+{
+  return this.http.post<any>(this.declineStd_url +"/"+landlord_email,landlord_email)
+}
+
 
 
   //-------------
