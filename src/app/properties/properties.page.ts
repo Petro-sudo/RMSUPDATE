@@ -210,7 +210,7 @@ this.sideMenu();
 ////nnn
 public approved: any=[];
   ngOnInit() {
-this.getApproved();
+    this.getApproved();
     this.getStudApplication();
     this.initializeApp();
     this.sideMenu();

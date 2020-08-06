@@ -105,24 +105,22 @@
   </ion-item>
     
     <ion-label position="floating">Full Names</ion-label>
-    <ion-input>
+    <ion-input [(ngModel)] = "lordData.full_name" name="full_name"  type="text">
     </ion-input>
     <ion-label position="floating">Surname</ion-label>
-    <ion-input> 
+    <ion-input [(ngModel)] = "lordData.last_name" name="last_name"  type="text"> 
     </ion-input>
-
-      <ion-label>Identification Type</ion-label>
-      <ion-input>
-        <ion-select interface="popover">
-          <ion-select-option value="dl">Drivers License</ion-select-option>
-          <ion-select-option value="id">Identification Card</ion-select-option>
-          <ion-select-option value="ps">Passport</ion-select-option>
-        </ion-select>
-        </ion-input>
+        
+  <ion-label position="floating">Identification Type</ion-label>
+  <ion-select [(ngModel)] = "lordData.ID_type" name="ID_type" type="text" placeholder="Select ID type">
+    <ion-select-option value="Drivers License">Drivers License</ion-select-option>
+    <ion-select-option value="Identification Card">Identification Card</ion-select-option>
+    <ion-select-option value="Passport">Passport</ion-select-option>
+  </ion-select>
       
 
       <ion-label position="floating">Identification Number</ion-label>
-    <ion-input> 
+    <ion-input [(ngModel)] = "lordData.ID_number" name="ID_number" type ="text"> 
     </ion-input>
     
   
@@ -134,10 +132,10 @@
     </ion-item>
 
     <ion-label position="floating">Company Name</ion-label>
-    <ion-input>
+    <ion-input [(ngModel)] = "lordData.company_name" name="company_name"  type="text">
     </ion-input>
     <ion-label position="floating">Company Registration number</ion-label>
-    <ion-input> 
+    <ion-input [(ngModel)] = "lordData.registration_no" name="registration_no"  type="text"> 
     </ion-input>
     
 </div>
@@ -152,23 +150,23 @@
     margin-left: 40px;border-left: 10px 	rgb(6, 2, 73)solid">Contact Details</ion-title>
 <br>
       <ion-label position="floating">Email Address</ion-label>
-      <ion-input>
+      <ion-input [(ngModel)] = "lordData.email_address" name="email_address"  type="text">
       </ion-input>
 
       <ion-label position="floating">Telephone Numbers</ion-label>
-      <ion-input> 
+      <ion-input [(ngModel)] = "lordData.telephone" name = "telephone" type="text"> 
       </ion-input>
 
       <ion-label position="floating">Home Numbers</ion-label>
-      <ion-input>
+      <ion-input [(ngModel)] = "lordData.home_number" name = "home_number" type="text">
       </ion-input>
 
       <ion-label position="floating">Fax Numbers</ion-label>
-      <ion-input> 
+      <ion-input [(ngModel)] = "lordData.fax_number" name = "fax_number" type="text">  
       </ion-input>
 
       <ion-label position="floating">Cell Numbers</ion-label>
-      <ion-input>
+      <ion-input [(ngModel)] = "lordData.cell_number" name = "cell_number" type="text">
       </ion-input>
       
 </ion-card>
@@ -183,31 +181,31 @@
     margin-left: 40px;border-left: 10px 	rgb(6, 2, 73)solid">Address Details</ion-title>
     <br>
      <ion-label position="floating">Unit/House Number</ion-label>
-     <ion-input>
+     <ion-input [(ngModel)] = "lordData.house_number" name = "house_number" type="text">
      </ion-input>
 
      <ion-label position="floating">Suburb</ion-label>
-     <ion-input> 
+     <ion-input [(ngModel)] = "lordData.suburb" name = "suburb" type="text"> 
      </ion-input>
 
      <ion-label position="floating">Province</ion-label>
-     <ion-input>
+     <ion-input [(ngModel)] = "lordData.province" name = "province" type="text">
      </ion-input>
 
      <ion-label position="floating">Zip Code</ion-label>
-     <ion-input> 
+     <ion-input [(ngModel)] = "lordData.zip_code" name = "zip_code" type="text"> 
      </ion-input>
 
      <ion-label position="floating">Street Name</ion-label>
-     <ion-input>
+     <ion-input [(ngModel)] = "lordData.street_name" name = "street_name" type="text">
      </ion-input>
      
      <ion-label position="floating">City/Town</ion-label>
-     <ion-input> 
+     <ion-input [(ngModel)] = "lordData.city" name = "city" type="text"> 
      </ion-input>
 
      <ion-label position="floating">Country</ion-label>
-     <ion-input>
+     <ion-input [(ngModel)] = "lordData.country" name = "country" type="text">
      </ion-input>
 </ion-card> 
 
@@ -220,39 +218,39 @@
     margin-left: 40px;border-left: 10px 	rgb(6, 2, 73)solid">The Details of Property</ion-title>
     <br>
      <ion-label position="floating">Name of the property</ion-label>
-     <ion-input>
+     <ion-input [(ngModel)] = "propData.prop_name" name = "prop_name" type="text">
      </ion-input>
 
      <ion-label position="floating">Name the closest campus you at</ion-label>
-     <ion-input> 
+     <ion-input [(ngModel)] = "propData.campus" name = "campus" type="text"> 
      </ion-input>
 
      <ion-label position="floating">Write the number of rooms of the property</ion-label>
-     <ion-input>
+     <ion-input [(ngModel)] = "propData.num_rooms" name = "num_rooms" type="text">
      </ion-input>
 
      <ion-label position="floating">How many floors does the property contain</ion-label>
-     <ion-input> 
+     <ion-input [(ngModel)] = "propData.num_floors" name = "num_floors" type="text"> 
      </ion-input>
 
-     <ion-label position="floating">How many rooms with the single beds</ion-label>
-     <ion-input>
+     <ion-label position="floating">How many rooms with the sharing beds</ion-label>
+     <ion-input [(ngModel)] = "propData.bedSharing" name = "bedSharing" type="text">
      </ion-input>
      
-     <ion-label position="floating">How many rooms are made for sharing</ion-label>
-     <ion-input> 
+     <ion-label position="floating">How many rooms with single beds</ion-label>
+     <ion-input [(ngModel)] = "propData.bedSingle" name = "bedSingle" type="text"> 
      </ion-input>
 
-     <ion-label position="floating">How many rooms are allocated for boys only</ion-label>
-     <ion-input>
+     <ion-label position="floating">How many rooms are allocated for females only</ion-label>
+     <ion-input [(ngModel)] = "propData.numFemale_beds" name = "numFemale_beds" type="text">
      </ion-input>
 
-     <ion-label position="floating">How many rooms are allocated for girls only</ion-label>
-     <ion-input>
+     <ion-label position="floating">How many rooms are allocated for males only</ion-label>
+     <ion-input [(ngModel)] = "propData.numMale_beds" name = "numMale_beds" type="text">
      </ion-input>
 </ion-card> 
 <div style="text-align: center;">
-<ion-button color="primary"  (click)="presentAlertPrompt()">
+<ion-button color="primary"  (click)="addLord()" (click)= "addProperty()">
   Submit
 </ion-button>
 

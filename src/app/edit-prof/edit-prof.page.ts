@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NavController, MenuController, ActionSheetController, LoadingController, Platform } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { ServiceService } from '../service.service';
@@ -13,7 +13,14 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class EditProfPage implements OnInit {
   
+@Input() lordData = {full_name:" ", last_name:" ",ID_type:" ", ID_number:" ", company_name:" ",registration_no:" ",
+                      email_address:" ", telephone:" ", home_number:" ", fax_number:" ", cell_number:" ", house_number:" ",
+                      suburb:" ", province:" ",zip_code:" ",street_name:" ", city:" ",
+                      country:" "};
 
+@Input() propData= {prop_name:" ", campus:" ", num_rooms:" ", num_floors:" ", bedSharing:" ",
+                    bedSingle:" ", numFemale_beds:" ", numMale_beds:" "}         
+                      
   navigate: { title: string; url: string; icon: string; }[];
   constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService,
     public menuCtrl: MenuController, private router: Router, public actionSheetCtrl: ActionSheetController,
@@ -70,6 +77,24 @@ export class EditProfPage implements OnInit {
 
 
    ]
+ }
+
+ //post details
+ addLord(){
+   this._serviceService.lordApplicationFormD(this.lordData).subscribe(
+     data=>console.log(data)
+   );
+   console.log(this.lordData)
+ }
+
+ //post property
+
+ addProperty(){
+   this._serviceService.lordApplicationFormProp(this.propData).subscribe(
+     data=>console.log(data)
+   )
+   console.log(this.propData)
+   
  }
 
 

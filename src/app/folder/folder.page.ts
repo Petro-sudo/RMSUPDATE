@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MenuController, Platform } from '@ionic/angular';
 import { IonSlides } from '@ionic/angular';
@@ -15,7 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 })
 export class FolderPage implements OnInit {
   public folder: string;
- 
+
   slideOptsOne = {
     initialSlide: 0,
     slidesPerView: 1,
@@ -80,6 +80,7 @@ export class FolderPage implements OnInit {
     this.initializeApp();
     this.getProperty();
     // this.setFilteredItems();
+   
   }
 
 
@@ -176,11 +177,29 @@ export class FolderPage implements OnInit {
         this.filterItems(searchTerm); 
      });
    }
+
+
+  // //get the property of one campus
+  // public propNear: any=[];
+  // getProperty(){
+  //   var searchTerm= "";
+  //   return this._serviceService.propertyNearCampus().subscribe((apart:any)=>
+  //   {this.propNear =apart;
+  //   console.log(this.propNear);
+  //   this.setFilteredItems();})
+  // }
  
  
 
  
-  
+  // //select 1 campus
+  // selectCampus(){
+  //   this._serviceService.selectCampuses(this.campusData).subscribe(
+  //     data=>console.log(data)
+  //   )
+  //   this.getProperty();
+  //   console.log(this.campusData)
+  // }
  
 
 

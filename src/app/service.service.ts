@@ -29,9 +29,9 @@ export class ServiceService {
   lordapp_url = 'https://168.172.185.106:5000/lord';
 
 
-  stud_url='http://192.168.43.92:9000/stud';
-  stat_urlmale = 'http://192.168.1.103:9000/male';
-  stat_urlfemale = 'http://192.168.43.92:9000/female';
+  stud_url='http://192.168.43.142:9000/stud';
+  stat_urlmale = 'http://192.168.43.142:9000/male';
+  stat_urlfemale = 'http://192.168.43.142:9000/female';
 
 //for landlord app
 application_url ='http://192.168.43.142:9000/pendingprop';
@@ -45,11 +45,29 @@ public getLandlordApp()
 approvedapp_url ='http://192.168.43.142:9000/acceptedprop';
 
 public getApprovedApp()
-{return this.http.get<any>(this.approvedapp_url);
+{
+  return this.http.get<any>(this.approvedapp_url);
 }
 
+//get property near certain campus
+propNearCamp_url = 'http://192.168.43.142:9000/acceptedprop'
+
+public propertyNearCampus()
+{
+  return this.http.get<any>(this.propNearCamp_url)
+}
+
+//select campus
+campus_url ='http://192.168.43.142:9000/addproperty';
+
+public selectCampuses(campusesData)
+{
+  return this.http.post<any>(this.campus_url, campusesData, {})
+}
+
+
 //delete 
-delete_url ='http://192.168.43.92:9000/dlt';
+delete_url ='http://192.168.43.142:9000/dlt';
 
 //delete_url ='http://192.168.1.101:9000/dlt';
 public deleteLord(landlord_email)
@@ -58,7 +76,7 @@ public deleteLord(landlord_email)
 }
 
 //decline landlord
-decline_url ='http://192.168.43.92:9000/rejectapp';
+decline_url ='http://192.168.43.142:9000/rejectapp';
 
 public declineLord(landlord_email )
 {
@@ -66,7 +84,7 @@ public declineLord(landlord_email )
 }
 
 //accept landlord
-accept_url ='http://192.168.43.92:9000/acceptapp';
+accept_url ='http://192.168.43.142:9000/acceptapp';
 
 public acceptLord(landlord_email)
 {
@@ -90,7 +108,7 @@ public editProp(edit:any)
 }
 
 //get students pending
-appl_url ='http://192.168.43.92:9000/pendingstud/';
+appl_url ='http://192.168.43.142:9000/pendingstud/';
 
 public getStudentsApp()
   {
@@ -98,7 +116,7 @@ public getStudentsApp()
   }
 
   //get student accepted
-  Actappl_url ='http://192.168.43.92:9000/acceptedstud/';
+  Actappl_url ='http://192.168.43.142:9000/acceptedstud/';
 
 public getStudentsAcptd()
   {
@@ -107,7 +125,7 @@ public getStudentsAcptd()
 
   //student application
 
-studApp_url = 'http://192.168.43.92:9000/updateStu/';
+studApp_url = 'http://192.168.43.142:9000/updateStu/';
 
 public studApplicationForm(studData)
 {
@@ -115,22 +133,36 @@ public studApplicationForm(studData)
 }
 
 //accept student
-acceptStd_url ='http://192.168.43.92:9000/acceptStud';
+acceptStd_url ='http://192.168.43.142:9000/acceptStud';
 
 public acceptStudent(student_no)
 {
   return this.http.post<any>(this.acceptStd_url +"/"+ student_no,{})
 }
 
-
 //decline student
-declineStd_url ='http://192.168.43.92:9000/rejectStud';
+declineStd_url ='http://192.168.43.142:9000/rejectStud';
 
 public declineStudent(student_no)
 {
   return this.http.post<any>(this.declineStd_url +"/"+student_no,{})
 }
 
+//lord update personal D
+lordApp_url ='http://192.168.43.142:9000/updateLandlord';
+
+public lordApplicationFormD(lordData)
+{
+  return this.http.post<any>(this.lordApp_url, lordData, {})
+}
+
+//lord update property
+lordApp1_url ='http://192.168.43.142:9000/addproperty';
+
+public lordApplicationFormProp(propData)
+{
+  return this.http.post<any>(this.lordApp1_url, propData, {})
+}
 
 
   //-------------

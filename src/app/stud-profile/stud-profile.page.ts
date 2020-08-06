@@ -36,7 +36,7 @@ export class StudProfilePage implements OnInit {
 this.initializeApp();
 this.sideMenu();
 this.studData.campus_study;
-// this.profile();
+ this.profile();
   }
 
   //application
@@ -46,6 +46,18 @@ this.studData.campus_study;
     );
     console.log(this.studData);
   }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -98,9 +110,6 @@ this.studData.campus_study;
 
 
   async profile() {
-
-    
-
     const alert = await this.alertCtrl.create({  
      header:'Profile Dialog',
       message:'Please complete your profile' ,
@@ -122,19 +131,11 @@ this.studData.campus_study;
       ]
       
     }
-   
-    
-
-
-    
     );  
 
     await alert.present();  
     const result = await alert.onDidDismiss();  
     console.log(result);
-
-
-
    }
 
 
