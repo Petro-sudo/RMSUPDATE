@@ -149,7 +149,7 @@ public declineStudent(student_no)
 }
 
 //lord update personal D
-lordApp_url ='http://192.168.43.142:9000/updateLandlord';
+lordApp_url ='http://192.168.43.142:9000/updateLand';
 
 public lordApplicationFormD(lordData)
 {
@@ -157,11 +157,11 @@ public lordApplicationFormD(lordData)
 }
 
 //lord update property
-lordApp1_url ='http://192.168.43.142:9000/addproperty';
+lordApp1_url ='http://192.168.43.142:9000/insertprop';
 
-public lordApplicationFormProp(propData)
+public lordApplicationFormProp(popData)
 {
-  return this.http.post<any>(this.lordApp1_url, propData, {})
+  return this.http.post<any>(this.lordApp1_url, popData, {})
 }
 
 

@@ -105,7 +105,7 @@
   </ion-item>
     
     <ion-label position="floating">Full Names</ion-label>
-    <ion-input [(ngModel)] = "lordData.full_name" name="full_name"  type="text">
+    <ion-input [(ngModel)] = "lordData.Full_name" name="Full_name"  type="text">
     </ion-input>
     <ion-label position="floating">Surname</ion-label>
     <ion-input [(ngModel)] = "lordData.last_name" name="last_name"  type="text"> 
@@ -150,7 +150,7 @@
     margin-left: 40px;border-left: 10px 	rgb(6, 2, 73)solid">Contact Details</ion-title>
 <br>
       <ion-label position="floating">Email Address</ion-label>
-      <ion-input [(ngModel)] = "lordData.email_address" name="email_address"  type="text">
+      <ion-input [(ngModel)] = "lordData.landlord_email" name="landlord_email"  type="text">
       </ion-input>
 
       <ion-label position="floating">Telephone Numbers</ion-label>
@@ -210,7 +210,7 @@
 </ion-card> 
 
 
-<ion-card style=" width: 600px;height: 600px;">
+<ion-card style=" width: 600px;height: 800px;">
   <ion-item>
     <ion-label>Apartment Details</ion-label>
   </ion-item>
@@ -218,41 +218,55 @@
     margin-left: 40px;border-left: 10px 	rgb(6, 2, 73)solid">The Details of Property</ion-title>
     <br>
      <ion-label position="floating">Name of the property</ion-label>
-     <ion-input [(ngModel)] = "propData.prop_name" name = "prop_name" type="text">
+     <ion-input [(ngModel)] = "lordData.property_name" name = "property_name" type="text">
      </ion-input>
 
+     <ion-label position="floating">Enter your Email Address</ion-label>
+      <ion-input [(ngModel)] = "popData.landlord_email" name="landlord_email"  type="text">
+      </ion-input>
+
      <ion-label position="floating">Name the closest campus you at</ion-label>
-     <ion-input [(ngModel)] = "propData.campus" name = "campus" type="text"> 
+     <ion-input [(ngModel)] = "popData.campus" name = "campus" type="text"> 
      </ion-input>
 
      <ion-label position="floating">Write the number of rooms of the property</ion-label>
-     <ion-input [(ngModel)] = "propData.num_rooms" name = "num_rooms" type="text">
+     <ion-input [(ngModel)] = "popData.num_rooms" name = "num_rooms" type="text">
      </ion-input>
 
      <ion-label position="floating">How many floors does the property contain</ion-label>
-     <ion-input [(ngModel)] = "propData.num_floors" name = "num_floors" type="text"> 
+     <ion-input [(ngModel)] = "popData.num_floors" name = "num_floors" type="text"> 
      </ion-input>
 
      <ion-label position="floating">How many rooms with the sharing beds</ion-label>
-     <ion-input [(ngModel)] = "propData.bedSharing" name = "bedSharing" type="text">
+     <ion-input [(ngModel)] = "popData.bedSharing" name = "bedSharing" type="text">
      </ion-input>
      
      <ion-label position="floating">How many rooms with single beds</ion-label>
-     <ion-input [(ngModel)] = "propData.bedSingle" name = "bedSingle" type="text"> 
+     <ion-input [(ngModel)] = "popData.bedSingle" name = "bedSingle" type="text"> 
      </ion-input>
 
+     <ion-label position="floating">How many beds per room</ion-label>
+     <ion-input [(ngModel)] = "popData.bedsPerRoom" name = "bedsPerRoom" type="text"> 
+     </ion-input>
+     
+     <ion-label position="floating">How many blocks per stand</ion-label>
+     <ion-input [(ngModel)] = "popData.blocks" name = "blocks" type="text"> 
+     </ion-input>
+     
      <ion-label position="floating">How many rooms are allocated for females only</ion-label>
-     <ion-input [(ngModel)] = "propData.numFemale_beds" name = "numFemale_beds" type="text">
+     <ion-input [(ngModel)] = "popData.numFemale_beds" name = "numFemale_beds" type="text">
      </ion-input>
 
      <ion-label position="floating">How many rooms are allocated for males only</ion-label>
-     <ion-input [(ngModel)] = "propData.numMale_beds" name = "numMale_beds" type="text">
+     <ion-input [(ngModel)] = "popData.numMale_beds" name = "numMale_beds" type="text">
      </ion-input>
 </ion-card> 
 <div style="text-align: center;">
-<ion-button color="primary"  (click)="addLord()" (click)= "addProperty()">
+<ion-button color="primary" (click)= "addProperty()" (click)="addLord()" >
   Submit
 </ion-button>
+
+<!--   -->
 
 <ion-button color="danger" (click)="AlertPrompt()" >
   Cancel
