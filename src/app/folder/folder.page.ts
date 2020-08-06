@@ -36,6 +36,7 @@ export class FolderPage implements OnInit {
     ) { }
   public addProp: any=[];
   public addProps: any=[];
+  public searchProps: any=[];
   addimg: any=[];
   public searchTerm: string = "";
   public items: any;
@@ -79,7 +80,7 @@ export class FolderPage implements OnInit {
     this.sideMenu();
     this.initializeApp();
     this.getProperty();
-    // this.setFilteredItems();
+    
   }
 
 
@@ -179,7 +180,16 @@ export class FolderPage implements OnInit {
  
  
 
- 
+   searchProperty(j){
+    
+     return  this._serviceService.searchprop(j).
+     subscribe((apart:any)=>
+      {this.searchProps = apart;
+        console.log(this.searchProps
+          );
+         
+      });
+    }
   
  
 

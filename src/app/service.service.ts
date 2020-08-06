@@ -34,7 +34,7 @@ export class ServiceService {
   stat_urlfemale = 'http://192.168.43.92:9000/female';
 
 //for landlord app
-application_url ='http://192.168.43.142:9000/pendingprop';
+application_url ='http://192.168.43.92:9000/pendingprop';
 
 public getLandlordApp()
   {
@@ -42,7 +42,7 @@ public getLandlordApp()
   }
 
 //manage approved prop
-approvedapp_url ='http://192.168.43.142:9000/acceptedprop';
+approvedapp_url ='http://192.168.43.92:9000/acceptedprop';
 
 public getApprovedApp()
 {return this.http.get<any>(this.approvedapp_url);
@@ -82,7 +82,7 @@ public issuesLord(){
 }
 
 //editproperty
-editP_url = 'http://192.168.1.101:9000/edit';
+editP_url = 'http://192.168.43.92:9000/edit';
 
 public editProp(edit:any)
 {
@@ -130,6 +130,17 @@ public declineStudent(student_no)
 {
   return this.http.post<any>(this.declineStd_url +"/"+student_no,{})
 }
+
+
+
+//search properties
+search_url ='http://192.168.43.92:9000/searchprop';
+
+public searchprop(campus)
+{
+  return this.http.get<any>(this.search_url +"/"+campus)
+}
+
 
 
 
