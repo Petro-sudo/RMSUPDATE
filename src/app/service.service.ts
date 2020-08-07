@@ -115,12 +115,31 @@ public studApplicationForm(studData)
 }
 
 //accept student
-acceptStd_url ='http://192.168.43.92:9000/acceptStud';
+acceptStd_url ='http://192.168.43.92:9000/InsertStuIssues/';
 
 public acceptStudent(student_no)
 {
   return this.http.post<any>(this.acceptStd_url +"/"+ student_no,{})
 }
+
+
+//accept student
+Stdissues_url ='http://192.168.43.92:9000/InsertStuIssues';
+
+public Studentissue(issueData)
+{
+  return this.http.post<any>(this.Stdissues_url,issueData ,{})
+}
+
+
+
+getStdissues_url ='http://192.168.43.92:9000/viewStuIssues';
+
+public getStudentissue()
+{
+  return this.http.get<any>(this.getStdissues_url)
+}
+
 
 
 //decline student
@@ -136,9 +155,9 @@ public declineStudent(student_no)
 //search properties
 search_url ='http://192.168.43.92:9000/searchprop';
 
-public searchprop(campus)
+public searchprop()
 {
-  return this.http.get<any>(this.search_url +"/"+campus)
+  return this.http.get<any>(this.search_url)
 }
 
 

@@ -446,13 +446,11 @@ style=" position: relative;z-index: 1;" >
 
   <ion-select     name="search"  style="border-bottom: 5px blue; background-color:#DCDCDC ;"
   [(ngModel)]="search"
- 
-  (click)="searchProperty(addProp.campus)"
+
   placeholder="Which campus would you like to view for?"    required >
  
-
    <ion-select-option value="POLOKWANE ">POLOKWANE CAMPUS</ion-select-option>
-   <ion-select-option value="Soshanguve ">SOSHAGUVE CAMPUS</ion-select-option>
+   <ion-select-option (click)="searchProperty()" value="Soshanguve ">SOSHAGUVE CAMPUS</ion-select-option>
    <ion-select-option value="ARCADIA ">ARCADIA CAMPUS</ion-select-option>
 
     <ion-select-option value="EMALAHLENI ">EMALAHLENI CAMPUS</ion-select-option>

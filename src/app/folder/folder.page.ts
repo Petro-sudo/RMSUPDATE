@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MenuController, Platform } from '@ionic/angular';
 import { IonSlides } from '@ionic/angular';
@@ -36,41 +36,18 @@ export class FolderPage implements OnInit {
     ) { }
   public addProp: any=[];
   public addProps: any=[];
-  public searchProps: any=[];
+  // public searchProps: any=[];
   addimg: any=[];
   public searchTerm: string = "";
   public items: any;
   navigate : any;
 
-
-
-
-
-
-
-
-
-
-
-
+  @Input() searchProps= {campus:" "}
 
 
 
 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -82,12 +59,6 @@ export class FolderPage implements OnInit {
     this.getProperty();
     
   }
-
-
-
-
-
-
 
 
   initializeApp() {
@@ -129,15 +100,6 @@ export class FolderPage implements OnInit {
   }
 
 
-
-
-
-
-
-
-
-
-
   filterItems(searchTerm) {
     return this.addProp.filter(item => {
       return item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
@@ -159,14 +121,6 @@ export class FolderPage implements OnInit {
 
 
 
-
-
-
-
-
-
-
-
   getProperty(){
    var searchTerm= "";
     return  this._serviceService.getApprovedApp().
@@ -180,9 +134,9 @@ export class FolderPage implements OnInit {
  
  
 
-   searchProperty(j){
+   searchProperty(){
     
-     return  this._serviceService.searchprop(j).
+     return  this._serviceService.searchprop().
      subscribe((apart:any)=>
       {this.searchProps = apart;
         console.log(this.searchProps

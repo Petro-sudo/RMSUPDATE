@@ -129,41 +129,35 @@
   <div id="Issues" class="tabcontent">
     
     <h1>Issues</h1>
-    <ion-searchbar></ion-searchbar>
-    <table class="rwd-table">
-      
-      <tr>
-        <th>Date</th>
-        <th>Full Name</th>
-        <th>Description</th>
-        <th>Status</th>
-        <th>View</th>
-      </tr>
-      <tr>
-        <td data-th="Date">2020/05/01</td>
-        <td data-th="Full Name">Kgopotso Lelake</td>
-        <td data-th="Description">Lights not working</td>
-        <td data-th="Status">In- progress</td>
-        <td data-th="View"><ion-button> view</ion-button></td>
-      </tr>
-      <tr>
-        <td data-th="Date">2020/05/02</td>
-        <td data-th="Full Name">Peter moluleka</td>
-        <td data-th="Description">stove not working</td>
-        <td data-th="Status">In- progress</td>
-        <td data-th="View"><ion-button> view</ion-button></td>
-      </tr>
-      <tr>
-        <td data-th="Date">2020/05/01</td>
-        <td data-th="Full Name">Noxolo Zuma</td>
-        <td data-th="Description">socket not working</td>
-        <td data-th="Status">In- progress</td>
-        <td data-th="View"><ion-button> view</ion-button></td>
-      </tr>
-    </table>
-    
-    <!-- <p>&larr; Drag window (in editor or full page view) to see the effect. &rarr;</p> -->
 
+    <ion-card>
+      <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
+        {{ issueData.length}} New issues</ion-title>
+    </ion-card>
+    <ion-searchbar></ion-searchbar>
+    <ion-card  *ngFor= "let item of issueData" style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
+     
+     
+     
+    
+     <ion-label >
+     Issue Description: {{item.description}} 
+     </ion-label>
+     <br>
+     <ion-label >
+    Issue Type: {{item.Issue_type}}
+     </ion-label>
+     <br>
+     <ion-label >
+       Student Number: {{item.student_no}} 
+       
+     </ion-label>
+     <br>
+
+
+     
+    
+   </ion-card>
 
 
 
