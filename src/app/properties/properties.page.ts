@@ -209,6 +209,7 @@ this.sideMenu();
   }
 ////nnn
 public approved: any=[];
+public issueData: any=[];
   ngOnInit() {
     this.getApproved();
     this.getStudApplication();
@@ -216,6 +217,7 @@ public approved: any=[];
     this.sideMenu();
     this.calc();
     this.calc1();
+    this.getissues();
   }
 
   
@@ -433,6 +435,22 @@ calc()
 
 console.log(this.studApp.length);
 }
+
+getissues(){
+  
+   return  this._serviceService.getStudentissue().
+   subscribe((apart:any)=>
+    {this.issueData = apart;
+      console.log(this.issueData
+        );
+      
+    });
+  }
+
+
+
+
+
 
 //get accepted student
 

@@ -441,11 +441,15 @@ style=" position: relative;z-index: 1;" >
 </ion-row>
 
   
+
+
+  
+
+  <ion-select     name="search"  style="border-bottom: 5px blue; background-color:#DCDCDC ;"
+  [(ngModel)]="search"
+
  
-  <ion-icon color="success" name="search-outline"></ion-icon>
-  <ion-select     name="search-outline"  style="border-bottom: 5px blue; background-color:#DCDCDC ;"
-  [(ngModel)]="searchTerm"
-  (ionChange)="setFilteredItems()"
+  
   placeholder="Which campus would you like to view for?"    required >
   <ion-icon color="success" name="search-outline"></ion-icon>
 
@@ -458,8 +462,15 @@ style=" position: relative;z-index: 1;" >
     <ion-select-option value="MBOMBELA CAMPUS">MBOMBELA CAMPUS</ion-select-option>
     <ion-select-option value="PRETORIA MAIN CAMPUS">PRETORIA MAIN CAMPUS</ion-select-option>
  
+   <ion-select-option value="POLOKWANE ">POLOKWANE CAMPUS</ion-select-option>
+   <ion-select-option (click)="searchProperty()" value="Soshanguve ">SOSHAGUVE CAMPUS</ion-select-option>
+   <ion-select-option value="ARCADIA ">ARCADIA CAMPUS</ion-select-option>
 
-    
+    <ion-select-option value="EMALAHLENI ">EMALAHLENI CAMPUS</ion-select-option>
+    <ion-select-option value="GA-RANKUWA ">GA-RANKUWA CAMPUS</ion-select-option>
+    <ion-select-option value="MBOMBELA ">MBOMBELA CAMPUS</ion-select-option>
+    <ion-select-option value="PRETORIA ">PRETORIA MAIN CAMPUS</ion-select-option>
+
   </ion-select>
 
 

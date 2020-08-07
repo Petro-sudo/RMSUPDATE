@@ -10,21 +10,24 @@
 
   <p style="font-size: 14px; font-weight: bold; text-align: center;">Report all issue rargarding your stay below</p>
 
-  <ion-select placeholder="Issue type"   >
+  <ion-select  [(ngModel)] = "issueData.Issue_type" name="Issue_type" placeholder="Issue type"   >
     <ion-select-option value="Maintence">Maintence</ion-select-option>
     <ion-select-option value="Appliances">Appliances</ion-select-option>
     <ion-select-option value="Past invasions">Past invasions</ion-select-option>
   </ion-select>
 <br>
-<ion-input placeholder="Issue description" ></ion-input>
- 
+<ion-label>Issue description </ion-label>
+<ion-input  [(ngModel)] = "issueData.description"  name="description" placeholder="Issue description" ></ion-input>
+ <br>
+ <ion-label>Your Student Number </ion-label>
+ <ion-input   [(ngModel)] = "issueData.student_no" nane="student_no" placeholder="Your Student Number" ></ion-input>
 <ion-toolbar>
   <div slot="start">
-    <ion-button  color = "tertiary" size ="small" style="text-transform: none;">Submit</ion-button>
+    <ion-button (click)="issue()"  color = "tertiary" size ="small" style="text-transform: none;">Submit</ion-button>
     </div>
 
   <div slot="end">
-    <ion-button (click)="closePop()" color="light" size ="small" style="text-transform: none;">Cancel</ion-button>
+    <ion-button  (click)="closePop()" color="light" size ="small" style="text-transform: none;">Cancel</ion-button>
   </div>
   
 </ion-toolbar>

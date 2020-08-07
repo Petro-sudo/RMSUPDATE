@@ -36,40 +36,19 @@ export class FolderPage implements OnInit {
     ) { }
   public addProp: any=[];
   public addProps: any=[];
+  // public searchProps: any=[];
+
   addimg: any=[];
   public searchTerm: string = "";
   public items: any;
   navigate : any;
 
-
-
-
-
-
-
-
-
-
-
-
+  @Input() searchProps= {campus:" "}
 
 
 
 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -82,12 +61,6 @@ export class FolderPage implements OnInit {
     // this.setFilteredItems();
    
   }
-
-
-
-
-
-
 
 
   initializeApp() {
@@ -129,15 +102,6 @@ export class FolderPage implements OnInit {
   }
 
 
-
-
-
-
-
-
-
-
-
   filterItems(searchTerm) {
     return this.addProp.filter(item => {
       return item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
@@ -156,14 +120,6 @@ export class FolderPage implements OnInit {
   
 
   }
-
-
-
-
-
-
-
-
 
 
 
@@ -191,15 +147,21 @@ export class FolderPage implements OnInit {
  
  
 
+
+   searchProperty(){
+    
+     return  this._serviceService.searchprop().
+     subscribe((apart:any)=>
+      {this.searchProps = apart;
+        console.log(this.searchProps
+          );
+         
+      });
+    }
+  
+
  
-  // //select 1 campus
-  // selectCampus(){
-  //   this._serviceService.selectCampuses(this.campusData).subscribe(
-  //     data=>console.log(data)
-  //   )
-  //   this.getProperty();
-  //   console.log(this.campusData)
-  // }
+
  
 
 
