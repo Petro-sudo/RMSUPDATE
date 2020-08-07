@@ -61,8 +61,15 @@ propinfo(){
 
 async AlertPrompt(i) {
   const alert = await this.alertController.create({
-    header: 'Are you sure You want to remove this user from a database?',
+    header: 'Are you sure You want to suspend this user from a database?',
     // message: 'I cannot login',
+    inputs: [
+      {
+        name: 'name1',
+        type: 'text',
+        placeholder: 'send the user the reason for suspending him or her'
+      },
+    ],
 
     buttons: [
       {

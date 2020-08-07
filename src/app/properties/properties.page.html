@@ -97,7 +97,7 @@
     <ion-card-header>
       <ion-card-title>Occupied beds</ion-card-title>
       <ion-button color="dark" shape="round"><ion-icon name="bed-outline"></ion-icon>
-        7
+        
       </ion-button>
     </ion-card-header>
     <ion-card-content>
@@ -134,6 +134,8 @@
       <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
         {{ issueData.length}} New issues</ion-title>
     </ion-card>
+
+    <h3>Students Complaints</h3>
     <ion-searchbar></ion-searchbar>
     <ion-card  *ngFor= "let item of issueData" style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
      
@@ -165,73 +167,72 @@
   
   <div id="Tenants" class="tabcontent">
 
-    <h1>Tenants</h1>
+    <h3>Students Residing in my Property</h3>
     
     <ion-card>
       <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
         {{approved.length}} New Applications</ion-title>
     </ion-card>
       
-    <!--      -->
-    <ion-card   style="background-color: rgb(21, 187, 6); border-radius:10px; width:500px ;" *ngFor= "let item of approved" >
+    <ion-card   style="background-color: rgb(96, 250, 82); border-radius:10px; width:500px ;" *ngFor= "let item of approved" >
          <br>
       
-        <ion-label   style="color: white;" id="properties" >
+        <ion-label   style="color: black;" id="properties" >
      
           Student Number: {{item.student_no}}
          </ion-label>
         
          <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
          First Name: {{item.Full_names}}
          </ion-label>
          <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
          Last Name: {{item.Last_name}}
           </ion-label>
           <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
           Gender: {{item.gender}}
         </ion-label>
         <br>
-        <ion-label  style="color: white;" >
+        <ion-label  style="color: black;" >
          Identity Number: {{item.Id_no}}
        </ion-label>
        <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
            Disability: {{item.disability}}
          </ion-label>
          <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
           Student Contact: {{item.contact_student}} 
         </ion-label>
         <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
            Student Guardian: {{item.contact_guardian}} 
         </ion-label>
         <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
            Course: {{item.course}}
          </ion-label>
          <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
            Faculty: {{item.faculty}}
          </ion-label>
          <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
            Campus: {{item.campus_study}}
          </ion-label>
          <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
            Year of admission: {{item.year_of_admission}}
          </ion-label>
          <br>
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
            Sponsor: {{item.sponsor}}
          </ion-label>
          <br>
          
-         <ion-label  style="color: white;" >
+         <ion-label  style="color: black;" >
            Status: {{item.status}}
          </ion-label>
          <br>
@@ -243,6 +244,9 @@
   </div>
   
 <div id="applications" class="tabcontent">
+
+  <h3>Students Pending Applications</h3>
+
   <ion-grid style="background-color: 	#FDF5E6;">
 
     <ion-card>

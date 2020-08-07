@@ -65,8 +65,20 @@
   
     <ion-button (click)= "popOver($event)" color="light" color="tertiary" shape="round">
       <ion-icon name="add" color=""></ion-icon></ion-button>
+      
+ <br>
+ <br>
+
+      <div class="form-group">
+       
+        <ion-label for="bus-image">Upload a picture of an issue you just log</ion-label>
+        <br>
+        <ion-input type="file" name="images" ></ion-input>
+      
+      </div>
+      <br>
     
-<ion-card style="margin-left: 60px;">
+<ion-card >
   <p>No issues have been logged, press(+) to log an Issue</p>
   <br>
 </ion-card>
@@ -199,8 +211,7 @@
 
   
   <ion-item>
-    <ion-label>Disabilities</ion-label>
-    <ion-select placeholder="Select One">
+br    <ion-select placeholder="Select One">
       <ion-select-option value="No">No</ion-select-option>
       <ion-select-option value="Yes">Yes</ion-select-option>
     </ion-select>

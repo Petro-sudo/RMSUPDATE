@@ -15,7 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 })
 export class FolderPage implements OnInit {
   public folder: string;
- 
+
   slideOptsOne = {
     initialSlide: 0,
     slidesPerView: 1,
@@ -37,6 +37,7 @@ export class FolderPage implements OnInit {
   public addProp: any=[];
   public addProps: any=[];
   // public searchProps: any=[];
+
   addimg: any=[];
   public searchTerm: string = "";
   public items: any;
@@ -57,7 +58,8 @@ export class FolderPage implements OnInit {
     this.sideMenu();
     this.initializeApp();
     this.getProperty();
-    
+    // this.setFilteredItems();
+   
   }
 
 
@@ -131,8 +133,20 @@ export class FolderPage implements OnInit {
         this.filterItems(searchTerm); 
      });
    }
+
+
+  // //get the property of one campus
+  // public propNear: any=[];
+  // getProperty(){
+  //   var searchTerm= "";
+  //   return this._serviceService.propertyNearCampus().subscribe((apart:any)=>
+  //   {this.propNear =apart;
+  //   console.log(this.propNear);
+  //   this.setFilteredItems();})
+  // }
  
  
+
 
    searchProperty(){
     
@@ -145,6 +159,9 @@ export class FolderPage implements OnInit {
       });
     }
   
+
+ 
+
  
 
 

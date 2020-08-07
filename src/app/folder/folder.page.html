@@ -442,12 +442,25 @@ style=" position: relative;z-index: 1;" >
 
   
 
+
   
 
   <ion-select     name="search"  style="border-bottom: 5px blue; background-color:#DCDCDC ;"
   [(ngModel)]="search"
 
+ 
+  
   placeholder="Which campus would you like to view for?"    required >
+  <ion-icon color="success" name="search-outline"></ion-icon>
+
+   <ion-select-option value="POLOKWANE CAMPUS">POLOKWANE CAMPUS</ion-select-option>
+   <ion-select-option value="SOSHAGUVE CAMPUS">SOSHAGUVE CAMPUS</ion-select-option>
+   <ion-select-option value="ARCADIA CAMPUS">ARCADIA CAMPUS</ion-select-option>
+  <ion-select-option value="ARTS CAMPUS">ARTS CAMPUS</ion-select-option>
+    <ion-select-option value="EMALAHLENI CAMPUS">EMALAHLENI CAMPUS</ion-select-option>
+    <ion-select-option value="GA-RANKUWA CAMPUS">GA-RANKUWA CAMPUS</ion-select-option>
+    <ion-select-option value="MBOMBELA CAMPUS">MBOMBELA CAMPUS</ion-select-option>
+    <ion-select-option value="PRETORIA MAIN CAMPUS">PRETORIA MAIN CAMPUS</ion-select-option>
  
    <ion-select-option value="POLOKWANE ">POLOKWANE CAMPUS</ion-select-option>
    <ion-select-option (click)="searchProperty()" value="Soshanguve ">SOSHAGUVE CAMPUS</ion-select-option>
@@ -457,7 +470,7 @@ style=" position: relative;z-index: 1;" >
     <ion-select-option value="GA-RANKUWA ">GA-RANKUWA CAMPUS</ion-select-option>
     <ion-select-option value="MBOMBELA ">MBOMBELA CAMPUS</ion-select-option>
     <ion-select-option value="PRETORIA ">PRETORIA MAIN CAMPUS</ion-select-option>
- 
+
   </ion-select>
 
 
@@ -466,13 +479,9 @@ style=" position: relative;z-index: 1;" >
     <!-- <ion-row>
       <ion-col col="6">  -->
         
-    <ion-card  *ngFor= "let item of addProp" style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
+    <ion-card  *ngFor= "let item of addProp   " style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
      
      
-     
-
-
-
       <h1 style="color: black;margin-right: 120px;" >{{item.property_name}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
      
   
@@ -490,15 +499,27 @@ style=" position: relative;z-index: 1;" >
      </ion-label>
      <br>
      <ion-label >
-       POSTAL CODE: {{item.zip_code}} <ion-icon style="color:#00003f; font-size:20px ; margin-right:10px;" name="call"></ion-icon>
-       <ion-icon  style="color:#00003f; font-size:20px ; margin-right:20px;" name="mail"></ion-icon>
-     </ion-label>
+       POSTAL CODE: {{item.zip_code}} 
+      </ion-label>
+
+      <br>
+      <ion-icon style="color:#00003f; font-size:20px ; margin-right:10px;" name="call"></ion-icon>
+      <ion-icon  style="color:#00003f; font-size:20px ; margin-right:20px;" name="mail"></ion-icon>
      <br>
-
-
      
+<ion-toolbar color="  #00003f ;">
+  <div slot="start">
+    <img width="180" src="../../assets/pics/bed.jpg">
+  </div>
+
+  <div slot="end" >
+    <img width="180" src="../../assets/pics/bath.jpg">
+  </div>
+</ion-toolbar>
     
    </ion-card>
+
+
 <!-- </ion-col>
    
   </ion-row> -->

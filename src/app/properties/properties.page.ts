@@ -211,7 +211,7 @@ this.sideMenu();
 public approved: any=[];
 public issueData: any=[];
   ngOnInit() {
-this.getApproved();
+    this.getApproved();
     this.getStudApplication();
     this.initializeApp();
     this.sideMenu();
@@ -538,6 +538,7 @@ async acceptAlertPrompt(j) {
 
   await alert.present();
 }
+ 
 //accept student
 acceptstudent(j){
   this._serviceService.acceptStudent(j).subscribe(data =>
