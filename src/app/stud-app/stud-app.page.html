@@ -71,13 +71,22 @@
 
       <div class="form-group">
        
-        <ion-label for="bus-image">Upload a picture of an issue you just log</ion-label>
+        <ion-label >Upload a picture of an issue you just log</ion-label>
         <br>
         <ion-input type="file" name="images" ></ion-input>
       
       </div>
       <br>
-    
+      <ion-button color="primary" (click)="addLord()" >
+        Submit
+      </ion-button>
+     
+      <ion-button color="danger" (click)="AlertPrompt()" >
+        Cancel
+       </ion-button>
+      
+    <br>
+    <br>
 <ion-card >
   <p>No issues have been logged, press(+) to log an Issue</p>
   <br>

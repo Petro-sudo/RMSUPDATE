@@ -76,6 +76,7 @@
 
   <div class="tab">
     <button class="tablinks" (click)="openCity(event, 'Dashboard')">DASHBOARD</button>
+    <button class="tablinks" (click)="openCity(event, 'images')">ADVERTISE YOUR PROPERTY</button>
     <button class="tablinks" (click)="openCity(event, 'applications')">APPLICATIONS</button>
     <button class="tablinks" (click)="openCity(event, 'Tenants')">TENANTS</button>
     <button class="tablinks" (click)="openCity(event, 'Issues')">ISSUES</button>
@@ -125,6 +126,31 @@
   </ion-grid>
   
   </div>
+
+<!-- get img -->
+
+  <div id="images" class="tabcontent">
+    <h3>Upload your Property pictures</h3>
+    <br>
+    <br>
+
+    <ion-label position="floating">Select a picture</ion-label>
+    <ion-input [(ngModel)] = "postImage.image" name = "image" type="file"> 
+    </ion-input>
+    
+   
+      
+<ion-toolbar color="light">
+    <ion-button color="success"  (click)="addImage()">
+      Accept 
+    </ion-button>
+
+    <ion-button color="danger"  (click)="deleteImg()">
+    Cancel
+    </ion-button>
+</ion-toolbar>
+  </div>
+
   
   <div id="Issues" class="tabcontent">
     
@@ -132,10 +158,11 @@
 
     <ion-card>
       <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
+        <h3>Students Complaints</h3>
         {{ issueData.length}} New issues</ion-title>
     </ion-card>
 
-    <h3>Students Complaints</h3>
+    
     <ion-searchbar></ion-searchbar>
     <ion-card  *ngFor= "let item of issueData" style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
      
@@ -164,6 +191,8 @@
 
 
   </div>
+
+
   
   <div id="Tenants" class="tabcontent">
 
@@ -242,6 +271,8 @@
        </ion-card>
 
   </div>
+
+
   
 <div id="applications" class="tabcontent">
 
