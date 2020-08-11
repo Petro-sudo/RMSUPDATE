@@ -207,6 +207,13 @@ public lordApplicationFormProp(popData)
   return this.http.post<any>(this.lordApp1_url, popData, {})
 }
 
+//posting img to DB
+postImg_url = 'http://192.168.43.92:9000/img';
+
+public postImg(postImage)
+{
+ return this.http.post<any>(this.postImg_url, postImage,{})
+}
 
   //-------------
 public status()

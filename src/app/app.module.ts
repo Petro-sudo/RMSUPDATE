@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
 import {IonicStorageModule} from '@ionic/storage';
 import {StreamingMedia} from '@ionic-native/streaming-media/ngx';
+//popup
 import { PopemailPageModule } from './popover/popemail/popemail.module';
 import { PopstdPageModule } from './popover/popstd/popstd.module';
 import { PopratePageModule } from './popover/poprate/poprate.module';
@@ -26,6 +27,11 @@ import { HelpadminPageModule } from './popover/helpadmin/helpadmin.module';
 import { PoppropPageModule } from './popover/popprop/popprop.module';
 import { SendmailPageModule } from './popover/sendmail/sendmail.module';
 
+//img
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { File, FileEntry } from '@ionic-native/File/ngx';
+import { Camera,CameraOptions,PictureSourceType } from '@ionic-native/camera/ngx';
+//import { FilePath } from '@ionic-native/file-path/ngx';
 
 @NgModule({
   declarations: [AppComponent, 
@@ -60,11 +66,11 @@ import { SendmailPageModule } from './popover/sendmail/sendmail.module';
   ],
   providers: [AuthGuard,
     StatusBar,
-    SplashScreen,
+    SplashScreen, 
     HttpModule,
     ShareService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-    ,StreamingMedia
+    ,StreamingMedia, File, WebView
     
   ],
   bootstrap: [AppComponent],

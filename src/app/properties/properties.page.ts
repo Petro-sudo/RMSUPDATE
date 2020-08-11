@@ -171,7 +171,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { Platform, AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Input } from '@angular/core';
+
 import { Chart } from 'chart.js';
 
  @Component({
@@ -182,6 +183,9 @@ import { Chart } from 'chart.js';
  export class PropertiesPage  {
   @ViewChild('barChart' ,{ static: true }) barChart;
   @ViewChild('label' ,{ static: true }) label;
+
+  @Input() postImage = {image:" "}
+
   bars: any;
   colorArray: any;
   //  alertController: any;
@@ -219,6 +223,15 @@ public issueData: any=[];
     this.calc1();
     this.getissues();
   }
+
+  //post  image
+addImage(){
+  this._serviceService.postImg(this.postImage).subscribe(
+    data=>console.log(data)
+  )
+  console.log(this.postImage)
+}
+
 
   
 

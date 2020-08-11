@@ -210,7 +210,7 @@
 </ion-card> 
 
 
-<ion-card style=" width: 600px;height: 900px;">
+<ion-card style=" width: 600px;height: 850px;">
   <ion-item>
     <ion-label>Apartment Details</ion-label>
   </ion-item>
@@ -260,13 +260,6 @@
      <ion-label position="floating">How many rooms are allocated for males only</ion-label>
      <ion-input [(ngModel)] = "popData.numMale_beds" name = "numMale_beds" type="text">
      </ion-input>
-     <div class="form-group">
-       
-      <ion-label>Please Upload a simple of bed and bathroom of you Apartment</ion-label>
-      <br>
-      <ion-input type="file" name="images" placeholder="bedroom"></ion-input>
-      <ion-input type="file" name="images" placeholder="bathroom"></ion-input>
-    </div>
 </ion-card> 
 <div style="text-align: center;">
 <ion-button color="primary" (click)= "addProperty()" (click)="addLord()" >
