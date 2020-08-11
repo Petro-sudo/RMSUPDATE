@@ -23,6 +23,7 @@
     "@angular/router": "~8.2.14",
     "@auth0/angular-jwt": "^4.0.0",
     "@capacitor/core": "1.5.0",
+    "@ionic-native/camera": "^5.27.0",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/file-chooser": "^5.22.0",
     "@ionic-native/native-page-transitions": "^4.20.0",
@@ -35,6 +36,7 @@
     "com.telerik.plugins.nativepagetransitions": "^0.6.5",
     "cordova-android": "8.1.0",
     "cordova-ios": "5.1.1",
+    "cordova-plugin-camera": "^4.1.0",
     "cordova-plugin-streaming-media": "^2.2.0",
     "core-js": "^2.5.4",
     "moment": "^2.24.0",
@@ -83,7 +85,10 @@
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-camera": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      }
     },
     "platforms": [
       "ios",
