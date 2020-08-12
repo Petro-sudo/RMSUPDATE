@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -8,7 +9,7 @@ import {HttpClient} from '@angular/common/http';
 export class ServiceService {
   display: any;
   public addProp: any=[];
-
+  _url: string;
   constructor(private http: HttpClient) { }
 
   login_url = 'http://168.172.185.101:5000/login';
@@ -207,8 +208,31 @@ public lordApplicationFormProp(popData)
   return this.http.post<any>(this.lordApp1_url, popData, {})
 }
 
+
+
+
+uploadFile(data: any): Observable<{}> {
+  this._url = 'http://192.168.43.92:9000/landlodImage';
+  return this.http.post(this._url, data)
+      // .map(this.handleData)
+      // .catch(this.handleError);
+}
+
+private handleData(res: Response) {
+  let data = res.json();
+  return data;
+}
+private handleError(error: Response | any) {
+  return Observable.throw('API failed');
+}
+
+
+
+
+
+
 //posting img to DB
-postImg_url = 'http://192.168.43.92:9000/img';
+postImg_url = 'http://192.168.43.92:9000/landlodImage';
 
 public postImg(postImage)
 {
