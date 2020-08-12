@@ -169,8 +169,9 @@ import {Observable} from 'rxjs';
 import {ServiceService} from './../service.service';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { Platform, AlertController } from '@ionic/angular';
+import { Platform, AlertController, NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { Camera,CameraOptions,PictureSourceType, MediaType } from '@ionic-native/camera/ngx';
 import { Component, ViewChild, Input } from '@angular/core';
 
 import { Chart } from 'chart.js';
@@ -195,7 +196,8 @@ import { Chart } from 'chart.js';
         private statusBar   : StatusBar,
         private _serviceService: ServiceService,
         public alertCtrl: AlertController,
-        private router: Router,
+        private router: Router, private camera: Camera,
+        public navCtrl: NavController,
         public alertController: AlertController
   ) { }
 
@@ -214,6 +216,7 @@ this.sideMenu();
 ////nnn
 public approved: any=[];
 public issueData: any=[];
+base64Image:string;
   ngOnInit() {
     this.getApproved();
     this.getStudApplication();
@@ -230,13 +233,48 @@ addImage(){
     data=>console.log(data)
   )
   console.log(this.postImage)
-}
+  }
+
+  openCamera(){
+    const options: CameraOptions={
+      quality:100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+    this.camera.getPicture(options).then((ImageData)=>{
+      
+      this.base64Image='data:../../assets/pics/bed.jpg;base64'+ImageData;},
+      (err)=>{
+        
+      }
+      );
+
+  }
+
+  openGallery(){
+    const options: CameraOptions={
+      quality:100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+    }
+    this.camera.getPicture(options).then((ImageData)=>{
+      
+      this.base64Image='data:../../assets/pics/bed.jpg;base64'+ImageData;},
+      (err)=>{
+        
+      }
+      );
+
+  }
 
 
   
 
 
-
+//end img
   createlabelChart(){
 
     this.bars = new Chart(this.label.nativeElement, {

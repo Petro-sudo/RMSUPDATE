@@ -70,7 +70,7 @@ import { Camera,CameraOptions,PictureSourceType } from '@ionic-native/camera/ngx
     HttpModule,
     ShareService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-    ,StreamingMedia, File, WebView
+    ,StreamingMedia ,Camera, File, WebView
     
   ],
   bootstrap: [AppComponent],

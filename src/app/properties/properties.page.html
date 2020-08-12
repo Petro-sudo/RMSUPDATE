@@ -137,18 +137,32 @@
     <ion-label position="floating">Select a picture</ion-label>
     <ion-input [(ngModel)] = "postImage.image" name = "image" type="file"> 
     </ion-input>
+    <br>
     
-   
       
-<ion-toolbar color="light">
-    <ion-button color="success"  (click)="addImage()">
-      Accept 
+
+    <ion-button slot="start" color="success"  (click)="addImage()">
+      Upload
     </ion-button>
 
-    <ion-button color="danger"  (click)="deleteImg()">
+    <ion-button  slot="end" color="danger"  (click)="deleteImg()">
     Cancel
     </ion-button>
-</ion-toolbar>
+
+
+<br>
+<br>
+    <br>
+    <ion-button full  (click)="openCamera()">
+      Open Camera
+    </ion-button>
+
+    <ion-button color="danger"  (click)="openGallery()">
+    Open Gallery
+    </ion-button>
+    <br>
+    <br>
+   <img [src]="base64Image"/>
   </div>
 
   
