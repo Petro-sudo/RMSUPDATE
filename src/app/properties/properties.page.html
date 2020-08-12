@@ -76,7 +76,7 @@
 
   <div class="tab">
     <button class="tablinks" (click)="openCity(event, 'Dashboard')">DASHBOARD</button>
-    <button class="tablinks" (click)="openCity(event, 'images')">ADVERTISE YOUR PROPERTY</button>
+    <!-- <button class="tablinks" (click)="openCity(event, 'images')">ADVERTISE YOUR PROPERTY</button> -->
     <button class="tablinks" (click)="openCity(event, 'applications')">APPLICATIONS</button>
     <button class="tablinks" (click)="openCity(event, 'Tenants')">TENANTS</button>
     <button class="tablinks" (click)="openCity(event, 'Issues')">ISSUES</button>
@@ -90,6 +90,33 @@
     <h2 style="color:black ;border-left:10px solid rgb(6, 2, 73);"> Overview +Stats:TUTEH Residence</h2>
    <ion-button fill="outline" (click)="presentAlertPrompt()">Broadcast a notice</ion-button>
    <ion-button fill="outline" (click)="presentAlertPrompt2()">Log an issue</ion-button>
+  
+   
+  
+     
+<ion-toolbar color="light">
+  <h2>Upload Property pictures</h2>
+  
+  <div class="container">
+    <form [formGroup]="form"  (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <input type="file" (change)="uploadFile($event)">
+        </div>
+
+        <div class="form-group input-group-lg">
+            <input class="form-control" placeholder="Name" formControlName="name">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-danger btn-block btn-lg">Create</button>
+        </div>
+    </form>
+</div>
+
+   <!-- <ion-button color="danger"  (click)="deleteImg()">
+   Cancel
+   </ion-button> -->
+</ion-toolbar>
 <ion-grid>
   <ion-row>
   <ion-col col=6>
@@ -128,7 +155,7 @@
   </div>
 
 <!-- get img -->
-
+<!-- 
   <div id="images" class="tabcontent">
     <h3>Upload your Property pictures</h3>
     <br>
@@ -149,7 +176,7 @@
     Cancel
     </ion-button>
 </ion-toolbar>
-  </div>
+  </div> -->
 
   
   <div id="Issues" class="tabcontent">

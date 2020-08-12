@@ -172,8 +172,9 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { Platform, AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { Component, ViewChild, Input } from '@angular/core';
-
+import { FormBuilder, FormGroup } from "@angular/forms";
 import { Chart } from 'chart.js';
+import { ReactiveFormsModule } from '@angular/forms';
 
  @Component({
    selector: 'app-properties',
@@ -184,8 +185,8 @@ import { Chart } from 'chart.js';
   @ViewChild('barChart' ,{ static: true }) barChart;
   @ViewChild('label' ,{ static: true }) label;
 
-  @Input() postImage = {image:" "}
-
+  @Input() postImage = {pic_name:" "}
+  form: FormGroup;
   bars: any;
   colorArray: any;
   //  alertController: any;
@@ -196,9 +197,46 @@ import { Chart } from 'chart.js';
         private _serviceService: ServiceService,
         public alertCtrl: AlertController,
         private router: Router,
-        public alertController: AlertController
-  ) { }
+        private http: HttpClient,
+        public alertController: AlertController,
+        public fb: FormBuilder
+  ) {
 
+
+
+    this.form = this.fb.group({
+      name: [''],
+      avatar: [null]
+    })
+
+
+   }
+
+   uploadFile(event) {
+    const file = (event.target as HTMLInputElement).files[0];
+    this.form.patchValue({
+      avatar: file
+    });
+    this.form.get('avatar').updateValueAndValidity()
+  }
+
+  submitForm() {
+    console.log(this.form.value)
+
+
+    var formData: any = new FormData();
+    formData.append("name", this.form.get('name').value);
+    formData.append("avatar", this.form.get('avatar').value);
+
+    this.http.post('http://192.168.43.92:9000/landlodImage', formData).subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+    )
+  }
+
+  
+
+   
 //nnnnnn
   public studApp: any=[];
   public studAcpt: any= [];
@@ -223,6 +261,38 @@ public issueData: any=[];
     this.calc1();
     this.getissues();
   }
+
+//upload img
+upload(event: any) {
+  let files = event.target.files;
+  let fData: FormData = new FormData;
+
+  for (var i = 0; i < files.length; i++) {
+      fData.append("file[]", files[i]);
+  }
+  var _data = {
+      filename: 'Sample File',
+      id: '0001'
+  }
+
+  fData.append("data", JSON.stringify(_data));
+
+  this._serviceService.uploadFile(fData).subscribe(
+      response => this.handleResponse(response),
+      error => this.handleError(error)
+  )
+}
+handleResponse(response: any) {
+  console.log(response);
+}
+handleError(error: string) {
+  console.log(error);
+}
+
+
+
+
+
 
   //post  image
 addImage(){
