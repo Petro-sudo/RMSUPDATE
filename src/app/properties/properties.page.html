@@ -76,7 +76,7 @@
 
   <div class="tab">
     <button class="tablinks" (click)="openCity(event, 'Dashboard')">DASHBOARD</button>
-    <button class="tablinks" (click)="openCity(event, 'images')">ADVERTISE YOUR PROPERTY</button>
+    <!-- <button class="tablinks" (click)="openCity(event, 'images')">ADVERTISE YOUR PROPERTY</button> -->
     <button class="tablinks" (click)="openCity(event, 'applications')">APPLICATIONS</button>
     <button class="tablinks" (click)="openCity(event, 'Tenants')">TENANTS</button>
     <button class="tablinks" (click)="openCity(event, 'Issues')">ISSUES</button>
@@ -84,12 +84,46 @@
   </div>
   
   <div id="Dashboard" class="tabcontent">
-    <h3>Dashboard</h3><br>
+    <h3>Dashboard</h3>
     <br>
     
     <h2 style="color:black ;border-left:10px solid rgb(6, 2, 73);"> Overview +Stats:TUTEH Residence</h2>
    <ion-button fill="outline" (click)="presentAlertPrompt()">Broadcast a notice</ion-button>
    <ion-button fill="outline" (click)="presentAlertPrompt2()">Log an issue</ion-button>
+  
+   
+  
+     
+<ion-toolbar color="light">
+  <h3>Upload Property Pictures</h3>
+  
+  <div class="container">
+    <form [formGroup]="form"  (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <input type="file" (change)="uploadFile($event)">
+        </div>
+      
+        <div class="form-group input-group-lg">
+            <input class="form-control" placeholder="Name" formControlName="name">
+        </div>
+        <br>
+
+        <ion-toolbar color="success">
+        <div class="form-group" slot="start">
+            <button style="margin-left: 10px;" class="btn btn-danger btn-block btn-lg" >Upload</button>
+        </div>
+
+          <div class="form-group" slot="end">
+            <button style="margin-right: 10px;" class="btn btn-cancel" >Cancel</button>
+          </div>
+        </ion-toolbar>
+    </form>
+</div>
+
+   <!-- <ion-button color="danger"  (click)="deleteImg()">
+   Cancel
+   </ion-button> -->
+</ion-toolbar>
 <ion-grid>
   <ion-row>
   <ion-col col=6>
@@ -128,7 +162,7 @@
   </div>
 
 <!-- get img -->
-
+<!-- 
   <div id="images" class="tabcontent">
     <h3>Upload your Property pictures</h3>
     <br>
@@ -148,36 +182,22 @@
     <ion-button  slot="end" color="danger"  (click)="deleteImg()">
     Cancel
     </ion-button>
-
-
-<br>
-<br>
-    <br>
-    <ion-button full  (click)="openCamera()">
-      Open Camera
-    </ion-button>
-
-    <ion-button color="danger"  (click)="openGallery()">
-    Open Gallery
-    </ion-button>
-    <br>
-    <br>
-   <img [src]="base64Image"/>
-  </div>
+</ion-toolbar>
+  </div> -->
 
   
   <div id="Issues" class="tabcontent">
     
-    <h1>Issues</h1>
-
+    <!-- <h1>Issues</h1> -->
+    <h3>Students Complaints</h3>
+    <br>
     <ion-card>
       <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
-        <h3>Students Complaints</h3>
         {{ issueData.length}} New issues</ion-title>
     </ion-card>
 
     
-    <ion-searchbar></ion-searchbar>
+    <!-- <ion-searchbar></ion-searchbar> -->
     <ion-card  *ngFor= "let item of issueData" style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
      
      
@@ -211,10 +231,10 @@
   <div id="Tenants" class="tabcontent">
 
     <h3>Students Residing in my Property</h3>
-    
+    <br>
     <ion-card>
       <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
-        {{approved.length}} New Applications</ion-title>
+        {{approved.length}} Students</ion-title>
     </ion-card>
       
     <ion-card   style="background-color: rgb(96, 250, 82); border-radius:10px; width:500px ;" *ngFor= "let item of approved" >
@@ -291,7 +311,7 @@
 <div id="applications" class="tabcontent">
 
   <h3>Students Pending Applications</h3>
-
+<br>
   <ion-grid style="background-color: 	#FDF5E6;">
 
     <ion-card>

@@ -173,8 +173,9 @@ import { Platform, AlertController, NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { Camera,CameraOptions,PictureSourceType, MediaType } from '@ionic-native/camera/ngx';
 import { Component, ViewChild, Input } from '@angular/core';
-
+import { FormBuilder, FormGroup } from "@angular/forms";
 import { Chart } from 'chart.js';
+import { ReactiveFormsModule } from '@angular/forms';
 
  @Component({
    selector: 'app-properties',
@@ -185,8 +186,8 @@ import { Chart } from 'chart.js';
   @ViewChild('barChart' ,{ static: true }) barChart;
   @ViewChild('label' ,{ static: true }) label;
 
-  @Input() postImage = {image:" "}
-
+  @Input() postImage = {pic_name:" "}
+  form: FormGroup;
   bars: any;
   colorArray: any;
   //  alertController: any;
@@ -196,11 +197,47 @@ import { Chart } from 'chart.js';
         private statusBar   : StatusBar,
         private _serviceService: ServiceService,
         public alertCtrl: AlertController,
-        private router: Router, private camera: Camera,
-        public navCtrl: NavController,
-        public alertController: AlertController
-  ) { }
+        private router: Router,
+        private http: HttpClient,
+        public alertController: AlertController,
+        public fb: FormBuilder
+  ) {
 
+
+
+    this.form = this.fb.group({
+      name: [''],
+      avatar: [null]
+    })
+
+
+   }
+
+   uploadFile(event) {
+    const file = (event.target as HTMLInputElement).files[0];
+    this.form.patchValue({
+      avatar: file
+    });
+    this.form.get('avatar').updateValueAndValidity()
+  }
+
+  submitForm() {
+    console.log(this.form.value)
+
+
+    var formData: any = new FormData();
+    formData.append("name", this.form.get('name').value);
+    formData.append("avatar", this.form.get('avatar').value);
+
+    this.http.post('http://192.168.43.92:9000/landlodImage', formData).subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+    )
+  }
+
+  
+
+   
 //nnnnnn
   public studApp: any=[];
   public studAcpt: any= [];
@@ -227,6 +264,34 @@ base64Image:string;
     this.getissues();
   }
 
+//upload img
+upload(event: any) {
+  let files = event.target.files;
+  let fData: FormData = new FormData;
+
+  for (var i = 0; i < files.length; i++) {
+      fData.append("file[]", files[i]);
+  }
+  var _data = {
+      filename: 'Sample File',
+      id: '0001'
+  }
+
+  fData.append("data", JSON.stringify(_data));
+
+  this._serviceService.uploadFile(fData).subscribe(
+      response => this.handleResponse(response),
+      error => this.handleError(error)
+  )
+}
+handleResponse(response: any) {
+  console.log(response);
+}
+handleError(error: string) {
+  console.log(error);
+}
+
+
   //post  image
 addImage(){
   this._serviceService.postImg(this.postImage).subscribe(
@@ -235,42 +300,7 @@ addImage(){
   console.log(this.postImage)
   }
 
-  openCamera(){
-    const options: CameraOptions={
-      quality:100,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
-    }
-    this.camera.getPicture(options).then((ImageData)=>{
-      
-      this.base64Image='data:../../assets/pics/bed.jpg;base64'+ImageData;},
-      (err)=>{
-        
-      }
-      );
-
-  }
-
-  openGallery(){
-    const options: CameraOptions={
-      quality:100,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE,
-      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
-    }
-    this.camera.getPicture(options).then((ImageData)=>{
-      
-      this.base64Image='data:../../assets/pics/bed.jpg;base64'+ImageData;},
-      (err)=>{
-        
-      }
-      );
-
-  }
-
-
+ 
   
 
 
@@ -604,3 +634,42 @@ acceptstudent(j){
 
 
 }
+
+
+
+
+// openCamera(){
+//   const options: CameraOptions={
+//     quality:100,
+//     destinationType: this.camera.DestinationType.DATA_URL,
+//     encodingType: this.camera.EncodingType.JPEG,
+//     mediaType: this.camera.MediaType.PICTURE
+//   }
+//   this.camera.getPicture(options).then((ImageData)=>{
+    
+//     this.base64Image='data:../../assets/pics/bed.jpg;base64'+ImageData;},
+//     (err)=>{
+      
+//     }
+//     );
+
+// }
+
+// openGallery(){
+//   const options: CameraOptions={
+//     quality:100,
+//     destinationType: this.camera.DestinationType.DATA_URL,
+//     encodingType: this.camera.EncodingType.JPEG,
+//     mediaType: this.camera.MediaType.PICTURE,
+//     sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+//   }
+//   this.camera.getPicture(options).then((ImageData)=>{
+    
+//     this.base64Image='data:../../assets/pics/bed.jpg;base64'+ImageData;},
+//     (err)=>{
+      
+//     }
+//     );
+
+// }
+
