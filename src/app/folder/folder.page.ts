@@ -43,7 +43,8 @@ export class FolderPage implements OnInit {
   public searchTerm: string = "";
   public items: any;
   navigate : any;
-  public url: string = "http://192.168.43.92:9000/";
+  //public url: string = "http://192.168.43.92:9000/";
+  public url: string = "http://192.168.43.142:9000/";
   @Input() searchProps= {campus:" "}
 
 
@@ -173,19 +174,5 @@ export class FolderPage implements OnInit {
          
       });
     }
-  
-
- 
-
- 
-
-
-
-
-
-
-
-
-
 
 }

@@ -191,10 +191,10 @@
     <!-- <h1>Issues</h1> -->
     <h3>Students Complaints</h3>
     <br>
-    <ion-card>
+    <div>
       <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
         {{ issueData.length}} New issues</ion-title>
-    </ion-card>
+    </div>
 
     
     <!-- <ion-searchbar></ion-searchbar> -->
@@ -215,10 +215,10 @@
        Student Number: {{item.student_no}} 
        
      </ion-label>
-
+     <br>
      <ion-label>
       Prove of an issue:
-     <img style="width: 350px" src="../../assets/pics/plug.jpg">
+     <img style="width: 350px; height: 200px;" src="../../assets/pics/plug.jpg">
     </ion-label>
      <br>
 
@@ -237,10 +237,10 @@
 
     <h3>Students Residing in my Property</h3>
     <br>
-    <ion-card>
+    <div>
       <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
         {{approved.length}} Students</ion-title>
-    </ion-card>
+    </div>
       
     <ion-card   style="background-color: rgb(96, 250, 82); border-radius:10px; width:500px ;" *ngFor= "let item of approved" >
          <br>
@@ -319,10 +319,10 @@
 <br>
   <ion-grid style="background-color: 	#FDF5E6;">
 
-    <ion-card>
+    <div>
       <ion-title  style="text-align:center ; font-weight: bolder; font-style: italic; color:black;" >
         {{studApp.length}} New Applications</ion-title>
-    </ion-card>
+    </div>
       
     <!--      -->
     <ion-card   style="background-color: rgb(5, 2, 61); border-radius:10px; width:500px ;" *ngFor= "let item of studApp" >
