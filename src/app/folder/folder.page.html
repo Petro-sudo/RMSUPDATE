@@ -479,7 +479,7 @@ style=" position: relative;z-index: 1;" >
     <!-- <ion-row>
       <ion-col col="6">  -->
         
-    <ion-card  *ngFor= "let item of addProp   " style="font-weight: bold; width:500px;border-left: 10px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
+    <ion-card  *ngFor= "let item of addProp  " style="font-weight: bold; width:500px;border-left: 10px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
      
      
       <h1 style="color: black;margin-right: 120px;" >{{item.property_name}}   <ion-icon style="color:#FFA500; font-size:20px ; margin-right:-100px;" name="podium"></ion-icon></h1>
@@ -510,9 +510,9 @@ style=" position: relative;z-index: 1;" >
 <ion-toolbar color="  #00003f ;">
   <ion-slides>
 
-    <ion-slide>
+    <ion-slide *ngFor= "let item of imgProps   ">
      
-    <img style="width: 350px" src="../../assets/pics/bed.jpg">
+      <img style="width:400px; border-radius:25px;" src="  {{item.avatar}}">
 
 
    
@@ -520,8 +520,14 @@ style=" position: relative;z-index: 1;" >
 
 <ion-slide>
   
-    <img style="width: 350px" src="../../assets/pics/bath.jpg">
+    <img style="width:400px; border-radius:25px;" src="../../assets/pics/kit.jpg">
    
+</ion-slide>
+
+<ion-slide>
+  
+  <img style="width:400px; border-radius:25px;" src="../../assets/pics/student.jpg">
+ 
 </ion-slide>
 
 </ion-slides>

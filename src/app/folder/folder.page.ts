@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MenuController, Platform } from '@ionic/angular';
 import { IonSlides } from '@ionic/angular';
 import {FormsModule } from '@angular/forms';
-
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import {ServiceService} from './../service.service';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -31,18 +31,19 @@ export class FolderPage implements OnInit {
     
     private platform    : Platform,
               private splashScreen: SplashScreen,
-              private statusBar   : StatusBar
+              private statusBar   : StatusBar,
+               private sanitizer: DomSanitizer
       
     ) { }
   public addProp: any=[];
   public addProps: any=[];
   // public searchProps: any=[];
-
+  public imgProps: any=[];
   addimg: any=[];
   public searchTerm: string = "";
   public items: any;
   navigate : any;
-
+  public url: string = "http://192.168.43.92:9000/";
   @Input() searchProps= {campus:" "}
 
 
@@ -58,10 +59,12 @@ export class FolderPage implements OnInit {
     this.sideMenu();
     this.initializeApp();
     this.getProperty();
-    // this.setFilteredItems();
+     this.getPimg();
    
   }
 
+
+  
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -134,6 +137,18 @@ export class FolderPage implements OnInit {
      });
    }
 
+
+
+   getPimg(){
+    
+     return  this._serviceService.imgView().
+     subscribe((apart:any)=>
+      {this.imgProps = apart;
+        console.log(this.imgProps
+          );
+       
+      });
+    }
 
   // //get the property of one campus
   // public propNear: any=[];

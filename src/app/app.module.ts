@@ -26,7 +26,7 @@ import { ConfirmEqualValidatorDirective } from './shared/confirm-equal-validator
 import { HelpadminPageModule } from './popover/helpadmin/helpadmin.module';
 import { PoppropPageModule } from './popover/popprop/popprop.module';
 import { SendmailPageModule } from './popover/sendmail/sendmail.module';
-
+import { NgSrcModule } from 'ng-src';
 //img
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { File, FileEntry } from '@ionic-native/File/ngx';
@@ -58,7 +58,7 @@ import { Camera,CameraOptions,PictureSourceType } from '@ionic-native/camera/ngx
    HelpadminPageModule, 
    PoppropPageModule,
    SendmailPageModule,
-   
+   NgSrcModule,
     
 
     FormsModule, ReactiveFormsModule

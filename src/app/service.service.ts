@@ -95,14 +95,14 @@ public acceptLord(landlord_email)
 
 //issues
 //issues_url ='http://192.168.1.101:9000/issues';
-issues_url ='http://192.168.43.142:9000/issues';
+issues_url ='http://192.168.43.92:9000/issues';
 public issuesLord(){
   return this.http.get<any>(this.issues_url)
 }
 
 //editproperty
 //editP_url = 'http://192.168.1.101:9000/edit';
-editP_url = 'http://192.168.43.142:9000/edit';
+editP_url = 'http://192.168.43.92:9000/edit';
 
 public editProp(edit:any)
 {
@@ -110,7 +110,7 @@ public editProp(edit:any)
 }
 
 //get students pending
-appl_url ='http://192.168.43.142:9000/pendingstud';
+appl_url ='http://192.168.43.92:9000/pendingstud';
 //appl_url ='http://192.168.43.92:9000/pendingstud/';
 
 public getStudentsApp()
@@ -119,7 +119,7 @@ public getStudentsApp()
   }
 
   //get student accepted
-  Actappl_url ='http://192.168.43.142:9000/acceptedstud';
+  Actappl_url ='http://192.168.43.92:9000/acceptedstud';
  // Actappl_url ='http://192.168.43.92:9000/acceptedstud/';
 
 public getStudentsAcptd()
@@ -129,7 +129,7 @@ public getStudentsAcptd()
 
   //student application
 
-studApp_url = 'http://192.168.43.142:9000/updateStu';
+studApp_url = 'http://192.168.43.92:9000/updateStu';
 //studApp_url = 'http://192.168.43.92:9000/updateStu/';
 
 public studApplicationForm(studData)
@@ -141,7 +141,7 @@ public studApplicationForm(studData)
 
 //acceptStd_url ='http://192.168.43.92:9000/InsertStuIssues/';
 
-acceptStd_url ='http://192.168.43.142:9000/acceptStud';
+acceptStd_url ='http://192.168.43.92:9000/acceptStud';
 
 
 public acceptStudent(student_no)
@@ -153,7 +153,7 @@ public acceptStudent(student_no)
 
 //accept student
 //Stdissues_url ='http://192.168.43.92:9000/InsertStuIssues';
-Stdissues_url ='http://192.168.43.142:9000/InsertStuIssues';
+Stdissues_url ='http://192.168.43.92:9000/InsertStuIssues';
 
 public Studentissue(issueData)
 {
@@ -163,7 +163,7 @@ public Studentissue(issueData)
 
 //view issues
 //getStdissues_url ='http://192.168.43.92:9000/viewStuIssues';
-getStdissues_url ='http://192.168.43.142:9000/viewStuIssues';
+getStdissues_url ='http://192.168.43.92:9000/viewStuIssues';
 
 public getStudentissue()
 {
@@ -188,7 +188,7 @@ lordApp_url ='http://192.168.43.92:9000/updateLand';
 
 //search properties
 //search_url ='http://192.168.43.92:9000/searchprop';
-search_url ='http://192.168.43.142:9000/searchprop';
+search_url ='http://192.168.43.92:9000/searchprop';
 
 public searchprop()
 {
@@ -226,8 +226,12 @@ private handleError(error: Response | any) {
   return Observable.throw('API failed');
 }
 
-
-
+//posting img to DB
+imgv_url = 'http://192.168.43.92:9000/getlimages';
+public imgView()
+{
+  return this.http.get<any>(this.imgv_url)
+}
 
 
 
