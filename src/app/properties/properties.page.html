@@ -198,37 +198,28 @@
 
     
     <!-- <ion-searchbar></ion-searchbar> -->
-    <ion-card  *ngFor= "let item of issueData" style="font-weight: bold; width:400px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
-     
-     
-     
-    
-     <ion-label >
+    <ion-card  *ngFor= "let item of issueData" style="font-weight: bold; width:320px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
+
+     <ion-label style="margin-left: 10px; color:black;">
      Issue Description: {{item.description}} 
      </ion-label>
      <br>
-     <ion-label >
+     <ion-label style="margin-left: 10px;color:black" >
     Issue Type: {{item.Issue_type}}
      </ion-label>
      <br>
-     <ion-label >
+     <ion-label style="margin-left: 10px;color:black">
        Student Number: {{item.student_no}} 
        
-     </ion-label>
+     </ion-label >
      <br>
-     <ion-label>
+     <ion-label style="margin-left: 10px;color:black">
       Prove of an issue:
      <img style="width: 350px; height: 200px;" src="../../assets/pics/plug.jpg">
     </ion-label>
      <br>
-
-
-     
     
-   </ion-card>
-
-
-
+    </ion-card>
   </div>
 
 
@@ -242,73 +233,70 @@
         {{approved.length}} Students</ion-title>
     </div>
       
-    <ion-card   style="background-color: rgb(13, 5, 156); border-radius:10px; width:500px ;" *ngFor= "let item of approved" >
+    <ion-card   style="background-color: rgb(2, 19, 97);border-radius:10px; width:320px; " *ngFor= "let item of approved" >
          <br>
       
-        <ion-label   style="color: black; font-size: medium;" id="properties" >
+        <ion-label   style="color: white; margin-left: 10px; font-size: medium;" id="properties" >
      
           Student Number: {{item.student_no}}
          </ion-label>
         
          <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color:  white; margin-left: 10px; font-size: medium;" >
          First Name: {{item.Full_names}}
          </ion-label>
          <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
          Last Name: {{item.Last_name}}
           </ion-label>
           <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
           Gender: {{item.gender}}
         </ion-label>
         <br>
-        <ion-label  style="color: black;" >
+        <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
          Identity Number: {{item.Id_no}}
        </ion-label>
        <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
            Disability: {{item.disability}}
          </ion-label>
          <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
           Student Contact: {{item.contact_student}} 
         </ion-label>
         <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
            Student Guardian: {{item.contact_guardian}} 
         </ion-label>
         <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
            Course: {{item.course}}
          </ion-label>
          <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
            Faculty: {{item.faculty}}
          </ion-label>
          <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
            Campus: {{item.campus_study}}
          </ion-label>
          <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
            Year of admission: {{item.year_of_admission}}
          </ion-label>
          <br>
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
            Sponsor: {{item.sponsor}}
          </ion-label>
          <br>
          
-         <ion-label  style="color: black;" >
+         <ion-label  style="color: white; margin-left: 10px; font-size: medium;" >
            Status: {{item.status}}
          </ion-label>
          <br>
-
-        
-    
+         <br>
        </ion-card>
-
   </div>
 
 
@@ -325,67 +313,67 @@
     </div>
       
     <!--      -->
-    <ion-card   style="background-color: rgb(5, 2, 61); border-radius:10px; width:500px ;" *ngFor= "let item of studApp" >
+    <ion-card   style="background-color: rgb(5, 2, 61); border-radius:10px; width:320px ;" *ngFor= "let item of studApp" >
          <br>
-      <ion-label   style="color: white;" id="properties" >
+      <ion-label   style="color: white;margin-left: 10px;" id="properties" >
      
        Student Number: {{item.student_no}}
       </ion-label>
      
       <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
       First Name: {{item.Full_names}}
       </ion-label>
       <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
       Last Name: {{item.Last_name}}
        </ion-label>
        <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
        Gender: {{item.gender}}
      </ion-label>
      <br>
-     <ion-label  style="color: white;" >
+     <ion-label  style="color: white;margin-left: 10px;" >
       Identity Number: {{item.Id_no}}
     </ion-label>
     <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
         Disability: {{item.disability}}
       </ion-label>
       <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
        Student Contact: {{item.contact_student}} 
      </ion-label>
      <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
         Student Guardian: {{item.contact_guardian}} 
      </ion-label>
      <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
         Course: {{item.course}}
       </ion-label>
       <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
         Faculty: {{item.faculty}}
       </ion-label>
       <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
         Campus: {{item.campus_study}}
       </ion-label>
       <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
         Year of admission: {{item.year_of_admission}}
       </ion-label>
       <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
         Sponsor: {{item.sponsor}}
       </ion-label>
       <br>
-      <ion-label  style="color: white;" >
+      <ion-label  style="color: white;margin-left: 10px;" >
         Status: {{item.status}}
       </ion-label>
       <br>
-         
+         <div style=" margin-left: 10px;">
          <ion-button color="danger" (click)="declinePrompt(item.student_no)" >
          
           <ion-icon name="trash"></ion-icon>
@@ -396,10 +384,10 @@
           <ion-icon name="shield-checkmark-outline"></ion-icon>
           Accept 
         </ion-button>
-        
+        </div>
     
         
-    
+    <br>
        </ion-card>
     
     
