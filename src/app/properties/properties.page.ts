@@ -173,7 +173,7 @@ import { Platform, AlertController, NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { Camera,CameraOptions,PictureSourceType, MediaType } from '@ionic-native/camera/ngx';
 import { Component, ViewChild, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, NgModel } from "@angular/forms";
 import { Chart } from 'chart.js';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -228,8 +228,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     var formData: any = new FormData();
     formData.append("name", this.form.get('name').value);
     formData.append("avatar", this.form.get('avatar').value);
-
-    this.http.post('http://192.168.43.92:9000/landlodImage', formData).subscribe(
+    
+    //my url
+    this.http.post('http://192.168.43.142:9000/landlodImage', formData).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     )
@@ -413,19 +414,31 @@ addImage(){
     ]
   }
 
+
+//post notice
+  @Input() noticeData = {notice_title:" ", notice_description:" "}
+
+  PostNotice(noticeData)
+  {
+    this._serviceService.postNotice(this.noticeData).subscribe(
+      data=>console.log(data)
+    );
+    console.log(this.noticeData);
+  }
+
   async presentAlertPrompt() {
     const alert = await this.alertController.create({
       header: 'Notice Dialog',
       inputs: [
         {
-          name: 'name1',
+          name: 'notice_title',
           type: 'text',
           placeholder: 'Notice title'
         },
       
         // multiline input.
         {
-          name: 'paragraph',
+          name: 'notice_description',
           id: 'paragraph',
           type: 'textarea',
           placeholder: 'Notice Discription'
@@ -440,11 +453,20 @@ addImage(){
           handler: () => {
             console.log('Confirm Cancel');
           }
-        }, {
+        }, 
+        {
           text: 'Submit',
-          handler: () => {
-            console.log('Confirm Submit');
+          handler: data =>{this.PostNotice(this.noticeData)
+          console.log('Notice Posted')
+
           }
+          //or
+
+          // handler: () =>{
+          //   console.log('Notice Posted');
+          //   this.PostNotice(this.noticeData);
+  
+          //   }
         }
       ]
     });

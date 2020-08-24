@@ -241,14 +241,26 @@ public imgView()
   return this.http.get<any>(this.imgv_url)
 }
 
-
-
 //posting img to DB
 //postImg_url = 'http://192.168.43.92:9000/landlodImage';
 postImg_url = 'http://192.168.43.142:9000/landlodImage';
 public postImg(postImage)
 {
  return this.http.post<any>(this.postImg_url, postImage,{})
+}
+
+//posting notification as a landlord
+postNotice_url='http://192.168.43.142.900/postnotice';
+public postNotice(noticeData)
+{
+  return this.http.post<any>(this.postNotice_url, noticeData, {})
+}
+
+//get notifigation as a Student
+getStdNotice_url = 'http://192.168.43.142:9000/getnotice';
+public getNotice()
+{
+  return this.http.get<any>(this.getStdNotice_url)
 }
 
   //-------------

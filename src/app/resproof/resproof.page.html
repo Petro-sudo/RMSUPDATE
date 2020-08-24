@@ -116,18 +116,25 @@
                   </div >
 
                   <div style="color: rgb(6, 2, 73);" slot="end">
-                    
-                  <ion-button shape="round" color="dark"><ion-icon name="notifications-outline"></ion-icon> 0
-                  </ion-button>
-                      
-                    
-                 </div>
-                </ion-toolbar>
-                <p style="font-size: 14px;color: black">
-                  No notice have been posted </p>
-                
-                <br><br><br><br>
-                <br>
+                   <ion-button shape="round" color="dark"><ion-icon name="notifications-outline"></ion-icon>{{noticesData.length}}
+                   </ion-button>  
+                  </div>
+                 </ion-toolbar>
+
+                  <div *ngIf="noticesData.length == 0; else elsetag">
+                    <p style="font-size: 14px;color: black">
+                      No notice have been posted </p>
+              
+                      <br><br><br><br>
+                      <br>
+                  </div>
+
+                    <ng-template #elsetag>
+                  <div  *ngFor= "let item of noticesData">
+                    <br><br><br><br>
+                      <br><br>
+                   </div>
+                   </ng-template>
          </ion-card>
         </ion-col>
    </ion-row>
