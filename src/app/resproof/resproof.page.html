@@ -117,14 +117,24 @@
 
                   <div style="color: rgb(6, 2, 73);" slot="end">
                     
-                  <ion-button shape="round" color="dark"><ion-icon name="notifications-outline"></ion-icon> 0
+                  <ion-button shape="round" color="dark"><ion-icon name="notifications-outline"></ion-icon> {{addProp.length}}
                   </ion-button>
                       
                     
                  </div>
                 </ion-toolbar>
-                <p style="font-size: 14px;color: black">
-                  No notice have been posted </p>
+               
+
+
+                <ion-list *ngFor= "let item of addProp">
+                 <ion-item >
+                    
+                    <ion-label> {{item.message}}</ion-label>
+                  
+                  </ion-item>
+                
+                  </ion-list>
+               
                 
                 <br><br><br><br>
                 <br>

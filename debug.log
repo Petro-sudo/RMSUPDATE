@@ -20,3 +20,4 @@
 [0715/172703.857:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0715/172704.389:ERROR:exception_snapshot_win.cc(98)] thread ID 12820 not found in process
 [0715/172704.389:ERROR:exception_snapshot_win.cc(98)] thread ID 7520 not found in process
+[0823/010110.349:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)

@@ -187,6 +187,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   @ViewChild('label' ,{ static: true }) label;
 
   @Input() postImage = {pic_name:" "}
+  @Input() notice = {message:" "}
   form: FormGroup;
   bars: any;
   colorArray: any;
@@ -293,11 +294,11 @@ handleError(error: string) {
 
 
   //post  image
-addImage(){
-  this._serviceService.postImg(this.postImage).subscribe(
+postnotice(){
+  this._serviceService. postNotice().subscribe(
     data=>console.log(data)
   )
-  console.log(this.postImage)
+  console.log(this.notice)
   }
 
  
@@ -425,8 +426,8 @@ addImage(){
       
         // multiline input.
         {
-          name: 'paragraph',
-          id: 'paragraph',
+          name: 'message',
+          id: 'message',
           type: 'textarea',
           placeholder: 'Notice Discription'
         },
@@ -444,6 +445,7 @@ addImage(){
           text: 'Submit',
           handler: () => {
             console.log('Confirm Submit');
+            this.postnotice();
           }
         }
       ]
