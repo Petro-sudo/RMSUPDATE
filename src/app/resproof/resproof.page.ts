@@ -16,6 +16,7 @@ export class ResproofPage implements OnInit{
   result: any = [];
  data: Observable<any>;
  navigate : any;
+ public addProp: any=[];
 
   constructor(public navCtrl: NavController, public http: HttpClient, private _serviceService : ServiceService,
     private platform    : Platform,
@@ -30,6 +31,7 @@ export class ResproofPage implements OnInit{
     this.profile();
     this.initializeApp();
     this.sideMenu();
+    this.getnoti();
   }
 
 
@@ -80,6 +82,21 @@ export class ResproofPage implements OnInit{
     ]
   }
 
+
+
+
+
+
+  getnoti(){
+    
+    return  this._serviceService.noti().
+    subscribe((apart:any)=>
+     {this.addProp = apart;
+       console.log(this.addProp
+         );
+      
+     });
+   }
 
 
 
