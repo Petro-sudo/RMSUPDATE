@@ -190,6 +190,7 @@ import { LordpostissuesPage } from '../popover/lordpostissues/lordpostissues.pag
   @Input() noticeData = {notice_title:" ", notice_description:" "}
 
   @Input() postImage = {pic_name:" "}
+  @Input() notice = {message:" "}
   form: FormGroup;
   bars: any;
   colorArray: any;
@@ -299,11 +300,11 @@ handleError(error: string) {
 
 
   //post  image
-addImage(){
-  this._serviceService.postImg(this.postImage).subscribe(
+postnotice(){
+  this._serviceService. postNotice().subscribe(
     data=>console.log(data)
   )
-  console.log(this.postImage)
+  console.log(this.notice)
   }
 
  

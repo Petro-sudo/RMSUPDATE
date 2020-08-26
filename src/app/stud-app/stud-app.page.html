@@ -85,7 +85,39 @@
       
     
    <ion-card >
-  <p style="font-weight: bold;">No issues have been logged, press(+) to log an Issue</p>
+    <ion-list *ngFor= "let item of addProp">
+      <ion-item >
+         
+        
+         <ion-label> {{item.description}}</ion-label>
+         <ion-label> {{item.date}}</ion-label>
+         <ion-label> {{item.id}}</ion-label>
+         <ion-button color=primary   (click)="AlertPrompt1(item.description)"> Fixed</ion-button>
+       </ion-item>
+     
+       </ion-list>
+
+
+
+<!-- 
+       <table style="width:100%">
+        <tr>
+          <th>ISSUE TYPE</th>
+          <th>DESCR</th>
+          <th>Age</th>
+        </tr>
+        <tr  *ngFor= "let item of addProp">
+          <td>{{item.Issue_type}}</td>
+          <td>{{item.description}}</td>
+          <td>50</td>
+        </tr>
+       
+      </table> -->
+
+
+
+
+
   <br>
    </ion-card>
 
@@ -93,14 +125,7 @@
 
 
 
-  <br>
-  <br><br><br><br><br><br><br>
-  <br><br><br><br>
-    <ion-toolbar color="dark" >
-
   
-  
-    </ion-toolbar>
   
 
 
