@@ -26,7 +26,7 @@ export class ResproofPage implements OnInit{
     private router: Router ) { }
 
   ngOnInit() {
-    this.getStdNotice();
+    
     this.profile();
     this.initializeApp();
     this.sideMenu();
@@ -128,13 +128,7 @@ export class ResproofPage implements OnInit{
 
    }
 
-  getStdNotice()
-  {
-    return this._serviceService.getNotice().subscribe((apart:any)=>
-    {this.noticesData=apart;
-    console.log(this.noticesData);
-  });
-  } 
+ 
 
   
 

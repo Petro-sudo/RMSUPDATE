@@ -17,21 +17,20 @@ export class LoginPage implements OnInit {
   [x: string]: any;
   @Output('change') change = new EventEmitter();
 
-  //@Input() postData= {email:" ", password:" "}
- loginUserData = {};
+
+ 
  userID: any;
  error: boolean = false;
  errorMessage: String = " ";
  dataLoading: boolean = false;
  private querySubscription;
- loginuser: any;
- email: any;
 
- CheckArrary = "this.loginuser"
 
 
   value = 0;
   _ServiceService: any;
+
+  loginLordData = {email:" ", password:" "};
   constructor(public alertCtrl: AlertController,private router: Router,
     private _serviceService : ServiceService, private userserviceService: UserserviceService,
     private _loaderservice: LoaderService, private popoverController: PopoverController) { }
@@ -45,65 +44,41 @@ password: any;
   //this.getstu();
   this._loaderservice.display(true);
  }
- loginUser()
+
+ landlordlogin()
  {
-this._loaderservice.display(false);
-this.userserviceService.userLogin(this.loginUserData).subscribe(
-  res=>{
-    if (res["errorCode"]!= 0){
-      this.loginuser = res.email[0];
-      this.email = this.loginuser;
-      console.log(this.loginuser);
-      this.error=false;
-      this.errorMessage =" ";
-      this._loaderservice.display(false);
-
-      if(this.email=this.loginUser){
-        this.router.navigate(['/landlord-dash']);
-        localStorage.setItem('token', res.token)
-      }else{
-        this.router.navigate(['/login']);
-      }
-    }
-
-    }
-    // ,
-    //  err=>{console.log(err)
-    //  this.error  = true;
-    //  this.errorMessage = err.message;
-    //  this._loaderservice.display(false);
-     
-    //  }
-    //  ,
-    //  ()=>{
-
-    //   this._loaderservice.display(false);
-    //  } 
-     );
+   if(this.loginLordData.email=="charlse@gmail1.com" && 
+   this.loginLordData.password=="charlse1"){
+     this.router.navigate(['/viewproperties'])
+   }
+   else{
+     this.add();
+     this.router.navigate(['/login']);
+   }
  }
-//  getUserType(e){
-//    this.userID = e;
-//    console.log(e);
 
-//  }
+ async add()
+ {
+  if(this.loginLordData.email!="charlse@gmail1.com" && 
+  this.loginLordData.password!="charlse1"){
+
+    const alert = await this.alertCtrl.create({
+      header:'Incorrent Email or Password',
+      message: 'please try again ',
+      buttons:['OK']
+    });
+
+    await alert.present();  
+   const result = await alert.onDidDismiss();  
+
+  }
+ }
 
 
 
 
-//  getstu(){
-//   this._serviceService.postLogin(this.addprofile).subscribe((data: any)=>
-//   {this.addprofile=data;
-//   console.log(this.addprofile);
-//   });
-// }
-//  loginAction(){
-   
-//   this._serviceService.postLogin(this.postData).subscribe(
-//     data =>
-//     console.log(data));
-//   console.log(this.postData);
-//    }
-   
+
+ 
 //  popover
 
 async popover(ev: Event)  {
@@ -121,4 +96,16 @@ popo.present();
 };
   
  
-
+//  getstu(){
+//   this._serviceService.postLogin(this.addprofile).subscribe((data: any)=>
+//   {this.addprofile=data;
+//   console.log(this.addprofile);
+//   });
+// }
+//  loginAction(){
+   
+//   this._serviceService.postLogin(this.postData).subscribe(
+//     data =>
+//     console.log(data));
+//   console.log(this.postData);
+//    }

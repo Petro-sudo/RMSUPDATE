@@ -34,7 +34,7 @@
 
 <ion-item transparent>
   <ion-label position = "floating"><ion-icon name="mail"></ion-icon> EMAIL</ion-label>
-<ion-input [(ngModel)] = "loginUserData.email" type="email" id = "email" name ="email" class="form-control"
+<ion-input [(ngModel)] = "loginLordData.email" type="email" id = "email" name ="email" class="form-control"
 #email = "ngModel" autofocus required email ngModel></ion-input>    
 </ion-item>
 <div class="alert alert-danger" role="alert" *ngIf="email.invalid && (email.dirty || email.touched)">
@@ -43,7 +43,7 @@
 
 <ion-item transparent> 
 <ion-label position = "floating"><ion-icon name="lock-closed"></ion-icon> PASSWORD</ion-label>
-<ion-input [(ngModel)]="loginUserData.password" type="password" name="password" id="password" class="form-control"
+<ion-input [(ngModel)]="loginLordData.password" type="password" name="password" id="password" class="form-control"
 placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel ></ion-input> 
 </ion-item>
 <div class="alert alert-danger" role="alert" *ngIf="Password.invalid && (Password.dirty || Password.touched)" style="color:red">
@@ -51,8 +51,8 @@ placeholder="" #Password="ngModel" required minlength="8" maxlength="20" ngModel
 </div>
 <br>
 <div class ="ahover">
-<a routerLink = "/viewproperties"><ion-button class = "ion-text-center" color="secondary"  expand="block"
-(click)="loginUser()">Sign In</ion-button></a>
+<ion-button class = "ion-text-center" color="secondary"  expand="block"
+(click)="landlordlogin()">Sign In</ion-button>
 </div>
 <ion-toolbar>
 <div slot="start" >

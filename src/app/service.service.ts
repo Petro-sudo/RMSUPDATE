@@ -251,17 +251,12 @@ public postImg(postImage)
 
 //posting notification as a landlord
 postNotice_url='http://192.168.43.142.900/postnotice';
-public postNotice(noticeData)
+public postingNotice(noticeData)
 {
   return this.http.post<any>(this.postNotice_url, noticeData, {})
 }
 
-//get notifigation as a Student
-getStdNotice_url = 'http://192.168.43.142:9000/getnotice';
-public getNotice()
-{
-  return this.http.get<any>(this.getStdNotice_url)
-}
+
 
   //-------------
 public status()

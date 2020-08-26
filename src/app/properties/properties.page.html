@@ -88,7 +88,7 @@
     <br>
     
     <h2 style="color:black ;border-left:10px solid rgb(6, 2, 73);"> Overview +Stats:TUTEH Residence</h2>
-   <ion-button fill="outline" (click)="presentAlertPrompt()">Broadcast a notice</ion-button>
+   <ion-button fill="outline" (click)="postIssues()">Broadcast a notice</ion-button>
    <ion-button fill="outline" (click)="presentAlertPrompt2()">Log an issue</ion-button>
   
    
@@ -194,7 +194,7 @@
 
     
     <!-- <ion-searchbar></ion-searchbar> -->
-    <ion-card  *ngFor= "let item of issueData" style="font-weight: bold; width:320px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
+    <ion-card  *ngFor= "let item of issueData" style="font-weight: bold; width:450px;border-left: 20px solid #00003f; border-radius: 10px; background-color: #DCDCDC;">
 
      <ion-label style="margin-left: 10px; color:black;">
      Issue Description: {{item.description}} 
@@ -229,7 +229,7 @@
         {{approved.length}} Students</ion-title>
     </div>
       
-    <ion-card   style="background-color: rgb(2, 19, 97);border-radius:10px; width:320px; " *ngFor= "let item of approved" >
+    <ion-card   style="background-color: rgb(2, 19, 97);border-radius:10px; width:450px; " *ngFor= "let item of approved" >
          <br>
       
         <ion-label   style="color: white; margin-left: 10px; font-size: medium;" id="properties" >
@@ -309,7 +309,7 @@
     </div>
       
     <!--      -->
-    <ion-card   style="background-color: rgb(5, 2, 61); border-radius:10px; width:320px ;" *ngFor= "let item of studApp" >
+    <ion-card   style="background-color: rgb(5, 2, 61); border-radius:10px; width:450px ;" *ngFor= "let item of studApp" >
          <br>
       <ion-label   style="color: white;margin-left: 10px;" id="properties" >
      
@@ -369,17 +369,17 @@
         Status: {{item.status}}
       </ion-label>
       <br>
-         <div style=" margin-left: 10px;">
-         <ion-button color="danger" (click)="declinePrompt(item.student_no)" >
-         
-          <ion-icon name="trash"></ion-icon>
-          Decline 
-         </ion-button>
-    
-         <ion-button color="success"  (click)="acceptAlertPrompt(item.student_no)">
-          <ion-icon name="shield-checkmark-outline"></ion-icon>
-          Accept 
+      <div  >
+        <ion-button style=" margin-left: 10px;" color="danger" (click)="declinePrompt(item.student_no)" >
+        
+         <ion-icon name="trash"></ion-icon>
+         Decline 
         </ion-button>
+        
+        <ion-button color="success" style=" margin-left: 200px;" (click)="acceptAlertPrompt(item.student_no)">
+         <ion-icon name="shield-checkmark-outline"></ion-icon>
+         Accept 
+       </ion-button>
         </div>
     
         
