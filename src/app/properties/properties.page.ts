@@ -22,10 +22,6 @@ import { LordpostqueryPage } from '../popover/lordpostquery/lordpostquery.page';
  export class PropertiesPage  {
   @ViewChild('barChart' ,{ static: true }) barChart;
   @ViewChild('label' ,{ static: true }) label;
-
-  @Input() noticeData = {notice_title:" ", notice_description:" "}
-  @Input() queryData = {query_type:" ", query_description:" "}
-
   @Input() postImage = {pic_name:" "}
   @Input() notice = {message:" "}
   form: FormGroup;
@@ -300,6 +296,7 @@ postnotice(){
           //or
 
           // handler: () =>{
+  
           //   console.log('Notice Posted');
           //   this.PostNotice(this.noticeData);
   
@@ -310,6 +307,9 @@ postnotice(){
 
   //   await alert.present();
   // }
+
+
+ 
 
 
 
@@ -497,15 +497,6 @@ async postIssues(ev: Event)  {
    
   });
   postisseu.present();
-  this.PostNotice(this.noticeData);
-}
-
-PostNotice(noticeData)
-{
-  this._serviceService.postingNotice(this.noticeData).subscribe(
-    data=>console.log(data)
-  );
-  console.log(this.noticeData);
 }
 
 
@@ -519,17 +510,9 @@ async postQuery(ev: Event)  {
    
   });
   postquery.present();
-  this.PostQuery(this.queryData);
+  
 }
 
-
-PostQuery(queryData)
-{
-  this._serviceService.postingQuery(this.queryData).subscribe(
-    data=>console.log(data)
-  );
-  console.log(this.queryData);
-}
 
 
 
