@@ -52,7 +52,7 @@
 </ion-card>
   
     
-<ion-card   style="background-color:rgb(160, 160, 160); border-radius:10px; width:500px ;"  *ngFor= "let item of lookApp" >
+<ion-card   style="background-color:rgb(160, 160, 160); border-radius:10px; width:400px ;"  *ngFor= "let item of lookApp" >
      
      
   <h1 style="color: black;margin-right: 120px;" >{{item.property_name}}  </h1>
@@ -142,15 +142,15 @@ THE CLOSEST CAMPUS: {{item.campus}}
      <ion-button color="danger" (click)="AlertPrompt(item.landlord_email)" >
      
       <ion-icon name="trash"></ion-icon>
-      Decline Application
+      Decline
      </ion-button>
 
      <ion-button color="success"  (click)="presentAlertPrompt(item.landlord_email)">
-      Accept Application
+      Accept
     </ion-button>
    
 
-    
+    <br>
 
    </ion-card>
 

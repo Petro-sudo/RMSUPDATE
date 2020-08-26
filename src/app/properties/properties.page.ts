@@ -169,13 +169,14 @@ import {Observable} from 'rxjs';
 import {ServiceService} from './../service.service';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { Platform, AlertController, NavController } from '@ionic/angular';
+import { Platform, AlertController, NavController, PopoverController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { Camera,CameraOptions,PictureSourceType, MediaType } from '@ionic-native/camera/ngx';
 import { Component, ViewChild, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, NgModel } from "@angular/forms";
 import { Chart } from 'chart.js';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LordpostissuesPage } from '../popover/lordpostissues/lordpostissues.page';
 
  @Component({
    selector: 'app-properties',
@@ -186,11 +187,14 @@ import { ReactiveFormsModule } from '@angular/forms';
   @ViewChild('barChart' ,{ static: true }) barChart;
   @ViewChild('label' ,{ static: true }) label;
 
+  @Input() noticeData = {notice_title:" ", notice_description:" "}
+
   @Input() postImage = {pic_name:" "}
   @Input() notice = {message:" "}
   form: FormGroup;
   bars: any;
   colorArray: any;
+  value =0;
   //  alertController: any;
   constructor(
     private platform    : Platform,
@@ -201,7 +205,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         private router: Router,
         private http: HttpClient,
         public alertController: AlertController,
-        public fb: FormBuilder
+        public fb: FormBuilder,
+        private popoverController: PopoverController
   ) {
 
 
@@ -229,8 +234,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     var formData: any = new FormData();
     formData.append("name", this.form.get('name').value);
     formData.append("avatar", this.form.get('avatar').value);
-
-    this.http.post('http://192.168.43.92:9000/landlodImage', formData).subscribe(
+    
+    //my url
+    this.http.post('http://192.168.43.142:9000/landlodImage', formData).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     )
@@ -465,45 +471,59 @@ postnotice(){
     ]
   }
 
-  async presentAlertPrompt() {
-    const alert = await this.alertController.create({
-      header: 'Notice Dialog',
-      inputs: [
-        {
-          name: 'name1',
-          type: 'text',
-          placeholder: 'Notice title'
-        },
-      
-        // multiline input.
-        {
-          name: 'message',
-          id: 'message',
-          type: 'textarea',
-          placeholder: 'Notice Discription'
-        },
-       
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: () => {
-            console.log('Confirm Cancel');
-          }
-        }, {
-          text: 'Submit',
-          handler: () => {
-            console.log('Confirm Submit');
-            this.postnotice();
-          }
-        }
-      ]
-    });
 
-    await alert.present();
-  }
+
+  
+
+
+
+  // async presentAlertPrompt() {
+  //   const alert = await this.alertController.create({
+  //     header: 'Notice Dialog',
+  //     inputs: [
+  //       {
+  //         name: 'notice_title',
+  //         type: 'text',
+  //         placeholder: 'Notice title'
+  //       },
+      
+  //       // multiline input.
+  //       {
+  //         name: 'notice_description',
+  //         id: 'paragraph',
+  //         type: 'textarea',
+  //         placeholder: 'Notice Discription'
+  //       },
+       
+  //     ],
+  //     buttons: [
+  //       {
+  //         text: 'Cancel',
+  //         role: 'cancel',
+  //         cssClass: 'secondary',
+  //         handler: () => {
+  //           console.log('Confirm Cancel');
+  //         }
+  //       }, 
+  //       {
+  //         text: 'Submit',
+  //         handler: data =>{this.PostNotice(this.noticeData)
+  //         console.log('Notice Posted')
+
+  //         }
+          //or
+
+          // handler: () =>{
+          //   console.log('Notice Posted');
+          //   this.PostNotice(this.noticeData);
+  
+          //   }
+  //       }
+  //     ]
+  //   });
+
+  //   await alert.present();
+  // }
 
 
 
@@ -520,7 +540,7 @@ postnotice(){
           placeholder: 'Isuue description'
         },
       
-        // multiline input.
+       
         {
           name: 'paragraph',
           id: 'paragraph',
@@ -681,7 +701,28 @@ acceptstudent(j){
    this.getStudApplication();
 }
 
+//post issues
 
+
+
+async postIssues(ev: Event)  {
+  const postisseu = await this.popoverController.create({
+   component: LordpostissuesPage,
+   componentProps:{
+     custom_id: this.value
+   },
+   
+  });
+  postisseu.present();
+}
+
+PostNotice(noticeData)
+{
+  this._serviceService.postingNotice(this.noticeData).subscribe(
+    data=>console.log(data)
+  );
+  console.log(this.noticeData);
+}
 
 
 

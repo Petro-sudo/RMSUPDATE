@@ -3,6 +3,7 @@ import { AlertController, PopoverController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import {ServiceService} from './../service.service';
 import { PopstdPage } from '../popover/popstd/popstd.page';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login1',
@@ -14,28 +15,44 @@ export class Login1Page implements OnInit {
  
 
 
-  
+  loginStdData = {studno:" ", pwd:" "};
   constructor( private alertCtrl: AlertController, 
     private router: Router, private popoverController: PopoverController) { }
 
+  myform: FormGroup;
   ngOnInit() {
   }
   
-  // login(){
-  //   this.auth.login(this.credentials).subscribe(async res =>{
-  //     if(res){
-  //       this.router.navigateByUrl('/stud-profile');
-  //     }
-  //     else{
-  //       const alert =await this.alertCtrl.create({
-  //         header: 'Login failed',
-  //         message: 'Wrong credentials.',
-  //         buttons:['OK']
-  //       });
-  //       await alert.present();
-  //     }
-  //   });
-  // }pop
+  loginStud()
+  {
+    if(this.loginStdData.studno=="202020202" && this.loginStdData.pwd=="123456789"){
+      this.router.navigate(['/resproof'])
+    }
+    else{
+      this.add1();
+      this.router.navigate(['/login1']);
+    }
+
+  }
+
+
+  async add1()
+  {
+    if(this.loginStdData.studno!="202020202" && this.loginStdData.pwd!="123456789"){
+   
+      const alert = await this.alertCtrl.create({
+        header:'Invalid Student No or Password',
+        message: 'please try again ',
+        buttons:['OK']
+      });
+  
+      await alert.present();  
+     const result = await alert.onDidDismiss(); 
+    }
+  }
+  
+
+  // pop
 
   async popOver(ev: Event)  {
     const pop = await this.popoverController.create({

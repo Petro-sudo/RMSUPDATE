@@ -315,6 +315,12 @@ public postImg(postImage)
  return this.http.post<any>(this.postImg_url, postImage,{})
 }
 
+//posting notification as a landlord
+postNotice_url='http://192.168.43.142.900/postnotice';
+public postingNotice(noticeData)
+{
+  return this.http.post<any>(this.postNotice_url, noticeData, {})
+}
 
 
 

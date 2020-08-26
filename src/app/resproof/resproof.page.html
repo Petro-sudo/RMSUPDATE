@@ -116,28 +116,46 @@
                   </div >
 
                   <div style="color: rgb(6, 2, 73);" slot="end">
+                   <ion-button shape="round" color="dark"><ion-icon name="notifications-outline"></ion-icon>{{addProp.length}}
+                   </ion-button>  
+                  </div>
+                 </ion-toolbar>
+
+                  
+                  <div *ngIf="addProp.length == 0; else elsetag">
+                    <p style="font-size: 14px;color: black">
+                      No notice have been posted </p>
+              
+                      <br><br><br><br>
+                      <br>
+                  </div>
+
+                    <ng-template #elsetag>
+                      <ion-list *ngFor= "let item of addProp">
+                        <ion-item >
+                           
+                           <ion-label> {{item.message}}</ion-label>
+                         
+                         </ion-item>
+                       
+                         </ion-list>
+                      
+                    <br><br><br><br>
+                      <br><br>
+                   
+                   </ng-template>  
+                   
                     
-                  <ion-button shape="round" color="dark"><ion-icon name="notifications-outline"></ion-icon> {{addProp.length}}
-                  </ion-button>
+                  
                       
                     
-                 </div>
-                </ion-toolbar>
+               
                
 
 
-                <ion-list *ngFor= "let item of addProp">
-                 <ion-item >
-                    
-                    <ion-label> {{item.message}}</ion-label>
-                  
-                  </ion-item>
                 
-                  </ion-list>
-               
                 
-                <br><br><br><br>
-                <br>
+                
          </ion-card>
         </ion-col>
    </ion-row>

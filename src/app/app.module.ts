@@ -31,6 +31,7 @@ import { NgSrcModule } from 'ng-src';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { File, FileEntry } from '@ionic-native/File/ngx';
 import { Camera,CameraOptions,PictureSourceType } from '@ionic-native/camera/ngx';
+import { LordpostissuesPageModule } from './popover/lordpostissues/lordpostissues.module';
 //import { FilePath } from '@ionic-native/file-path/ngx';
 
 @NgModule({
@@ -58,6 +59,7 @@ import { Camera,CameraOptions,PictureSourceType } from '@ionic-native/camera/ngx
    HelpadminPageModule, 
    PoppropPageModule,
    SendmailPageModule,
+   LordpostissuesPageModule,
    NgSrcModule,
     
 
