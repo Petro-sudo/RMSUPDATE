@@ -304,6 +304,12 @@ public postingNotice(noticeData)
   return this.http.post<any>(this.postNotice_url, noticeData, {})
 }
 
+//posting queries as a landlord
+postQuery_url='http://192.168.43.142.900/postquery';
+public postingQuery(queryData)
+{
+  return this.http.post<any>(this.postQuery_url, queryData, {})
+}
 
 
   //-------------

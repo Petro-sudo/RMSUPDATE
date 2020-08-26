@@ -23,33 +23,42 @@ export class Login1Page implements OnInit {
   ngOnInit() {
   }
   
-  loginStud()
+  async loginStud()
   {
-    if(this.loginStdData.studno=="202020202" && this.loginStdData.pwd=="123456789"){
+    if(this.loginStdData.studno=="2020202020" && this.loginStdData.pwd=="123456789"){
       this.router.navigate(['/resproof'])
     }
     else{
-      this.add1();
+
+      const alert = await this.alertCtrl.create({
+        header:'Invalid Student No or Password',
+        message: 'please re-enter your details and try again ',
+        buttons:['OK']
+      });
+  
+      await alert.present();  
+     const result = await alert.onDidDismiss(); 
+    
       this.router.navigate(['/login1']);
     }
 
   }
 
 
-  async add1()
-  {
-    if(this.loginStdData.studno!="202020202" && this.loginStdData.pwd!="123456789"){
+  // async add1()
+  // {
+  //   if(this.loginStdData.studno!="202020202" && this.loginStdData.pwd!="123456789"){
    
-      const alert = await this.alertCtrl.create({
-        header:'Invalid Student No or Password',
-        message: 'please try again ',
-        buttons:['OK']
-      });
+  //     const alert = await this.alertCtrl.create({
+  //       header:'Invalid Student No or Password',
+  //       message: 'please try again ',
+  //       buttons:['OK']
+  //     });
   
-      await alert.present();  
-     const result = await alert.onDidDismiss(); 
-    }
-  }
+  //     await alert.present();  
+  //    const result = await alert.onDidDismiss(); 
+  //   }
+  // }
   
 
   // pop

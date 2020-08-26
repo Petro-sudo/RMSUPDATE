@@ -1,0 +1,26 @@
+<ion-content style="margin-left: 20px;">
+  <h1 style="margin-left: 20px;" >Query Dialog</h1>
+
+     <p style="margin-left: 20px;">Send quiries to TUTEH Properties</p>
+  <ion-item>
+<ion-input type="text" placeholder="Notice type" style="border-bottom: 1px;">
+
+</ion-input>
+  </ion-item>
+<ion-item>
+<ion-input type="textarea" id= "paragraph" placeholder="Query Description" style="border-bottom: 1px;">
+
+</ion-input>
+</ion-item>
+<br>
+<ion-toolbar>
+<div slot="start">
+  <ion-button color="light" style="margin-left: 40px;"  (click)="closePop()" >CANCEL</ion-button>
+</div>
+  <div slot="end">
+<ion-button color="light"  style="margin-right: 15px;" (click)="PostQuery()">SUBMIT</ion-button>
+</div>
+    
+</ion-toolbar>
+</ion-content>
+

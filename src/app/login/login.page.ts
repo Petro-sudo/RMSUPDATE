@@ -45,34 +45,27 @@ password: any;
   this._loaderservice.display(true);
  }
 
- landlordlogin()
+ async landlordlogin()
  {
-   if(this.loginLordData.email=="charlse@gmail1.com" && 
+   if(this.loginLordData.email=="charlse@gmail.com" && 
    this.loginLordData.password=="charlse1"){
      this.router.navigate(['/viewproperties'])
    }
    else{
-     this.add();
-     this.router.navigate(['/login']);
-   }
- }
-
- async add()
- {
-  if(this.loginLordData.email!="charlse@gmail1.com" && 
-  this.loginLordData.password!="charlse1"){
-
     const alert = await this.alertCtrl.create({
       header:'Incorrent Email or Password',
-      message: 'please try again ',
+      message: 'please re-enter your details and try again ',
       buttons:['OK']
     });
 
     await alert.present();  
-   const result = await alert.onDidDismiss();  
-
-  }
+   const result = await alert.onDidDismiss();
+     this.router.navigate(['/login']);
+   }
  }
+
+
+ 
 
 
 
