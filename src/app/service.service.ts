@@ -42,7 +42,7 @@ export class ServiceService {
 
 //for landlord app
 // application_url ='http://192.168.43.92:9000/pendingprop';
-application_url ='http://192.168.43.142:9000/pendingprop';
+application_url ='http://192.168.1.105:9000/pendingprop';
 public getLandlordApp()
   {
     return this.http.get<any>(this.application_url);
@@ -92,6 +92,15 @@ public stufixIssue(description)
 {
   return this.http.post<any>(this.fixissueStu_url +"/"+ description,description,description)
 }
+
+fixissueStu1_url ='http://192.168.1.105:9000/fixissue1';
+
+public stufixIssue1(description)
+{
+  return this.http.post<any>(this.fixissueStu1_url +"/"+ description,description,description)
+}
+
+
 stuNotice_url ='http://192.168.1.105:9000/postnotice';
 
 public postNotice()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
@@ -198,6 +207,15 @@ public getStudentissue()
 }
 
 
+
+//get a specific issue for a certain student
+// getStdissues_url ='http://192.168.43.142:9000/';
+//getStdissues_url ='http://192.168.43.92:9000/';
+getSpecificissue1_url ='http://192.168.1.105:9000/specificissue1';
+public getSpecifictissue1()
+{
+  return this.http.get<any>(this.getSpecificissue1_url)
+}
 
 
 //get a specific issue for a certain student

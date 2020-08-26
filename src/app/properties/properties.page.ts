@@ -265,6 +265,57 @@ base64Image:string;
     this.getissues();
   }
 
+
+
+
+
+
+  async AlertPrompt1(i) {
+    const alert = await this.alertController.create({
+      header: 'Are you sure this issue has been fixed?',
+      // message: 'I cannot login',
+     
+  
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Confirm Submit');
+            this.delete1(i);
+            this.getissues();
+          }
+        }
+      ]
+    });
+  
+    await alert.present();
+   
+    
+  }
+
+ 
+
+  delete1(i){
+    this._serviceService.stufixIssue1(i).subscribe(data =>
+      {this.getissues()
+      })
+      this.getissues();
+  }
+
+
+
+
+
+
+
+
 //upload img
 upload(event: any) {
   let files = event.target.files;
@@ -521,7 +572,7 @@ console.log(this.studApp.length);
 
 getissues(){
   
-   return  this._serviceService.getStudentissue().
+   return  this._serviceService.getSpecifictissue1().
    subscribe((apart:any)=>
     {this.issueData = apart;
       console.log(this.issueData
