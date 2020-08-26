@@ -29,10 +29,10 @@
 <ion-item transparent>
   <ion-label position = "floating"><ion-icon name="person"></ion-icon> STUDENT NUMBER</ion-label>
 <ion-input [(ngModel)]="loginStdData.studno" type="number" id= "studno" name="studno" class="form-control"
-#studno= "ngModel" required minlength="9" maxlength="10" ngModel></ion-input>    
+#studno= "ngModel" required minlength="8" maxlength="10" ngModel></ion-input>    
 </ion-item>
 <div class="alert alert-danger" role="alert" *ngIf="studno.invalid && (studno.dirty || studno.touched)">
-  <p style="color:red;"> Please enter a valid student number with 9 numbers.</p>
+  <p style="color:red;"> Please enter a valid student number.</p>
 </div>
 
 <ion-item transparent> 

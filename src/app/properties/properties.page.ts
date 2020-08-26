@@ -1,169 +1,4 @@
-// import { Component, OnInit } from '@angular/core';
-// import{HttpClient} from '@angular/common/http';
-// /*import {NavController} from '@ionic/angular';*/
-// import {Observable} from 'rxjs';
-// import {ServiceService} from './../service.service';
-// import { StatusBar } from '@ionic-native/status-bar/ngx';
-// import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-// import { Platform, AlertController } from '@ionic/angular';
-// import { Router } from '@angular/router';
-// import {  ViewChild } from '@angular/core';
-// import { Chart } from 'chart.js';
 
-// @Component({
-//   selector: 'app-properties',
-//   templateUrl: './properties.page.html',
-//   styleUrls: ['./properties.page.scss'],
-// })
-// export class PropertiesPage implements OnInit {
- 
-//   constructor(/*public navCtrl: NavController,*/ public http: HttpClient,
-//     private platform    : Platform,
-//     private splashScreen: SplashScreen,
-//     private statusBar   : StatusBar,
-//     public alertCtrl: AlertController,
-//     private router: Router
-//     ) { }
-//     navigate : any;
-//   ngOnInit() {
-
-//     // this.getData();
-// this.initializeApp();
-// this.sideMenu();
-// // this.profile();
-//   }
-
-
-
-//   initializeApp() {
-//     this.platform.ready().then(() => {
-//       this.statusBar.styleDefault();
-//       this.splashScreen.hide();
-//     });
-//   }
-
-//   sideMenu()
-//   {
-//     this.navigate =
-//     [
-//       {
-//         title : "Profile",
-//         url   : "/stud-profile",
-//         icon :"person-outline"
-       
-       
-//       },
-//       {
-//         title : "Overview",
-//         url   : "/resproof",
-//         icon :"eye-outline"
-       
-       
-//       },
-//       {
-//         title : "My rooms",
-//         url   : "/studstatus",
-//         icon  : "bed-outline"
-//       },
-//       {
-//         title : "Issues",
-//         url   : "/stud-app",
-//         icon  : "add"
-//       },
-
-
-      
-//     ]
-//   }
-
-
-
-
-
-
-
-
-//   async profile() {
-
-    
-
-//     const alert = await this.alertCtrl.create({  
-//      header:'Profile Dialog',
-//       message:'Please complete your profile' ,
-//       buttons: [
-//         {
-//           text: 'Update',
-//           role: 'update',
-//           cssClass: 'secondary',
-//           handler: (blah) => {
-//             console.log('Confirm update: blah');
-//             this.router.navigate(['/profile']);
-//           }
-//         }, {
-//           text: 'Later',
-//           handler: () => {
-//             console.log('Confirm later');
-//           }
-//         }
-//       ]
-      
-//     }
-   
-    
-
-
-    
-//     );  
-
-//     await alert.present();  
-//     const result = await alert.onDidDismiss();  
-//     console.log(result);
-
-
-
-//    }
-
-
-
-// public doughnutChartLabels:string[]=['me','myself','irene'];
-// public doughnutChartData:number[]=[1200,1500,2000];
-// public doughnutChartType:string='doughnut';
-
-
-
-
-
-
-
-
-
-
-
-//   // getData(){
-//   //   var url='http://168.172.185.106:5000/getstud/40';
-//   //   this.data= this.http.get(url);
-//   //   //this.data.subscribe(data =>{
-//   //       //this.result=data;
-//   //       console.log("clicked");
-
-      
-//   //   //});
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
-//   }
 import{HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {ServiceService} from './../service.service';
@@ -177,6 +12,7 @@ import { FormBuilder, FormGroup, NgModel } from "@angular/forms";
 import { Chart } from 'chart.js';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LordpostissuesPage } from '../popover/lordpostissues/lordpostissues.page';
+import { LordpostqueryPage } from '../popover/lordpostquery/lordpostquery.page';
 
  @Component({
    selector: 'app-properties',
@@ -186,9 +22,6 @@ import { LordpostissuesPage } from '../popover/lordpostissues/lordpostissues.pag
  export class PropertiesPage  {
   @ViewChild('barChart' ,{ static: true }) barChart;
   @ViewChild('label' ,{ static: true }) label;
-
-  @Input() noticeData = {notice_title:" ", notice_description:" "}
-
   @Input() postImage = {pic_name:" "}
   @Input() notice = {message:" "}
   form: FormGroup;
@@ -514,6 +347,7 @@ postnotice(){
           //or
 
           // handler: () =>{
+  
           //   console.log('Notice Posted');
           //   this.PostNotice(this.noticeData);
   
@@ -524,6 +358,9 @@ postnotice(){
 
   //   await alert.present();
   // }
+
+
+ 
 
 
 
@@ -702,9 +539,6 @@ acceptstudent(j){
 }
 
 //post issues
-
-
-
 async postIssues(ev: Event)  {
   const postisseu = await this.popoverController.create({
    component: LordpostissuesPage,
@@ -724,6 +558,18 @@ async postIssues(ev: Event)  {
 //   console.log(this.noticeData);
 // }
 
+//posting quary
+async postQuery(ev: Event)  {
+  const postquery = await this.popoverController.create({
+   component: LordpostqueryPage,
+   componentProps:{
+     custom_id: this.value
+   },
+   
+  });
+  postquery.present();
+  
+}
 
 
 
@@ -733,38 +579,6 @@ async postIssues(ev: Event)  {
 
 
 
-// openCamera(){
-//   const options: CameraOptions={
-//     quality:100,
-//     destinationType: this.camera.DestinationType.DATA_URL,
-//     encodingType: this.camera.EncodingType.JPEG,
-//     mediaType: this.camera.MediaType.PICTURE
-//   }
-//   this.camera.getPicture(options).then((ImageData)=>{
-    
-//     this.base64Image='data:../../assets/pics/bed.jpg;base64'+ImageData;},
-//     (err)=>{
-      
-//     }
-//     );
 
-// }
 
-// openGallery(){
-//   const options: CameraOptions={
-//     quality:100,
-//     destinationType: this.camera.DestinationType.DATA_URL,
-//     encodingType: this.camera.EncodingType.JPEG,
-//     mediaType: this.camera.MediaType.PICTURE,
-//     sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
-//   }
-//   this.camera.getPicture(options).then((ImageData)=>{
-    
-//     this.base64Image='data:../../assets/pics/bed.jpg;base64'+ImageData;},
-//     (err)=>{
-      
-//     }
-//     );
-
-// }
 
