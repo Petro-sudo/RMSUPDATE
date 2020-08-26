@@ -25,8 +25,9 @@ export class Login1Page implements OnInit {
   
   loginStud()
   {
-    if(this.loginStdData.studno=="202020202" && this.loginStdData.pwd=="123456789"){
-      this.router.navigate(['/resproof'])
+    if(this.loginStdData.studno=="2020202020" && this.loginStdData.pwd=="123456789"){
+      this.router.navigate(['/resproof']);
+
     }
     else{
       this.add1();
@@ -38,7 +39,7 @@ export class Login1Page implements OnInit {
 
   async add1()
   {
-    if(this.loginStdData.studno!="202020202" && this.loginStdData.pwd!="123456789"){
+    if(this.loginStdData.studno!="2020202020" || this.loginStdData.pwd!="123456789"){
    
       const alert = await this.alertCtrl.create({
         header:'Invalid Student No or Password',

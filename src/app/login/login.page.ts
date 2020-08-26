@@ -47,9 +47,9 @@ password: any;
 
  landlordlogin()
  {
-   if(this.loginLordData.email=="charlse@gmail1.com" && 
+   if(this.loginLordData.email=="charlse@gmail.com" && 
    this.loginLordData.password=="charlse1"){
-     this.router.navigate(['/viewproperties'])
+     this.router.navigate(['/viewproperties']);
    }
    else{
      this.add();
@@ -59,7 +59,7 @@ password: any;
 
  async add()
  {
-  if(this.loginLordData.email!="charlse@gmail1.com" && 
+  if(this.loginLordData.email!="charlse@gmail.com" ||
   this.loginLordData.password!="charlse1"){
 
     const alert = await this.alertCtrl.create({

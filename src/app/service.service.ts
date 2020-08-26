@@ -196,6 +196,23 @@ public Studentissue(issueData)
   return this.http.post<any>(this.Stdissues_url,issueData ,{})
 }
 
+Snoti_url ='http://192.168.1.105:9000/postnotice';
+public Snotice(noticeData)
+{
+  return this.http.post<any>(this.Snoti_url,noticeData ,{})
+}
+
+
+
+
+//posting notification as a landlord
+postNotice1_url='http://192.168.1.105.9000/postnotice';
+public postingNotice1(noticeData)
+{
+  return this.http.post<any>(this.postNotice1_url, noticeData, {})
+}
+
+
 
 //view issues
 // getStdissues_url ='http://192.168.43.142:9000/viewStuIssues';
@@ -315,12 +332,7 @@ public postImg(postImage)
  return this.http.post<any>(this.postImg_url, postImage,{})
 }
 
-//posting notification as a landlord
-postNotice_url='http://192.168.43.142.900/postnotice';
-public postingNotice(noticeData)
-{
-  return this.http.post<any>(this.postNotice_url, noticeData, {})
-}
+
 
 
 

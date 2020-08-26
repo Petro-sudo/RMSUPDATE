@@ -716,18 +716,19 @@ async postIssues(ev: Event)  {
   postisseu.present();
 }
 
-PostNotice(noticeData)
-{
-  this._serviceService.postingNotice(this.noticeData).subscribe(
-    data=>console.log(data)
-  );
-  console.log(this.noticeData);
-}
+// PostNotice(noticeData)
+// {
+//   this._serviceService.postingNotice(this.noticeData).subscribe(
+//     data=>console.log(data)
+//   );
+//   console.log(this.noticeData);
+// }
 
 
 
 
-}
+// }
+ }
 
 
 
