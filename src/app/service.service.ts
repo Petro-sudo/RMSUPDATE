@@ -30,7 +30,7 @@ export class ServiceService {
   lordapp_url = 'https://168.172.185.106:5000/lord';
 
 
-  stud_url='http://192.168.43.92:9000/stud';
+  stud_url='http://192.168.1.105:9000/stud';
   stat_urlmale = 'http://192.168.43.142:9000/male';
   stat_urlfemale = 'http://192.168.43.142:9000/female';
 
@@ -42,7 +42,7 @@ export class ServiceService {
 
 //for landlord app
 // application_url ='http://192.168.43.92:9000/pendingprop';
-application_url ='http://192.168.43.142:9000/pendingprop';
+application_url ='http://192.168.1.105:9000/pendingprop';
 public getLandlordApp()
   {
     return this.http.get<any>(this.application_url);
@@ -92,6 +92,15 @@ public stufixIssue(description)
 {
   return this.http.post<any>(this.fixissueStu_url +"/"+ description,description,description)
 }
+
+fixissueStu1_url ='http://192.168.1.105:9000/fixissue1';
+
+public stufixIssue1(description)
+{
+  return this.http.post<any>(this.fixissueStu1_url +"/"+ description,description,description)
+}
+
+
 stuNotice_url ='http://192.168.1.105:9000/postnotice';
 
 public postNotice()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
@@ -187,6 +196,23 @@ public Studentissue(issueData)
   return this.http.post<any>(this.Stdissues_url,issueData ,{})
 }
 
+Snoti_url ='http://192.168.1.105:9000/postnotice';
+public Snotice(noticeData)
+{
+  return this.http.post<any>(this.Snoti_url,noticeData ,{})
+}
+
+
+
+
+//posting notification as a landlord
+postNotice1_url='http://192.168.1.105.9000/postnotice';
+public postingNotice1(noticeData)
+{
+  return this.http.post<any>(this.postNotice1_url, noticeData, {})
+}
+
+
 
 //view issues
 // getStdissues_url ='http://192.168.43.142:9000/viewStuIssues';
@@ -198,6 +224,15 @@ public getStudentissue()
 }
 
 
+
+//get a specific issue for a certain student
+// getStdissues_url ='http://192.168.43.142:9000/';
+//getStdissues_url ='http://192.168.43.92:9000/';
+getSpecificissue1_url ='http://192.168.1.105:9000/specificissue1';
+public getSpecifictissue1()
+{
+  return this.http.get<any>(this.getSpecificissue1_url)
+}
 
 
 //get a specific issue for a certain student
@@ -297,12 +332,7 @@ public postImg(postImage)
  return this.http.post<any>(this.postImg_url, postImage,{})
 }
 
-//posting notification as a landlord
-postNotice_url='http://192.168.43.142.900/postnotice';
-public postingNotice(noticeData)
-{
-  return this.http.post<any>(this.postNotice_url, noticeData, {})
-}
+
 
 //posting queries as a landlord
 postQuery_url='http://192.168.43.142.900/postquery';

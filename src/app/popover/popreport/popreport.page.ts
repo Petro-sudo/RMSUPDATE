@@ -17,6 +17,7 @@ export class PopreportPage implements OnInit {
     public alertController: AlertController) { }
 
   ngOnInit() {
+    this.getnoti();
   }
   closePop(){
     this.popoverController.dismiss();

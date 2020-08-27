@@ -71,7 +71,7 @@
   
 <div id = "card" class="tabcontent"  >
   <ion-title style="text-align: center">Name of Properties</ion-title>
-  <ion-row>
+  <!-- <ion-row>
     <ion-col>
   <ion-card class="tablinks" (click)="openCity(event, 'i1')">
 
@@ -112,12 +112,13 @@
 
   </ion-card>
  </ion-col>
-</ion-row>
+</ion-row> -->
 
 <ion-row>
   
 <ion-col>
-  <ion-card class="tablinks" (click)="openCity(event, 'i3')">
+
+  <ion-card  *ngFor= "let item of addProp " (click)="openCity(event, 'i4')">
     <ion-toolbar>
       <div slot="start">
         <ion-title style="font-size: 18px; font-weight: bold;color: 
@@ -130,12 +131,12 @@
              2</ion-button>             
      </div>
     </ion-toolbar>
-    <ion-title>Apartment: 3</ion-title>
-    <ion-title>Twala house</ion-title>
+    
+    <ion-title>{{item.property_name}}</ion-title>
 
   </ion-card>
 </ion-col>
-
+<!-- 
 <ion-col>
 
   <ion-card class="tablinks" (click)="openCity(event, 'i4')"><ion-toolbar>
@@ -155,7 +156,7 @@
     <ion-title>Dlamani house</ion-title>
 
   </ion-card>
- </ion-col>
+ </ion-col> -->
 </ion-row>
 
 </div>
