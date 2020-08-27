@@ -68,57 +68,44 @@
       
  <br>
  <br>
-      <!-- <div class="form-group">
-       
-        <ion-label >Upload a picture of an issue you just log</ion-label>
-        <br>
-        <ion-input type="file" name="images" ></ion-input>
-      
-      </div>
-      <ion-button color="primary" (click)="addLord()" >
-        Submit
-      </ion-button>
-     
-      <ion-button color="danger" (click)="AlertPrompt()" >
-        Cancel
-       </ion-button> -->
+   
       
     
    <ion-card >
-    <ion-list *ngFor= "let item of addProp">
-      <ion-item >
-         
-        
+     <ion-title >Total issues reported {{addProp.length}}</ion-title>
+      
+      <div *ngIf="addProp.length == 0; else elsetag">
+        <p style="font-size: 14px;color: black; margin-left: 20px;">
+          No Issues have been posted </p>
+  
+      </div>
+
+        <ng-template #elsetag>
+          <ion-list *ngFor= "let item of addProp">
+        <ion-item >
          <ion-label> {{item.description}}</ion-label>
          <ion-label> {{item.date}}</ion-label>
          <ion-label> {{item.id}}</ion-label>
          <ion-button color=primary   (click)="AlertPrompt1(item.description)"> Fixed</ion-button>
        </ion-item>
      
-       </ion-list>
-
-
-
-<!-- 
-       <table style="width:100%">
-        <tr>
-          <th>ISSUE TYPE</th>
-          <th>DESCR</th>
-          <th>Age</th>
-        </tr>
-        <tr  *ngFor= "let item of addProp">
-          <td>{{item.Issue_type}}</td>
-          <td>{{item.description}}</td>
-          <td>50</td>
-        </tr>
+      </ion-list>
+       </ng-template>  
+     
        
-      </table> -->
+
+      
+        
+          
+        
+       <br><br><br><br>
+       <br><br>
 
 
 
 
 
-  <br>
+
    </ion-card>
 
 
@@ -135,132 +122,8 @@
 
 
 
+   
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <ion-header>
-  <ion-toolbar color="dark">
-    <ion-buttons slot="start" >
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title align="center">STUDENT APPLICATION</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-
-<ion-content>
-  <ion-item>
-    <ion-label>Upload proof of registration</ion-label>
-    <input mbsc-input type="file" placeholder="Select file..." />
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Upload ID copy</ion-label>
-    <input mbsc-input type="file" placeholder="Select file..." />
-  </ion-item>
-
-  
-  <ion-item>
-br    <ion-select placeholder="Select One">
-      <ion-select-option value="No">No</ion-select-option>
-      <ion-select-option value="Yes">Yes</ion-select-option>
-    </ion-select>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label>Do you agree to the terms and conditions</ion-label>
-    <ion-checkbox item-right secondary checked="false"></ion-checkbox>
-  </ion-item>
-
-  <ion-button class = "ion-text-center" expand="block" color="dark" shape="round">SUBMIT APPLICATION</ion-button>
-
-</ion-content> -->
