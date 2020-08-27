@@ -30,7 +30,7 @@ export class ServiceService {
   lordapp_url = 'https://168.172.185.106:5000/lord';
 
 
-  stud_url='http://192.168.43.92:9000/stud';
+  stud_url='http://192.168.1.105:9000/stud';
   stat_urlmale = 'http://192.168.43.142:9000/male';
   stat_urlfemale = 'http://192.168.43.142:9000/female';
 

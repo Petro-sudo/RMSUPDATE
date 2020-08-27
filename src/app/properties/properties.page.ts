@@ -69,7 +69,7 @@ import { LordpostqueryPage } from '../popover/lordpostquery/lordpostquery.page';
     formData.append("avatar", this.form.get('avatar').value);
     
     //my url
-    this.http.post('http://192.168.43.142:9000/landlodImage', formData).subscribe(
+    this.http.post('http://192.168.1.105:9000/landlodImage', formData).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     )
@@ -501,6 +501,7 @@ declinestudent(i){
   })
   this.getStudApplication();
 }
+
 
 
 //accept stud
