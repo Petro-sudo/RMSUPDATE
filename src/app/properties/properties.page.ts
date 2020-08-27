@@ -69,7 +69,7 @@ import { LordpostqueryPage } from '../popover/lordpostquery/lordpostquery.page';
     formData.append("avatar", this.form.get('avatar').value);
     
     //my url
-    this.http.post('http://192.168.43.142:9000/landlodImage', formData).subscribe(
+    this.http.post('http://192.168.1.105:9000/landlodImage', formData).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     )
@@ -103,6 +103,57 @@ base64Image:string;
     this.calc1();
     this.getissues();
   }
+
+
+
+
+
+
+  async AlertPrompt1(i) {
+    const alert = await this.alertController.create({
+      header: 'Are you sure this issue has been fixed?',
+      // message: 'I cannot login',
+     
+  
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Confirm',
+          handler: () => {
+            console.log('Confirm Submit');
+            this.delete1(i);
+            this.getissues();
+          }
+        }
+      ]
+    });
+  
+    await alert.present();
+   
+    
+  }
+
+ 
+
+  delete1(i){
+    this._serviceService.stufixIssue1(i).subscribe(data =>
+      {this.getissues()
+      })
+      this.getissues();
+  }
+
+
+
+
+
+
+
 
 //upload img
 upload(event: any) {
@@ -378,7 +429,7 @@ console.log(this.studApp.length);
 
 getissues(){
   
-   return  this._serviceService.getStudentissue().
+   return  this._serviceService.getSpecifictissue1().
    subscribe((apart:any)=>
     {this.issueData = apart;
       console.log(this.issueData
@@ -452,6 +503,7 @@ declinestudent(i){
 }
 
 
+
 //accept stud
 async acceptAlertPrompt(j) {
   const alert = await this.alertController.create({
@@ -499,6 +551,13 @@ async postIssues(ev: Event)  {
   postisseu.present();
 }
 
+// PostNotice(noticeData)
+// {
+//   this._serviceService.postingNotice(this.noticeData).subscribe(
+//     data=>console.log(data)
+//   );
+//   console.log(this.noticeData);
+// }
 
 //posting quary
 async postQuery(ev: Event)  {
@@ -515,9 +574,11 @@ async postQuery(ev: Event)  {
 
 
 
+// }
+ }
 
 
-}
+
 
 
 

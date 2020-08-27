@@ -49,9 +49,19 @@ password: any;
  {
    if(this.loginLordData.email=="charlse@gmail.com" && 
    this.loginLordData.password=="charlse1"){
-     this.router.navigate(['/viewproperties'])
+     this.router.navigate(['/viewproperties']);
    }
    else{
+     this.add();
+     this.router.navigate(['/login']);
+   }
+ }
+
+ async add()
+ {
+  if(this.loginLordData.email!="charlse@gmail.com" ||
+  this.loginLordData.password!="charlse1"){
+
     const alert = await this.alertCtrl.create({
       header:'Incorrent Email or Password',
       message: 'please re-enter your details and try again ',

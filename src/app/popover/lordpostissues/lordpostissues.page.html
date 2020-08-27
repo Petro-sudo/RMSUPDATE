@@ -8,7 +8,8 @@
 </ion-input>
   </ion-item>
 <ion-item>
-<ion-input type="textarea" id= "paragraph" placeholder="Notice Description" style="border-bottom: 1px;">
+  <ion-label position="floating"> Notice Description</ion-label>
+<ion-input [(ngModel)]="noticeData.message"type="textarea" name="message" id= "message" placeholder="Notice Discription" style="border-bottom: 1px;">
 
 </ion-input>
 </ion-item>
@@ -18,7 +19,7 @@
   <ion-button color="light" style="margin-left: 40px;"  (click)="closePop()" >CANCEL</ion-button>
 </div>
   <div slot="end">
-<ion-button color="light"  style="margin-right: 15px;" (click)="PostNotice()">SUBMIT</ion-button>
+<ion-button color="light"  style="margin-right: 15px;" (click)="AlertPrompt1()">SUBMIT</ion-button>
 </div>
     
 </ion-toolbar>

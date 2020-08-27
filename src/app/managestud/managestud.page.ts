@@ -25,11 +25,41 @@ export class ManagestudPage implements OnInit {
     viewStud: any=[];
   addimg: any=[];
   public items: any;
-  
+  public approved: any=[];
+  public addProp: any=[];
   ngOnInit() {
     this.getStudents();
     //this.applidstu();
+    this. getApproved();
+    this.getProperty();
   }
+
+
+
+
+  getApproved(){
+    var searchTerm= "";
+     return  this._serviceService.getStudentsAcptd().
+     subscribe((apart:any)=>
+      {this.approved = apart;
+        console.log(this.approved
+          );
+        //  this.filterItems(searchTerm); 
+      });
+    }
+
+    getProperty(){
+      var searchTerm= "";
+       return  this._serviceService.getApprovedApp().
+       subscribe((apart:any)=>
+        {this.addProp = apart;
+          console.log(this.addProp
+            );
+          //  this.filterItems(searchTerm); 
+        });
+      }
+   
+    
 
   openCity(evt,cityName) {
     var i, tabcontent, tablinks;
