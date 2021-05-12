@@ -36,7 +36,7 @@
     "@ionic/angular": "^5.0.0",
     "@ionic/storage": "^2.2.0",
     "angular-filter": "^0.5.17",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "com.telerik.plugins.nativepagetransitions": "^0.6.5",
     "cordova-android": "8.1.0",
     "cordova-ios": "5.1.1",
